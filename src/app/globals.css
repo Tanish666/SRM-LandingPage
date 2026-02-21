@@ -38,6 +38,7 @@ html {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -64,6 +65,7 @@ html {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
   .theme {
     --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
   }
@@ -73,6 +75,7 @@ html {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -82,6 +85,7 @@ html {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -96,14 +100,17 @@ html {
     from {
       transform: translateX(0);
     }
+
     to {
       transform: translateX(calc(-100% - var(--gap)));
     }
   }
+
   @keyframes marquee-vertical {
     from {
       transform: translateY(0);
     }
+
     to {
       transform: translateY(calc(-100% - var(--gap)));
     }
@@ -114,31 +121,60 @@ html {
       background-position: 0% 50%;
       transform: rotate(-5deg) scale(0.9);
     }
+
     25% {
       background-position: 50% 100%;
       transform: rotate(5deg) scale(1.1);
     }
+
     50% {
       background-position: 100% 50%;
       transform: rotate(-3deg) scale(0.95);
     }
+
     75% {
       background-position: 50% 0%;
       transform: rotate(3deg) scale(1.05);
     }
+
     100% {
       background-position: 0% 50%;
       transform: rotate(-5deg) scale(0.9);
     }
   }
+
   @keyframes blink-cursor {
-  0%, 49% {
-    opacity: 1;
+
+    0%,
+    49% {
+      opacity: 1;
     }
-  50%, 100% {
-    opacity: 0;
+
+    50%,
+    100% {
+      opacity: 0;
     }
   }
+}
+
+.hero-stadium {
+  background: linear-gradient(to bottom, rgba(5, 11, 24, 0.4), rgba(5, 11, 24, 0.95)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.border-neon {
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.05);
+}
+
+.brand-font {
+  font-family: var(--font-space-grotesk);
 }
 
 ::-webkit-scrollbar {
@@ -146,18 +182,22 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: black; /* scrollbar track background */
+  background-color: black;
+  /* scrollbar track background */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3f3f46;  /* the draggable bar */
+  background-color: #3f3f46;
+  /* the draggable bar */
   border-radius: 1px;
   min-height: 60px;
 }
 
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .white-space-pre-line {
@@ -165,20 +205,20 @@ body {
 }
 
 .logo {
-            display: inline-block;
-            height: 100px;
-            width: 350px;
-            /* Added width to make logos of equal height and width */
+  display: inline-block;
+  height: 100px;
+  width: 350px;
+  /* Added width to make logos of equal height and width */
 
-            vertical-align: middle;
-            filter: grayscale(100%) brightness(0) invert(1);
-            object-fit: contain;
-            /* Ensures logos do not look stretched or shrunk */
-          }
+  vertical-align: middle;
+  filter: grayscale(100%) brightness(0) invert(1);
+  object-fit: contain;
+  /* Ensures logos do not look stretched or shrunk */
+}
 
 .custom-cursor {
   cursor: url("/cursor.svg") 16 16, auto;
-}       
+}
 
 @media (min-width: 768px) {
   .panelTitle {
@@ -193,14 +233,16 @@ body {
 }
 
 .MenuText {
-  font-weight: 510; /* bold */
+  font-weight: 510;
+  /* bold */
 }
 
 @media (min-width: 1400px) and (min-height: 900px) {
-  .xxlHero{
-     margin-top: 4.5vw;
+  .xxlHero {
+    margin-top: 4.5vw;
   }
-  .xxlHerotext{
+
+  .xxlHerotext {
     font-size: 15vw;
   }
 }

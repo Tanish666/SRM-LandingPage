@@ -37,12 +37,17 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#00F2FF',
+					foreground: '#050B18'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#7000FF',
+					foreground: '#FFFFFF'
+				},
+				navy: {
+					900: '#050B18',
+					800: '#0D1526',
+					700: '#162035'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -66,6 +71,10 @@ export default {
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))'
 				}
+			},
+			fontFamily: {
+				sans: ["var(--font-inter)", "sans-serif"],
+				display: ["var(--font-space-grotesk)", "sans-serif"]
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
