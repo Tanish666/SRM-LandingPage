@@ -1,9 +1,12 @@
 "use client";
 import Lenis from "lenis";
+import { motion } from "framer-motion";
 import { LiveMatchesTicker } from "@/components/LiveMatchesTicker";
 import { useEffect } from "react";
 import FuzzyText from "@/components/FuzzyText";
 import { FloatingNavbar } from "@/components/FloatingNavbar";
+import { TextAnimate } from "@/components/ui/textAnimate";
+import { once } from "events";
 
 export default function ClubDuelzPage() {
   useEffect(() => {
@@ -17,13 +20,16 @@ export default function ClubDuelzPage() {
     requestAnimationFrame(raf);
   }, [])
   return (
-    <div className="min-h-screen bg-navy-900 text-slate-100 font-sans">
+    <div className="min-h-screen bg-black text-slate-100 font-sans">
       <FloatingNavbar />
 
       <main className="pt-0">
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-32">
           {/* Video Background */}
-          <video
+          <motion.video
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 3 }}
             autoPlay
             loop
             muted
@@ -31,21 +37,23 @@ export default function ClubDuelzPage() {
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="/footballvideo.mp4" type="video/mp4" />
-          </video>
+          </motion.video>
 
           {/* Visual Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-navy-900/40 via-navy-900/20 to-navy-900"></div>
 
           <div className="max-w-5xl mx-auto text-center relative z-10 mb-20">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 3 }} className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                 Season 04 Now Live
               </span>
-            </div>
+            </motion.div>
             <h1 className="text-6xl md:text-9xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase italic font-display">
-              Clash of the <br />
-              <span className="w-full flex items-center justify-center">
+              <TextAnimate delay={1} duration={2} startOnView={false}>
+                Clash of the
+              </TextAnimate>
+              <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3 }} className="w-full flex items-center justify-center">
                 <FuzzyText
                   className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary neon-glow text-center italic"
                   baseIntensity={0.3}
@@ -56,19 +64,19 @@ export default function ClubDuelzPage() {
                   color="#00F2FF"
                   gradient={['#00FFD5', '#00F2FF', '#0066FF']}
                 >Titans</FuzzyText>
-              </span>
+              </motion.span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3 }} className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
               Elite matchmaking for the streets. Challenge rivals, rise through
               the ranks, and secure your legend in the local circuit.
-            </p>
+            </motion.p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="w-full sm:w-auto px-10 py-5 bg-primary text-navy-900 font-black text-lg uppercase tracking-tighter hover:translate-y-[-2px] transition-all">
+              <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.5 }} className="w-full sm:w-auto px-10 py-5 bg-primary text-navy-900 font-black text-lg uppercase tracking-tighter hover:translate-y-[-2px] transition-all">
                 Register Your Team
-              </button>
-              <button className="w-full sm:w-auto px-10 py-5 bg-white/5 border border-white/20 text-white font-black text-lg uppercase tracking-tighter backdrop-blur-sm hover:bg-white hover:text-navy-900 transition-all">
+              </motion.button>
+              <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4 }} className="w-full sm:w-auto px-10 py-5 bg-white/5 border border-white/20 text-white font-black text-lg uppercase tracking-tighter backdrop-blur-sm hover:bg-white hover:text-navy-900 transition-all">
                 Find a Match
-              </button>
+              </motion.button>
             </div>
           </div>
           <LiveMatchesTicker />
@@ -520,6 +528,6 @@ export default function ClubDuelzPage() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }
