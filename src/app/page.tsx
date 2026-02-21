@@ -3,6 +3,7 @@ import Lenis from "lenis";
 import { LiveMatchesTicker } from "@/components/LiveMatchesTicker";
 import { useEffect } from "react";
 import FuzzyText from "@/components/FuzzyText";
+import { FloatingNavbar } from "@/components/FloatingNavbar";
 
 export default function ClubDuelzPage() {
   useEffect(() => {
@@ -17,57 +18,10 @@ export default function ClubDuelzPage() {
   }, [])
   return (
     <div className="min-h-screen bg-navy-900 text-slate-100 font-sans">
-      <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-navy-900/80 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform rotate-12 shadow-[0_0_20px_rgba(0,242,255,0.4)]">
-              <span className="material-symbols-outlined text-navy-900 font-bold -rotate-12">
-                swords
-              </span>
-            </div>
-            <span className="text-2xl font-black tracking-tighter uppercase italic">
-              Club Duelz
-            </span>
-          </div>
-          <nav className="hidden lg:flex items-center gap-10">
-            <a
-              className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-              href="#"
-            >
-              Matches
-            </a>
-            <a
-              className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-              href="#"
-            >
-              Teams
-            </a>
-            <a
-              className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-              href="#"
-            >
-              Leagues
-            </a>
-            <a
-              className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-              href="#"
-            >
-              Rankings
-            </a>
-          </nav>
-          <div className="flex items-center gap-6">
-            <button className="text-sm font-bold uppercase tracking-widest hover:text-primary">
-              Login
-            </button>
-            <button className="bg-primary text-navy-900 px-6 py-2.5 rounded-sm font-black uppercase tracking-tighter hover:bg-white transition-all shadow-lg shadow-primary/20">
-              Join League
-            </button>
-          </div>
-        </div>
-      </header>
+      <FloatingNavbar />
 
-      <main className="pt-20">
-        <section className="relative hero-stadium min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
+      <main className="pt-0">
+        <section className="relative hero-stadium min-h-screen flex items-center justify-center px-6 overflow-hidden pt-20">
           <div className="max-w-5xl mx-auto text-center relative z-10 mb-20">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -79,7 +33,7 @@ export default function ClubDuelzPage() {
               Clash of the <br />
               <span className="w-full flex items-center justify-center">
                 <FuzzyText
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary neon-glow text-center"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary neon-glow text-center italic"
                   baseIntensity={0.3}
                   hoverIntensity={0.5}
                   enableHover
