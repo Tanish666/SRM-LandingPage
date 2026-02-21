@@ -54,7 +54,7 @@ export default function ClubDuelzPage() {
                   fontWeight={1000}
                   fontSize={"clamp(2rem, 12vw, 12rem)"}
                   color="#00F2FF"
-                  gradient={['#00FFD5', '#0066FF']}
+                  gradient={['#00FFD5', '#00F2FF', '#0066FF']}
                 >Titans</FuzzyText>
               </span>
             </h1>
