@@ -24,11 +24,21 @@ export function FloatingNavbar() {
                             swords
                         </span>
                     </motion.div>
-                    <span className="text-xl font-black tracking-tighter uppercase italic text-slate-100">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 3 }}
+                        className="text-xl font-black tracking-tighter uppercase italic text-slate-100"
+                    >
                         Club Duelz
-                    </span>
+                    </motion.span>
                 </div>
-                <nav className="hidden lg:flex items-center gap-8">
+                <motion.nav
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 3.5 }}
+                    className="hidden lg:flex items-center gap-8"
+                >
                     <a
                         className="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-slate-300"
                         href="#"
@@ -53,15 +63,20 @@ export function FloatingNavbar() {
                     >
                         Rankings
                     </a>
-                </nav>
-                <div className="flex items-center gap-4">
+                </motion.nav>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 4 }}
+                    className="flex items-center gap-4"
+                >
                     <button className="text-xs font-bold uppercase tracking-widest hover:text-primary text-slate-300">
                         Login
                     </button>
                     <button className="bg-primary text-navy-900 px-6 py-2.5 rounded-full font-black uppercase tracking-tighter hover:bg-white transition-all shadow-lg shadow-primary/20 text-xs text-nowrap">
                         Join League
                     </button>
-                </div>
+                </motion.div>
             </div>
         </motion.header>
     );
