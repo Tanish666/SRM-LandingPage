@@ -2,6 +2,7 @@
 import Lenis from "lenis";
 import { LiveMatchesTicker } from "@/components/LiveMatchesTicker";
 import { useEffect } from "react";
+import FuzzyText from "@/components/FuzzyText";
 
 export default function ClubDuelzPage() {
   useEffect(() => {
@@ -74,10 +75,19 @@ export default function ClubDuelzPage() {
                 Season 04 Now Live
               </span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase italic font-display">
+            <h1 className="text-6xl md:text-9xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase italic font-display">
               Clash of the <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary neon-glow">
-                Titans
+              <span className="w-full flex items-center justify-center">
+                <FuzzyText
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary neon-glow text-center"
+                  baseIntensity={0.3}
+                  hoverIntensity={0.5}
+                  enableHover
+                  fontWeight={1000}
+                  fontSize={"clamp(2rem, 12vw, 12rem)"}
+                  color="#00F2FF"
+                  gradient={['#00FFD5', '#0066FF']}
+                >Titans</FuzzyText>
               </span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
