@@ -21,7 +21,21 @@ export default function ClubDuelzPage() {
       <FloatingNavbar />
 
       <main className="pt-0">
-        <section className="relative hero-stadium min-h-screen flex items-center justify-center px-6 overflow-hidden pt-20">
+        <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden py-32">
+          {/* Video Background */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/footballvideo.mp4" type="video/mp4" />
+          </video>
+
+          {/* Visual Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-navy-900/40 via-navy-900/20 to-navy-900"></div>
+
           <div className="max-w-5xl mx-auto text-center relative z-10 mb-20">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
