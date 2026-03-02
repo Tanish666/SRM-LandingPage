@@ -6,7 +6,7 @@ import { delay, motion } from 'framer-motion'
 import { Inter } from "next/font/google";
 import { Poppins } from 'next/font/google';
 import { Montserrat } from 'next/font/google';
-import { Scale } from 'lucide-react';
+
 const inter = Inter({
   weight: "300",
   subsets: ["latin"],

@@ -14,7 +14,7 @@ import HomeSection10 from '@/components/HomeSection10'
 
 const page = () => {
   return (
-    <div className='space-y-5'>
+    <div className='space-y-5 overflow-hidden'>
       <HeroSection />
       <HeroMarquee />
       <HomeSection2 />
