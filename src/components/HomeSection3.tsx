@@ -94,7 +94,7 @@ export default function HomeSection3() {
                                     className={`group flex items-center justify-between py-5 border-b cursor-pointer transition-colors ${activeProgram === program.id ? 'border-slate-800 text-[#0066FF]' : 'border-slate-200 text-slate-700 hover:text-[#0066FF]'
                                         }`}
                                 >
-                                    <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap`}>{program.name}</span>
+                                    <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap text-[#000000]`}>{program.name}</span>
                                     <ArrowUpRight className={`size-5 transition-colors ${activeProgram === program.id ? 'text-[#0066FF]' : 'text-slate-300 group-hover:text-[#0066FF]'
                                         }`} />
                                 </div>

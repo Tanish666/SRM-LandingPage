@@ -14,7 +14,7 @@ const Card = ({ icon, title, description }: { icon: React.ReactNode, title: stri
             <div className="text-[#30A0FF]">
                 {icon}
             </div>
-            <h3 className="text-base lg:text-[20px] font-semibold text-gray-800 leading-tight">{title}</h3>
+            <h3 className="text-base lg:text-[20px] font-semibold text-[#515151] leading-tight">{title}</h3>
         </div>
         <p className="text-md lg:text-[16.5px] text-gray-500 leading-relaxed font-normal">
             {description}
@@ -27,7 +27,7 @@ const HeroSection4 = () => {
         <section className="w-full max-w-[98%] mx-auto px-4 py-12 lg:py-20">
             <div className="bg-[#30A0FF] rounded-[2.5rem] p-10 lg:px-14 lg:pt-14 lg:pb-0 relative overflow-hidden flex flex-col gap-10">
                 {/* Header Row */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 z-10 w-full relative max-w-[1420px] mx-auto">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
                     {/* Left Header */}
                     <div className="flex flex-col gap-6 lg:w-1/2">
                         <div className="bg-white rounded-full px-5 py-2.5 flex items-center gap-3 w-max shadow-sm">
@@ -42,12 +42,12 @@ const HeroSection4 = () => {
                     {/* Right Header */}
                     <div className="flex flex-col gap-6 lg:w-[452px] text-white/90 lg:pt-4">
                         <p className="text-sm lg:text-[15px] leading-relaxed font-light">
-                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <button className="bg-[#FFE100] hover:bg-[#f2d600] transition-colors text-black rounded-full pl-6 pr-2 py-2 flex items-center gap-3 w-max shadow-sm">
-                            <span className="text-[15px] font-medium">Explore Now</span>
-                            <div className="bg-white rounded-full p-2 flex items-center justify-center">
-                                <ArrowUpRight className="w-4 h-4 text-black" strokeWidth={2.5} />
+                        <button className="group flex items-center gap-3 bg-[#FCF01E] pl-6 pr-2 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 w-fit">
+                            <span className="text-slate-900 ml-2">Explore Now</span>
+                            <div className="bg-white rounded-full p-2 group-hover:bg-slate-50 transition-colors">
+                                <ArrowUpRight className="size-5 text-slate-900" />
                             </div>
                         </button>
                     </div>

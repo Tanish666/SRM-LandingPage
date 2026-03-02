@@ -12,7 +12,7 @@ const HomeSection10 = () => {
                 <div className="mb-20">
                     <div className="flex flex-col items-center relative mb-12">
                         {/* Pill */}
-                        <div className="flex items-center gap-2 bg-[#DBDBDB]/90 border border-gray-200 rounded-full px-4 py-1.5 mb-10 shadow-sm">
+                        <div className="flex items-center gap-2 bg-[#F9F9F9] border border-[#DBDBDB] rounded-full px-4 py-1.5 mb-10 shadow-sm">
                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
                             <span className="text-sm font-medium text-gray-700">News & Events</span>
                         </div>

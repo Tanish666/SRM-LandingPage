@@ -13,7 +13,7 @@ const HemeSection6 = () => {
                 {/* Header Section */}
                 <div className="flex flex-col items-center mb-12">
                     {/* Pill */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-white shadow-sm mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#DBDBDB] bg-[#F9F9F9] shadow-sm mb-6">
                         <div className="w-2 h-2 rounded-full bg-[#0066CC]"></div>
                         <span className="text-sm text-gray-700 font-medium">Research</span>
                     </div>

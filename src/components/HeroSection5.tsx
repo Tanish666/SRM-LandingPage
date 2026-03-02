@@ -19,7 +19,7 @@ export default function HeroSection5() {
                 {/* Left Column: Latest News */}
                 <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col h-[520px] pb-4">
                     <div className="bg-[#FFD700] rounded-lg py-2 text-center shadow-sm z-10 mx-1">
-                        <h3 className={`${marcellus.className} text-[28px] text-slate-900 tracking-wide`}>Latest News</h3>
+                        <h3 className={`${marcellus.className} text-[28px] text-[#000000] tracking-wide`}>Latest News</h3>
                     </div>
                     <div className="flex-1 overflow-y-auto px-7 py-6 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FFD700] [&::-webkit-scrollbar-thumb]:rounded-full">
                         {[1, 2, 3, 4].map((item, index) => (
@@ -86,8 +86,8 @@ export default function HeroSection5() {
                         <div className="relative border border-slate-300/80 rounded-[24px] p-8 lg:p-10 h-full flex flex-col justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group">
                             {/* Quotes Blocks */}
                             <div className="absolute top-10 left-10 flex gap-[12px] z-0">
-                                <img src="sec5Svg.svg" alt="" />
-                                <img src="sec5Svg.svg" alt="" />
+                                <img src="sec5SVG.svg" alt="" />
+                                <img src="sec5SVG.svg" alt="" />
                             </div>
                             <div className="relative z-10">
                                 <p className="text-[#64748B] text-[15px] lg:text-[15.5px] leading-[1.8] mb-8 group-hover:text-slate-700 transition-colors w-full sm:w-[95%]">
