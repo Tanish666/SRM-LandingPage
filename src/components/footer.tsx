@@ -93,7 +93,7 @@ function Footer() {
           }}
         >
           <div
-            className="bg-white text-zinc-800 text-[10px] sm:text-xs md:text-sm py-2 px-12 md:px-24 lg:w-[1100px] flex items-center justify-center text-center font-semibold"
+            className="bg-white text-[#000000] text-[10px] sm:text-xs md:text-sm py-2 px-12 md:px-24 lg:w-[1100px] flex items-center justify-center text-center font-semibold"
             style={{
               clipPath: "polygon(35px 0, calc(100% - 35px) 0, 100% 100%, 0 100%)"
             }}
