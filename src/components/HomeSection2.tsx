@@ -20,11 +20,11 @@ const HomeSection2 = () => {
                     <span className="text-sm font-medium text-slate-600 tracking-wide uppercase">About Us</span>
                 </div>
 
-                <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[3.5rem] text-slate-900 mb-8 leading-tight max-w-4xl`}>
+                <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 mb-8 leading-tight whitespace-nowrap text-center w-full max-w-none`}>
                     Shaping Healthcare Leaders For A Better Tomorrow
                 </h2>
 
-                <p className="text-slate-500/90 max-w-3xl text-lg md:text-xl leading-relaxed font-light">
+                <p className="text-slate-500/90 max-w-5xl text-lg md:text-[17px] leading-relaxed font-light">
                     Welcome To SRM Institute Of Allied Health Sciences, A Pioneering Institution Where Academic Excellence Meets Clinical Innovation. Our Programs Are Designed To Empower Students
                 </p>
             </div>
