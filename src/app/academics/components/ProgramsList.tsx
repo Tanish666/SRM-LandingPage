@@ -8,38 +8,40 @@ const marcellus = Marcellus({
 })
 
 const programs = [
-    { name: "B.Sc. Cardio Perfusion Technology", duration: "4 Years", eligibility: "10 + 2 with PCB / PCM" },
-    { name: "B.Sc. Clinical Psychology", duration: "4 Years", eligibility: "10 + 2 with PCB / PCM" },
-    { name: "B.Sc. Dialysis Technology", duration: "4 Years", eligibility: "10 + 2 with PCB / PCM" },
-    { name: "B.Sc. Medical Imaging Technology", duration: "4 Years", eligibility: "10 + 2 with PCB / PCM" },
-    { name: "B.Sc. Physician Assistant", duration: "4 Years", eligibility: "10 + 2 with PCB / PCM" },
-    { name: "B.Sc. Cardio Perfusion Technology", duration: "4 Years", eligibility: "10 + 2 with PCB / PCM" },
+    { name: "B.Sc Cardio Perfusion Technology", duration: "3 Year" },
+    { name: "B.Sc Clinical Psychology", duration: "3 Year" },
+    { name: "B.Sc Cardio Perfusion Technology", duration: "3 Year" },
+    { name: "B.Sc Medical Imaging Technology", duration: "3 Year" },
+    { name: "B.Sc Physician Assistant", duration: "3 Year" },
+    { name: "B.Sc Cardio Perfusion Technology", duration: "3 Year" },
 ]
 
 const ProgramsList = () => {
     return (
         <section className="flex flex-col items-center justify-center w-full px-8 md:px-20 py-16">
-            <h2 className={`${marcellus.className} text-3xl md:text-4xl text-black mb-10 text-center`}>
+            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-10 text-center`}>
                 Our Allied Health Sciences Programs
             </h2>
 
-            <div className="w-full max-w-6xl mx-auto rounded-[30px] border border-gray-200 overflow-hidden shadow-sm bg-white">
+            <div className="w-full max-w-6xl mx-auto rounded-[21.04px] border border-gray-200 overflow-hidden shadow-sm bg-[#EEEEEE]">
                 {/* Header Bar */}
-                <div className="bg-[#0070c0] p-4 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center bg-[#0070c0] border-2 border-white rounded-full p-1 overflow-hidden shrink-0">
-                        <button className="px-6 py-2 bg-white text-[#0070c0] rounded-full font-medium whitespace-nowrap shadow-sm">
-                            Undergraduate
+                <div className="bg-[#0071BC] p-4 px-6 flex flex-col md:flex-row items-center justify-between gap-6 rounded-b-[21.04px]">
+                    {/* Toggle Buttons */}
+                    <div className="flex items-center bg-[#FFD812] rounded-full p-1 overflow-hidden shrink-0">
+                        <button className="px-6 py-2 bg-white text-gray-900 rounded-full font-medium whitespace-nowrap shadow-sm">
+                            Under Graduate
                         </button>
-                        <button className="px-6 py-2 text-[#FFD812] font-medium whitespace-nowrap ml-2">
-                            Postgraduate
+                        <button className="px-6 py-2 text-gray-900 font-medium whitespace-nowrap">
+                            Post Graduate
                         </button>
                     </div>
 
-                    <div className="flex-1 w-full flex items-center bg-white rounded-full overflow-hidden max-w-xl shadow-inner border border-gray-100 pl-4 py-1 pr-1">
+                    {/* Search Bar */}
+                    <div className="flex-1 w-full flex items-center bg-white rounded-full overflow-hidden max-w-2xl border border-gray-100 pl-6 py-1 pr-1">
                         <input
                             type="text"
-                            placeholder="Search Syllabus & Programs"
-                            className="flex-1 px-4 py-2 outline-none text-gray-700 bg-transparent text-sm placeholder-gray-400"
+                            placeholder="Search Your Program...."
+                            className="flex-1 px-2 py-2 outline-none text-gray-700 bg-transparent text-sm placeholder-gray-300"
                         />
                         <button className="bg-[#FFD812] text-gray-900 px-8 py-2.5 rounded-full font-medium shadow-sm hover:bg-yellow-400 transition-colors text-sm">
                             Search
@@ -48,22 +50,21 @@ const ProgramsList = () => {
                 </div>
 
                 {/* List flex-col spacing */}
-                <div className="bg-[#f8f9fa]">
+                <div className="bg-[#EEEEEE]">
                     {programs.map((program, idx) => (
-                        <div key={idx} className={`flex flex-col md:flex-row justify-between items-start md:items-center p-6 md:px-10 ${idx !== programs.length - 1 ? 'border-b border-gray-200' : ''}`}>
+                        <div key={idx} className={`flex flex-col md:flex-row justify-between items-start md:items-center py-5 px-6 md:px-10 ${idx !== programs.length - 1 ? 'border-b border-gray-100' : ''}`}>
                             <div className="mb-4 md:mb-0">
-                                <h3 className="text-[17px] font-medium text-gray-900 mb-[2px]">{program.name}</h3>
-                                <p className="text-[13px] text-gray-500 flex items-center gap-3">
+                                <h3 className={`${marcellus.className} text-[20px] text-gray-900 mb-[4px]`}>{program.name}</h3>
+                                <div className="text-[13px] text-gray-500 flex items-center gap-4">
                                     <span>Duration : {program.duration}</span>
-                                    <span className="text-gray-300">|</span>
-                                    <span className="text-[#0070c0] font-medium">Eligibility : {program.eligibility}</span>
-                                </p>
+                                    <button className="text-[#0070c0] hover:underline font-medium">Explore Program</button>
+                                </div>
                             </div>
                             <div className="flex items-center gap-3">
-                                <button className="px-6 py-2 bg-[#0070c0] text-white rounded-full font-medium text-[13px] hover:bg-blue-700 transition-colors">
-                                    View Syllabus
+                                <button className="px-8 py-2.5 bg-[#0070c0] text-white rounded-full font-medium text-[13px] hover:bg-blue-700 transition-all">
+                                    Check Eligibly
                                 </button>
-                                <button className="px-6 py-2 bg-[#FFD812] text-gray-900 rounded-full font-medium text-[13px] hover:bg-yellow-400 transition-colors shadow-sm">
+                                <button className="px-8 py-2.5 bg-[#FFD812] text-gray-900 rounded-full font-medium text-[13px] hover:bg-yellow-400 transition-all shadow-sm">
                                     Apply Now
                                 </button>
                             </div>
