@@ -43,74 +43,74 @@ const HomeSection10 = () => {
                             <div className='w-full h-[1px] border-t my-5 border-dashed border-[#9F9F9F]' />
                             <div className="grid grid-cols-8 gap-y-4 gap-x-2 text-[15px] md:text-[13px] lg:text-sm text-center font-medium">
                                 {/* Header Row */}
-                                <div className="text-gray-500">08.</div>
-                                <div className="text-gray-500">Mo</div>
-                                <div className="text-gray-500">Tu</div>
-                                <div className="text-gray-500">We</div>
-                                <div className="text-gray-500">Th</div>
-                                <div className="text-gray-500">Fr</div>
-                                <div className="text-gray-500">Sa</div>
-                                <div className="text-gray-500">Su</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">08.</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">Mo</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">Tu</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">We</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">Th</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">Fr</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">Sa</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">Su</div>
 
                                 {/* Row 1 */}
-                                <div className="text-gray-500 text-[14px] leading-relaxed">31</div>
-                                <div className="text-gray-500">28</div>
-                                <div className="text-gray-500">29</div>
-                                <div className="text-gray-500">30</div>
-                                <div className="text-gray-500">31</div>
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333] text-[14px]">31</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">28</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">29</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">30</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">31</div>
+                                <div className="flex items-center justify-center h-7">1</div>
+                                <div className="flex items-center justify-center h-7">2</div>
+                                <div className="flex items-center justify-center h-7">3</div>
 
                                 {/* Row 2 */}
-                                <div className="text-gray-500 text-[14px] leading-relaxed">32</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333] text-[14px]">32</div>
                                 <div className="bg-yellow-400 rounded-sm font-semibold flex items-center justify-center w-7 h-7 mx-auto">4</div>
-                                <div>5</div>
-                                <div>6</div>
-                                <div>7</div>
-                                <div>8</div>
-                                <div>9</div>
-                                <div>10</div>
+                                <div className="flex items-center justify-center h-7">5</div>
+                                <div className="flex items-center justify-center h-7">6</div>
+                                <div className="flex items-center justify-center h-7">7</div>
+                                <div className="flex items-center justify-center h-7">8</div>
+                                <div className="flex items-center justify-center h-7">9</div>
+                                <div className="flex items-center justify-center h-7">10</div>
 
                                 {/* Row 3 */}
-                                <div className="text-gray-500 text-[14px] leading-relaxed">33</div>
-                                <div>11</div>
-                                <div>12</div>
-                                <div>13</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333] text-[14px]">33</div>
+                                <div className="flex items-center justify-center h-7">11</div>
+                                <div className="flex items-center justify-center h-7">12</div>
+                                <div className="flex items-center justify-center h-7">13</div>
                                 <div className="bg-yellow-400 rounded-sm font-semibold flex items-center justify-center w-7 h-7 mx-auto">14</div>
-                                <div>15</div>
-                                <div>16</div>
-                                <div>17</div>
+                                <div className="flex items-center justify-center h-7">15</div>
+                                <div className="flex items-center justify-center h-7">16</div>
+                                <div className="flex items-center justify-center h-7">17</div>
 
                                 {/* Row 4 */}
-                                <div className="text-gray-500 text-[14px] leading-relaxed">34</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333] text-[14px]">34</div>
                                 <div className="bg-yellow-400 rounded-sm font-semibold flex items-center justify-center w-7 h-7 mx-auto">18</div>
-                                <div>19</div>
-                                <div>20</div>
-                                <div>21</div>
-                                <div>22</div>
-                                <div>23</div>
-                                <div>24</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">19</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">20</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">21</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">22</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">23</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333]">24</div>
 
                                 {/* Row 5 */}
-                                <div className="text-gray-500 text-[14px] leading-relaxed">35</div>
-                                <div>25</div>
-                                <div>26</div>
-                                <div>27</div>
-                                <div>28</div>
-                                <div>29</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333] text-[14px]">35</div>
+                                <div className="flex items-center justify-center h-7">25</div>
+                                <div className="flex items-center justify-center h-7">26</div>
+                                <div className="flex items-center justify-center h-7">27</div>
+                                <div className="flex items-center justify-center h-7">28</div>
+                                <div className="flex items-center justify-center h-7">29</div>
                                 <div className="bg-yellow-400 rounded-sm font-semibold flex items-center justify-center w-7 h-7 mx-auto">30</div>
-                                <div>31</div>
+                                <div className="flex items-center justify-center h-7">31</div>
 
                                 {/* Row 6 */}
-                                <div className="text-gray-500 text-[14px] leading-relaxed">36</div>
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
-                                <div>4</div>
-                                <div>5</div>
-                                <div>6</div>
-                                <div>7</div>
+                                <div className="flex items-center justify-center h-7 text-[#333333] text-[14px]">36</div>
+                                <div className="flex items-center justify-center h-7">1</div>
+                                <div className="flex items-center justify-center h-7">2</div>
+                                <div className="flex items-center justify-center h-7">3</div>
+                                <div className="flex items-center justify-center h-7">4</div>
+                                <div className="flex items-center justify-center h-7">5</div>
+                                <div className="flex items-center justify-center h-7">6</div>
+                                <div className="flex items-center justify-center h-7">7</div>
                             </div>
                         </div>
 
@@ -170,7 +170,7 @@ const HomeSection10 = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                         {/* Card 1 */}
-                        <div className="bg-[#A4DEFF] rounded-xl h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
+                        <div className="bg-[#A4DEFF] rounded-[20px] h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
                             <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
                                 <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg]" size={40} strokeWidth={1.5} />
                             </div>
@@ -180,7 +180,7 @@ const HomeSection10 = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-[#FFF3B0] rounded-xl h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
+                        <div className="bg-[#FFF3B0] rounded-[20px] h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
                             <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
                                 <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg]" size={40} strokeWidth={1.5} />
                             </div>
@@ -190,7 +190,7 @@ const HomeSection10 = () => {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="bg-[#E0E0E0] rounded-xl h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
+                        <div className="bg-[#E0E0E0] rounded-[20px] h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
                             <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
                                 <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg]" size={40} strokeWidth={1.5} />
                             </div>
