@@ -15,19 +15,19 @@ const AboutSection6 = () => {
             name: "Dr. T. R. Paarivendhar",
             role: "Founder",
             desc: "SRM Institute Of Science And Technology",
-            imgSrc: "sec4Pic1.svg", // Placeholders
+            imgSrc: "ASec6Pic1.svg", // Placeholders
         },
         {
             name: "Dr. R. Shivakumar",
             role: "Chairman",
             desc: "SRM Group Of Institutions, Ramapuram & Trichy",
-            imgSrc: "sec2Pic2.svg",
+            imgSrc: "ASec6Pic2.svg",
         },
         {
             name: "Mr. S. Niranjan",
             role: "Co-Chairman",
             desc: "SRM Group Of Institutions, Ramapuram & Trichy",
-            imgSrc: "sec3Pic1.svg",
+            imgSrc: "ASec6Pic3.svg",
         }
     ]
 
@@ -38,7 +38,7 @@ const AboutSection6 = () => {
                 <div>
                     <div className="flex items-center gap-2.5 border border-slate-200 px-5 py-2 rounded-full mb-6 bg-white shrink-0 shadow-sm w-max">
                         <span className="size-2 bg-[#FFD100] rounded-full"></span>
-                        <span className="text-sm font-medium text-slate-600 tracking-wide uppercase">Our Leaders</span>
+                        <span className="text-sm font-medium text-slate-600 tracking-wide">our Leadership</span>
                     </div>
 
                     <h2 className={`${marcellus.className} text-3xl md:text-[44px] text-slate-900 leading-tight max-w-2xl`}>
@@ -60,9 +60,12 @@ const AboutSection6 = () => {
                     <div key={idx} className="flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform">
                         <div className="w-full aspect-square rounded-[2rem] bg-slate-200 overflow-hidden mb-6 relative">
                             {/* Replace with leader image */}
-                            <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-700">
-                                [Photo Placeholder]
-                            </div>
+                            <Image
+                                src={leader.imgSrc}
+                                alt={leader.name}
+                                fill
+                                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                            />
                         </div>
                         <h3 className={`${marcellus.className} text-[26px] text-slate-900 mb-1`}>{leader.name}</h3>
                         <p className="text-[#006BB3] font-medium text-[15px] mb-1">{leader.role}</p>
