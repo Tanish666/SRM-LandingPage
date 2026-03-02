@@ -17,7 +17,7 @@ const AboutSection5 = () => {
     ]
 
     return (
-        <section className="py-20 px-6 max-w-7xl mx-auto flex flex-col items-center">
+        <section className="py-24 md:py-32 px-6 max-w-7xl mx-auto flex flex-col items-center">
 
             <div className="flex items-center gap-2.5 bg-[#F9F9F9]/90 border border-[#DBDBDB] px-5 py-2 rounded-full mb-6 bg-white shrink-0 shadow-sm">
                 <span className="size-2 bg-[#0066FF] rounded-full"></span>
@@ -28,20 +28,20 @@ const AboutSection5 = () => {
                 Accredited For Excellence In Technical Education
             </h2>
 
-            <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4">
-                <button className="flex items-center justify-center text-slate-800 hover:text-blue-600 transition-colors">
+            <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4 gap-4">
+                <button className="flex items-center justify-center text-slate-800 hover:text-blue-600 transition-colors shrink-0">
                     <ChevronLeft className="size-10 font-thin" strokeWidth={1} />
                 </button>
 
-                <div className="flex-1 flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div className="flex-1 flex flex-wrap justify-center items-center gap-10 md:gap-16 py-4">
                     {marqueeLogos.map((logo, idx) => (
-                        <div key={idx} className="w-[140px] md:w-[220px] h-auto flex items-center justify-center">
-                            <img src={`/${logo}`} alt={`Logo ${idx}`} className="max-w-full max-h-[80px] object-contain" />
+                        <div key={idx} className="w-[140px] md:w-[200px] flex items-center justify-center">
+                            <img src={`/${logo}`} alt={`Logo ${idx}`} className="max-w-full max-h-[90px] object-contain" />
                         </div>
                     ))}
                 </div>
 
-                <button className="flex items-center justify-center text-slate-800 hover:text-blue-600 transition-colors">
+                <button className="flex items-center justify-center text-slate-800 hover:text-blue-600 transition-colors shrink-0">
                     <ChevronRight className="size-10 font-extralight" strokeWidth={1} />
                 </button>
             </div>
