@@ -13,7 +13,7 @@ export default function HeroMarquee() {
 
   return (
     <div className='pt-5'>
-      <div className='bg-[#FFEC22] py-3 text-lg font-semibold uppercase tracking-wide border-y border-black/5 rotate-[0.95deg]'>
+      <div className='bg-[#FFEC22] py-4 text-lg font-semibold uppercase tracking-wide border-y border-black/5 rotate-[0.95deg]'>
         <Marquee className=' [--duration:30s]' pauseOnHover>
           {items.map((text, i) => (
             <div key={i} className='flex items-center gap-3 whitespace-nowrap'>
