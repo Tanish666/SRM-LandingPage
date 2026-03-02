@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Marcellus } from 'next/font/google'
+import CTAButton from './ui/CTA';
 const marcellus = Marcellus({
     subsets: ['latin'],
     weight: ['400'],
@@ -44,12 +45,10 @@ const HeroSection4 = () => {
                         <p className="text-sm lg:text-[15px] leading-relaxed font-light">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <button className="group flex items-center gap-3 bg-[#FCF01E] pl-6 pr-2 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 w-fit">
-                            <span className="text-slate-900 ml-2">Explore Now</span>
-                            <div className="bg-white rounded-full p-2 group-hover:bg-slate-50 transition-colors">
-                                <ArrowUpRight className="size-5 text-slate-900" />
-                            </div>
-                        </button>
+                        <CTAButton
+                            text="Explore Now"
+                            onClick={() => console.log('Explore Now button clicked')}
+                        />
                     </div>
                 </div>
 

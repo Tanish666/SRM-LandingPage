@@ -4,6 +4,7 @@ import React from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import CTAButton from './ui/CTA'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -33,12 +34,10 @@ const HomeSection2 = () => {
             <div className="relative">
                 {/* Centered Read More Button - Absolutely positioned to float in the center */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 md:-translate-y-12 z-20">
-                    <button className="group flex items-center gap-3 bg-[#FCF01E] pl-8 pr-2 py-2 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                        <span className="font-semibold text-slate-900 text-lg">Read More</span>
-                        <div className="bg-white rounded-full p-2 group-hover:bg-slate-50 transition-colors">
-                            <ArrowUpRight className="size-6 text-slate-900" />
-                        </div>
-                    </button>
+                    <CTAButton
+                        text="Read More"
+                        onClick={() => console.log('Read More button clicked')}
+                    />
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-6 md:gap-20 max-w-6xl mx-auto px-4 md:px-0">

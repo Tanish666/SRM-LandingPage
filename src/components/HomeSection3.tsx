@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import CTAButton from './ui/CTA'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -36,13 +37,10 @@ export default function HomeSection3() {
                     <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-[80%] text-nowrap`}>
                         Our Allied Health<br className="hidden lg:block" /> Sciences Programs
                     </h2>
-
-                    <button className="group flex items-center gap-3 bg-[#FCF01E] pl-6 pr-2 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-                        <span className="text-slate-900 ml-2">Explore Now</span>
-                        <div className="bg-white rounded-full p-2 group-hover:bg-slate-50 transition-colors">
-                            <ArrowUpRight className="size-5 text-slate-900" />
-                        </div>
-                    </button>
+                    <CTAButton
+                        text="Explore Now"
+                        onClick={() => console.log('Explore button clicked')}
+                    />
                 </div>
 
                 {/* Middle Column */}
