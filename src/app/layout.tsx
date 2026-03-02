@@ -1,8 +1,8 @@
 
 import "./globals.css";
 import type { Metadata } from "next";
-
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 import { Montserrat, Inter, Space_Grotesk } from 'next/font/google';
 
 const inter = Inter({
@@ -17,8 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Club Duelz | The Ultimate Football Matchmaking",
-  description: "Elite matchmaking for the streets. Challenge rivals, rise through the ranks, and secure your legend in the local circuit.",
+  title: "SRM Institute of Science and Technology",
 };
 
 export default function RootLayout({
@@ -32,10 +31,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`antialiased bg-[#050B18] text-slate-100 ${inter.variable} ${spaceGrotesk.variable} font-sans selection:bg-[#00F2FF] selection:text-[#050B18]`}
+        className={`antialiased bg-[#FFFFFF99]  ${inter.className} text-black`}
       >
+        <Navbar />
         {children}
       </body>
+      <Footer />
     </html>
   );
 }

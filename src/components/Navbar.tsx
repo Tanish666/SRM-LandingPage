@@ -1,87 +1,54 @@
-"use client"
-import { NavLinks } from "@/app/constants/NavLinks"
-import React, { useState } from "react"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+'use client'
+import React from 'react'
+import { useRouter, usePathname } from 'next/navigation'
 
-import Link from "next/link"
-import { signOut, useSession } from "next-auth/react"
-import { useRouter } from "next/navigation"
-import { Loader } from "lucide-react"
+const Navbar = () => {
+    const router = useRouter()
+    const pathname = usePathname()
 
-export const Navbar = () => {
-  const { status } = useSession()
+    const navLinks = [
+        { label: 'Home', path: '/' },
+        { label: 'About Us', path: '/aboutUs' },
+        { label: 'Academics', path: '/academics' },
+        { label: 'Campus Life', path: '/campus-life' },
+        { label: 'Professional Activities', path: '/professional-activities' },
+        { label: 'Careers', path: '/careers' },
+    ]
 
-  const [loggingOut, setLoggingOut] = useState(false)
-  const router = useRouter()
-  let pathname = usePathname() || "/"
-
-  return (
-    <nav className="flex h-fit w-full items-center justify-center py-4 md:py-9">
-      <div className="flex w-[1300px] items-center justify-between px-4 md:ml-8 md:px-6">
-        <div className="w-[160px] md:w-[220px]">
-          <img
-            className="cursor-pointer"
-            src={"logo.webp"}
-            alt="TechKareer"
-            onClick={() => router.push("/")}
-          />
-        </div>
-
-        <div className="hidden flex-row items-center justify-center gap-4 md:flex">
-          {NavLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.path}
-              className={cn(
-                "rounded-full border-[1px] border-solid border-transparent bg-transparent px-5 py-3 text-xs font-bold transition-all",
-                "transition-all duration-500 hover:border-gray-200/60",
-                pathname === link.path
-                  ? "border-gray-200/60"
-                  : "border-transparent",
-              )}
-            >
-              <p>{link.name}</p>
-            </Link>
-          ))}
-        </div>
-        <div className="flex flex-row gap-5">
-          {/* <ReactLink
-            spy={true}
-            smooth={true}
-            duration={500}
-            to={"opportunities"}
-          >
-            <button className="rounded-full border-[.1px] border-solid border-gray-200/10 bg-[#15151f] px-4 py-2 font-bold tracking-wider duration-300 hover:bg-[#F9F9F9] hover:text-[#000] md:px-6 md:py-3">
-              <p className="text-xs md:text-sm">OPPORTUNITIES</p>
-            </button>
-          </ReactLink> */}
-          {status == "authenticated" ? (
-            <button
-              onClick={() => {
-                router.push("/opportunities")
-              }}
-              className="flex min-w-[100px] items-center justify-center rounded-full border-[.1px] border-solid border-gray-200/10 bg-white/90 px-4 py-2 font-bold tracking-wider md:px-6 md:py-3"
-            >
-              <p className="text-xs text-black md:text-sm">
-                {loggingOut ? <Loader className="animate-spin" /> : "DASHBOARD"}
-              </p>
-            </button>
-          ) : (
-            <Link href={"/login"}>
-              <button className="rounded-full border-[.1px] border-solid border-gray-200/10 bg-white/90 px-4 py-2 font-bold tracking-wider duration-300 hover:bg-[#F9F9F9] hover:text-[#000] md:px-6 md:py-3">
-                <p className="text-xs text-black md:text-sm">LOGIN</p>
-              </button>
-            </Link>
-          )}
-        </div>
-      </div>
-    </nav>
-  )
+    return (
+        <nav className='sticky top-0 z-50 bg-[#FFFFFF] flex items-center justify-between w-full px-16 py-1 shadow-sm'>
+            <div className='flex items-center justify-between'>
+                <img src="srmLogo.svg" alt="" className="cursor-pointer" onClick={() => router.push('/')} />
+            </div>
+            <div className='flex items-center'>
+                <ul className='flex items-center gap-8 cursor-pointer list-none'>
+                    {navLinks.map((link) => {
+                        const active = pathname === link.path;
+                        return (
+                            <li
+                                key={link.label}
+                                onClick={() => router.push(link.path)}
+                                className={`transition-all duration-200 text-[15px] font-medium ${active
+                                    ? 'text-blue-500 hover:text-blue-600'
+                                    : 'text-slate-500 hover:text-black'
+                                    }`}
+                            >
+                                {link.label}
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+            <div className='flex items-center bg-[#FFEB3B] rounded-full p-2'>
+                <button className='bg-white text-black px-5 py-2.5 rounded-full font-medium leading-none shadow-sm transition-all hover:bg-gray-100'>
+                    Admission
+                </button>
+                <button className='text-black px-5 py-2.5 font-medium leading-none transition-all hover:opacity-80'>
+                    Contact
+                </button>
+            </div>
+        </nav>
+    )
 }
 
-// import React from "react";
-
-// export const Navbar = () => {
-//   return <div>Navbar</div>;
-// };
+export default Navbar

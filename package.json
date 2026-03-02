@@ -24,6 +24,7 @@
     "@reduxjs/toolkit": "^2.8.2",
     "@studio-freight/lenis": "^1.0.42",
     "@studio-freight/react-lenis": "^0.0.47",
+    "@tabler/icons-preact": "^3.37.1",
     "@tabler/icons-react": "^3.31.0",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
