@@ -22,7 +22,7 @@ const AboutSection3 = () => {
                     <h3 className={`${marcellus.className} text-5xl lg:text-[56px] text-[#0071BC] mb-4 font-light`}>
                         {card.num}
                     </h3>
-                    <p className={`${card.textCol} text-[15px] font-medium leading-relaxed max-w-[200px]`}>
+                    <p className={`text-[#515151] text-[15px] leading-relaxed max-w-[200px] `}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     </p>
                 </div>
