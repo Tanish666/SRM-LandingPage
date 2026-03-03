@@ -15,7 +15,13 @@ function Footer() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12">
         {/* Column 1: Logo & Social */}
         <div className="flex flex-col gap-6">
-          <div className="rounded-xl p-3 inline-block w-[260px]">
+          <div className="inline-block" style={{
+            width: '208px',
+            height: '156px',
+            boxShadow: '0px 4px 4px rgba(124, 124, 124, 0.25)',
+            borderRadius: '5px',
+          }}>
+
             <img src="/footerLogo.svg" alt="SRM Logo" className="w-full h-auto object-contain" />
           </div>
           <p className="text-[#E0F2FE] text-[15px] leading-relaxed pr-4 font-light">
