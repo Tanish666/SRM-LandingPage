@@ -27,7 +27,7 @@ const AboutSection9 = () => {
 
                 {/* Navigation Arrows Container - Positioned above cards on the right */}
                 <div className="flex justify-end gap-3 mb-8 relative z-20 w-full max-w-[1300px] mx-auto px-4 lg:px-0">
-                    <button className="w-10 h-10 rounded-full bg-[#FFD100] flex items-center justify-center text-[#0051A4] shadow-lg hover:scale-110 active:scale-95 transition-all">
+                    <button className="w-10 h-10 rounded-full bg-[#FFD100] flex items-center justify-center text-white    shadow-lg hover:scale-110 active:scale-95 transition-all">
                         <ArrowLeft size={20} strokeWidth={2.5} />
                     </button>
                     <button className="w-10 h-10 rounded-full bg-[#0051A4] flex items-center justify-center text-white shadow-lg border border-white/20 hover:scale-110 active:scale-95 transition-all">
@@ -49,11 +49,11 @@ const AboutSection9 = () => {
                             {/* Inner Card Name Tag with Line Logic */}
                             <div className="absolute bottom-0 left-0 right-0 z-20 h-16 backdrop-blur-[2px] flex items-center justify-center">
                                 <div className="flex items-center gap-3 w-full px-4">
-                                    <div className="h-[2px] flex-grow bg-[#FFD100]" />
-                                    <span className="text-white text-[13px] lg:text-[14px] font-medium tracking-wide uppercase whitespace-nowrap">
+                                    <div className="h-[1.5px] w-7 shrink-0 bg-[#FFD812]" />
+                                    <span className={`${marcellus.className} text-white text-[13px] lg:text-[14px]  tracking-wide uppercase whitespace-nowrap`}>
                                         {item.title}
                                     </span>
-                                    <div className="h-[2px] flex-grow bg-[#FFD100]" />
+                                    <div className="h-[1.5px] flex-grow bg-[#FFD812]" />
                                 </div>
                             </div>
                         </div>

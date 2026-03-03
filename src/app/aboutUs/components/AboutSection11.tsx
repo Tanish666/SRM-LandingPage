@@ -41,7 +41,7 @@ const AboutSection11 = () => {
                     <h2 className={`${marcellus.className} text-4xl md:text-[60px] text-slate-900 mb-8 leading-tight`}>
                         Our Principles
                     </h2>
-                    <p className="text-[#3E3E3E] text-[18px] leading-[1.8] max-w-lg mb-8 font-normal">
+                    <p className="text-[#3E3E3E] text-[15px] leading-[1.8] max-w-xl mb-8 font-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
                     </p>
                 </div>

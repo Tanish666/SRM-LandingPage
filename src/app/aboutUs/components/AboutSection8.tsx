@@ -22,11 +22,11 @@ const AboutSection8 = () => {
 
             <div className="relative w-full max-w-5xl flex flex-col items-center">
                 {/* Vertical Dotted Line */}
-                <div className="absolute top-10 bottom-0 left-1/2 -translate-x-1/2 border-l-2 border-dashed border-gray-400 h-[90%]"></div>
+                <div className="absolute top-10 bottom-0 left-1/2 -translate-x-1/2 border-l-2 border-dashed border-gray-400 h-[85%]"></div>
 
                 {/* Timeline Items */}
                 {/* 2001 */}
-                <div className="w-full relative flex items-center mb-24">
+                <div className="w-full relative flex  mb-24">
                     <div className="w-1/2 pr-14 text-right">
                         <h3 className={`text-[30px] text-[#000000]`}>2001</h3>
                     </div>
@@ -41,7 +41,7 @@ const AboutSection8 = () => {
                 </div>
 
                 {/* 2003 */}
-                <div className="w-full relative flex items-center mb-24 flex-row-reverse">
+                <div className="w-full relative flex mb-24 flex-row-reverse">
                     <div className="w-1/2 pl-14">
                         <h3 className={`text-[30px] text-[#000000]`}>2003</h3>
                     </div>
@@ -56,7 +56,7 @@ const AboutSection8 = () => {
                 </div>
 
                 {/* 2008 */}
-                <div className="w-full relative flex items-center mb-24">
+                <div className="w-full relative flex  mb-24">
                     <div className="w-1/2 pr-14 text-right">
                         <h3 className={`text-[30px] text-[#000000]`}>2008</h3>
                     </div>
@@ -71,7 +71,7 @@ const AboutSection8 = () => {
                 </div>
 
                 {/* 2011 */}
-                <div className="w-full relative flex items-center flex-row-reverse">
+                <div className="w-full relative flex  flex-row-reverse">
                     <div className="w-1/2 pl-14">
                         <h3 className={`text-[30px] text-[#000000]`}>2011</h3>
                     </div>
