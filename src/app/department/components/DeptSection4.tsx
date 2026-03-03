@@ -15,11 +15,12 @@ const inter = Inter({
 const DeptSection4 = () => {
     return (
         <section
-            className="relative mx-auto w-full"
+            className="relative mx-auto w-full mt-14"
             style={{
                 width: '1368px',
                 height: '502px',
-                marginTop: '50px'
+                marginTop: '50px',
+                marginBottom: '50px'
             }}
         >
             <div
@@ -39,8 +40,8 @@ const DeptSection4 = () => {
                             <h3
                                 className={`${marcellus.className} text-[45px] text-[#000000] capitalize`}
                                 style={{
-                                    width: '120px', 
-                                    height: '56px', 
+                                    width: '120px',
+                                    height: '56px',
                                     lineHeight: '56px'
                                 }}
                             >
@@ -52,8 +53,8 @@ const DeptSection4 = () => {
                             style={{
                                 fontSize: '15px',
                                 lineHeight: '25px',
-                                width: '485px', 
-                                height: '152px', 
+                                width: '485px',
+                                height: '152px',
                             }}
                         >
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
@@ -85,7 +86,7 @@ const DeptSection4 = () => {
                                 fontSize: '15px',
                                 lineHeight: '25px',
                                 width: '485px',
-                                height: '152px', 
+                                height: '152px',
                             }}
                         >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

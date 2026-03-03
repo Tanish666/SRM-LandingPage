@@ -13,14 +13,14 @@ const DeptSection5 = () => {
             num: "150+", label: "Industry Tie-Ups",
             desc: "Collaborations With Reputed Hospitals, Diagnostic Centers Internships",
             width: '295px', height: '345px', top: '182px', left: '0px',
-            descWidth: '283px' 
+            descWidth: '283px'
         },
         {
             icon: "/section5logo2.png", iconW: 57, iconH: 58,
             num: "100%", label: "Internship Assurance",
             desc: "Guaranteed Hands-On Clinical Training In SRM AHS",
             width: '295px', height: '227px', top: '300px', left: '314px',
-            descWidth: '247px' 
+            descWidth: '247px'
         },
         {
             icon: "/section5logo3.png", iconW: 66, iconH: 66,
@@ -39,10 +39,10 @@ const DeptSection5 = () => {
     ];
 
     return (
-        <section className="w-full bg-white flex justify-center py-20 overflow-hidden">
+        <section className="w-full bg-white flex justify-center py-20 overflow-hidden mb-[-80px]">
             <div className="relative" style={{ width: '1245px', height: '650px' }}>
 
-                {/* 1. Pill Badge */}
+                {/*  Pill Badge */}
                 <div
                     className="absolute flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px]"
                     style={{ width: '217px', height: '41px', left: '514px', top: '0px' }}
@@ -51,7 +51,7 @@ const DeptSection5 = () => {
                     <span className={`${inter.className} text-[16px] text-black capitalize`}>Career Opportunities</span>
                 </div>
 
-                {/* 2. Main Heading */}
+                {/* Main Heading */}
                 <h2
                     className={`${marcellus.className} absolute text-center text-[45px] leading-[56px] text-black capitalize`}
                     style={{ width: '1166px', left: '41.5px', top: '65px' }}
@@ -59,7 +59,7 @@ const DeptSection5 = () => {
                     Empowering The Next Generation Of Healthcare Leaders
                 </h2>
 
-                {/* 3. Subtitle */}
+                {/* Subtitle */}
                 <p
                     className={`${inter.className} absolute text-center text-[#515151] text-[15px] leading-[25px] capitalize`}
                     style={{ width: '623px', left: '312.5px', top: '135px' }}
@@ -67,20 +67,20 @@ const DeptSection5 = () => {
                     Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.
                 </p>
 
-                {/* 4. CTA Button */}
+                {/*  CTA Button */}
                 <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors cursor-pointer"
+                        className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer"
                         style={{
-                            width: '230px',
+                            width: '267px',
                             height: '47px',
                             borderRadius: '33.57px',
                             border: '1.12px solid #E5E5E5',
-                            paddingLeft: '26px',
+                            paddingLeft: '20px',
                             paddingRight: '4px',
                         }}
                     >
-                        <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28px' }}>Explore Program</span>
+                        <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
                         <span
                             className="rounded-full bg-white flex items-center justify-center flex-shrink-0"
                             style={{ width: '39px', height: '38px' }}
@@ -93,7 +93,7 @@ const DeptSection5 = () => {
                     </button>
                 </div>
 
-                {/* 5. Stat Cards */}
+                {/*  Stat Cards */}
                 <div className="absolute w-full" style={{ top: '0px' }}>
                     {stats.map((stat, index) => {
                         const isShortCard = index === 1 || index === 2;
