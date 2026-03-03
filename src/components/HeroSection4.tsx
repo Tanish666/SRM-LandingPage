@@ -31,18 +31,18 @@ const HeroSection4 = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
                     {/* Left Header */}
                     <div className="flex flex-col gap-6 lg:w-1/2">
-                        <div className="bg-white rounded-full px-5 py-2.5 flex items-center gap-3 w-max shadow-sm">
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#FFE100]"></span>
-                            <span className="text-sm font-medium text-gray-800">Discover SRM AHS Advantage</span>
+                        <div className="bg-[#FFFFFF] rounded-full px-5 py-2.5 flex items-center gap-3 w-max shadow-sm">
+                            <span className="w-2.5 h-2.5 rounded-full bg-[#F4CB00]"></span>
+                            <span className="text-sm font-medium text-gray-800">Why Choose SRM AHS</span>
                         </div>
-                        <h2 className={`${marcellus.className} text-white text-4xl lg:text-[3.2rem] font-light tracking-wide leading-[1.2]`}>
+                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl lg:text-[45px]  tracking-wide leading-[1.2]`}>
                             Empowering Future<br />Healthcare Professionals
                         </h2>
                     </div>
 
                     {/* Right Header */}
-                    <div className="flex flex-col gap-6 lg:w-[452px] text-white/90 lg:pt-4">
-                        <p className="text-sm lg:text-[15px] leading-relaxed font-light">
+                    <div className="flex flex-col gap-6 lg:w-[616px] text-white/90 lg:pt-10">
+                        <p className="text-sm lg:text-[15px] leading-relaxed font-light text-[#FFFFFF]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                         <CTAButton

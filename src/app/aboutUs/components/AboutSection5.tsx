@@ -33,7 +33,7 @@ const AboutSection5 = () => {
                     <ChevronLeft className="size-10 font-thin" strokeWidth={1.5} />
                 </button>
 
-                <div className="flex-1 flex flex-wrap justify-center items-center gap-10 md:gap-16 py-4">
+                <div className="flex-1 flex flex-wrap justify-center items-center gap-10 md:gap-24 py-4">
                     {marqueeLogos.map((logo, idx) => (
                         <div key={idx} className="w-[140px] md:w-[200px] flex items-center justify-center">
                             <img src={`/${logo}`} alt={`Logo ${idx}`} className="max-w-full max-h-[190px] object-contain" />
