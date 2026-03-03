@@ -4,6 +4,7 @@ import React from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import CTAButton from './ui/CTA'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -15,16 +16,16 @@ const HomeSection2 = () => {
         <section className="py-24 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-20">
-                <div className="flex items-center gap-2.5 border border-slate-200 px-5 py-2 rounded-full mb-8 bg-white/50 backdrop-blur-sm shadow-sm">
+                <div className="flex items-center gap-2.5 border border-[#DBDBDB] px-5 py-2 rounded-full mb-8 bg-[#F9F9F9] backdrop-blur-sm shadow-sm">
                     <span className="size-2 bg-[#0066FF] rounded-full"></span>
                     <span className="text-sm font-medium text-slate-600 tracking-wide uppercase">About Us</span>
                 </div>
 
-                <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[3.5rem] text-slate-900 mb-8 leading-tight max-w-4xl`}>
+                <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-[#000000] mb-8 leading-tight whitespace-nowrap text-center w-full max-w-none font-medium`}>
                     Shaping Healthcare Leaders For A Better Tomorrow
                 </h2>
 
-                <p className="text-slate-500/90 max-w-3xl text-lg md:text-xl leading-relaxed font-light">
+                <p className="text-[#515151] max-w-5xl text-lg md:text-[17px] leading-relaxed">
                     Welcome To SRM Institute Of Allied Health Sciences, A Pioneering Institution Where Academic Excellence Meets Clinical Innovation. Our Programs Are Designed To Empower Students
                 </p>
             </div>
@@ -33,12 +34,10 @@ const HomeSection2 = () => {
             <div className="relative">
                 {/* Centered Read More Button - Absolutely positioned to float in the center */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 md:-translate-y-12 z-20">
-                    <button className="group flex items-center gap-3 bg-[#FCF01E] pl-8 pr-2 py-2 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                        <span className="font-semibold text-slate-900 text-lg">Read More</span>
-                        <div className="bg-white rounded-full p-2 group-hover:bg-slate-50 transition-colors">
-                            <ArrowUpRight className="size-6 text-slate-900" />
-                        </div>
-                    </button>
+                    <CTAButton
+                        text="Read More"
+                        onClick={() => console.log('Read More button clicked')}
+                    />
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-6 md:gap-20 max-w-6xl mx-auto px-4 md:px-0">

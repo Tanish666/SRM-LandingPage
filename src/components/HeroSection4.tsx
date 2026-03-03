@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Marcellus } from 'next/font/google'
+import CTAButton from './ui/CTA';
 const marcellus = Marcellus({
     subsets: ['latin'],
     weight: ['400'],
@@ -14,7 +15,7 @@ const Card = ({ icon, title, description }: { icon: React.ReactNode, title: stri
             <div className="text-[#30A0FF]">
                 {icon}
             </div>
-            <h3 className="text-base lg:text-[20px] font-semibold text-gray-800 leading-tight">{title}</h3>
+            <h3 className="text-base lg:text-[20px] font-semibold text-[#515151] leading-tight">{title}</h3>
         </div>
         <p className="text-md lg:text-[16.5px] text-gray-500 leading-relaxed font-normal">
             {description}
@@ -27,29 +28,27 @@ const HeroSection4 = () => {
         <section className="w-full max-w-[98%] mx-auto px-4 py-12 lg:py-20">
             <div className="bg-[#30A0FF] rounded-[2.5rem] p-10 lg:px-14 lg:pt-14 lg:pb-0 relative overflow-hidden flex flex-col gap-10">
                 {/* Header Row */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 z-10 w-full relative max-w-[1420px] mx-auto">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
                     {/* Left Header */}
                     <div className="flex flex-col gap-6 lg:w-1/2">
-                        <div className="bg-white rounded-full px-5 py-2.5 flex items-center gap-3 w-max shadow-sm">
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#FFE100]"></span>
-                            <span className="text-sm font-medium text-gray-800">Discover SRM AHS Advantage</span>
+                        <div className="bg-[#FFFFFF] rounded-full px-5 py-2.5 flex items-center gap-3 w-max shadow-sm">
+                            <span className="w-2.5 h-2.5 rounded-full bg-[#F4CB00]"></span>
+                            <span className="text-sm font-medium text-gray-800">Why Choose SRM AHS</span>
                         </div>
-                        <h2 className={`${marcellus.className} text-white text-4xl lg:text-[3.2rem] font-light tracking-wide leading-[1.2]`}>
+                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl lg:text-[45px]  tracking-wide leading-[1.2]`}>
                             Empowering Future<br />Healthcare Professionals
                         </h2>
                     </div>
 
                     {/* Right Header */}
-                    <div className="flex flex-col gap-6 lg:w-[452px] text-white/90 lg:pt-4">
-                        <p className="text-sm lg:text-[15px] leading-relaxed font-light">
-                            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    <div className="flex flex-col gap-6 lg:w-[616px] text-white/90 lg:pt-10">
+                        <p className="text-sm lg:text-[15px] leading-relaxed font-light text-[#FFFFFF]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-                        <button className="bg-[#FFE100] hover:bg-[#f2d600] transition-colors text-black rounded-full pl-6 pr-2 py-2 flex items-center gap-3 w-max shadow-sm">
-                            <span className="text-[15px] font-medium">Explore Now</span>
-                            <div className="bg-white rounded-full p-2 flex items-center justify-center">
-                                <ArrowUpRight className="w-4 h-4 text-black" strokeWidth={2.5} />
-                            </div>
-                        </button>
+                        <CTAButton
+                            text="Explore Now"
+                            onClick={() => console.log('Explore Now button clicked')}
+                        />
                     </div>
                 </div>
 

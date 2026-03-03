@@ -12,7 +12,7 @@ const marcellus = Marcellus({
 
 const HeroSection = () => {
     return (
-        <section className='relative h-[85vh] flex items-center bg-[url("/heroBg.svg")] bg-cover bg-center px-6 md:px-20 overflow-hidden mx-6 md:mx-5 rounded-[1.5rem]'>
+        <section className='relative h-[85vh] flex items-center bg-[url("/heroBg.svg")] bg-cover bg-center px-6 md:px-20 overflow-hidden mx-6 md:mx-5 rounded-[1.5rem] mt-3'>
             <div className='max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 py-20'>
                 {/* Hero Text Content */}
                 <div className='flex-1 lg:max-w-[55%] z-10'>

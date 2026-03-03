@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
+import CTAButton from './ui/CTA'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -24,25 +25,22 @@ export default function HomeSection3() {
 
     return (
         <section className="py-24 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr_1.5fr] gap-12 lg:gap-8 items-center max-w-7xl mx-auto">
 
                 {/* Left Column */}
                 <div className="flex flex-col items-start">
                     <div className="flex items-center gap-2.5 border border-slate-200 px-5 py-2 rounded-full mb-8 bg-white text-sm shadow-sm">
                         <span className="size-2 bg-[#0066FF] rounded-full"></span>
-                        <span className="text-slate-600">Program Offered</span>
+                        <span className="text-[#000000]">Program Offered</span>
                     </div>
 
                     <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-[80%] text-nowrap`}>
                         Our Allied Health<br className="hidden lg:block" /> Sciences Programs
                     </h2>
-
-                    <button className="group flex items-center gap-3 bg-[#FCF01E] pl-6 pr-2 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-                        <span className="font-semibold text-slate-900 ml-2">Explore Now</span>
-                        <div className="bg-white rounded-full p-2 group-hover:bg-slate-50 transition-colors">
-                            <ArrowUpRight className="size-5 text-slate-900" />
-                        </div>
-                    </button>
+                    <CTAButton
+                        text="Explore Now"
+                        onClick={() => console.log('Explore button clicked')}
+                    />
                 </div>
 
                 {/* Middle Column */}
@@ -94,7 +92,7 @@ export default function HomeSection3() {
                                     className={`group flex items-center justify-between py-5 border-b cursor-pointer transition-colors ${activeProgram === program.id ? 'border-slate-800 text-[#0066FF]' : 'border-slate-200 text-slate-700 hover:text-[#0066FF]'
                                         }`}
                                 >
-                                    <span className="text-[1.05rem] transition-colors">{program.name}</span>
+                                    <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap text-[#000000]`}>{program.name}</span>
                                     <ArrowUpRight className={`size-5 transition-colors ${activeProgram === program.id ? 'text-[#0066FF]' : 'text-slate-300 group-hover:text-[#0066FF]'
                                         }`} />
                                 </div>

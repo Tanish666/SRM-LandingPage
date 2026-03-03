@@ -22,7 +22,7 @@ const HomeSection9 = () => {
 
                 {/* Gradient Overlay & Text Content */}
                 <div className="relative w-full pt-10 pb-16 px-8 lg:px-14 flex flex-col items-start gap-4 z-10">
-                    <div className='absolute top-0 left-0 w-full h-full bg-[#FFFFFFA8] blur-[2  px] -z-10' />
+                    <div className='absolute top-0 left-0 w-full h-full bg-[#FFFFFFA8] backdrop-blur-sm -z-10' />
                     <h2 className={`text-4xl md:text-5xl lg:text-[54px] ${marcellus.className} leading-[1.1] text-black font-serif tracking-tight`}>
                         World Class Facilities
                     </h2>

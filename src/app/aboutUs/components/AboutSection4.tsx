@@ -20,9 +20,9 @@ const AboutSection4 = () => {
                             <div className="text-[#46A2FF]">
                                 <img src="ASec4Svg1.svg" alt="" />
                             </div>
-                            <h3 className={`${marcellus.className} text-4xl text-slate-900`}>Vision</h3>
+                            <h3 className={`${marcellus.className} text-[45px] text-[#000000]`}>Vision</h3>
                         </div>
-                        <p className="text-slate-600 leading-8 text-[17px]">
+                        <p className="text-[#515151] leading-8 text-[17px]">
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore Eu Fugiat Nulla Pariatur.
                         </p>
                     </div>
@@ -35,9 +35,9 @@ const AboutSection4 = () => {
                             <div className="text-[#46A2FF]">
                                 <img src="ASec4Svg2.svg" alt="" />
                             </div>
-                            <h3 className={`${marcellus.className} text-4xl text-slate-900`}>Mission</h3>
+                            <h3 className={`${marcellus.className} text-[45px] text-[#000000]`}>Mission</h3>
                         </div>
-                        <p className="text-slate-600 leading-8 text-[17px]">
+                        <p className="text-[#515151] leading-8 text-[17px]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         </p>
                     </div>

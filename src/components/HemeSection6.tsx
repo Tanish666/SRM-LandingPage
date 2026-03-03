@@ -8,12 +8,12 @@ const marcellus = Marcellus({
 })
 const HemeSection6 = () => {
     return (
-        <section className="w-full py-16 bg-white font-sans">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="w-full py-16 bg-white font-sans overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 md:px-20">
                 {/* Header Section */}
                 <div className="flex flex-col items-center mb-12">
                     {/* Pill */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-white shadow-sm mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#DBDBDB] bg-[#F9F9F9] shadow-sm mb-6">
                         <div className="w-2 h-2 rounded-full bg-[#0066CC]"></div>
                         <span className="text-sm text-gray-700 font-medium">Research</span>
                     </div>
@@ -59,8 +59,8 @@ const HemeSection6 = () => {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
 
                         {/* Card 1 */}
-                        <div className="rounded-[30px] py-[1.85px] px-[2.1px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm">
-                            <div className="h-auto md:h-[340px] rounded-[30px] bg-gradient-to-b from-white to-[#EAF5FF] p-7 flex flex-col justify-between">
+                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
+                            <div className="h-auto md:h-[340px] w-full rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-between">
 
                                 <div className="mb-6 md:mb-0">
                                     <img src="sec5Svg1.svg" alt="" />
@@ -82,8 +82,8 @@ const HemeSection6 = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="rounded-[30px] py-[1.85px] px-[2.1px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[220px] rounded-[30px] bg-gradient-to-b from-white to-[#EAF5FF] p-7 flex flex-col justify-end relative">
+                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
+                            <div className="h-auto md:h-[220px] rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-end relative">
 
                                 <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
                                     <img src="sec5Svg2.svg" alt="" />
@@ -110,8 +110,8 @@ const HemeSection6 = () => {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="rounded-[30px] py-[1.85px] px-[2.1px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[220px] rounded-[30px] bg-gradient-to-b from-white to-[#EAF5FF] p-7 flex flex-col justify-end relative">
+                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
+                            <div className="h-auto md:h-[220px] rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-end relative">
 
                                 <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
                                     <img src="sec5Svg3.svg" alt="" />
@@ -138,8 +138,8 @@ const HemeSection6 = () => {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="rounded-[30px] py-[1.85px] px-[2.1px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[340px] rounded-[30px] bg-gradient-to-b from-white to-[#EAF5FF] p-7 flex flex-col justify-between">
+                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
+                            <div className="h-auto md:h-[340px] rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-between">
 
                                 <div className="mb-6 md:mb-0">
                                     <img src="sec5Svg4.svg" alt="" />

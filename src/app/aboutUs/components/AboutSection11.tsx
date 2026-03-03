@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
-import { Plus, Minus } from 'lucide-react'
+import { ChevronDown, ArrowUp } from 'lucide-react'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -13,55 +13,54 @@ const AboutSection11 = () => {
 
     const faq = [
         {
-            q: "Uncompromising Ethical Standards",
-            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            q: "Leadership in Education and Research",
+            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         },
         {
-            q: "Integrity In All We Do",
-            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            q: "Growth and Achievements",
+            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         },
         {
-            q: "Empathy And Compassion",
-            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            q: "Quality and Global Standards",
+            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         },
         {
-            q: "Fostering Innovation And Research",
-            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            q: "Embracing Society and Business World",
+            a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         }
     ]
 
     return (
-        <section className="w-full bg-[#FFD100] relative overflow-hidden">
+        <section className="relative w-full bg-[#FFD100] overflow-hidden">
             {/* Some graphic overlay */}
-            <div className="absolute left-0 bottom-0 w-1/2 h-full opacity-10 bg-gradient-to-tr from-white to-transparent pointer-events-none"></div>
-
+            <img src="ASec11Vector.svg" className='absolute z-10 bottom-0' alt="" />
             <div className="max-w-[1450px] mx-auto px-6 md:px-20 py-24 flex flex-col lg:flex-row gap-16 lg:gap-24 relative z-10">
 
                 {/* Left Text */}
-                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                    <h2 className={`${marcellus.className} text-4xl md:text-[52px] text-slate-900 mb-6 leading-tight`}>
+                <div className="w-full lg:w-1/2 flex flex-col">
+                    <h2 className={`${marcellus.className} text-4xl md:text-[60px] text-slate-900 mb-8 leading-tight`}>
                         Our Principles
                     </h2>
-                    <p className="text-slate-800 text-[16px] leading-[1.8] max-w-lg mb-8 font-medium">
-                        Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+                    <p className="text-[#3E3E3E] text-[15px] leading-[1.8] max-w-xl mb-8 font-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
                     </p>
                 </div>
 
                 {/* Right Accordion */}
                 <div className="w-full lg:w-1/2 flex flex-col gap-4">
                     {faq.map((item, idx) => (
-                        <div key={idx} className="bg-white rounded-[16px] overflow-hidden shadow-sm transition-all duration-300">
+                        <div key={idx} className="bg-white rounded-none overflow-hidden transition-all duration-300">
                             <button
                                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                                className={`w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-[17px] transition-colors ${openIdx === idx ? 'bg-[#0073B4] text-white' : 'text-slate-800 hover:bg-slate-50'}`}
+                                className={`w-full text-left px-8 py-6 flex items-center justify-between font-normal text-[22px] transition-colors ${marcellus.className} ${openIdx === idx ? 'bg-[#00ADEF] text-white' : 'text-[#3E3E3E] hover:bg-slate-50'}`}
                             >
                                 {item.q}
                                 <span>
-                                    {openIdx === idx ? <Minus size={22} className="text-white" /> : <Plus size={22} className="text-[#0073B4]" />}
+                                    {openIdx === idx ? <ArrowUp size={24} strokeWidth={1.5} className="text-white" /> : <ChevronDown size={24} strokeWidth={1.5} className="text-[#00ADEF]" />}
                                 </span>
                             </button>
                             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openIdx === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <div className="p-6 text-slate-600 leading-relaxed text-[15.5px]">
+                                <div className="px-8 pb-8 pt-4 text-[#3E3E3E] leading-relaxed text-[16px] font-normal">
                                     {item.a}
                                 </div>
                             </div>
