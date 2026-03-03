@@ -107,13 +107,12 @@ const DeptSection9 = () => {
                         </p>
 
                         {/* Action Link */}
-                        <a
-                            href="#"
-                            className={`${inter.className} text-[16px] text-[#0071BC] font-medium hover:underline`}
+                        <button
+                            className={`${inter.className} text-[16px] text-[#0071BC] font-medium hover:underline cursor-pointer bg-transparent border-none p-0`}
                             style={{ lineHeight: '26px' }}
                         >
                             Read More
-                        </a>
+                        </button>
                     </div>
                 ))}
             </div>

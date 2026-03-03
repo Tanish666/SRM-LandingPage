@@ -61,9 +61,8 @@ const DeptSection6 = () => {
                         </p>
 
                         {/* Button */}
-                        <a
-                            href="#"
-                            className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors"
+                        <button
+                            className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors cursor-pointer"
                             style={{
                                 width: '230px',
                                 height: '47px',
@@ -83,7 +82,7 @@ const DeptSection6 = () => {
                                     <polyline points="9 5 19 5 19 15" />
                                 </svg>
                             </span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

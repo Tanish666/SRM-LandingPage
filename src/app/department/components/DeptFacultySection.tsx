@@ -19,106 +19,207 @@ const faculty = [
         qualification: 'M.Sc., Ph.D.',
         designation: 'Professor & Principal',
         image: '/deptimage.png',
-        left: 98,
+        leftOffset: 0,
+        objectPosition: 'center 35%',
+        scale: 1.15,
     },
     {
         name: 'Dr.G.Rohini',
         qualification: 'M.Sc., Ph.D. Biochemistry / PDF',
         designation: 'Associate Professor',
         image: '/deptimage.png',
-        left: 530,
+        leftOffset: 432,
+        objectPosition: 'center 40%',
+        scale: 1.15,
     },
     {
         name: 'Dr.A.Vijayan',
-        qualification: 'M.Sc., Ph.D.',
+        qualification: 'MSc., Ph.D.',
         designation: 'Assistant Professor',
         image: '/deptimage.png',
-        left: 962,
+        leftOffset: 864,
+        objectPosition: 'center 45%',
+        scale: 1.15,
     },
+
 ]
 
 const DeptFacultySection = () => {
     return (
-        <section className="w-full bg-white overflow-hidden py-20">
-            <div className="relative mx-auto" style={{ width: '1440px', height: '650px' }}>
+        <section className="w-full bg-white mt-[88px]">
+            <div
+                className="relative mx-auto"
+                style={{ width: '1440px', height: '790px' }}
+            >
+                {/* ── Title ── */}
+                <h2
+                    className={`${marcellus.className} absolute text-[45px] text-black text-center capitalize`}
+                    style={{
+                        width: '235px',
+                        lineHeight: '56px',
+                        top: '0px',
+                        left: 'calc(50% - 235px / 2 - 3.5px)',
+                    }}
+                >
+                    Our Faculty
+                </h2>
 
-                <div className="relative w-full h-full">
+                {/* ── Description ── */}
+                <p
+                    className={`${inter.className} absolute font-light text-[18px] text-black text-center`}
+                    style={{
+                        width: '1005px',
+                        lineHeight: '27px',
+                        top: '87px',
+                        left: 'calc(50% - 1005px / 2 + 11.5px)',
+                    }}
+                >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut laboreLorem ipsum dolor
+                    sit amet, consectetur adipiscing elit, sed do eiusmod
+                </p>
+
+                {/* ── Faculty Images Grid ── */}
+                <div
+                    className="absolute"
+                    style={{
+                        width: '1239px',
+                        height: '489px',
+                        left: '98px',
+                        top: '191px',
+                    }}
+                >
                     {faculty.map((member, index) => (
-                        <React.Fragment key={index}>
-                            {/* Image Container  */}
-                            <div
-                                className="absolute"
+                        <div
+                            key={index}
+                            className="absolute overflow-hidden rounded-[20px]"
+                            style={{
+                                width: '375px',
+                                height: '394px',
+                                left: `${member.leftOffset}px`,
+                                top: '0px',
+                            }}
+                        ><Image
+                                src={member.image}
+                                alt={member.name}
+                                fill
                                 style={{
-                                    width: '375px',
-                                    height: '394px',
-                                    left: `${member.left}px`,
-                                    top: '0px',
-                                    borderRadius: '20px',
-                                    overflow: 'hidden',
-                                    background: '#F5F5F5', 
+                                    objectFit: 'cover',
+                                    objectPosition: member.objectPosition,
+                                    transform: `scale(${member.scale})`,
                                 }}
-                            >
-                                <Image
-                                    src={member.image}
-                                    alt={member.name}
-                                    fill
-                                    className="object-cover"
-                                    style={{
-                                        transform: 'scale(1.1)',
-                                        objectPosition: 'center 10%',
-                                    }}
-                                />
-                            </div>
+                            />
+                            {/* Dual gradient overlay — Figma spec */}
+                            <div
+                                className="absolute inset-0 pointer-events-none"
+                                style={{
+                                    background:
+                                        'linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
 
-                            {/* Yellow Accent Bar */}
+                {/* ── Yellow Bars + Names + Qualifications + Designations ── */}
+                {faculty.map((member, index) => {
+                    const barLeft = [99, 530, 962][index]
+                    const textLeft = barLeft + 15
+
+                    return (
+                        <React.Fragment key={`info-${index}`}>
+                            {/* Yellow Accent Bar — 9×22 */}
                             <span
                                 className="absolute"
                                 style={{
                                     width: '9px',
                                     height: '22px',
                                     backgroundColor: '#FFD812',
-                                    left: `${member.left}px`,
-                                    top: '419px',
+                                    left: `${barLeft}px`,
+                                    top: '618px',
                                 }}
                             />
 
-                            {/* Name + Qualification  */}
-                            <h3
-                                className={`${marcellus.className} absolute text-[30px] text-black capitalize`}
+                            {/* Name + Qualification inline */}
+                            <div
+                                className="absolute flex items-baseline gap-[6px]"
                                 style={{
-                                    width: '700px', 
-                                    lineHeight: '38px',
-                                    letterSpacing: '-0.03em',
-                                    left: `${member.left + 15}px`,
-                                    top: '411px',
+                                    left: `${textLeft}px`,
+                                    top: '610px',
                                 }}
                             >
-                                {member.name}
-                                <span className="text-[16px] ml-2 font-normal">
+                                <span
+                                    className={`${marcellus.className} text-[30px] text-black`}
+                                    style={{
+                                        lineHeight: '38px',
+                                        letterSpacing: '-0.03em',
+                                    }}
+                                >
+                                    {member.name}
+                                </span>
+                                <span
+                                    className={`${marcellus.className} text-[16px] text-black`}
+                                    style={{
+                                        lineHeight: '20px',
+                                        letterSpacing: '-0.03em',
+                                    }}
+                                >
                                     {member.qualification}
                                 </span>
-                            </h3>
+                            </div>
 
                             {/* Designation */}
-                            <p
-                                className="absolute font-normal text-[#0071BC]"
+                            <span
+                                className={`${inter.className} absolute font-normal text-[#0071BC]`}
                                 style={{
-                                    fontFamily: 'Inder, sans-serif',
                                     fontSize: '19.3089px',
                                     lineHeight: '26px',
                                     letterSpacing: '-0.03em',
-                                    left: `${member.left + 15}px`,
-                                    top: '455px',
+                                    left: `${textLeft}px`,
+                                    top: '654px',
                                 }}
                             >
                                 {member.designation}
-                            </p>
+                            </span>
                         </React.Fragment>
-                    ))}
-                </div>
+                    )
+                })}
+
+                {/* ── View All Faculty Button ── */}
+
+                <a
+                    href="#"
+                    className="absolute inline-flex items-center justify-between bg-[#FFEC22] hover:brightness-95 transition-all"
+                    style={{
+                        width: '216px',
+                        height: '47px',
+                        top: '714px',
+                        left: 'calc(50% - 216px / 2 - 4px)',
+                        border: '1.12px solid #E5E5E5',
+                        borderRadius: '33.57px',
+                        paddingLeft: '20px',
+                        paddingRight: '4px',
+                    }}
+                >
+                    <span
+                        className={`${inter.className} font-normal text-[18px] text-black capitalize`}
+                        style={{ lineHeight: '28px' }}
+                    >
+                        View All Faculty
+                    </span>
+                    <span
+                        className="rounded-full bg-white flex items-center justify-center flex-shrink-0"
+                        style={{ width: '39px', height: '38px' }}
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="5" y1="19" x2="19" y2="5" />
+                            <polyline points="9 5 19 5 19 15" />
+                        </svg>
+                    </span>
+                </a>
             </div>
         </section>
     )
 }
 
-export default DeptFacultySection;
+export default DeptFacultySection

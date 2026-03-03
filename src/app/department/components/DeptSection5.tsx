@@ -69,9 +69,8 @@ const DeptSection5 = () => {
 
                 {/* 4. CTA Button */}
                 <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
-                    <a
-                        href="#"
-                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors"
+                    <button
+                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors cursor-pointer"
                         style={{
                             width: '230px',
                             height: '47px',
@@ -91,7 +90,7 @@ const DeptSection5 = () => {
                                 <polyline points="9 5 19 5 19 15" />
                             </svg>
                         </span>
-                    </a>
+                    </button>
                 </div>
 
                 {/* 5. Stat Cards */}

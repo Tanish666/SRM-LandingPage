@@ -2,7 +2,7 @@
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
 import Image from 'next/image'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -11,7 +11,7 @@ const marcellus = Marcellus({
 
 const inter = Inter({
     subsets: ['latin'],
-    weight: ['400'],
+    weight: ['300', '400', '500', '600'],
 })
 
 interface Testimonial {
@@ -26,19 +26,22 @@ const testimonials: Testimonial[] = [
         name: 'Saranya Mohan',
         department: 'B.Sc Cardiac Care Technology',
         image: '/depsecpic5.jpg',
-        quote: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Dui',
-    },
-    {
-        name: 'Swetha',
-        department: 'B.Sc Cardiac Care Technology',
-        image: '/depsecpic5.jpg',
-        quote: 'Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.',
+        quote:
+            'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Dui',
     },
     {
         name: 'Saranya Mohan',
         department: 'B.Sc Cardiac Care Technology',
         image: '/depsecpic5.jpg',
-        quote: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Dui',
+        quote:
+            'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Dui',
+    },
+    {
+        name: 'Saranya Mohan',
+        department: 'B.Sc Cardiac Care Technology',
+        image: '/depsecpic5.jpg',
+        quote:
+            'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Dui',
     },
 ]
 
@@ -49,8 +52,8 @@ const DeptSection11 = () => {
 
     return (
         <>
-            {/* ───── Insights From Our Learners Section ───── */}
-            <section className="py-16 w-full bg-white overflow-hidden">
+            {/* Insights From Our Learners*/}
+            <section className="py-16 w-full bg-white">
                 <div className="mx-auto" style={{ maxWidth: '1440px' }}>
                     {/* Title */}
                     <h2
@@ -63,7 +66,7 @@ const DeptSection11 = () => {
                         className="relative mx-auto mt-10"
                         style={{ width: '1281px', height: '533px' }}
                     >
-                        {/* Left Side Card */}
+                        {/*  Left Side Card */}
                         <div
                             className="absolute z-10"
                             style={{
@@ -91,7 +94,7 @@ const DeptSection11 = () => {
                             </div>
                         </div>
 
-                        {/* Testimonial Text Box (The Floating White Box) */}
+                        {/* Testimonial Text Box  */}
                         <div
                             className="absolute bg-[#FDFDFD] rounded-[18.64px] z-20 overflow-hidden"
                             style={{
@@ -102,7 +105,7 @@ const DeptSection11 = () => {
                                 border: '1.86px solid #E8E8E8',
                             }}
                         >
-                            {/* Quote icon background */}
+                            {/* Quote icon — background element */}
                             <svg
                                 width="125"
                                 height="125"
@@ -132,7 +135,7 @@ const DeptSection11 = () => {
                                 </p>
 
                                 <p className={`${marcellus.className} text-[24px] text-[#0071BC] leading-tight`}>
-                                    {active.name}
+                                    Swetha
                                 </p>
                                 <p className={`${inter.className} font-normal text-[16px] text-[#666] mt-1`}>
                                     {active.department}
@@ -140,7 +143,7 @@ const DeptSection11 = () => {
                             </div>
                         </div>
 
-                        {/* Center Focused Image */}
+                        {/*  Center Image  */}
                         <div
                             className="absolute z-30 rounded-[20px] overflow-hidden shadow-xl"
                             style={{
@@ -156,9 +159,17 @@ const DeptSection11 = () => {
                                 fill
                                 className="object-cover"
                             />
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent px-5 pb-5 pt-16">
+                                <p className={`${marcellus.className} text-white text-[18.45px] font-normal leading-tight`}>
+                                    {active.name}
+                                </p>
+                                <p className={`${inter.className} text-white/80 text-[12.3px] mt-0.5`}>
+                                    {active.department}
+                                </p>
+                            </div>
                         </div>
 
-                        {/* Right Side Card */}
+                        {/*  Right Side Card */}
                         <div
                             className="absolute z-10"
                             style={{
@@ -186,81 +197,46 @@ const DeptSection11 = () => {
                             </div>
                         </div>
 
-                        {/* Arrows */}
+                        {/*  Left Arrow  */}
                         <button
                             className="absolute z-40 flex items-center justify-center rounded-full hover:brightness-95 transition-colors"
-                            style={{ width: '43px', height: '42px', left: '0px', top: '322px', backgroundColor: '#FFD812' }}
+                            style={{
+                                width: '43px',
+                                height: '42px',
+                                left: '0px',
+                                top: '322px',
+                                backgroundColor: '#FFD812',
+                            }}
+                            aria-label="Previous testimonial"
                         >
                             <ArrowLeft size={18} className="text-black" />
                         </button>
 
+                        {/*  Right Arrow */}
                         <button
                             className="absolute z-40 flex items-center justify-center rounded-full hover:brightness-95 transition-colors"
-                            style={{ width: '43px', height: '42px', left: '1238px', top: '322px', backgroundColor: '#0071BC' }}
+                            style={{
+                                width: '43px',
+                                height: '42px',
+                                left: '1238px',
+                                top: '322px',
+                                backgroundColor: '#0071BC',
+                            }}
+                            aria-label="Next testimonial"
                         >
                             <ArrowRight size={18} className="text-white" />
                         </button>
                     </div>
-                </div>
-            </section>
 
-            {/* ───── Start Your Journey CTA (Figma Group 1000002192) ───── */}
-            <section className="relative w-full flex justify-center pb-20">
-                <div
-                    className="relative overflow-hidden"
-                    style={{
-                        width: '1241px',
-                        height: '298px',
-                        backgroundColor: '#FFD812',
-                        borderRadius: '20px'
-                    }}
-                >
-                    {/* Decorative Contours */}
-                    <div
-                        className="absolute opacity-[0.18]"
-                        style={{
-                            width: '546.34px',
-                            left: '-180px',
-                            top: '84.91%',
-                            transform: 'matrix(-0.57, 0.83, 0.82, 0.57, 0, 0)',
-                        }}
-                    >
-                        <div className="absolute w-[300px] h-[50px] bg-white rounded-[22px]" style={{ transform: 'matrix(0.57, -0.82, 0.82, 0.57, 0, 0)', left: '-3.43%' }} />
-                        <div className="absolute w-[300px] h-[50px] bg-[#C8C2C2] rounded-[22px]" style={{ transform: 'matrix(0.57, -0.82, 0.82, 0.57, 0, 0)', left: '-5.12%', top: '10px' }} />
-                        <div className="absolute w-[300px] h-[50px] bg-[#BC8000] rounded-[22px]" style={{ transform: 'matrix(0.57, -0.82, 0.82, 0.57, 0, 0)', left: '-7.69%', top: '20px' }} />
-                    </div>
-
-                    {/* CTA Text Container */}
-                    <div
-                        className="absolute"
-                        style={{ width: '711px', height: '112px', left: '54px', top: '58px' }}
-                    >
-                        <h2 className={`${marcellus.className} text-[45px] leading-[56px] capitalize text-[#333333]`}>
-                            Shape The Future Of Healthcare <br />
-                            Start Your Journey Today!
-                        </h2>
-                        <p className={`${inter.className} text-[#333333] text-[15px] opacity-80 mt-2 max-w-[550px]`}>
-                            Join SRM Allied Health Sciences and shape your future in healthcare excellence.
-                        </p>
-                    </div>
-
-                    {/* CTA Button (Apply Now) */}
-                    <div
-                        className="absolute flex items-center justify-center bg-white cursor-pointer hover:bg-gray-50 transition-colors"
-                        style={{
-                            width: '275px',
-                            height: '70.39px',
-                            left: '915px',
-                            top: '115px',
-                            borderRadius: '49.11px',
-                        }}
-                    >
-                        <span className={`${inter.className} text-[26.19px] leading-[32px] text-black capitalize`}>
-                            Apply Now
-                        </span>
+                    {/* Pagination Pills */}
+                    <div className="flex items-center justify-center gap-3 mt-8">
+                        <span className="h-[6px] w-5 rounded-full bg-gray-300" />
+                        <span className="h-[6px] w-12 rounded-full bg-[#FFD812]" />
+                        <span className="h-[6px] w-5 rounded-full bg-gray-300" />
                     </div>
                 </div>
             </section>
+
         </>
     )
 }

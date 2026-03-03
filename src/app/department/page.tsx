@@ -8,7 +8,7 @@ import DeptSection7 from "./components/DeptSection7";
 import DeptSection8 from "./components/DeptSection8";
 import DeptFacultySection from "./components/DeptFacultySection";
 import DeptSection9 from "./components/DeptSection9";
-import DeptSection10 from "./components/DeptSection10";
+
 import DeptSection11 from "./components/DeptSection11";
 import DeptCTABanner from "./components/DeptCTABanner";
 
@@ -42,16 +42,19 @@ const DepartmentPage = () => {
             {/* faculty section  */}
             <DeptFacultySection />
 
-            {/* student awrd section  */}
+            {/* student award section  */}
             <DeptSection9 />
 
-            {/* insignts from our learners section */}
-            <DeptSection10 />
+
 
 
 
             {/* insights from lerner section */}
             <DeptSection11 />
+            {/* section: call to action  */}
+
+            <DeptCTABanner/>
+            
         </div>
     )
 }
