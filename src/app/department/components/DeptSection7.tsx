@@ -46,7 +46,7 @@ const DeptSection7 = () => {
     }
 
     return (
-        <section className="relative w-full overflow-hidden flex justify-center bg-[#FFF4B1]" style={{ minHeight: '769px', padding: '90px 0' }}>
+        <section className="relative w-full overflow-hidden flex justify-center bg-[#FFF4B1]" style={{ padding: '90px 0' }}>
             <div className="w-full max-w-[1041px] flex flex-col items-center">
 
                 {/* Title: POs,PSOs And PEOs */}
@@ -63,56 +63,42 @@ const DeptSection7 = () => {
                                 {/* Accordion Header */}
                                 <button
                                     onClick={() => toggleAccordion(index)}
-                                    className={`w-full flex items-center justify-between px-[42px] transition-all duration-200 rounded-[10px]`}
+                                    className="w-full flex items-center justify-between px-[42px] transition-all duration-200 rounded-[10px] relative z-[1]"
                                     style={{
                                         height: '63.16px',
                                         backgroundColor: isOpen ? '#0071BC' : '#FFFFFF',
-                                        boxSizing: 'border-box'
+                                        boxSizing: 'border-box',
                                     }}
                                 >
                                     <span className={`${marcellus.className} text-[23.46px] leading-[29px] ${isOpen ? 'text-white' : 'text-[#595959]'}`}>
                                         {item.title}
                                     </span>
-
-                                    {/* Arrow Icon */}
-
-                                
-                                    <svg
-                                        style={{
-                                            width: '20px',
-                                            height: '40px',
-                                        
-                                            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                                            transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                                            transformOrigin: 'center'
-                                        }}
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6 9l6 6 6-6"
-                        
-                                            stroke={isOpen ? "#FFFFFF" : "#0071BC"}
-                                            strokeWidth="2.5"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-
-                                    </svg>
+                                    <img
+                                        src={isOpen ? '/POuparrow.png' : '/POdropdown.svg'}
+                                        alt=""
+                                        style={{ width: '35px', height: '35px' }}
+                                    />
                                 </button>
 
-                                {/* Accordion Content Container */}
+                                {/* Accordion Content */}
                                 <div
-                                    className={`overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-b-[10px] ${isOpen ? 'max-h-[500px] mt-[-5px] pt-[25px]' : 'max-h-0'
-                                        }`}
+                                    className="overflow-hidden transition-all duration-300 ease-in-out"
+                                    style={{
+                                        maxHeight: isOpen ? '500px' : '0px',
+                                        marginTop: isOpen ? '-20px' : '0px',
+                                    }}
                                 >
-                                    <div className="px-[42px] pb-[40px] space-y-4">
-                                        {item.content.map((point, pIndex) => (
-                                            <p key={pIndex} className={`${poppins.className} text-[16px] font-bold text-[#595959] leading-[31px]`}>
-                                                {point.label} – <span className="font-normal">{point.text}</span>
-                                            </p>
-                                        ))}
+                                    <div
+                                        className="bg-white"
+                                        style={{ borderRadius: '10px', border: '1.68px solid #FFFFFF' }}
+                                    >
+                                        <div className="px-[42px] pb-[40px] space-y-0.5" style={{ paddingTop: '60px' }}>
+                                            {item.content.map((point, pIndex) => (
+                                                <p key={pIndex} className={`${poppins.className} text-[16px] font-bold text-[#595959] leading-[31px]`}>
+                                                    {point.label} – <span className="font-normal">{point.text}</span>
+                                                </p>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

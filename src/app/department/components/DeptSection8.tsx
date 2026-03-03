@@ -10,13 +10,13 @@ const marcellus = Marcellus({
 
 const DeptSection8 = () => {
     return (
-        <section className=" w-full">
+        <section className="w-full overflow-hidden">
             {/* Full-width bg container  */}
             <div
-                className="bg-[#F4F7FD] mx-auto flex items-center justify-center rounded-xl  "
-                style={{ width: '100%', maxWidth: '1622px', height: '637px' }}
+                className="relative bg-[#F4F7FD] flex items-center"
+                style={{ width: '1800px', height: '637px', left: '-80px', borderRadius: '0px' }}
             >
-                <div className="flex flex-row items-center gap-40  px-16">
+                <div className="flex flex-row items-center gap-[118px]" style={{ paddingLeft: '264px' }}>
                     {/* Left: Blue frame*/}
                     <div
                         className="flex-shrink-0 flex items-center justify-center rounded-[30px] shadow-[0_10px_35px_rgba(0,113,188,0.2)]"
