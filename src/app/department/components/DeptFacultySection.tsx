@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Marcellus, Inter } from 'next/font/google'
+import { Marcellus, Inter, Inder } from 'next/font/google'
 import Image from 'next/image'
 
 const marcellus = Marcellus({
@@ -13,35 +13,33 @@ const inter = Inter({
     weight: ['300', '400', '500', '600'],
 })
 
+const inder = Inder({
+    subsets: ['latin'],
+    weight: ['400'],
+})
+
 const faculty = [
     {
         name: 'Dr.Kumar Ebenezer',
         qualification: 'M.Sc., Ph.D.',
         designation: 'Professor & Principal',
-        image: '/deptimage.png',
+        image: '/deptimagefinal.png',
         leftOffset: 0,
-        objectPosition: 'center 35%',
-        scale: 1.15,
     },
     {
         name: 'Dr.G.Rohini',
         qualification: 'M.Sc., Ph.D. Biochemistry / PDF',
         designation: 'Associate Professor',
-        image: '/deptimage.png',
+        image: '/deptimagefinal.png',
         leftOffset: 432,
-        objectPosition: 'center 40%',
-        scale: 1.15,
     },
     {
         name: 'Dr.A.Vijayan',
         qualification: 'MSc., Ph.D.',
         designation: 'Assistant Professor',
-        image: '/deptimage.png',
+        image: '/deptimagefinal.png',
         leftOffset: 864,
-        objectPosition: 'center 45%',
-        scale: 1.15,
     },
-
 ]
 
 const DeptFacultySection = () => {
@@ -99,22 +97,18 @@ const DeptFacultySection = () => {
                                 left: `${member.leftOffset}px`,
                                 top: '0px',
                             }}
-                        ><Image
+                        >
+                            <Image
                                 src={member.image}
                                 alt={member.name}
                                 fill
-                                style={{
-                                    objectFit: 'cover',
-                                    objectPosition: member.objectPosition,
-                                    transform: `scale(${member.scale})`,
-                                }}
+                                className="object-cover"
                             />
-                            {/* Dual gradient overlay — Figma spec */}
+                            {/* Gradient overlay — subtle tint + bottom gradient */}
                             <div
                                 className="absolute inset-0 pointer-events-none"
                                 style={{
-                                    background:
-                                        'linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)',
+                                    background: 'linear-gradient(0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%)',
                                 }}
                             />
                         </div>
@@ -170,7 +164,7 @@ const DeptFacultySection = () => {
 
                             {/* Designation */}
                             <span
-                                className={`${inter.className} absolute font-normal text-[#0071BC]`}
+                                className={`${inder.className} absolute font-normal text-[#0071BC]`}
                                 style={{
                                     fontSize: '19.3089px',
                                     lineHeight: '26px',
@@ -186,7 +180,6 @@ const DeptFacultySection = () => {
                 })}
 
                 {/* ── View All Faculty Button ── */}
-
                 <a
                     href="#"
                     className="absolute inline-flex items-center justify-between bg-[#FFEC22] hover:brightness-95 transition-all"
@@ -217,7 +210,7 @@ const DeptFacultySection = () => {
                         </svg>
                     </span>
                 </a>
-            </div>
+        </div>
         </section>
     )
 }

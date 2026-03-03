@@ -48,7 +48,7 @@ const DeptSection9 = () => {
             <div className="mx-auto" style={{ width: '1227px' }}>
                 {/* Navigation Arrows */}
                 <div className="flex items-center justify-end gap-[15px] mt-6 mb-6">
-                    {/* Left Arrow Button (Yellow) */}
+                    {/* Left Arrow Button  */}
                     <button
                         className="p-0 border-none bg-transparent hover:brightness-95 active:scale-95 transition-all cursor-pointer"
                         style={{ width: '43px', height: '42px' }}
@@ -56,7 +56,7 @@ const DeptSection9 = () => {
                         <img src="/left_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
                     </button>
 
-                    {/* Right Arrow Button (Blue) */}
+                    {/* Right Arrow Button  */}
                     <button
                         className="p-0 border-none bg-transparent hover:brightness-110 active:scale-95 transition-all cursor-pointer"
                         style={{ width: '43px', height: '42px' }}
@@ -66,9 +66,9 @@ const DeptSection9 = () => {
                 </div>
 
                 {/* 3 Cards Row */}
-                <div className="flex gap-[54px] overflow-x-auto pb-4">
+                <div className="flex justify-between pb-4">
                     {cards.map((card, index) => (
-                        <div key={index} className="flex-shrink-0" style={{ width: '373px' }}>
+                        <div key={index} style={{ width: '373px' }}>
                             {/* Image Placeholder */}
                             <div
                                 className="bg-[#D9D9D9] rounded-[10px] w-full"
@@ -95,7 +95,7 @@ const DeptSection9 = () => {
 
                             {/* Action Link */}
                             <button
-                                className={`${inter.className} text-[16px] text-[#0071BC] font-medium hover:underline cursor-pointer bg-transparent border-none p-0`}
+                                className={`${inter.className} text-[16px] text-[#0071BC] font-normal hover:underline cursor-pointer bg-transparent border-none p-0`}
                                 style={{ lineHeight: '26px' }}
                             >
                                 Read More

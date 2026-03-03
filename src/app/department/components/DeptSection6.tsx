@@ -11,7 +11,7 @@ const marcellus = Marcellus({
 
 const DeptSection6 = () => {
     return (
-        <section className="py-12 w-full flex justify-center">
+        <section className="py-12 w-full flex justify-center mt-14">
             {/* Container */}
             <div className="flex items-stretch" style={{ height: '510px' }}>
                 {/* Left image*/}

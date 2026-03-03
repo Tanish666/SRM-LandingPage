@@ -46,7 +46,7 @@ const DeptSection7 = () => {
     }
 
     return (
-        <section className="relative w-full overflow-hidden flex justify-center bg-[#FFF4B1]" style={{ padding: '90px 0' }}>
+        <section className="relative mt-2 w-full overflow-hidden flex justify-center bg-[#FFF4B1]" style={{ padding: '90px' }}>
             <div className="w-full max-w-[1041px] flex flex-col items-center">
 
                 {/* Title: POs,PSOs And PEOs */}

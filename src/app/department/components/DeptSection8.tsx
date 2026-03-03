@@ -1,9 +1,14 @@
 'use client'
 import React from 'react'
-import { Marcellus } from 'next/font/google'
+import { Marcellus , Inder } from 'next/font/google'
 import Image from 'next/image'
 
 const marcellus = Marcellus({
+    subsets: ['latin'],
+    weight: ['400'],
+})
+
+const inder = Inder({
     subsets: ['latin'],
     weight: ['400'],
 })
@@ -48,15 +53,16 @@ const DeptSection8 = () => {
                             Dr.Kumar Ebenezer K
                         </h3>
                         <p
-                            className={`${marcellus.className} text-[#0071BC] text-[24px] italic font-normal mb-8`}
+                            className={`${inder.className} text-[#0071BC] font-normal mb-8`}
+                            style={{ fontSize: '35px', lineHeight: '38.11px', letterSpacing: '-0.03em' }}
                         >
                             Professor &amp; Principal
                         </p>
-                        <p className="text-[16px] text-[#1a1a1a] mb-3">
+                        <p className={`${inder.className} text-[16px] text-[#1a1a1a] mb-3`}>
                             <span className="font-bold">Email:</span>{' '}
                             drkumarebenezerk@gmail.com
                         </p>
-                        <p className="text-[16px] text-[#1a1a1a]">
+                        <p className={`${inder.className} text-[16px] text-[#1a1a1a]`}>
                             <span className="font-bold">Phone:</span>{' '}
                             000-000-000
                         </p>
@@ -67,4 +73,4 @@ const DeptSection8 = () => {
     )
 }
 
-export default DeptSection8
+export default DeptSection8 ;

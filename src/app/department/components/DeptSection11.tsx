@@ -50,7 +50,7 @@ const DeptSection11 = () => {
     const right = testimonials[2]
 
     return (
-        <section className="pb-16 w-full bg-white">
+        <section className="pb-16 mt-[134px] w-full bg-white">
             <div className="mx-auto" style={{ maxWidth: '1440px' }}>
                 {/* Title */}
                 <h2
@@ -66,7 +66,7 @@ const DeptSection11 = () => {
 
                 <div
                     className="relative mx-auto"
-                    style={{ width: '1281px', height: '533px', marginTop: '0px' }}
+                    style={{ width: '1281px', height: '533px', marginTop: '-55px' }}
                 >
                     {/* Left Side Card */}
                     <div
@@ -276,8 +276,8 @@ const DeptSection11 = () => {
 
                 {/* Pagination Pills */}
                 <div
-                    className="flex items-center justify-center mt-8"
-                    style={{ gap: '16px' }}
+                    className="flex items-center justify-center mt-12"
+                    style={{ gap: 'px', marginRight: '40px' }}
                 >
                     <span
                         style={{
