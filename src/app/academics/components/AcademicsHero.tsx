@@ -11,7 +11,7 @@ const AcademicsHero = () => {
     return (
         <section className="relative w-full h-[400px] flex items-center justify-start overflow-hidden px-8 md:px-20 mt-6">
             <div className="absolute inset-0 bg-slate-900 overflow-hidden mx-5 rounded-[20px]">
-                <img src="/ASec1Pic1.svg" alt="Admission Hero Background" className="w-full h-full object-cover opacity-60" />
+                <img src="/ASec1Pic1.svg" alt="Admission Hero Background" className="w-full h-full object-cover" />
             </div>
 
             <div className="absolute z-20 flex flex-col items-start max-w-7xl w-full bottom-14 left-8 md:left-24">

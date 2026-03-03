@@ -8,8 +8,8 @@ const marcellus = Marcellus({
 
 const FeeStructure = () => {
     return (
-        <section className="px-8 md:px-20 py-8 w-full max-w-[1250px] mx-auto">
-            <div className="relative bg-[#FFD812] rounded-[30px] p-10 md:px-14 md:py-12 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden shadow-sm">
+        <section className="px-8 md:px-20 py-8 w-full max-w-[1315px] mx-auto">
+            <div className="relative bg-[#FFD812] rounded-[20px] p-10 md:px-14 md:py-12 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden shadow-sm">
                 <img src="/ADSec2Vector.svg" alt="" className='absolute object-cover left-0 bottom-0' />
 
                 {/* Decorative background element if needed */}
