@@ -22,11 +22,11 @@ const AboutHero = () => {
                     Cardiac Care Technology
                 </h1>
                 <div className="flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 shadow-sm font-medium text-sm">
-                    <span className="text-gray-900">HOME</span>
-                    <span className="size-[15px] rounded-full bg-[#FFD812]" />
-                    <span className="text-black">DEPARTMENT PAGE</span>
-                    <span className="size-[15px] rounded-full bg-[#FFD812]" />
-                    <span className="text-black">CARDIAC CARE TECHNOLOGY</span>
+                    <span className="text-black font-normal text-base">HOME</span>
+                    <span className="size-[16px] rounded-full bg-[#FFD812]" />
+                    <span className="text-black font-normal text-base">DEPARTMENT PAGE</span>
+                    <span className="size-[16px] rounded-full  bg-[#FFD812]" />
+                    <span className="text-black font-normal text-base ">CARDIAC CARE TECHNOLOGY</span>
 
                 </div>
             </div>

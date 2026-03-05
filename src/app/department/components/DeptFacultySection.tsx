@@ -49,7 +49,7 @@ const DeptFacultySection = () => {
                 className="relative mx-auto"
                 style={{ width: '1440px', height: '790px' }}
             >
-                {/* ── Title ── */}
+                {/*  Title */}
                 <h2
                     className={`${marcellus.className} absolute text-[45px] text-black text-center capitalize`}
                     style={{
@@ -104,7 +104,7 @@ const DeptFacultySection = () => {
                                 fill
                                 className="object-cover"
                             />
-                            {/* Gradient overlay — subtle tint + bottom gradient */}
+                            {/* Gradient overlay */}
                             <div
                                 className="absolute inset-0 pointer-events-none"
                                 style={{
@@ -115,7 +115,7 @@ const DeptFacultySection = () => {
                     ))}
                 </div>
 
-                {/* ── Yellow Bars + Names + Qualifications + Designations ── */}
+                {/* Yellow Bars + Names + Qualifications + Designations  */}
                 {faculty.map((member, index) => {
                     const barLeft = [99, 530, 962][index]
                     const textLeft = barLeft + 15
@@ -179,7 +179,7 @@ const DeptFacultySection = () => {
                     )
                 })}
 
-                {/* ── View All Faculty Button ── */}
+                {/*  View All Faculty Button  */}
                 <a
                     href="#"
                     className="absolute inline-flex items-center justify-between bg-[#FFEC22] hover:brightness-95 transition-all"
