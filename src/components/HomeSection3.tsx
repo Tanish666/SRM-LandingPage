@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
-import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import CTAButton from './ui/CTA'
 
@@ -93,8 +92,20 @@ export default function HomeSection3() {
                                         }`}
                                 >
                                     <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap text-[#000000]`}>{program.name}</span>
-                                    <ArrowUpRight className={`size-5 transition-colors ${activeProgram === program.id ? 'text-[#0066FF]' : 'text-slate-300 group-hover:text-[#0066FF]'
-                                        }`} />
+                                    <svg
+                                        width="30"
+                                        height="30"
+                                        viewBox="0 0 30 30"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className={`size-7 transition-colors ${activeProgram === program.id ? 'text-[#0066FF]' : 'text-slate-300 group-hover:text-[#0066FF]'}`}
+                                    >
+                                        <line x1="5" y1="19" x2="19" y2="5"></line>
+                                        <polyline points="9 5 19 5 19 15"></polyline>
+                                    </svg>
                                 </div>
                             ))}
                         </div>
