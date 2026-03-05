@@ -14,7 +14,7 @@ const inter = Inter({
 
 const DeptCTABanner = () => {
     return (
-        <section className="w-full" style={{ paddingTop: '48px', paddingBottom: '120px' }}>
+        <section className="w-full" style={{ marginTop: '100px', marginBottom: '150px' }}>
             <div className="max-w-[1440px] mx-auto px-6">
                 <div
                     className="relative mx-auto overflow-hidden"
@@ -67,7 +67,7 @@ const DeptCTABanner = () => {
                         </div>
 
                         <button
-                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal capitalize cursor-pointer transition-colors`}
+                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal  cursor-pointer transition-colors`}
                             style={{
                                 width: '275px',
                                 height: '70px',
