@@ -12,8 +12,8 @@ const marcellus = Marcellus({
 
 const HeroSection = () => {
     return (
-        <section className='relative min-h-[85vh] py-12 lg:py-0 flex items-center bg-[url("/HeroSectionBg.gif")] bg-cover bg-center px-6 md:px-20 overflow-hidden mx-6 md:mx-5 rounded-[1.5rem] mt-3'>
-            <div className='max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 py-20'>
+        <section className='relative min-h-[85vh] py-7 lg:py-0 flex items-center bg-[url("/HeroSectionBg.gif")] bg-cover bg-center px-6 md:px-20 overflow-hidden mx-6 md:mx-5 rounded-[1.5rem] mt-3'>
+            <div className='max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 lg:py-20'>
                 {/* Hero Text Content */}
                 <div className='flex-1 lg:max-w-[55%] z-10'>
                     <h1 className={`${marcellus.className} text-5xl md:text-7xl lg:text-[4rem] leading-[1.05] text-slate-900 mb-8 tracking-tight`}>
