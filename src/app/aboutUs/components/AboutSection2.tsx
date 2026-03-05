@@ -27,7 +27,7 @@ const AboutSection2 = () => {
                             <div className="w-8 md:w-11 h-4 md:h-6 bg-[#FFD100]"></div>
                             <div className="w-6 md:w-10 h-4 md:h-6 bg-[#006BB3] -skew-x-[20deg]"></div>
                         </div>
-                        <span className={`${marcellus.className} text-lg md:text-2xl text-[#000000] whitespace-nowrap`}>
+                        <span className={`${marcellus.className} text-lg md:text-2xl text-[#000000] whitespace-normal md:whitespace-nowrap`}>
                             From house of SRM Trichy
                         </span>
                     </div>

@@ -44,10 +44,8 @@ const AboutSection10 = () => {
                             title: ""
                         },
                     ].map((num, idx) => (
-                        <div key={idx} className="bg-[#FFF7C7] border border-[#FDEB96] rounded-[10px] p-8 flex flex-col items-center justify-center text-center shadow-sm relative group hover:-translate-y-1 transition-transform cursor-pointer overflow-hidden w-[260.1703186035156px] h-[191.35105895996094px]">
-
-                            <img src={num.img} alt="" />
-
+                        <div key={idx} className="bg-[#FFF7C7] border border-[#FDEB96] rounded-[10px] p-8 flex flex-col items-center justify-center text-center shadow-sm relative group hover:-translate-y-1 transition-transform cursor-pointer overflow-hidden w-full max-w-[260px] h-[191px] mx-auto">
+                            <img src={num.img} alt="" className="max-w-full h-auto" />
                         </div>
                     ))}
                 </div>

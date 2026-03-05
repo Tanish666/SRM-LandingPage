@@ -18,7 +18,7 @@ const AboutHero = () => {
             </div>
 
             <div className="absolute z-20 flex flex-col items-start max-w-7xl  w-full bottom-14 ">
-                <h1 className={`${marcellus.className} text-white text-5xl md:text-7xl mb-6 font-light`}>
+                <h1 className={`${marcellus.className} text-white text-4xl sm:text-5xl md:text-7xl mb-6 font-light`}>
                     About Us
                 </h1>
                 <div className="flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 shadow-sm font-medium text-sm">

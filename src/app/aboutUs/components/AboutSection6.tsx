@@ -42,9 +42,8 @@ const AboutSection6 = () => {
                         <span className="text-sm text-[#000000] tracking-wide">Our Leadership</span>
                     </div>
 
-                    <div className={`${marcellus.className} text-3xl md:text-[44px] text-slate-900 leading-tight max-w-2xl whitespace-nowrap`}>
-                        <p>Meet The Leaders Driving Academic</p>
-                        <p>Innovation And Institutional Growth</p>
+                    <div className={`${marcellus.className} text-3xl md:text-[44px] text-slate-900 leading-tight max-w-2xl whitespace-normal`}>
+                        <p>Meet The Leaders Driving Academic Innovation And Institutional Growth</p>
                     </div>
                 </div>
 

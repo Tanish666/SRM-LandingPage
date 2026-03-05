@@ -43,7 +43,7 @@ const AboutSection9 = () => {
                         { title: "Central Library", img: "bg-[url('/ASec9Pic3.svg')]" },
                         { title: "Central Library", img: "bg-[url('/ASec9Pic4.svg')]" },
                     ].map((item, idx) => (
-                        <div key={idx} className={`relative h-[335px] w-[313px] rounded-[15px] overflow-hidden ${item.img} group cursor-pointer shadow-2xl hover:-translate-y-2 transition-transform duration-500`}>
+                        <div key={idx} className={`relative h-[335px] w-full max-w-[313px] mx-auto rounded-[15px] overflow-hidden ${item.img} group cursor-pointer shadow-2xl hover:-translate-y-2 transition-transform duration-500`}>
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
 
                             {/* Inner Card Name Tag with Line Logic */}
