@@ -16,13 +16,13 @@ const DeptSection3 = () => {
     ]
 
     return (
-        <section className="mt-4 mb-8 px-6 md:px-20 max-w-8xl mx-auto w-full flex flex-wrap lg:flex-nowrap justify-center gap-8">
+        <section className="mt-4 mb-8 px-4 md:px-10 lg:px-20 max-w-8xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {cards.map((card, idx) => (
-                <div key={idx} className={`flex-1 min-w-[240px] bg-[#FFF4B1] rounded-[24px] py-12 px-8 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-[#FFE043]`}>
-                    <h3 className={`${marcellus.className} text-5xl lg:text-[56px] text-[#0071BC] mb-4 font-light`}>
+                <div key={idx} className={`w-full bg-[#FFF4B1] rounded-[24px] py-8 md:py-12 px-6 md:px-8 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-[#FFE043]`}>
+                    <h3 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[56px] text-[#0071BC] mb-4 font-light`}>
                         {card.num}
                     </h3>
-                    <p className={`${card.textCol} text-[15px] font-medium leading-relaxed max-w-[200px]`}>
+                    <p className={`${card.textCol} text-sm md:text-[15px] font-medium leading-relaxed max-w-[200px]`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     </p>
                 </div>

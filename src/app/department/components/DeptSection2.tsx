@@ -10,22 +10,20 @@ const marcellus = Marcellus({
 
 const DeptSection2 = () => {
     return (
-        <section className="py-20 w-full flex justify-center">
+        <section className="py-12 md:py-20 w-full flex justify-center px-4 md:px-10 lg:px-20">
 
-            <div className="flex items-start" style={{ gap: '86px' }}>
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-20 max-w-7xl">
                 {/* Left Side  */}
-                <div className="shrink-0">
-                    <div className="relative" style={{ width: '462px', height: '480px' }}>
+                <div className="shrink-0 w-full md:w-auto">
+                    <div className="relative w-full max-w-[462px] aspect-[462/480] mx-auto lg:mx-0">
                         {/* Blue background rectangle  */}
                         <div
-                            className="absolute rounded-[20px] bg-[#008EED]"
-                            style={{ width: '447px', height: '469px', top: '11px', left: '15px' }}
+                            className="absolute rounded-[20px] bg-[#008EED] w-[95%] h-[95%] top-[5%] left-[5%]"
                         />
 
                         {/* Main Image  */}
                         <div
-                            className="relative overflow-hidden z-10"
-                            style={{ width: '447px', height: '464px', borderRadius: '10.72px' }}
+                            className="relative overflow-hidden z-10 w-[95%] h-[95%] rounded-[10.72px]"
                         >
                             <img src='/deptsecpic2.png' className='w-full h-full object-cover' alt="Department students" />
                         </div>
@@ -33,19 +31,17 @@ const DeptSection2 = () => {
                 </div>
 
                 {/* Right Side*/}
-                <div className="flex flex-col items-start" style={{ paddingTop: '22px' }}>
+                <div className="flex flex-col items-start lg:pt-5">
                     {/* Title*/}
                     <h2
-                        className={`${marcellus.className} text-[45px] text-black capitalize`}
-                        style={{ width: '687px', lineHeight: '100%', letterSpacing: '0%', marginBottom: '24px' }}
+                        className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize mb-6 leading-tight lg:max-w-[687px]`}
                     >
                         Department Of Cardiac Care Technology
                     </h2>
 
                     {/* Body text  */}
                     <div
-                        className="font-light text-[18px] text-black flex flex-col gap-5"
-                        style={{ width: '705px', lineHeight: '27px', textAlign: 'justify', letterSpacing: '0%' }}
+                        className="font-light text-base md:text-[18px] text-black flex flex-col gap-5 leading-relaxed lg:max-w-[705px] text-justify"
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -57,20 +53,11 @@ const DeptSection2 = () => {
 
                     {/* Explore Program Button */}
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors mt-8 cursor-pointer"
-                        style={{
-                            width: '224px',
-                            height: '47px',
-                            borderRadius: '33.57px',
-                            border: '1.12px solid #E5E5E5',
-                            paddingLeft: '20px',
-                            paddingRight: '4px',
-                        }}
+                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors mt-8 cursor-pointer w-[224px] h-[47px] rounded-[33.57px] border border-[#E5E5E5] pl-5 pr-1"
                     >
-                        <span className="text-[18px] font-normal text-black" style={{ lineHeight: '28.2px' }}>Explore Program</span>
+                        <span className="text-lg font-normal text-black leading-none">Explore Program</span>
                         <span
-                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0"
-                            style={{ width: '39px', height: '38px' }}
+                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px]"
                         >
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="19" x2="19" y2="5" />
