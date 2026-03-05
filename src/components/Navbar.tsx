@@ -58,11 +58,11 @@ const Navbar = () => {
 
                 {/* Action Buttons & Mobile Toggle */}
                 <div className='flex items-center gap-3'>
-                    <div className='flex items-center bg-[#FFEB3B] rounded-full p-1 sm:p-2'>
-                        <button className='bg-white text-black px-4 py-2 sm:px-5 sm:py-2.5 rounded-full font-medium text-sm sm:text-base leading-none shadow-sm transition-all hover:bg-gray-100'>
+                    <div className='flex items-center bg-[#FFEB3B] rounded-full p-1 sm:p-1.5 transition-all'>
+                        <button className='bg-white text-black px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-semibold text-[13px] sm:text-base leading-none shadow-sm transition-all hover:bg-gray-100 active:scale-95'>
                             Admission
                         </button>
-                        <button className='hidden sm:block text-black px-5 py-2.5 font-medium leading-none transition-all hover:opacity-80'>
+                        <button className='text-black px-3 py-1.5 sm:px-5 sm:py-2 font-semibold text-[13px] sm:text-base leading-none transition-all hover:opacity-70 active:scale-95'>
                             Contact
                         </button>
                     </div>
