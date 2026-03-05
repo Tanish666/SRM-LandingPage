@@ -1,8 +1,15 @@
 'use client'
 import React from 'react'
-import { Marcellus } from 'next/font/google'
+import {
+    Marcellus, Inter
+
+} from 'next/font/google'
 
 const marcellus = Marcellus({
+    subsets: ['latin'],
+    weight: ['400'],
+})
+const inter = Inter({
     subsets: ['latin'],
     weight: ['400'],
 })
@@ -21,7 +28,7 @@ const AboutHero = () => {
                 <h1 className={`${marcellus.className} text-white text-5xl md:text-7xl mb-6 font-light`}>
                     Cardiac Care Technology
                 </h1>
-                <div className="flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 shadow-sm font-medium text-sm">
+                <div className={`${inter.className} flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 shadow-sm font-normal text-base`}>
                     <span className="text-black font-normal text-base">HOME</span>
                     <span className="size-[16px] rounded-full bg-[#FFD812]" />
                     <span className="text-black font-normal text-base">DEPARTMENT PAGE</span>
