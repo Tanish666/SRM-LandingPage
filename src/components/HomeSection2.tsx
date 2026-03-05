@@ -21,7 +21,7 @@ const HomeSection2 = () => {
                     <span className="text-sm font-medium text-slate-600 tracking-wide uppercase">About Us</span>
                 </div>
 
-                <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-[#000000] mb-8 leading-tight whitespace-nowrap text-center w-full max-w-none font-medium`}>
+                <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-[#000000] mb-8 leading-tight lg:whitespace-nowrap text-center w-full max-w-none font-medium`}>
                     Shaping Healthcare Leaders For A Better Tomorrow
                 </h2>
 

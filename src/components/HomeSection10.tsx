@@ -32,7 +32,7 @@ const HomeSection10 = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-[381px]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:h-[381px] h-auto">
                         {/* Calendar Card */}
                         <div className="bg-[#C5E6FD] rounded-xl p-6 text-gray-800">
                             <div className="flex items-center justify-center gap-4 text-lg font-serif mb-6">

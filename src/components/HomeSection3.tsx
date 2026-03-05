@@ -33,7 +33,7 @@ export default function HomeSection3() {
                         <span className="text-[#000000]">Program Offered</span>
                     </div>
 
-                    <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-[80%] text-nowrap`}>
+                    <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-full lg:w-[80%] lg:text-nowrap`}>
                         Our Allied Health<br className="hidden lg:block" /> Sciences Programs
                     </h2>
                     <CTAButton
@@ -91,7 +91,7 @@ export default function HomeSection3() {
                                     className={`group flex items-center justify-between py-5 border-b cursor-pointer transition-colors ${activeProgram === program.id ? 'border-slate-800 text-[#0071BC]' : 'border-slate-200 text-slate-700 hover:text-[#0071BC]'
                                         }`}
                                 >
-                                    <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap ${activeProgram === program.id ? 'text-[#0071BC]' : 'text-[#000000]'}`}>{program.name}</span>
+                                    <span className={`${marcellus.className} text-[22px] transition-colors lg:whitespace-nowrap ${activeProgram === program.id ? 'text-[#0071BC]' : 'text-[#000000]'}`}>{program.name}</span>
                                     <svg
                                         width="30"
                                         height="30"

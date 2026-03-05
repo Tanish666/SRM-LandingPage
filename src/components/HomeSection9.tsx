@@ -107,7 +107,7 @@ const FacilityCard = ({ title, heightClass, imgSrc }: { title?: string, heightCl
             {title && (
                 <div className="flex items-center w-full px-4 sm:px-6 gap-3">
                     <div className="h-[2px] flex-1 bg-[#FFD100]"></div>
-                    <span className="text-white text-[13px] sm:text-[15px] lg:text-base font-medium whitespace-nowrap drop-shadow-md">
+                    <span className="text-white text-[13px] sm:text-[15px] lg:text-base font-medium lg:whitespace-nowrap drop-shadow-md">
                         {title}
                     </span>
                     <div className="h-[2px] flex-1 bg-[#FFD100]"></div>

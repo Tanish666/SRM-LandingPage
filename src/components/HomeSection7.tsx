@@ -99,19 +99,19 @@ const HomeSection7 = () => {
                     </p>
 
                     {/* Stats Rows */}
-                    <div className="flex flex-row justify-start items-center mb-16 relative">
+                    <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center mb-16 relative gap-8 sm:gap-0">
                         {/* Stat 1 */}
-                        <div className="flex flex-col items-start w-[45%]">
+                        <div className="flex flex-col items-start w-full sm:w-[45%]">
                             <span className={`${marcellus.className} text-5xl lg:text-[56px] font-light text-[#0277bd] leading-none mb-4`}>104 +</span>
                             <span className={`${marcellus.className} bg-[#FFD812] text-black px-4 py-1.5 rounded-md text-sm font-medium`}>Companies</span>
                             <p className="text-gray-500 text-xs sm:text-sm mt-4 leading-tight max-w-[180px]">2023–24 Campus Placement Drive</p>
                         </div>
 
                         {/* Vertical Divider */}
-                        <div className="w-[1px] h-28 bg-gray-300 mx-4 sm:mx-8"></div>
+                        <div className="hidden sm:block w-[1px] h-28 bg-gray-300 mx-4 sm:mx-8"></div>
 
                         {/* Stat 2 */}
-                        <div className="flex flex-col items-start w-[45%]">
+                        <div className="flex flex-col items-start w-full sm:w-[45%]">
                             <span className={`${marcellus.className} text-5xl lg:text-[56px] font-light text-[#0277bd] leading-none mb-4`}>206+</span>
                             <span className={`${marcellus.className} bg-[#FFD812] text-black px-4 py-1.5 rounded-md text-sm font-medium`}>Placements</span>
                             <p className="text-gray-500 text-xs sm:text-sm mt-4 leading-tight max-w-[180px]">Offers Extended To Our Talented Graduates</p>

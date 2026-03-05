@@ -14,10 +14,10 @@ const HomeSection8 = () => {
 
                 {/* Left Content */}
                 <div className="relative z-10 w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h2 className={`text-[38px] md:text-5xl lg:text-[45px] ${marcellus.className} text-[#1e2a33] leading-[1.1] mb-5 whitespace-nowrap`}>
+                    <h2 className={`text-[38px] md:text-5xl lg:text-[45px] ${marcellus.className} text-[#1e2a33] leading-[1.1] mb-5 lg:whitespace-nowrap`}>
                         Discover The Right Course For You
                     </h2>
-                    <p className="text-[#3b4e5c] text-[15px] md:text-[15px] leading-[1.6] w-[721px]">
+                    <p className="text-[#3b4e5c] text-[15px] md:text-[15px] leading-[1.6] w-full lg:w-[721px] max-w-full">
                         Start Your Journey In Healthcare With Programs Designed To Empower You With Academic Excellence And Hands-On Experience.
                     </p>
                 </div>

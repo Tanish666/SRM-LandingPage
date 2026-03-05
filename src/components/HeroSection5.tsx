@@ -17,7 +17,7 @@ export default function HeroSection5() {
             <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)] gap-10 lg:gap-14 max-w-7xl mx-auto items-start">
 
                 {/* Left Column: Latest News */}
-                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col h-[520px] pb-4">
+                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col lg:h-[520px] h-auto pb-4">
                     <div className="bg-[#FFD700] rounded-lg py-2 text-center shadow-sm z-10 mx-1">
                         <h3 className={`${marcellus.className} text-[28px] text-[#000000] tracking-wide`}>Latest News</h3>
                     </div>
@@ -56,7 +56,7 @@ export default function HeroSection5() {
                     </div>
 
                     {/* Content Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-[260px_minmax(0,1fr)] gap-6 h-[400px]">
+                    <div className="grid grid-cols-1 md:grid-cols-[260px_minmax(0,1fr)] gap-6 lg:h-[400px] h-auto">
 
                         {/* Stacked Images */}
                         <div className="flex flex-col gap-3 h-full">
