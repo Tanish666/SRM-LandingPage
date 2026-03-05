@@ -88,10 +88,10 @@ export default function HomeSection3() {
                                 <div
                                     key={program.id}
                                     onClick={() => setActiveProgram(program.id)}
-                                    className={`group flex items-center justify-between py-5 border-b cursor-pointer transition-colors ${activeProgram === program.id ? 'border-slate-800 text-[#0066FF]' : 'border-slate-200 text-slate-700 hover:text-[#0066FF]'
+                                    className={`group flex items-center justify-between py-5 border-b cursor-pointer transition-colors ${activeProgram === program.id ? 'border-slate-800 text-[#0071BC]' : 'border-slate-200 text-slate-700 hover:text-[#0071BC]'
                                         }`}
                                 >
-                                    <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap text-[#000000]`}>{program.name}</span>
+                                    <span className={`${marcellus.className} text-[22px] transition-colors whitespace-nowrap ${activeProgram === program.id ? 'text-[#0071BC]' : 'text-[#000000]'}`}>{program.name}</span>
                                     <svg
                                         width="30"
                                         height="30"
@@ -101,7 +101,7 @@ export default function HomeSection3() {
                                         strokeWidth="2"
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        className={`size-7 transition-colors ${activeProgram === program.id ? 'text-[#0066FF]' : 'text-slate-300 group-hover:text-[#0066FF]'}`}
+                                        className={`size-7 transition-colors ${activeProgram === program.id ? 'text-[#0071BC]' : 'text-slate-300 group-hover:text-[#0071BC]'}`}
                                     >
                                         <line x1="5" y1="19" x2="19" y2="5"></line>
                                         <polyline points="9 5 19 5 19 15"></polyline>
