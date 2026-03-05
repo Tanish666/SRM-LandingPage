@@ -59,8 +59,8 @@ const HemeSection6 = () => {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
 
                         {/* Card 1 */}
-                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[340px] w-full rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-between">
+                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
+                            <div className="h-auto md:h-[340px] w-full rounded-[19px] p-7 flex flex-col justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
                                 <div className="mb-6 md:mb-0">
                                     <img src="sec5Svg1.svg" alt="" />
@@ -82,8 +82,8 @@ const HemeSection6 = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[220px] rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-end relative">
+                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
+                            <div className="h-auto md:h-[220px] rounded-[19px] p-7 flex flex-col justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
                                 <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
                                     <img src="sec5Svg2.svg" alt="" />
@@ -110,8 +110,8 @@ const HemeSection6 = () => {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[220px] rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-end relative">
+                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
+                            <div className="h-auto md:h-[220px] rounded-[19px] p-7 flex flex-col justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
                                 <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
                                     <img src="sec5Svg3.svg" alt="" />
@@ -138,8 +138,8 @@ const HemeSection6 = () => {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="rounded-[30px] p-[2.3px] bg-gradient-to-b from-[#C0C0C0] to-[#17A1FA] shadow-sm mt-8 md:mt-0">
-                            <div className="h-auto md:h-[340px] rounded-[30px] bg-gradient-to-b from-[#FFFFFF] to-[#D2EDFF] p-7 flex flex-col justify-between">
+                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
+                            <div className="h-auto md:h-[340px] rounded-[19px] p-7 flex flex-col justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
                                 <div className="mb-6 md:mb-0">
                                     <img src="sec5Svg4.svg" alt="" />
