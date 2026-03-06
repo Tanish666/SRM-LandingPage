@@ -64,10 +64,7 @@ const DeptSection11 = () => {
             <div className="mx-auto" style={{ maxWidth: '1440px' }}>
                 {/* Title */}
                 <h2
-                    className={`${marcellus.className} text-[28px] md:text-[45px] text-black text-center capitalize px-4 md:px-0`}
-                    style={{
-                        lineHeight: window?.innerWidth < 768 ? '36px' : '56px',
-                    }}
+                    className={`${marcellus.className} text-[28px] md:text-[45px] text-black text-center capitalize px-4 md:px-0 leading-[36px] md:leading-[56px]`}
                 >
                     <span className="block md:inline" style={{ maxWidth: '545px', margin: '0 auto' }}>
                         Insights From Our Learners
@@ -347,8 +344,7 @@ const DeptSection11 = () => {
 
                 {/* Pagination Pills */}
                 <div
-                    className="flex items-center justify-center mt-8 md:mt-12 gap-2"
-                    style={{ marginRight: window?.innerWidth >= 768 ? '40px' : '0' }}
+                    className="flex items-center justify-center mt-8 md:mt-12 gap-2 mr-0 md:mr-[40px]"
                 >
                     {testimonials.map((_, i) => (
                         <span
