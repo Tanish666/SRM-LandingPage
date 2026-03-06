@@ -45,7 +45,7 @@ const DeptSection9 = () => {
             </h2>
 
             {/* Cards + Arrows wrapper */}
-            <div className="mx-auto" style={{ width: '1227px' }}>
+            <div className="mx-auto w-full lg:w-[1227px]">
                 {/* Navigation Arrows */}
                 <div className="flex items-center justify-end gap-[15px] mt-6 mb-6">
                     {/* Left Arrow Button  */}
@@ -66,9 +66,9 @@ const DeptSection9 = () => {
                 </div>
 
                 {/* 3 Cards Row */}
-                <div className="flex justify-between pb-4">
+                <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0 pb-4">
                     {cards.map((card, index) => (
-                        <div key={index} style={{ width: '373px' }}>
+                        <div key={index} className="w-full lg:w-[373px]">
                             {/* Image Placeholder */}
                             <div
                                 className="bg-[#D9D9D9] rounded-[10px] w-full"

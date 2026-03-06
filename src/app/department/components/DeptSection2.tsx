@@ -53,9 +53,8 @@ const DeptSection2 = () => {
 
                     {/* Explore Program Button */}
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors mt-8 cursor-pointer w-[224px] h-[47px] rounded-[33.57px] border border-[#E5E5E5] pl-5 pr-1"
-                    >
-                        <span className="text-lg font-normal text-black leading-none">Explore Program</span>
+                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors mt-8 cursor-pointer w-[224px] h-[47px] rounded-[33.57px] border border-[#E5E5E5] pl-5 pr-1 self-center lg:self-start"
+                    >  <span className="text-lg font-normal text-black leading-none">Explore Program</span>
                         <span
                             className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px]"
                         >

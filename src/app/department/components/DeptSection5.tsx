@@ -36,13 +36,89 @@ const DeptSection5 = () => {
             width: '303px', height: '345px', top: '182px', left: '942px',
             descWidth: '247px'
         }
-    ];
+    ]
 
     return (
-        <section className="w-full bg-white flex justify-center py-20 overflow-hidden mb-[-80px]">
-            <div className="relative" style={{ width: '1245px', height: '650px' }}>
+        <section className="w-full bg-white flex justify-center py-12 lg:py-20 px-4 lg:px-0 overflow-hidden mb-[30px] lg:mb-[-80px]">
 
-                {/*  Pill Badge */}
+            {/* MOBILE LAYOUT */}
+            <div className="flex flex-col items-center w-full lg:hidden">
+                {/* Pill Badge */}
+                <div className="flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px] px-4 h-[41px]">
+                    <div className="bg-[#3C9E53] rounded-full mr-2" style={{ width: '10.48px', height: '10px' }}></div>
+                    <span className={`${inter.className} text-[14px] text-black capitalize`}>Career Opportunities</span>
+                </div>
+
+                {/* Main Heading */}
+                <h2 className={`${marcellus.className} text-center text-[28px] leading-[36px] text-black capitalize mt-4 max-w-[90%]`}>
+                    Empowering The Next Generation Of Healthcare Leaders
+                </h2>
+
+                {/* Subtitle */}
+                <p className={`${inter.className} text-center text-[#515151] text-[14px] leading-[22px] capitalize mt-3 max-w-[90%]`}>
+                    Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.
+                </p>
+
+                {/* CTA Button */}
+                <button
+                    className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer mt-6"
+                    style={{
+                        width: '267px',
+                        height: '47px',
+                        borderRadius: '33.57px',
+                        border: '1.12px solid #E5E5E5',
+                        paddingLeft: '20px',
+                        paddingRight: '4px',
+                    }}
+                >
+                    <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                    <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="5" y1="19" x2="19" y2="5" />
+                            <polyline points="9 5 19 5 19 15" />
+                        </svg>
+                    </span>
+                </button>
+
+                {/* Mobile Stat Cards */}
+                <div className="flex flex-col gap-4 mt-8 w-full max-w-[400px]">
+                    {stats.map((stat, index) => (
+                        <div
+                            key={index}
+                            className="w-full rounded-[20px] p-[1px]"
+                            style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                        >
+                            <div
+                                className="w-full rounded-[19px] p-5"
+                                style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
+                            >
+                                <div className="flex items-start justify-between mb-3">
+                                    <h3 className={`${marcellus.className} text-[36px] leading-[36px] text-[#0071BC]`}>
+                                        {stat.num}
+                                    </h3>
+                                    <Image
+                                        src={stat.icon}
+                                        alt={stat.label}
+                                        width={stat.iconW}
+                                        height={stat.iconH}
+                                        className="object-contain max-w-[50px] max-h-[50px]"
+                                    />
+                                </div>
+                                <p className={`${marcellus.className} text-[18px] leading-[24px] text-black capitalize mb-1`}>
+                                    {stat.label}
+                                </p>
+                                <p className={`${inter.className} text-[14px] leading-[22px] text-[#515151] capitalize`}>
+                                    {stat.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* DESKTOP LAYOUT  */}
+            <div className="relative hidden lg:block" style={{ width: '1245px', height: '650px' }}>
+                {/* Pill Badge */}
                 <div
                     className="absolute flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px]"
                     style={{ width: '217px', height: '41px', left: '514px', top: '0px' }}
@@ -67,7 +143,7 @@ const DeptSection5 = () => {
                     Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.
                 </p>
 
-                {/*  CTA Button */}
+                {/* CTA Button */}
                 <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
                     <button
                         className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer"
@@ -81,10 +157,7 @@ const DeptSection5 = () => {
                         }}
                     >
                         <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
-                        <span
-                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0"
-                            style={{ width: '39px', height: '38px' }}
-                        >
+                        <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="19" x2="19" y2="5" />
                                 <polyline points="9 5 19 5 19 15" />
@@ -93,10 +166,10 @@ const DeptSection5 = () => {
                     </button>
                 </div>
 
-                {/*  Stat Cards */}
+                {/* Desktop Stat Cards*/}
                 <div className="absolute w-full" style={{ top: '0px' }}>
                     {stats.map((stat, index) => {
-                        const isShortCard = index === 1 || index === 2;
+                        const isShortCard = index === 1 || index === 2
                         return (
                             <div key={index} className="absolute rounded-[20px] p-[1px]" style={{
                                 width: stat.width, height: stat.height, left: stat.left, top: stat.top,
@@ -105,28 +178,21 @@ const DeptSection5 = () => {
                                 <div className="w-full h-full rounded-[19px] relative overflow-hidden" style={{
                                     background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)',
                                 }}>
-                                    {/* Icon Positioning */}
                                     <div className={`absolute ${isShortCard ? 'top-[27px] right-[18px]' : 'top-[66px] left-[17px]'}`}>
                                         <Image src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
                                     </div>
-
-                                    {/* Number */}
                                     <h3
                                         className={`${marcellus.className} absolute text-[40px] leading-[40px] text-[#0071BC]`}
                                         style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
                                     >
                                         {stat.num}
                                     </h3>
-
-                                    {/* Label */}
                                     <p
                                         className={`${marcellus.className} absolute text-[20px] leading-[25px] text-black capitalize`}
                                         style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
                                     >
                                         {stat.label}
                                     </p>
-
-                                    {/* Description with fixed width for precise wrapping */}
                                     <p
                                         className={`${inter.className} absolute text-[15px] leading-[25px] text-[#515151] capitalize`}
                                         style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
@@ -135,12 +201,12 @@ const DeptSection5 = () => {
                                     </p>
                                 </div>
                             </div>
-                        );
+                        )
                     })}
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default DeptSection5;
+export default DeptSection5
