@@ -8,7 +8,7 @@ const marcellus = Marcellus({
 })
 const HemeSection6 = () => {
     return (
-        <section className="w-full py-16 bg-white font-sans overflow-hidden">
+        <section className="w-full pb-20 bg-white font-sans overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 md:px-20">
                 {/* Header Section */}
                 <div className="flex flex-col items-center mb-12">
@@ -32,13 +32,10 @@ const HemeSection6 = () => {
 
                 {/* Mobile Button (shown above cards on mobile) */}
                 <div className="flex justify-center mb-8 md:hidden">
-                    <button className="bg-[#FFD000] text-black font-medium py-3 px-8 rounded-full flex items-center gap-3 hover:bg-[#F2C500] transition-all shadow-sm">
+                    <button className="bg-[#FFD000] text-black font-medium py-1 px-1 pl-8 rounded-full flex items-center gap-3 hover:bg-[#F2C500] transition-all shadow-sm">
                         Explore Our Research
-                        <span className="bg-white rounded-full p-1 flex items-center justify-center">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M7 17L17 7" />
-                                <path d="M7 7h10v10" />
-                            </svg>
+                        <span className="bg-white rounded-full p-1.5 flex items-center justify-center">
+                            <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg]' size={35} />
                         </span>
                     </button>
                 </div>
@@ -60,13 +57,13 @@ const HemeSection6 = () => {
 
                         {/* Card 1 */}
                         <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-auto md:h-[340px] w-full rounded-[19px] p-7 flex flex-col justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
+                            <div className="h-[320px] md:h-[340px] w-full rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
-                                <div className="mb-6 md:mb-0">
-                                    <img src="sec5Svg1.svg" alt="" />
+                                <div className="flex justify-center md:block mb-6 md:mb-0">
+                                    <img src="sec5Svg1.svg" alt="" className='size-[92%] md:size-[100%]' />
                                 </div>
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col items-center md:items-start">
                                     <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
                                         94+
                                     </h3>
@@ -83,18 +80,18 @@ const HemeSection6 = () => {
 
                         {/* Card 2 */}
                         <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-auto md:h-[220px] rounded-[19px] p-7 flex flex-col justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
+                            <div className="h-[320px] md:h-[220px] rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
                                 <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
                                     <img src="sec5Svg2.svg" alt="" />
                                 </div>
 
                                 {/* Mobile icon */}
-                                <div className="md:hidden mb-6 block">
+                                <div className="md:hidden mb-6 flex justify-center">
                                     <img src="sec5Svg2.svg" alt="" />
                                 </div>
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col items-center md:items-start">
                                     <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
                                         468+
                                     </h3>
@@ -111,18 +108,18 @@ const HemeSection6 = () => {
 
                         {/* Card 3 */}
                         <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-auto md:h-[220px] rounded-[19px] p-7 flex flex-col justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
+                            <div className="h-[320px] md:h-[220px] rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
                                 <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
                                     <img src="sec5Svg3.svg" alt="" />
                                 </div>
 
                                 {/* Mobile icon */}
-                                <div className="md:hidden mb-6 block">
+                                <div className="md:hidden mb-6 flex justify-center">
                                     <img src="sec5Svg3.svg" alt="" />
                                 </div>
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col items-center md:items-start">
                                     <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
                                         20+
                                     </h3>
@@ -139,13 +136,13 @@ const HemeSection6 = () => {
 
                         {/* Card 4 */}
                         <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-auto md:h-[340px] rounded-[19px] p-7 flex flex-col justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
+                            <div className="h-[320px] md:h-[340px] rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
 
-                                <div className="mb-6 md:mb-0">
+                                <div className="flex justify-center md:block mb-6 md:mb-0">
                                     <img src="sec5Svg4.svg" alt="" />
                                 </div>
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col items-center md:items-start">
                                     <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
                                         100+
                                     </h3>

@@ -21,10 +21,10 @@ const AboutHero = () => {
                 <h1 className={`${marcellus.className} text-white text-4xl sm:text-5xl md:text-7xl mb-6 font-light`}>
                     About Us
                 </h1>
-                <div className="flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 shadow-sm font-medium text-sm">
-                    <span className="text-gray-900">Home</span>
+                <div className="flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 shadow-sm  text-sm">
+                    <span className="text-[#000000] uppercase">Home</span>
                     <span className="size-[15px] rounded-full bg-[#FFD812]" />
-                    <span className="text-gray-500">ABOUT US</span>
+                    <span className="text-[#000000] uppercase">ABOUT US</span>
                 </div>
             </div>
         </section>

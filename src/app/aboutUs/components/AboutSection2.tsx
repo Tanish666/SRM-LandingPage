@@ -10,7 +10,7 @@ const marcellus = Marcellus({
 
 const AboutSection2 = () => {
     return (
-        <section className="py-24 px-6 md:px-20 max-w-8xl mx-auto">
+        <section className="py-10 md:py-24 px-6 md:px-20 max-w-8xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-16 lg:items-stretch">
                 {/* Left Side: Image Content */}
                 <div className="w-full lg:w-[42%] relative shrink-0">
@@ -22,10 +22,10 @@ const AboutSection2 = () => {
                     </div>
                     {/* Overlay Info Bar */}
                     <div className="absolute bottom-0 left-0 w-[90%] md:w-[89%]  rounded-tr-[50px] md:rounded-tr-[30px] flex items-center gap-5 md:gap-8 overflow-hidden pt-4">
-                        <div className="flex items-center gap-2 md:gap-3 shrink-0">
+                        <div className="flex items-center gap-1 md:gap-1.5 shrink-0 ">
                             {/* Logo Shapes */}
-                            <div className="w-8 md:w-11 h-4 md:h-6 bg-[#FFD100]"></div>
-                            <div className="w-6 md:w-10 h-4 md:h-6 bg-[#006BB3] -skew-x-[20deg]"></div>
+                            <div className="w-12 md:w-24 h-4 md:h-6 bg-[#FFD100] skew-x-[15deg]"></div>
+                            <div className="w-5 md:w-8 h-4 md:h-6 bg-[#006BB3] skew-x-[15deg]"></div>
                         </div>
                         <span className={`${marcellus.className} text-lg md:text-2xl text-[#000000] whitespace-normal md:whitespace-nowrap`}>
                             From house of SRM Trichy

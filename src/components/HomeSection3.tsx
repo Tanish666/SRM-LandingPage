@@ -23,7 +23,7 @@ export default function HomeSection3() {
     const [activeProgram, setActiveProgram] = useState(2)
 
     return (
-        <section className="py-24 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden">
+        <section className="py-10 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr_1.5fr] gap-12 lg:gap-8 items-center max-w-7xl mx-auto">
 
                 {/* Left Column */}
@@ -36,10 +36,12 @@ export default function HomeSection3() {
                     <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-full lg:w-[80%] lg:text-nowrap`}>
                         Our Allied Health<br className="hidden lg:block" /> Sciences Programs
                     </h2>
-                    <CTAButton
-                        text="Explore Now"
-                        onClick={() => console.log('Explore button clicked')}
-                    />
+                    <div className='flex justify-center items-center md:justify-start w-full'>
+                        <CTAButton
+                            text="Explore Now"
+                            onClick={() => console.log('Explore button clicked')}
+                        />
+                    </div>
                 </div>
 
                 {/* Middle Column */}
@@ -66,21 +68,22 @@ export default function HomeSection3() {
                 {/* Right Column */}
                 <div className="flex flex-col pl-0 lg:pl-10">
                     {/* Tabs */}
-                    <div className="flex bg-[#FCF01E] rounded-full p-2 mb-8 w-fit shrink-0">
-                        <button
-                            className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-slate-900 shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
-                            onClick={() => setActiveTab('Under Graduate')}
-                        >
-                            Under Graduate
-                        </button>
-                        <button
-                            className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-slate-900 shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
-                            onClick={() => setActiveTab('Post Graduate')}
-                        >
-                            Post Graduate
-                        </button>
+                    <div className='w-full flex justify-center items-center md:justify-start'>
+                        <div className="flex bg-[#FCF01E] rounded-full p-2 mb-8 w-fit shrink-0">
+                            <button
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-slate-900 shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
+                                onClick={() => setActiveTab('Under Graduate')}
+                            >
+                                Under Graduate
+                            </button>
+                            <button
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-slate-900 shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
+                                onClick={() => setActiveTab('Post Graduate')}
+                            >
+                                Post Graduate
+                            </button>
+                        </div>
                     </div>
-
                     {/* Programs List */}
                     <div className="relative">
                         <div className="flex flex-col h-[320px] overflow-y-auto pr-6 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FCF01E] [&::-webkit-scrollbar-thumb]:rounded-full">
