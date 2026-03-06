@@ -9,7 +9,7 @@ const marcellus = Marcellus({
 
 const AboutHero = () => {
     return (
-        <section className="relative w-full h-[400px] flex items-center justify-start overflow-hidden px-8 md:px-20">
+        <section className="relative w-full h-[400px] flex items-center justify-start overflow-hidden px-16 md:px-20 mt-5 md:mt-2">
             {/* Background */}
             <div className="absolute inset-0 bg-slate-900 overflow-hidden mx-5 rounded-[20px]">
 

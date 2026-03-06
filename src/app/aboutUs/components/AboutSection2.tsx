@@ -54,12 +54,12 @@ const AboutSection2 = () => {
                     </p>
 
                     {/* Stats Boxes */}
-                    <div className="flex flex-col sm:flex-row items-center gap-8 w-full">
+                    <div className="flex  items-center gap-8 w-full">
                         <div className="flex items-center gap-4">
                             <div className="bg-gradient-to-b from-[#0071BC] to-[#0096FA] rounded-[5px] w-[90px] h-[90px] flex items-center justify-center shrink-0">
                                 <span className={`${marcellus.className} text-white text-5xl`}>25</span>
                             </div>
-                            <div className={`${marcellus.className} text-2xl leading-tight text-[#000000]`}>
+                            <div className={`${marcellus.className} text-xl md:text-2xl leading-tight text-[#000000]`}>
                                 Year of<br />Legacy
                             </div>
                         </div>
@@ -68,7 +68,7 @@ const AboutSection2 = () => {
 
                         <div className="flex items-center gap-4">
                             <span className={`${marcellus.className} text-[#0071BC] text-6xl leading-none`}>18+</span>
-                            <div className={`${marcellus.className} text-2xl leading-tight text-[#000000]`}>
+                            <div className={`${marcellus.className} text-xl md:text-2xl leading-tight text-[#000000]`}>
                                 Specialized<br />Programs
                             </div>
                         </div>

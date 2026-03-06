@@ -94,7 +94,7 @@ const Navbar = () => {
                                         router.push(link.path)
                                         setIsOpen(false)
                                     }}
-                                    className={`text-xl font-semibold border-b border-slate-200 pb-2 transition-colors ${active ? 'text-blue-600' : 'text-slate-700 hover:text-black'
+                                    className={`text-xl font-semibold border-b border-slate-200 pb-2 transition-colors ${active ? 'text-blue-600 cursor-default' : 'text-slate-700 hover:text-black cursor-pointer'
                                         }`}
                                 >
                                     {link.label}
