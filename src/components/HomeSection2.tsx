@@ -15,7 +15,7 @@ const HomeSection2 = () => {
     return (
         <section className="py-24 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden">
             {/* Header Content */}
-            <div className="flex flex-col items-center text-center mb-20">
+            <div className="flex flex-col items-center text-center mb-10 md:mb-20">
                 <div className="flex items-center gap-2.5 border border-[#DBDBDB] px-5 py-2 rounded-full mb-8 bg-[#F9F9F9] backdrop-blur-sm shadow-sm">
                     <span className="size-2 bg-[#0066FF] rounded-full"></span>
                     <span className="text-sm font-medium text-slate-600 tracking-wide uppercase">About Us</span>
@@ -33,13 +33,23 @@ const HomeSection2 = () => {
             {/* Cards Grid with Staggered Layout */}
             <div className="relative">
                 {/* Centered Read More Button - Absolutely positioned to float in the center */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
                     <CTAButton
                         text="Read More"
                         onClick={() => console.log('Read More button clicked')}
                     />
                 </div>
 
+                {/* Mobile Read More Button */}
+                <div className="md:hidden w-full flex justify-center items-center mb-10">
+                    <CTAButton
+                        text="Read More"
+                        onClick={() => console.log('Read More button clicked')}
+                    />
+                </div>
+
+
+                {/* Cards Grid */}
                 <div className="flex flex-wrap justify-center gap-6 md:gap-20 max-w-6xl mx-auto px-4 md:px-0">
                     {/* Card 1: Leftmost (High) */}
                     <div className="lg:translate-y-0 shrink-0">
