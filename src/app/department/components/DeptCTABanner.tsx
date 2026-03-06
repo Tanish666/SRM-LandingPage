@@ -14,52 +14,30 @@ const inter = Inter({
 
 const DeptCTABanner = () => {
     return (
-        <section className="w-full" style={{ marginTop: '100px', marginBottom: '150px' }}>
-            <div className="max-w-[1440px] mx-auto px-6">
+        <section className="w-full mt-16 lg:mt-[100px] mb-20 lg:mb-[150px]">
+            <div className="max-w-[1440px] mx-auto px-4 lg:px-6">
                 <div
-                    className="relative mx-auto overflow-hidden"
-                    style={{
-                        width: '1241px',
-                        height: '298px',
-                        background: '#FFD812',
-                        borderRadius: '20px',
-                    }}
+                    className="relative mx-auto overflow-hidden bg-[#FFD812] rounded-[20px] w-full max-w-[1241px] py-10 lg:py-0 lg:h-[298px]"
                 >
                     <img
                         src="/Contourdept.svg"
                         alt=""
                         aria-hidden="true"
-                        className="absolute pointer-events-none select-none"
-                        style={{
-                            width: '918px',
-                            height: '298px',
-                            left: '0px',
-                            top: '0px',
-                            opacity: 0.18,
-                        }}
+                        className="absolute pointer-events-none select-none top-0 left-0 h-full opacity-[0.18]"
                     />
 
                     <div
-                        className="relative z-10 flex items-center justify-between h-full"
-                        style={{ paddingLeft: '56px', paddingRight: '60px' }}
+                        className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full px-6 sm:px-10 lg:px-14 gap-6 lg:gap-4"
                     >
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 text-center lg:text-left">
                             <h2
-                                className={`${marcellus.className} text-[45px] text-[#333333] capitalize`}
-                                style={{
-                                    lineHeight: '56px',
-                                    width: '711px',
-                                }}
+                                className={`${marcellus.className} text-[28px] sm:text-[35px] lg:text-[45px] text-[#333333] capitalize leading-tight lg:leading-[56px] max-w-[711px]`}
                             >
-                                Shape The Future Of Healthcare<br />
-                                Start Your Journey Today!
+                                Shape The Future Of Healthcare<br className="hidden lg:block" />
+                                {' '}Start Your Journey Today!
                             </h2>
                             <p
-                                className={`${inter.className} text-[15px] text-[#333333] font-normal capitalize`}
-                                style={{
-                                    lineHeight: '25px',
-                                    width: '631px',
-                                }}
+                                className={`${inter.className} text-[14px] lg:text-[15px] text-[#333333] font-normal capitalize leading-relaxed lg:leading-[25px] max-w-[631px]`}
                             >
                                 Lorem Ipsum Odor Amet, Consectetuer Adipiscing Elit. Hac Arcu Primis Hac In Senectus
                                 Sit Penatibus. Efficitur Rutrum Pellentesque
@@ -67,12 +45,9 @@ const DeptCTABanner = () => {
                         </div>
 
                         <button
-                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal  cursor-pointer transition-colors`}
+                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal cursor-pointer transition-colors w-[220px] h-[55px] lg:w-[275px] lg:h-[70px] text-[20px] lg:text-[26.19px] border-none`}
                             style={{
-                                width: '275px',
-                                height: '70px',
                                 borderRadius: '49px',
-                                fontSize: '26.19px',
                                 lineHeight: '32px',
                             }}
                         >
@@ -85,4 +60,4 @@ const DeptCTABanner = () => {
     )
 }
 
-export default DeptCTABanner;
+export default DeptCTABanner ;

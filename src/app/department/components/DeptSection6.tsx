@@ -31,10 +31,10 @@ const DeptSection6 = () => {
                     className="rounded-[30px] w-full lg:w-[840px] lg:h-[510px] p-[2px] bg-gradient-to-b from-[#0071BC] to-[#17A1FA] mt-[-50px] lg:mt-0 lg:ml-[-100px] flex-shrink-0"
                 >
                     <div
-                        className="bg-[#F4F7FD] w-full h-full rounded-[28px] flex flex-col justify-center px-6 py-12 md:px-12 lg:pl-40 lg:pr-15"
+                        className="bg-[#F4F7FD] w-full h-full rounded-[28px] flex flex-col justify-center items-center lg:items-start px-6 py-12 md:px-12 lg:pl-40 lg:pr-15 text-center lg:text-left"
                     >
                         {/* Tag */}
-                        <div className="inline-flex items-center gap-2 bg-white rounded-[20px] px-4 py-2 mb-5 border border-[#F5F5F5] w-fit">
+                        <div className="inline-flex items-center gap-2 bg-white rounded-[20px] px-4 py-2 mb-5 border border-[#F5F5F5] w-fit self-center lg:self-start mt-4 lg:mt-0">
                             <span className="rounded-full w-[10px] h-[10px] bg-[#F4CB00]"></span>
                             <span className="text-sm md:text-base font-normal text-black capitalize">Programs offered</span>
                         </div>
@@ -53,7 +53,7 @@ const DeptSection6 = () => {
 
                         {/* Button */}
                         <button
-                            className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors cursor-pointer w-[230px] h-[47px] rounded-[33.57px] border border-[#E5E5E5] pl-6 pr-1"
+                            className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors cursor-pointer w-[230px] h-[47px] rounded-[33.57px] border border-[#E5E5E5] pl-6 pr-1 self-center lg:self-start"
                         >
                             <span className="text-lg font-normal text-black capitalize leading-none">Explore Program</span>
                             <span

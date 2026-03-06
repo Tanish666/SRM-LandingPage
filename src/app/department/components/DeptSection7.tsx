@@ -46,16 +46,16 @@ const DeptSection7 = () => {
     }
 
     return (
-        <section className="relative mt-2 w-full overflow-hidden flex justify-center bg-[#FFF4B1]" style={{ padding: '90px' }}>
+        <section className="relative mt-2 w-full overflow-hidden flex justify-center bg-[#FFF4B1] px-4 py-12 lg:p-[90px]">
             <div className="w-full max-w-[1041px] flex flex-col items-center">
 
-                {/* Title: POs,PSOs And PEOs */}
-                <h2 className={`${marcellus.className} text-[45px] text-black leading-[56px] capitalize mb-[40px] text-center`}>
+                {/* Title */}
+                <h2 className={`${marcellus.className} text-[28px] lg:text-[45px] text-black leading-[36px] lg:leading-[56px] capitalize mb-6 lg:mb-[40px] text-center`}>
                     POs,PSOs And PEOs
                 </h2>
 
                 {/* Accordion Container */}
-                <div className="w-full space-y-[18px]">
+                <div className="w-full space-y-3 lg:space-y-[18px]">
                     {accordionItems.map((item, index) => {
                         const isOpen = openIndex === index;
                         return (
@@ -63,20 +63,15 @@ const DeptSection7 = () => {
                                 {/* Accordion Header */}
                                 <button
                                     onClick={() => toggleAccordion(index)}
-                                    className="w-full flex items-center justify-between px-[42px] transition-all duration-200 rounded-[10px] relative z-[1]"
-                                    style={{
-                                        height: '63.16px',
-                                        backgroundColor: isOpen ? '#0071BC' : '#FFFFFF',
-                                        boxSizing: 'border-box',
-                                    }}
+                                    className={`w-full flex items-center justify-between px-4 lg:px-[42px] transition-all duration-200 rounded-[10px] relative z-[1] cursor-pointer h-[50px] lg:h-[63.16px] ${isOpen ? 'bg-[#0071BC]' : 'bg-white'}`}
                                 >
-                                    <span className={`${marcellus.className} text-[23.46px] leading-[29px] ${isOpen ? 'text-white' : 'text-[#595959]'}`}>
+                                    <span className={`${marcellus.className} text-[16px] lg:text-[23.46px] leading-[22px] lg:leading-[29px] text-left ${isOpen ? 'text-white' : 'text-[#595959]'}`}>
                                         {item.title}
                                     </span>
                                     <img
                                         src={isOpen ? '/POuparrow.png' : '/POdropdown.svg'}
                                         alt=""
-                                        style={{ width: '35px', height: '35px' }}
+                                        className="w-[25px] h-[25px] lg:w-[35px] lg:h-[35px] flex-shrink-0 ml-2"
                                     />
                                 </button>
 
@@ -92,9 +87,9 @@ const DeptSection7 = () => {
                                         className="bg-white"
                                         style={{ borderRadius: '10px', border: '1.68px solid #FFFFFF' }}
                                     >
-                                        <div className="px-[42px] pb-[40px] space-y-0.5" style={{ paddingTop: '60px' }}>
+                                        <div className="px-4 lg:px-[42px] pb-6 lg:pb-[40px] space-y-0.5 pt-10 lg:pt-[60px]">
                                             {item.content.map((point, pIndex) => (
-                                                <p key={pIndex} className={`${poppins.className} text-[16px] font-bold text-[#595959] leading-[31px]`}>
+                                                <p key={pIndex} className={`${poppins.className} text-[14px] lg:text-[16px] font-bold text-[#595959] leading-[26px] lg:leading-[31px]`}>
                                                     {point.label} – <span className="font-normal">{point.text}</span>
                                                 </p>
                                             ))}
@@ -106,7 +101,7 @@ const DeptSection7 = () => {
                     })}
                 </div>
             </div>
-        </section >
+        </section>
     )
 }
 
