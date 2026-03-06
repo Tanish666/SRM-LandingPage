@@ -13,7 +13,7 @@ const DeptSection6 = () => {
     return (
         <section className="py-12 w-full flex justify-center mt-10 px-4 md:px-10 lg:px-20">
             {/* Container */}
-            <div className="flex flex-col lg:flex-row items-center lg:items-stretch max-w-7xl w-full">
+            <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center max-w-7xl w-full">
                 {/* Left image*/}
                 <div
                     className="relative overflow-hidden z-10 w-full lg:w-[497px] min-h-[300px] md:min-h-[400px] lg:h-[510px] rounded-[30px] flex-shrink-0"

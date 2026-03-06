@@ -32,7 +32,7 @@ const DeptHeroSection = () => {
                     <span className="text-black font-normal">HOME</span>
                     <span className="size-[8px] md:size-[16px] rounded-full bg-[#FFD812]" />
                     <span className="text-black font-normal">DEPARTMENT PAGE</span>
-                    <span className="size-[8px] md:size-[16px] rounded-full bg-[#FFD812]" />
+                    <span className="hidden md:inline-block size-[8px] md:size-[16px] rounded-full bg-[#FFD812]" />
                     <span className="text-black font-normal">CARDIAC CARE TECHNOLOGY</span>
                 </div>
             </div>
