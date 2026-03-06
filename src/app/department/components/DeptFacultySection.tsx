@@ -66,20 +66,13 @@ const DeptFacultySection = () => {
                     {faculty.map((member, index) => (
                         <div key={index} className="w-full lg:w-[375px]">
                             {/* Image */}
-                            <div className="overflow-hidden rounded-[20px] w-full h-[300px] lg:h-[394px] relative">
+                            <div className="overflow-hidden rounded-[20px] w-full h-[300px] lg:h-[394px] relative bg-[#e8e8ed] border border-[#e0e0e0]">
                                 <Image
                                     src={member.image}
                                     alt={member.name}
                                     fill
-                                    className="object-cover"
-                                />
-                                {/* Gradient overlay */}
-                                <div
-                                    className="absolute inset-0 pointer-events-none"
-                                    style={{
-                                        background:
-                                            'linear-gradient(0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%)',
-                                    }}
+                                    className="object-cover scale-[1.05]"
+                                    style={{ objectPosition: 'center top' }}
                                 />
                             </div>
 
@@ -174,4 +167,4 @@ const DeptFacultySection = () => {
     )
 }
 
-export default DeptFacultySection ;
+export default DeptFacultySection;
