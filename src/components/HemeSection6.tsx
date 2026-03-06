@@ -1,167 +1,204 @@
 'use client'
-import React from 'react';
-import { Marcellus } from 'next/font/google';
-import { IconArrowNarrowRight } from '@tabler/icons-react';
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
+import React from 'react'
+import { Marcellus, Inter } from 'next/font/google'
+import { IconArrowNarrowRight } from '@tabler/icons-react'
+
+const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
+const inter = Inter({ subsets: ['latin'], weight: ['400'] })
+
 const HemeSection6 = () => {
+    const stats = [
+        {
+            icon: "sec5Svg1.svg", iconW: 83, iconH: 69,
+            num: "94+", label: "Active Research Projects",
+            desc: "Across Rehabilitation, Diagnostics, Imaging & Community Health.",
+            width: '295px', height: '345px', top: '182px', left: '0px',
+            descWidth: '283px'
+        },
+        {
+            icon: "sec5Svg2.svg", iconW: 57, iconH: 58,
+            num: "468+", label: "Intellectual Property Rights",
+            desc: "Under Our Intellectual Property Rights (IPR) Cell.",
+            width: '295px', height: '227px', top: '300px', left: '314px',
+            descWidth: '247px'
+        },
+        {
+            icon: "sec5Svg3.svg", iconW: 66, iconH: 66,
+            num: "20+", label: "Collaborative Partnerships",
+            desc: "With Hospitals, Research Bodies & Academic Institutions.",
+            width: '295px', height: '227px', top: '300px', left: '628px',
+            descWidth: '247px'
+        },
+        {
+            icon: "sec5Svg4.svg", iconW: 84, iconH: 84,
+            num: "100+", label: "Student Research Engagement",
+            desc: "With Hospitals, Research Bodies & Academic Institutions.",
+            width: '303px', height: '345px', top: '182px', left: '942px',
+            descWidth: '247px'
+        }
+    ]
+
     return (
-        <section className="w-full pb-20 bg-white font-sans overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 md:px-20">
-                {/* Header Section */}
-                <div className="flex flex-col items-center mb-12">
-                    {/* Pill */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#DBDBDB] bg-[#F9F9F9] shadow-sm mb-6">
-                        <div className="w-2 h-2 rounded-full bg-[#0066CC]"></div>
-                        <span className="text-sm text-gray-700 font-medium">Research</span>
-                    </div>
+        <section className="w-full bg-white flex justify-center py-12 lg:py-20 px-4 lg:px-0 overflow-hidden mb-[30px] lg:mb-[-80px]">
 
-                    {/* Title */}
-                    <h2 className={`${marcellus.className} text-center text-[40px] md:text-[46px] leading-[1.2] text-gray-900 mb-4 tracking-normal`}>
-                        Driving Innovation In Allied Health Research
-                    </h2>
-
-                    {/* Subtitle */}
-                    <p className="text-center text-gray-500 text-[15px] md:text-base max-w-2xl mx-auto leading-relaxed">
-                        Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical
-                        Practice, Diagnostics, And Public Health Outcomes.
-                    </p>
+            {/* MOBILE LAYOUT */}
+            <div className="flex flex-col items-center w-full lg:hidden">
+                {/* Pill Badge */}
+                <div className="flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px] px-4 h-[41px]">
+                    <div className="bg-[#0066CC] rounded-full mr-2" style={{ width: '10.48px', height: '10px' }}></div>
+                    <span className={`${inter.className} text-[14px] text-black capitalize`}>Research</span>
                 </div>
 
-                {/* Mobile Button (shown above cards on mobile) */}
-                <div className="flex justify-center mb-8 md:hidden">
-                    <button className="bg-[#FFD000] text-black font-medium py-1 px-1 pl-8 rounded-full flex items-center gap-3 hover:bg-[#F2C500] transition-all shadow-sm">
-                        Explore Our Research
-                        <span className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                            <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg]' size={35} />
+                {/* Main Heading */}
+                <h2 className={`${marcellus.className} text-center text-[28px] leading-[36px] text-black capitalize mt-4 max-w-[90%]`}>
+                    Driving Innovation In Allied Health Research
+                </h2>
+
+                {/* Subtitle */}
+                <p className={`${inter.className} text-center text-[#515151] text-[14px] leading-[22px] capitalize mt-3 max-w-[90%]`}>
+                    Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
+                </p>
+
+                {/* CTA Button */}
+                <button
+                    className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer mt-6"
+                    style={{
+                        width: '267px',
+                        height: '47px',
+                        borderRadius: '33.57px',
+                        border: '1.12px solid #E5E5E5',
+                        paddingLeft: '20px',
+                        paddingRight: '4px',
+                    }}
+                >
+                    <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                    <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
+                        <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-black' size={24} />
+                    </span>
+                </button>
+
+                {/* Mobile Stat Cards */}
+                <div className="flex flex-col gap-4 mt-8 w-full max-w-[400px]">
+                    {stats.map((stat, index) => (
+                        <div
+                            key={index}
+                            className="w-full rounded-[20px] p-[1px]"
+                            style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                        >
+                            <div
+                                className="w-full rounded-[19px] p-5"
+                                style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
+                            >
+                                <div className="flex items-start justify-between mb-3">
+                                    <h3 className={`${marcellus.className} text-[36px] leading-[36px] text-[#0066CC]`}>
+                                        {stat.num}
+                                    </h3>
+                                    <img
+                                        src={stat.icon}
+                                        alt={stat.label}
+                                        className="object-contain max-w-[50px] max-h-[50px]"
+                                    />
+                                </div>
+                                <p className={`${marcellus.className} text-[18px] leading-[24px] text-black capitalize mb-1`}>
+                                    {stat.label}
+                                </p>
+                                <p className={`${inter.className} text-[14px] leading-[22px] text-[#515151] capitalize`}>
+                                    {stat.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* DESKTOP LAYOUT  */}
+            <div className="relative hidden lg:block" style={{ width: '1245px', height: '650px' }}>
+                {/* Pill Badge */}
+                <div
+                    className="absolute flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px]"
+                    style={{ width: '217px', height: '41px', left: '514px', top: '0px' }}
+                >
+                    <div className="bg-[#0066CC] rounded-full mr-2" style={{ width: '10.48px', height: '10px' }}></div>
+                    <span className={`${inter.className} text-[16px] text-black capitalize`}>Research</span>
+                </div>
+
+                {/* Main Heading */}
+                <h2
+                    className={`${marcellus.className} absolute text-center text-[45px] leading-[56px] text-black capitalize`}
+                    style={{ width: '1166px', left: '41.5px', top: '65px' }}
+                >
+                    Driving Innovation In Allied Health Research
+                </h2>
+
+                {/* Subtitle */}
+                <p
+                    className={`${inter.className} absolute text-center text-[#515151] text-[15px] leading-[25px] capitalize`}
+                    style={{ width: '623px', left: '312.5px', top: '135px' }}
+                >
+                    Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
+                </p>
+
+                {/* CTA Button */}
+                <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
+                    <button
+                        className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer"
+                        style={{
+                            width: '267px',
+                            height: '47px',
+                            borderRadius: '33.57px',
+                            border: '1.12px solid #E5E5E5',
+                            paddingLeft: '20px',
+                            paddingRight: '4px',
+                        }}
+                    >
+                        <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                        <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
+                            <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-black' size={24} />
                         </span>
                     </button>
                 </div>
 
-                {/* Cards Grid Container */}
-                <div className="relative">
-                    {/* Desktop Button - Absolutely positioned above Grid center */}
-                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-8 z-10 w-auto">
-                        <button className="bg-[#FFCE00] text-black font-medium py-1 px-1 pl-8 rounded-full flex items-center gap-3 hover:bg-[#E6BA00] transition-colors shadow-sm">
-                            Explore Our Research
-                            <span className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                                <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg]' size={35} />
-                            </span>
-                        </button>
-                    </div>
-
-                    {/* The Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
-
-                        {/* Card 1 */}
-                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-[320px] md:h-[340px] w-full rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
-
-                                <div className="flex justify-center md:block mb-6 md:mb-0">
-                                    <img src="sec5Svg1.svg" alt="" className='size-[92%] md:size-[100%]' />
-                                </div>
-
-                                <div className="flex flex-col items-center md:items-start">
-                                    <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
-                                        94+
+                {/* Desktop Stat Cards*/}
+                <div className="absolute w-full" style={{ top: '0px' }}>
+                    {stats.map((stat, index) => {
+                        const isShortCard = index === 1 || index === 2
+                        return (
+                            <div key={index} className="absolute rounded-[20px] p-[1px]" style={{
+                                width: stat.width, height: stat.height, left: stat.left, top: stat.top,
+                                background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)'
+                            }}>
+                                <div className="w-full h-full rounded-[19px] relative overflow-hidden" style={{
+                                    background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)',
+                                }}>
+                                    <div className={`absolute ${isShortCard ? 'top-[27px] right-[18px]' : 'top-[66px] left-[17px]'}`}>
+                                        <img src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
+                                    </div>
+                                    <h3
+                                        className={`${marcellus.className} absolute text-[40px] leading-[40px] text-[#0066CC]`}
+                                        style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
+                                    >
+                                        {stat.num}
                                     </h3>
-                                    <p className={`${marcellus.className} text-gray-900 font-medium text-[17px] leading-tight mb-2`}>
-                                        Active Research Projects
+                                    <p
+                                        className={`${marcellus.className} absolute text-[20px] leading-[25px] text-black capitalize`}
+                                        style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
+                                    >
+                                        {stat.label}
                                     </p>
-                                    <p className="text-gray-500 text-[14px] leading-relaxed">
-                                        Across Rehabilitation, Diagnostics, Imaging & Community Health.
+                                    <p
+                                        className={`${inter.className} absolute text-[15px] leading-[25px] text-[#515151] capitalize`}
+                                        style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
+                                    >
+                                        {stat.desc}
                                     </p>
                                 </div>
-
                             </div>
-                        </div>
-
-                        {/* Card 2 */}
-                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-[320px] md:h-[220px] rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
-
-                                <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
-                                    <img src="sec5Svg2.svg" alt="" />
-                                </div>
-
-                                {/* Mobile icon */}
-                                <div className="md:hidden mb-6 flex justify-center">
-                                    <img src="sec5Svg2.svg" alt="" />
-                                </div>
-
-                                <div className="flex flex-col items-center md:items-start">
-                                    <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
-                                        468+
-                                    </h3>
-                                    <p className={`${marcellus.className} text-gray-900 font-medium text-[17px] leading-tight mb-2`}>
-                                        Intellectual Property Rights
-                                    </p>
-                                    <p className="text-gray-500 text-[14px] leading-relaxed">
-                                        Under Our Intellectual Property Rights (IPR) Cell.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        {/* Card 3 */}
-                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-[320px] md:h-[220px] rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-end relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
-
-                                <div className="md:absolute top-7 right-7 mb-6 md:mb-0 hidden md:block">
-                                    <img src="sec5Svg3.svg" alt="" />
-                                </div>
-
-                                {/* Mobile icon */}
-                                <div className="md:hidden mb-6 flex justify-center">
-                                    <img src="sec5Svg3.svg" alt="" />
-                                </div>
-
-                                <div className="flex flex-col items-center md:items-start">
-                                    <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
-                                        20+
-                                    </h3>
-                                    <p className={`${marcellus.className} text-gray-900 font-medium text-[17px] leading-tight mb-2`}>
-                                        Collaborative Partnerships
-                                    </p>
-                                    <p className="text-gray-500 text-[14px] leading-relaxed">
-                                        With Hospitals, Research Bodies & Academic Institutions.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        {/* Card 4 */}
-                        <div className="rounded-[20px] p-[1px] shadow-sm mt-8 md:mt-0" style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}>
-                            <div className="h-[320px] md:h-[340px] rounded-[19px] p-7 flex flex-col items-center text-center justify-center md:items-start md:text-left md:justify-between relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}>
-
-                                <div className="flex justify-center md:block mb-6 md:mb-0">
-                                    <img src="sec5Svg4.svg" alt="" />
-                                </div>
-
-                                <div className="flex flex-col items-center md:items-start">
-                                    <h3 className={`${marcellus.className} text-[#0066CC] text-[42px] font-light leading-none mb-3`}>
-                                        100+
-                                    </h3>
-                                    <p className={`${marcellus.className} text-gray-900 font-medium text-[17px] leading-tight mb-2`}>
-                                        Student Research Engagement
-                                    </p>
-                                    <p className="text-gray-500 text-[14px] leading-relaxed">
-                                        With Hospitals, Research Bodies & Academic Institutions.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default HemeSection6;
+export default HemeSection6
