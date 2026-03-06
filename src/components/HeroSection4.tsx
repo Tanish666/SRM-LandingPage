@@ -69,7 +69,7 @@ const HeroSection4 = () => {
 
                     {/* Center Image */}
                     <div
-                        className="relative order-last lg:order-none w-full max-w-[280px] h-[348px] rounded-[25px] mx-auto"
+                        className="relative order-last lg:order-none w-[280px] lg:min-w-[280px] h-[348px] rounded-[25px] mx-auto shrink-0 mt-10 md:mt-0"
                         style={{
                             background: 'linear-gradient(180deg, #FFFFFF 0%, #FFEC22 100%)',
                             opacity: 1,
