@@ -51,14 +51,14 @@ const HeroSection = () => {
                         </div>
 
                         {/* Program Offered Badge */}
-                        <div className='absolute -bottom-8 -right-8 md:bottom-8 md:-right-5 z-20'>
+                        <div className='absolute bottom-2 -right-10 md:bottom-8 md:-right-7 z-20'>
                             <div className='relative'>
-                                <div className='absolute size-20 -z-10 bg-white rounded-full -top-3.5 -left-4' />
-                                <div className='flex items-center gap-2  pr-8 py-1.5 rounded-full  group/badge hover:shadow-2xl transition-all duration-500 cursor-pointer '>
+                                <div className='absolute size-14 md:size-20 -z-10 bg-white rounded-full -top-2 md:-top-3.5 -left-2.5 md:-left-4' />
+                                <div className='flex items-center gap-1.5 md:gap-2 pr-5 md:pr-8 py-1.5 rounded-full group/badge hover:shadow-2xl transition-all duration-500 cursor-pointer '>
                                     <div className=''>
-                                        <IconArrowNarrowRight stroke={1} size={40} className='rotate-[-35deg]' />
+                                        <IconArrowNarrowRight stroke={1} className='w-8 h-8 md:w-10 md:h-10 rotate-[-35deg]' />
                                     </div>
-                                    <span className='text-base md:text-lg font-semibold text-slate-600 tracking-tight whitespace-nowrap'>Program Offered</span>
+                                    <span className='text-[13px] md:text-lg font-semibold text-slate-600 tracking-tight whitespace-nowrap'>Program Offered</span>
                                 </div>
                             </div>
                         </div>

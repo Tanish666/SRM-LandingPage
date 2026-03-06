@@ -33,7 +33,7 @@ const HomeSection2 = () => {
             {/* Cards Grid with Staggered Layout */}
             <div className="relative">
                 {/* Centered Read More Button - Absolutely positioned to float in the center */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 md:-translate-y-12 z-20">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
                     <CTAButton
                         text="Read More"
                         onClick={() => console.log('Read More button clicked')}
