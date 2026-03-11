@@ -43,6 +43,7 @@ const Navbar = () => {
                             return (
                                 <li
                                     key={link.label}
+                                    style={{ fontWeight: 400 }}
                                     onClick={() => router.push(link.path)}
                                     className={`transition-all duration-200 text-[15px] font-medium ${active
                                         ? 'text-blue-500 hover:text-blue-600'
