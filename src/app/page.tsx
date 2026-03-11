@@ -15,17 +15,29 @@ import HomeSection10 from '@/components/HomeSection10'
 const page = () => {
   return (
     <div className='w-full overflow-x-hidden'>
+      {/* Hero Section */}
       <HeroSection />
+      {/* Hero Marquee */}
       <HeroMarquee />
+      {/* About Us Section */}
       <HomeSection2 />
+      {/* Section Separator */}
       <Separator />
+      {/* Programs Offered Section */}
       <HomeSection3 />
+      {/* Why Choose Us Section */}
       <HeroSection4 />
+      {/* Testimonials & Latest News Section */}
       <HeroSection5 />
+      {/* Research & Innovation Section */}
       <HemeSection6 />
+      {/* Placement Partners Section */}
       <HomeSection7 />
+      {/* Course Finder Section */}
       <HomeSection8 />
+      {/* Campus Facilities Section */}
       <HomeSection9 />
+      {/* News, Events & CTA Section */}
       <HomeSection10 />
     </div>
   )

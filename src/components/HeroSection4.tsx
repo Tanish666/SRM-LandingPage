@@ -10,7 +10,7 @@ const marcellus = Marcellus({
 })
 
 const Card = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
-    <div className="bg-white rounded-[20px] py-5 px-5 lg:py-5 lg:px-7 shadow-sm flex flex-col gap-1 w-full lg:max-w-[510px] lg:h-[160px] ">
+    <div className="bg-white rounded-[20px] py-5 px-5 lg:py-5 lg:px-7 shadow-sm flex flex-col gap-1 w-full  lg:h-[160px] ">
         <div className="flex items-center gap-4">
             <div className="text-[#30A0FF]">
                 {icon}
@@ -52,9 +52,9 @@ const HeroSection4 = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-8 relative z-10 pb-8 lg:pb-10 max-w-[1420px] mx-auto w-full items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-8 relative z-10 pb-8 lg:pb-10 max-w-[1550px] mx-auto w-full items-center">
                     {/* Left Cards */}
-                    <div className="flex flex-col gap-8 justify-center items-center lg:items-end">
+                    <div className="flex flex-col gap-8 justify-center items-center lg:items-start">
                         <Card
                             icon={<Image src="/sec4Icon1.svg" width={45} height={45} alt="Icon 1" />}
                             title="Advanced Laboratories & Facilities"
@@ -88,7 +88,7 @@ const HeroSection4 = () => {
                     </div>
 
                     {/* Right Cards */}
-                    <div className="flex flex-col gap-8 justify-center items-center lg:items-start">
+                    <div className="flex flex-col gap-8 justify-center items-center lg:items-end">
                         <Card
                             icon={<Image src="/sec4Icon3.svg" width={45} height={45} alt="Icon 3" />}
                             title="Personalized Academic Mentorship"

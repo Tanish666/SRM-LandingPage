@@ -18,6 +18,14 @@ const programs = [
     { id: 5, name: 'B.Sc Physician Assistant' },
 ]
 
+const mastersPrograms = [
+    { id: 1, name: 'M.Sc Cardio Perfusion Technology' },
+    { id: 2, name: 'M.Sc Clinical Psychology' },
+    { id: 3, name: 'M.Sc Medical imaging Technology' },
+    { id: 4, name: 'M.Sc Medical Laboratory Technology' },
+    { id: 5, name: 'M.Sc Physician Assistant' },
+]
+
 export default function HomeSection3() {
     const [activeTab, setActiveTab] = useState('Under Graduate')
     const [activeProgram, setActiveProgram] = useState(2)
@@ -71,14 +79,20 @@ export default function HomeSection3() {
                     <div className='w-full flex justify-center items-center md:justify-start'>
                         <div className="flex bg-[#FCF01E] rounded-full p-2 mb-8 w-fit shrink-0">
                             <button
-                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-slate-900 shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
-                                onClick={() => setActiveTab('Under Graduate')}
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-[#0071BC] shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
+                                onClick={() => {
+                                    setActiveTab('Under Graduate')
+                                    setActiveProgram(1)
+                                }}
                             >
                                 Under Graduate
                             </button>
                             <button
-                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-slate-900 shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
-                                onClick={() => setActiveTab('Post Graduate')}
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-[#0071BC] shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
+                                onClick={() => {
+                                    setActiveTab('Post Graduate')
+                                    setActiveProgram(1)
+                                }}
                             >
                                 Post Graduate
                             </button>
@@ -87,14 +101,14 @@ export default function HomeSection3() {
                     {/* Programs List */}
                     <div className="relative">
                         <div className="flex flex-col h-[320px] overflow-y-auto pr-6 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FCF01E] [&::-webkit-scrollbar-thumb]:rounded-full">
-                            {programs.map((program) => (
+                            {(activeTab === 'Under Graduate' ? programs : mastersPrograms).map((program) => (
                                 <div
                                     key={program.id}
                                     onClick={() => setActiveProgram(program.id)}
                                     className={`group flex items-center justify-between py-5 border-b cursor-pointer transition-colors ${activeProgram === program.id ? 'border-slate-800 text-[#0071BC]' : 'border-slate-200 text-slate-700 hover:text-[#0071BC]'
                                         }`}
                                 >
-                                    <span className={`${marcellus.className} text-[22px] transition-colors lg:whitespace-nowrap ${activeProgram === program.id ? 'text-[#0071BC]' : 'text-[#000000]'}`}>{program.name}</span>
+                                    <span className={`${marcellus.className} text-[22px] transition-colors lg:whitespace-nowrap ${activeProgram === program.id ? 'text-[#0071BC]' : 'text-[#000000] group-hover:text-[#0071BC]'}`}>{program.name}</span>
                                     <svg
                                         width="30"
                                         height="30"
