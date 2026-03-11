@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -35,7 +36,8 @@ const cards = [
 
 const DeptSection9 = () => {
     return (
-        <section className="pt-20 px-6  max-w-[1440px] mx-auto w-full bg-white">
+        <section className="pt-20 px-6  max-w-[1440px] mx-auto w-full bg-white flex flex-col items-center">
+            <SectionPill text="Achievements" className="mb-8" />
             {/* Title */}
             <h2
                 className={`${marcellus.className} text-[45px] text-black text-center capitalize`}

@@ -17,43 +17,42 @@ const DepartmentPage = () => {
     return (
         <div className="flex flex-col w-full font-sans bg-white overflow-x-hidden">
 
-            {/* main hero section */}
+            {/* Hero Section - Banner with breadcrumbs */}
             <DeptHeroSection />
 
-            {/* departmentof cardiac technology */}
+            {/* Department Introduction - Overview of Cardiac Care Technology */}
             <DeptSection2 />
 
-            {/*   4 cards rendering  */}
+            {/* Department Stats - Key figures like programs, publications, and labs */}
             <DeptSection3 />
-            {/* vision and mission cards  */}
+
+            {/* Vision & Mission - Goals and values of the department */}
             <DeptSection4 />
-            {/* program offered section */}
+
+            {/* Programs Offered - Details about B.Sc. Cardiac Care Technology */}
             <DeptSection6 />
 
-            {/* career oppurtunity card  */}
+            {/* Career Opportunities - Mentorship and internship highlights */}
             <DeptSection5 />
 
-            {/* POs PSOs PEOs */}
+            {/* POs, PSOs, PEOs - Academic outcomes and objectives accordion */}
             <DeptSection7 />
 
-            {/* Principle Section */}
+            {/* Principal's Note - Message from the Professor & Principal */}
             <DeptSection8 />
 
-            {/* faculty section  */}
+            {/* Our Faculty - Profiles of dedicated academic staff */}
             <DeptFacultySection />
 
-            {/* student award section  */}
+            {/* Student Achievements - Awards and achievements in healthcare */}
             <DeptSection9 />
 
-
-
-
-
-            {/* insights from lerner section */}
+            {/* Insights From Learners - Student testimonials and success stories */}
             <DeptSection11 />
-            {/* section: call to action  */}
 
+            {/* Final CTA Banner - Application and enquiry call to action */}
             <DeptCTABanner/>
+
             
         </div>
     )

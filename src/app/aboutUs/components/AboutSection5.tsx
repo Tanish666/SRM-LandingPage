@@ -2,6 +2,7 @@
 import React from 'react'
 import { Marcellus } from 'next/font/google'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -19,10 +20,7 @@ const AboutSection5 = () => {
     return (
         <section className="py-24 md:py-32 px-6 max-w-7xl mx-auto flex flex-col items-center">
 
-            <div className="flex items-center gap-2.5 bg-[#F9F9F9] border border-[#DBDBDB] px-5 py-2 rounded-full mb-6 shrink-0 shadow-sm">
-                <span className="size-2 bg-[#0071BC] rounded-full"></span>
-                <span className="text-sm font-medium text-[#000000] tracking-wide ">Accreditations</span>
-            </div>
+            <SectionPill text="Accreditations" className="mb-6" />
 
             <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-16 text-center leading-tight max-w-2xl`}>
                 Accredited For Excellence In Technical Education

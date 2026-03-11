@@ -2,6 +2,7 @@
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
 import Image from 'next/image'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
@@ -44,10 +45,7 @@ const DeptSection5 = () => {
             {/* MOBILE LAYOUT */}
             <div className="flex flex-col items-center w-full lg:hidden">
                 {/* Pill Badge */}
-                <div className="flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px] px-4 h-[41px]">
-                    <div className="bg-[#3C9E53] rounded-full mr-2" style={{ width: '10.48px', height: '10px' }}></div>
-                    <span className={`${inter.className} text-[14px] text-black capitalize`}>Career Opportunities</span>
-                </div>
+                <SectionPill text="Career Opportunities" className="mb-4" />
 
                 {/* Main Heading */}
                 <h2 className={`${marcellus.className} text-center text-[28px] leading-[36px] text-black capitalize mt-4 max-w-[90%]`}>
@@ -120,11 +118,10 @@ const DeptSection5 = () => {
             <div className="relative hidden lg:block" style={{ width: '1245px', height: '650px' }}>
                 {/* Pill Badge */}
                 <div
-                    className="absolute flex items-center justify-center border border-[#DBDBDB] bg-[#F9F9F9] rounded-[20px]"
-                    style={{ width: '217px', height: '41px', left: '514px', top: '0px' }}
+                    className="absolute"
+                    style={{ left: '514px', top: '0px' }}
                 >
-                    <div className="bg-[#3C9E53] rounded-full mr-2" style={{ width: '10.48px', height: '10px' }}></div>
-                    <span className={`${inter.className} text-[16px] text-black capitalize`}>Career Opportunities</span>
+                    <SectionPill text="Career Opportunities" />
                 </div>
 
                 {/* Main Heading */}

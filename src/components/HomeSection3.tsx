@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
 import Image from 'next/image'
 import CTAButton from './ui/CTA'
+import SectionPill from './SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -36,10 +37,7 @@ export default function HomeSection3() {
 
                 {/* Left Column */}
                 <div className="flex flex-col items-start">
-                    <div className="flex items-center gap-2.5 border border-slate-200 px-5 py-2 rounded-full mb-8 bg-white text-sm shadow-sm">
-                        <span className="size-2 bg-[#0066FF] rounded-full"></span>
-                        <span className="text-[#000000]">Program Offered</span>
-                    </div>
+                    <SectionPill text="Program Offered" className="mb-8" />
 
                     <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-full lg:w-[80%] lg:text-nowrap`}>
                         Our Allied Health<br className="hidden lg:block" /> Sciences Programs

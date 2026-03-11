@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus } from 'next/font/google'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -18,10 +19,7 @@ const AboutSection12 = () => {
 
                 {/* Left Text */}
                 <div className="flex flex-col relative z-10 w-full lg:w-3/5">
-                    <div className="flex items-center gap-2.5 mb-6 shrink-0 w-max">
-                        <div className='w-2 h-5 bg-[#FFD812]' />
-                        <p className='text-[#FFFFFF] text-[15px] tracking-widest font-medium uppercase'>enquiry</p>
-                    </div>
+                    <SectionPill text="Enquiry" className="mb-6" />
 
                     <h2 className={`${marcellus.className} text-4xl md:text-[48px] text-white leading-[1.2] mb-6`}>
                         Shape The Future Of Healthcare — Start Your Journey Today!

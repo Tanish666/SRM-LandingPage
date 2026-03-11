@@ -3,6 +3,7 @@ import React from 'react'
 import { Marcellus } from 'next/font/google'
 import Image from 'next/image'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -12,6 +13,7 @@ const marcellus = Marcellus({
 const AboutSection10 = () => {
     return (
         <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto flex flex-col items-center relative overflow-hidden">
+            <SectionPill text="Achievements" className="mb-8" />
 
             <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-16 text-center leading-tight max-w-2xl`}>
                 Achievements & Awards

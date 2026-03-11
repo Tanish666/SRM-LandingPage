@@ -3,6 +3,7 @@ import React from 'react'
 import { Marcellus } from 'next/font/google'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -34,10 +35,7 @@ const DeptSection6 = () => {
                         className="bg-[#F4F7FD] w-full h-full rounded-[28px] flex flex-col justify-center items-center lg:items-start px-6 py-12 md:px-12 lg:pl-40 lg:pr-15 text-center lg:text-left"
                     >
                         {/* Tag */}
-                        <div className="inline-flex items-center gap-2 bg-white rounded-[20px] px-4 py-2 mb-5 border border-[#F5F5F5] w-fit self-center lg:self-start mt-4 lg:mt-0">
-                            <span className="rounded-full w-[10px] h-[10px] bg-[#F4CB00]"></span>
-                            <span className="text-sm md:text-base font-normal text-black capitalize">Programs offered</span>
-                        </div>
+                        <SectionPill text="Programs offered" className="mb-5 self-center lg:self-start mt-4 lg:mt-0" />
 
                         {/* Title */}
                         <h2 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[40px] text-black capitalize mb-4 leading-tight`}>

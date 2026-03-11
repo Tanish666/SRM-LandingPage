@@ -5,6 +5,7 @@ import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import CTAButton from './ui/CTA'
+import SectionPill from './SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -16,10 +17,7 @@ const HomeSection2 = () => {
         <section className="py-24 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-10 md:mb-20">
-                <div className="flex items-center gap-2.5 border border-[#DBDBDB] px-5 py-2 rounded-full mb-8 bg-[#F9F9F9] backdrop-blur-sm shadow-sm">
-                    <span className="size-2 bg-[#0066FF] rounded-full"></span>
-                    <span className="text-sm font-medium text-slate-600 tracking-wide uppercase">About Us</span>
-                </div>
+                <SectionPill text="About Us" className="mb-8" />
 
                 <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-[#000000] mb-8 leading-tight lg:whitespace-nowrap text-center w-full max-w-none font-medium`}>
                     Shaping Healthcare Leaders For A Better Tomorrow
@@ -122,4 +120,3 @@ const Card = ({ number, text, imageSrc, className }: { number: string, text: str
 )
 
 export default HomeSection2
-

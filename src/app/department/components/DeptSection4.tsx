@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -15,8 +16,9 @@ const inter = Inter({
 const DeptSection4 = () => {
     return (
         <section
-            className="relative mx-auto w-full px-4 md:px-10 lg:px-20 mt-10 mb-10"
+            className="relative mx-auto w-full px-4 md:px-10 lg:px-20 mt-10 mb-10 flex flex-col items-center"
         >
+            <SectionPill text="Our Vision & Mission" className="mb-8" />
             <div
                 className="flex flex-col lg:flex-row gap-8 lg:gap-12 p-8 md:p-12 lg:p-16 h-full"
                 style={{

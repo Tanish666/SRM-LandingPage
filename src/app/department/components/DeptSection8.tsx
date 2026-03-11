@@ -2,6 +2,7 @@
 import React from 'react'
 import { Marcellus, Inder } from 'next/font/google'
 import Image from 'next/image'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -39,6 +40,7 @@ const DeptSection8 = () => {
 
                     {/* Right: Name, Designation & Contact */}
                     <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <SectionPill text="Principal's Note" className="mb-6" />
                         <h3
                             className={`${marcellus.className} text-[28px] lg:text-[40px] text-[#0D1B2A] leading-tight mb-4`}
                         >

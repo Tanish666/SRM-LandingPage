@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
 import { ChevronDown, ArrowUp } from 'lucide-react'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -38,6 +39,7 @@ const AboutSection11 = () => {
 
                 {/* Left Text */}
                 <div className="w-full lg:w-1/2 flex flex-col">
+                    <SectionPill text="Our Principles" className="mb-6" />
                     <h2 className={`${marcellus.className} text-4xl md:text-[60px] text-slate-900 mb-6 md:mb-8 leading-tight`}>
                         Our Principles
                     </h2>

@@ -2,6 +2,7 @@
 import React from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -32,6 +33,7 @@ const DeptSection2 = () => {
 
                 {/* Right Side*/}
                 <div className="flex flex-col items-start lg:pt-5">
+                    <SectionPill text="About Us" className="mb-6" />
                     {/* Title*/}
                     <h2
                         className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize mb-6 leading-tight lg:max-w-[687px]`}

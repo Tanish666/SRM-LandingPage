@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Marcellus } from 'next/font/google'
 import CTAButton from './ui/CTA';
+import SectionPill from './SectionPill';
+
 const marcellus = Marcellus({
     subsets: ['latin'],
     weight: ['400'],
@@ -31,10 +33,8 @@ const HeroSection4 = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
                     {/* Left Header */}
                     <div className="flex flex-col gap-6 lg:w-1/2">
-                        <div className="bg-[#FFFFFF] rounded-full px-5 py-2.5 flex items-center gap-3 w-max shadow-sm">
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#F4CB00]"></span>
-                            <span className="text-sm font-medium text-gray-800">Why Choose SRM AHS</span>
-                        </div>
+                        <SectionPill text="Why Choose SRM AHS" />
+
                         <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl lg:text-[45px]  tracking-wide leading-[1.2]`}>
                             Empowering Future<br />Healthcare Professionals
                         </h2>

@@ -2,6 +2,7 @@
 import React from 'react'
 import { Marcellus, Inter, Inder } from 'next/font/google'
 import Image from 'next/image'
+import SectionPill from '@/components/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -42,7 +43,8 @@ const faculty = [
 const DeptFacultySection = () => {
     return (
         <section className="w-full bg-white mt-[88px]">
-            <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-0">
+            <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-0 flex flex-col items-center">
+                <SectionPill text="Our Faculty" className="mb-8" />
                 {/* Title */}
                 <h2
                     className={`${marcellus.className} text-[28px] lg:text-[45px] text-black text-center capitalize`}
