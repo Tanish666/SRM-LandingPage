@@ -1,7 +1,8 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Marcellus } from 'next/font/google'
 import SectionPill from '@/components/SectionPill'
+import { useScroll, useTransform, motion, useMotionValueEvent } from 'framer-motion'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -9,8 +10,27 @@ const marcellus = Marcellus({
 })
 
 const AboutSection8 = () => {
+    const sectionRef = useRef(null);
+    const [currentYear, setCurrentYear] = useState<number>(2001);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start center", "end center"]
+    })
+
+    useMotionValueEvent(scrollYProgress, "change", (latest: number) => {
+        if (latest < 0.25) {
+            setCurrentYear(2001);
+        } else if (latest < 0.5) {
+            setCurrentYear(2003);
+        } else if (latest < 0.75) {
+            setCurrentYear(2008);
+        } else {
+            setCurrentYear(2011);
+        }
+    });
+
     return (
-        <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto flex flex-col items-center">
+        <section ref={sectionRef} className="py-20 px-6 md:px-20 max-w-7xl mx-auto flex flex-col items-center">
             <SectionPill text="Our History" className="mb-8" />
 
             <div className={`${marcellus.className} text-3xl md:text-[54px] text-slate-900 mb-24 text-center leading-tight max-w-4xl text-[#000000] whitespace-normal`}>
@@ -28,7 +48,11 @@ const AboutSection8 = () => {
                         <h3 className={`text-[30px] text-[#000000]`}>2001</h3>
                     </div>
                     {/* Yellow Circle */}
-                    <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#FFD812] rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"></div>
+                    <motion.div 
+                        animate={{ backgroundColor: currentYear === 2001 ? "#FFD812" : "#38BDF8" }} 
+                        transition={{ duration: 0.5 }}
+                        className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                    ></motion.div>
                     <div className="w-full md:w-1/2 pl-12 md:pl-14 mt-4 md:mt-0">
                         <h4 className="text-[22px] text-[#000000] font-normal mb-3" style={marcellus.style}>Empowering Generations</h4>
                         <p className="text-slate-500 text-[15px] leading-relaxed max-w-5xl">
@@ -43,7 +67,11 @@ const AboutSection8 = () => {
                         <h3 className={`text-[30px] text-[#000000]`}>2003</h3>
                     </div>
                     {/* Blue Circle */}
-                    <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#38BDF8] rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"></div>
+                    <motion.div 
+                        animate={{ backgroundColor: currentYear === 2003 ? "#FFD812" : "#38BDF8" }} 
+                        transition={{ duration: 0.5 }}
+                        className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                    ></motion.div>
                     <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-14 text-left md:text-right mt-4 md:mt-0">
                         <h4 className="text-[22px] text-[#000000] font-normal mb-3" style={marcellus.style}>Empowering Generations</h4>
                         <p className="text-slate-500 text-[15px] leading-relaxed max-w-5xl">
@@ -58,7 +86,11 @@ const AboutSection8 = () => {
                         <h3 className={`text-[30px] text-[#000000]`}>2008</h3>
                     </div>
                     {/* Blue Circle */}
-                    <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#38BDF8] rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"></div>
+                    <motion.div 
+                        animate={{ backgroundColor: currentYear === 2008 ? "#FFD812" : "#38BDF8" }} 
+                        transition={{ duration: 0.5 }}
+                        className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                    ></motion.div>
                     <div className="w-full md:w-1/2 pl-12 md:pl-14 mt-4 md:mt-0">
                         <h4 className="text-[22px] text-[#000000] font-normal mb-3" style={marcellus.style}>Empowering Generations</h4>
                         <p className="text-slate-500 text-[15px] leading-relaxed max-w-5xl">
@@ -73,7 +105,11 @@ const AboutSection8 = () => {
                         <h3 className={`text-[30px] text-[#000000]`}>2011</h3>
                     </div>
                     {/* Blue Circle */}
-                    <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#38BDF8] rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"></div>
+                    <motion.div 
+                        animate={{ backgroundColor: currentYear === 2011 ? "#FFD812" : "#38BDF8" }} 
+                        transition={{ duration: 0.5 }}
+                        className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                    ></motion.div>
                     <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-14 text-left md:text-right mt-4 md:mt-0">
                         <h4 className="text-[22px] text-[#000000] font-normal mb-3" style={marcellus.style}>Empowering Generations</h4>
                         <p className="text-slate-500 text-[15px] leading-relaxed max-w-5xl">

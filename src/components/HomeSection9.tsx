@@ -44,48 +44,96 @@ const HomeSection9 = () => {
             </div>
 
             {/* Right Column Grid */}
-            <div className="w-full lg:w-[55%] px-10  flex relative overflow-hidden">
+            <div className="w-full lg:w-[55%] px-4 lg:px-10 flex relative overflow-hidden">
 
-                {/* 2-Column Marquee Grid */}
-                <div className="flex gap-4 sm:gap-6 w-full h-[120vh] relative z-10">
+                {/* Marquee Content */}
+                <div className="w-full relative z-10">
+                    
+                    {/* Mobile View - Horizontal Marquee */}
+                    <div className="flex lg:hidden flex-col gap-6 w-full py-12">
+                        <Marquee className="[--duration:25s] [--gap:1.5rem]" repeat={4}>
+                            <FacilityCard
+                                title="Open Stadium"
+                                imgSrc="/sec9Pic2.svg"
+                                heightClass="h-[180px]"
+                                widthClass="w-[280px]"
+                            />
+                            <FacilityCard
+                                title="Central Library"
+                                imgSrc="/sec9Pic3.svg"
+                                heightClass="h-[180px]"
+                                widthClass="w-[280px]"
+                            />
+                            <FacilityCard
+                                title="Sports Complex"
+                                imgSrc="/sec9Pic4.svg"
+                                heightClass="h-[180px]"
+                                widthClass="w-[280px]"
+                            />
+                        </Marquee>
 
-                    {/* First Column - Marquee Up */}
-                    <Marquee vertical className="[--duration:30s] w-1/2" repeat={4}>
-                        <FacilityCard
-                            title="Open Stadium"
-                            imgSrc="/sec9Pic2.svg"
-                            heightClass="h-[200px] md:h-[240px] xl:h-[280px]"
-                        />
-                        <FacilityCard
-                            title="Central Library"
-                            imgSrc="/sec9Pic3.svg"
-                            heightClass="h-[250px] md:h-[300px] xl:h-[340px]"
-                        />
-                        <FacilityCard
-                            title="Sports Complex"
-                            imgSrc="/sec9Pic4.svg"
-                            heightClass="h-[200px] md:h-[240px] xl:h-[280px]"
-                        />
-                    </Marquee>
+                        <Marquee reverse className="[--duration:30s] [--gap:1.5rem]" repeat={4}>
+                            <FacilityCard
+                                title="Computer Labs"
+                                imgSrc="/sec9Pic5.svg"
+                                heightClass="h-[180px]"
+                                widthClass="w-[280px]"
+                            />
+                            <FacilityCard
+                                title="Cafeteria"
+                                imgSrc="/sec9Pic6.svg"
+                                heightClass="h-[180px]"
+                                widthClass="w-[280px]"
+                            />
+                            <FacilityCard
+                                title="Modern Campus"
+                                imgSrc="/sec9Pic7.svg"
+                                heightClass="h-[180px]"
+                                widthClass="w-[280px]"
+                            />
+                        </Marquee>
+                    </div>
 
-                    {/* Second Column - Marquee Down */}
-                    <Marquee vertical reverse className="[--duration:35s] w-1/2" repeat={4}>
-                        <FacilityCard
-                            title="Computer Labs"
-                            imgSrc="/sec9Pic5.svg"
-                            heightClass="h-[230px] md:h-[270px] xl:h-[320px]"
-                        />
-                        <FacilityCard
-                            title="Cafeteria"
-                            imgSrc="/sec9Pic6.svg"
-                            heightClass="h-[250px] md:h-[300px] xl:h-[340px]"
-                        />
-                        <FacilityCard
-                            title="Modern Campus"
-                            imgSrc="/sec9Pic7.svg"
-                            heightClass="h-[170px] md:h-[210px] xl:h-[240px]"
-                        />
-                    </Marquee>
+                    {/* Desktop View - Vertical Marquee */}
+                    <div className="hidden lg:flex gap-4 sm:gap-6 w-full h-[120vh]">
+                        {/* First Column - Marquee Up */}
+                        <Marquee vertical className="[--duration:30s] w-1/2" repeat={4}>
+                            <FacilityCard
+                                title="Open Stadium"
+                                imgSrc="/sec9Pic2.svg"
+                                heightClass="h-[200px] md:h-[240px] xl:h-[280px]"
+                            />
+                            <FacilityCard
+                                title="Central Library"
+                                imgSrc="/sec9Pic3.svg"
+                                heightClass="h-[250px] md:h-[300px] xl:h-[340px]"
+                            />
+                            <FacilityCard
+                                title="Sports Complex"
+                                imgSrc="/sec9Pic4.svg"
+                                heightClass="h-[200px] md:h-[240px] xl:h-[280px]"
+                            />
+                        </Marquee>
+
+                        {/* Second Column - Marquee Down */}
+                        <Marquee vertical reverse className="[--duration:35s] w-1/2" repeat={4}>
+                            <FacilityCard
+                                title="Computer Labs"
+                                imgSrc="/sec9Pic5.svg"
+                                heightClass="h-[230px] md:h-[270px] xl:h-[320px]"
+                            />
+                            <FacilityCard
+                                title="Cafeteria"
+                                imgSrc="/sec9Pic6.svg"
+                                heightClass="h-[250px] md:h-[300px] xl:h-[340px]"
+                            />
+                            <FacilityCard
+                                title="Modern Campus"
+                                imgSrc="/sec9Pic7.svg"
+                                heightClass="h-[170px] md:h-[210px] xl:h-[240px]"
+                            />
+                        </Marquee>
+                    </div>
 
                 </div>
             </div>
@@ -93,8 +141,8 @@ const HomeSection9 = () => {
     )
 }
 
-const FacilityCard = ({ title, heightClass, imgSrc }: { title?: string, heightClass: string, imgSrc: string }) => (
-    <div className={`relative w-full ${heightClass} rounded-[10px] overflow-hidden shadow-xl group bg-blue-950 transition-all duration-300 hover:shadow-2xl`}>
+const FacilityCard = ({ title, heightClass, imgSrc, widthClass = "w-full" }: { title?: string, heightClass: string, imgSrc: string, widthClass?: string }) => (
+    <div className={`relative ${widthClass} ${heightClass} rounded-[10px] overflow-hidden shadow-xl group bg-blue-950 transition-all duration-300 hover:shadow-2xl`}>
 
         {/* Image */}
         <div className="absolute inset-0 bg-gray-500 group-hover:scale-[1.08] transition-transform duration-700 ease-in-out">

@@ -48,9 +48,9 @@ const HomeSection2 = () => {
 
 
                 {/* Cards Grid */}
-                <div className="flex flex-wrap justify-center gap-6 md:gap-20 max-w-6xl mx-auto px-4 md:px-0">
+                <div className="grid grid-cols-2 lg:flex lg:flex-wrap justify-center gap-x-4 gap-y-10 md:gap-20 max-w-6xl mx-auto px-4 md:px-0">
                     {/* Card 1: Leftmost (High) */}
-                    <div className="lg:translate-y-0 shrink-0">
+                    <div className="lg:translate-y-0">
                         <Card
                             number="25"
                             text="Year of Legacy"
@@ -59,7 +59,7 @@ const HomeSection2 = () => {
                     </div>
 
                     {/* Card 2: Center-Left (Low) */}
-                    <div className="lg:translate-y-20 shrink-0">
+                    <div className="lg:translate-y-20">
                         <Card
                             number="100+"
                             text="Research Publications Annually"
@@ -68,7 +68,7 @@ const HomeSection2 = () => {
                     </div>
 
                     {/* Card 3: Center-Right (Low) */}
-                    <div className="lg:translate-y-20 shrink-0">
+                    <div className="lg:translate-y-20">
                         <Card
                             number="25"
                             text="Experienced Faculty Members"
@@ -77,7 +77,7 @@ const HomeSection2 = () => {
                     </div>
 
                     {/* Card 4: Rightmost (High) */}
-                    <div className="lg:translate-y-0 shrink-0">
+                    <div className="lg:translate-y-0">
                         <Card
                             number="18+"
                             text="Specialized Programs"
@@ -91,7 +91,7 @@ const HomeSection2 = () => {
 }
 
 const Card = ({ number, text, imageSrc, className }: { number: string, text: string, imageSrc: string, className?: string }) => (
-    <div className={`group relative rounded-[7.7px] overflow-hidden bg-slate-100 cursor-pointer w-[221.88px] h-[231.89px] ${className || ''}`}>
+    <div className={`group relative rounded-[7.7px] overflow-hidden bg-slate-100 cursor-pointer w-full md:w-[221.88px] aspect-[221/231] md:h-[231.89px] ${className || ''}`}>
         {/* Background Image */}
         <Image
             src={imageSrc}

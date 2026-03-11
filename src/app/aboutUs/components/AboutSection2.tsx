@@ -35,7 +35,7 @@ const AboutSection2 = () => {
                 </div>
 
                 {/* Right Side: Text Content */}
-                <div className="w-full lg:flex-1 flex flex-col items-start justify-center mt-8 lg:mt-0">
+                <div className="w-full lg:flex-1 flex flex-col items-center md:items-start justify-center mt-8 lg:mt-0 text-center md:text-left">
                     <SectionPill text="About Us" className="mb-8" />
 
                     <div className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-6 leading-[1.2]`}>
@@ -52,21 +52,21 @@ const AboutSection2 = () => {
                     </p>
 
                     {/* Stats Boxes */}
-                    <div className="flex  items-center gap-8 w-full">
-                        <div className="flex items-center gap-4">
-                            <div className="bg-gradient-to-b from-[#0071BC] to-[#0096FA] rounded-[5px] w-[90px] h-[90px] flex items-center justify-center shrink-0">
-                                <span className={`${marcellus.className} text-white text-5xl`}>25</span>
+                    <div className="flex items-center justify-center md:justify-start gap-6 md:gap-8 w-full flex-wrap sm:flex-nowrap">
+                        <div className="flex items-center gap-3 md:gap-4">
+                            <div className="bg-gradient-to-b from-[#0071BC] to-[#0096FA] rounded-[5px] w-[70px] h-[70px] md:w-[90px] md:h-[90px] flex items-center justify-center shrink-0">
+                                <span className={`${marcellus.className} text-white text-3xl md:text-5xl`}>25</span>
                             </div>
-                            <div className={`${marcellus.className} text-xl md:text-2xl leading-tight text-[#000000]`}>
+                            <div className={`${marcellus.className} text-lg md:text-2xl leading-tight text-[#000000] text-left`}>
                                 Year of<br />Legacy
                             </div>
                         </div>
 
-                        <div className="hidden sm:block w-[2.5px] h-20 bg-[#DBDBDB]"></div>
+                        <div className="hidden sm:block w-[2.5px] h-16 md:h-20 bg-[#DBDBDB]"></div>
 
-                        <div className="flex items-center gap-4">
-                            <span className={`${marcellus.className} text-[#0071BC] text-6xl leading-none`}>18+</span>
-                            <div className={`${marcellus.className} text-xl md:text-2xl leading-tight text-[#000000]`}>
+                        <div className="flex items-center gap-3 md:gap-4">
+                            <span className={`${marcellus.className} text-[#0071BC] text-4xl md:text-6xl leading-none`}>18+</span>
+                            <div className={`${marcellus.className} text-lg md:text-2xl leading-tight text-[#000000] text-left`}>
                                 Specialized<br />Programs
                             </div>
                         </div>
