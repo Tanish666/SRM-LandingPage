@@ -49,7 +49,7 @@ const HomeSection10 = () => {
     ];
 
     const displayEvents = selectedDates.length > 0 
-        ? selectedDates.map((date, index) => ({
+        ? [...selectedDates].sort((a, b) => Number(a) - Number(b)).map((date, index) => ({
             id: `dummy-${date}-${index}`,
             date: `August ${date}, 2025`,
             title: "Upcoming Event",
