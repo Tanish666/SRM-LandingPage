@@ -48,19 +48,30 @@ const HomeSection10 = () => {
         }
     ];
 
+    const displayEvents = selectedDates.length > 0 
+        ? selectedDates.map((date, index) => ({
+            id: `dummy-${date}-${index}`,
+            date: `August ${date}, 2025`,
+            title: "Upcoming Event",
+            description: `This is a dummy event for August ${date}. Actual event data is not available yet.`,
+            image: "/",
+            link: "#"
+        }))
+        : eventsData;
+
     const nextEvents = () => {
-        if (startIndex + 2 < eventsData.length) {
-            setStartIndex(prev => prev + 1);
+        if (startIndex + 2 < displayEvents.length) {
+            setStartIndex(prev => prev + 2);
         } else {
             setStartIndex(0); // Optional: Loop back to start
         }
     };
 
     const prevEvents = () => {
-        if (startIndex > 0) {
-            setStartIndex(prev => prev - 1);
+        if (startIndex >= 2) {
+            setStartIndex(prev => prev - 2);
         } else {
-            setStartIndex(eventsData.length - 2); // Optional: Loop to end
+            setStartIndex(Math.max(0, Math.floor((displayEvents.length - 1) / 2) * 2)); // Optional: Loop to end
         }
     };
 
@@ -69,13 +80,18 @@ const HomeSection10 = () => {
         const saved = localStorage.getItem('selectedCalendarDates');
         if (saved) {
             try {
-                setSelectedDates(JSON.parse(saved));
+                const parsed = JSON.parse(saved);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    setSelectedDates(parsed.map(String));
+                } else {
+                    setSelectedDates(["4", "14", "18", "30"]);
+                }
             } catch (e) {
                 console.error("Error parsing saved dates", e);
-                setSelectedDates([4, 14, 18, 30]);
+                setSelectedDates(["4", "14", "18", "30"]);
             }
         } else {
-            setSelectedDates([4, 14, 18, 30]);
+            setSelectedDates(["4", "14", "18", "30"]);
         }
     }, []);
 
@@ -87,11 +103,17 @@ const HomeSection10 = () => {
     }, [selectedDates]);
 
     const toggleDate = (val: number | string) => {
-        setSelectedDates(prev =>
-            prev.includes(val)
-                ? prev.filter(d => d !== val)
-                : [...prev, val]
-        );
+        setSelectedDates(prev => {
+            const stringVal = String(val);
+            const stringPrev = prev.map(String);
+            
+            const newDates = stringPrev.includes(stringVal)
+                ? stringPrev.filter(d => d !== stringVal)
+                : [...stringPrev, stringVal];
+            
+            return newDates.length > 0 ? newDates : ["4", "14", "18", "30"];
+        });
+        setStartIndex(0);
     };
 
     const calendarData = [
@@ -125,22 +147,24 @@ const HomeSection10 = () => {
                         </h2>
 
                         {/* Arrows (Desktop positioned right, Mobile flow below) */}
-                        <div className="hidden md:flex absolute right-0 bottom-2 gap-3">
-                            <button
-                                onClick={prevEvents}
-                                className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-white hover:-translate-x-1 transition-transform"
-                                aria-label="Previous events"
-                            >
-                                <IconArrowNarrowLeft size={30} strokeWidth={1.5} />
-                            </button>
-                            <button
-                                onClick={nextEvents}
-                                className="w-10 h-10 rounded-full bg-[#006BB3] flex items-center justify-center text-white hover:translate-x-1 transition-transform"
-                                aria-label="Next events"
-                            >
-                                <IconArrowNarrowRight size={30} strokeWidth={1.5} />
-                            </button>
-                        </div>
+                        {displayEvents.length > 2 && (
+                            <div className="hidden md:flex absolute right-0 bottom-2 gap-3">
+                                <button
+                                    onClick={prevEvents}
+                                    className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-white hover:-translate-x-1 transition-transform"
+                                    aria-label="Previous events"
+                                >
+                                    <IconArrowNarrowLeft size={30} strokeWidth={1.5} />
+                                </button>
+                                <button
+                                    onClick={nextEvents}
+                                    className="w-10 h-10 rounded-full bg-[#006BB3] flex items-center justify-center text-white hover:translate-x-1 transition-transform"
+                                    aria-label="Next events"
+                                >
+                                    <IconArrowNarrowRight size={30} strokeWidth={1.5} />
+                                </button>
+                            </div>
+                        )}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:h-[381px] h-auto">
@@ -195,7 +219,7 @@ const HomeSection10 = () => {
                         </div>
 
                         <AnimatePresence mode="wait">
-                            {eventsData.slice(startIndex, startIndex + 2).map((event) => (
+                            {displayEvents.slice(startIndex, startIndex + 2).map((event) => (
                                 <motion.div
                                     key={event.id}
                                     initial={{ opacity: 0, x: 20 }}
@@ -233,22 +257,24 @@ const HomeSection10 = () => {
                         </AnimatePresence>
 
                         {/* Mobile Nav Arrows Container */}
-                        <div className="flex md:hidden justify-center gap-4 mt-8">
-                            <button
-                                onClick={prevEvents}
-                                className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-white active:scale-95 transition-transform"
-                                aria-label="Previous events"
-                            >
-                                <ArrowLeft size={20} strokeWidth={2.5} />
-                            </button>
-                            <button
-                                onClick={nextEvents}
-                                className="w-10 h-10 rounded-full bg-[#006BB3] flex items-center justify-center text-white active:scale-95 transition-transform"
-                                aria-label="Next events"
-                            >
-                                <ArrowRight size={20} strokeWidth={2.5} />
-                            </button>
-                        </div>
+                        {displayEvents.length > 2 && (
+                            <div className="flex md:hidden justify-center gap-4 mt-8">
+                                <button
+                                    onClick={prevEvents}
+                                    className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-white active:scale-95 transition-transform"
+                                    aria-label="Previous events"
+                                >
+                                    <ArrowLeft size={20} strokeWidth={2.5} />
+                                </button>
+                                <button
+                                    onClick={nextEvents}
+                                    className="w-10 h-10 rounded-full bg-[#006BB3] flex items-center justify-center text-white active:scale-95 transition-transform"
+                                    aria-label="Next events"
+                                >
+                                    <ArrowRight size={20} strokeWidth={2.5} />
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </div>
 
