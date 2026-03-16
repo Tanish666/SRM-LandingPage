@@ -3,10 +3,36 @@ import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 import SectionPill from './SectionPill'
+import { motion, useInView, animate, useMotionValue, useTransform, useSpring } from 'framer-motion'
 
 
 const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
+
+const Counter = ({ value }: { value: string }) => {
+    const numMatch = value.match(/(\d+)(.*)/);
+    const targetNum = numMatch ? parseInt(numMatch[1]) : 0;
+    const suffix = numMatch ? numMatch[2] : "";
+    
+    const count = useMotionValue(0);
+    const springValue = useSpring(count, {
+        stiffness: 50,
+        damping: 30,
+        restDelta: 0.001
+    });
+    const rounded = useTransform(springValue, (latest) => Math.round(latest) + suffix);
+    
+    const ref = React.useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+    React.useEffect(() => {
+        if (isInView) {
+            count.set(targetNum);
+        }
+    }, [isInView, count, targetNum]);
+
+    return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 
 const HemeSection6 = () => {
     const stats = [
@@ -90,7 +116,7 @@ const HemeSection6 = () => {
                             >
                                 <div className="flex items-start justify-between mb-3">
                                     <h3 className={`${marcellus.className} text-[36px] leading-[36px] text-[#0066CC]`}>
-                                        {stat.num}
+                                        <Counter value={stat.num} />
                                     </h3>
                                     <img
                                         src={stat.icon}
@@ -172,7 +198,7 @@ const HemeSection6 = () => {
                                         className={`${marcellus.className} absolute text-[40px] leading-[40px] text-[#0066CC]`}
                                         style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
                                     >
-                                        {stat.num}
+                                        <Counter value={stat.num} />
                                     </h3>
                                     <p
                                         className={`${marcellus.className} absolute text-[20px] leading-[25px] text-black capitalize`}

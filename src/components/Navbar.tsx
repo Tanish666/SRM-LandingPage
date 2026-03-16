@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { useRouter, usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
@@ -7,6 +8,7 @@ const Navbar = () => {
     const router = useRouter()
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
+    const [hoveredTab, setHoveredTab] = useState<'admission' | 'contact'>('admission')
 
     const navLinks = [
         { label: 'Home', path: '/' },
@@ -59,12 +61,35 @@ const Navbar = () => {
 
                 {/* Action Buttons & Mobile Toggle */}
                 <div className='flex items-center gap-3'>
-                    <div className='flex items-center bg-[#FFEB3B] rounded-full p-1 sm:p-1.5 transition-all'>
-                        <button className='bg-white text-black px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-semibold text-[13px] sm:text-base leading-none shadow-sm transition-all hover:bg-gray-100 active:scale-95'>
-                            Admission
+                    <div
+                        className='flex items-center bg-[#FFEB3B] rounded-full p-1 sm:p-1.5 transition-all relative'
+                        onMouseLeave={() => setHoveredTab('admission')}
+                    >
+                        <button
+                            onMouseEnter={() => setHoveredTab('admission')}
+                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-semibold text-[13px] sm:text-base leading-none transition-all active:scale-95'
+                        >
+                            <span className="relative z-10">Admission</span>
+                            {hoveredTab === 'admission' && (
+                                <motion.div
+                                    layoutId="nav-pill"
+                                    className="absolute inset-0 bg-white rounded-full shadow-sm"
+                                    transition={{ duration: 0.5 }}
+                                />
+                            )}
                         </button>
-                        <button className='text-black px-3 py-1.5 sm:px-5 sm:py-2 font-semibold text-[13px] sm:text-base leading-none transition-all hover:opacity-70 active:scale-95'>
-                            Contact
+                        <button
+                            onMouseEnter={() => setHoveredTab('contact')}
+                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-semibold text-[13px] sm:text-base leading-none transition-all active:scale-95'
+                        >
+                            <span className="relative z-10">Contact</span>
+                            {hoveredTab === 'contact' && (
+                                <motion.div
+                                    layoutId="nav-pill"
+                                    className="absolute inset-0 bg-white rounded-full shadow-sm"
+                                    transition={{ type: 'spring', bounce: 0.25, duration: 0.5 }}
+                                />
+                            )}
                         </button>
                     </div>
 

@@ -34,7 +34,7 @@ const HeroSection = () => {
 
                 {/* Hero Image Section */}
                 <div className='relative flex-1 w-full'>
-                    <div className='relative rounded-[4rem]   group perspective-1000'>
+                    <div className='relative rounded-[4rem] perspective-1000'>
                         <img
                             src="/srmHero.svg"
                             alt="SRM Campus"
@@ -52,13 +52,13 @@ const HeroSection = () => {
 
                         {/* Program Offered Badge */}
                         <div className='absolute bottom-2 -right-10 md:bottom-8 md:-right-7 z-20'>
-                            <div className='relative'>
-                                <div className='absolute size-14 md:size-20 -z-10 bg-white rounded-full -top-2 md:-top-3.5 -left-2.5 md:-left-4' />
-                                <div className='flex items-center gap-1.5 md:gap-2 pr-5 md:pr-8 py-1.5 rounded-full group/badge hover:shadow-2xl transition-all duration-500 cursor-pointer '>
+                            <div className='relative group/program'>
+                                <div className='absolute size-14 md:size-20 -z-10 bg-white rounded-full -top-2 md:-top-3.5 -left-2.5 md:-left-4 group-hover/program:bg-[#FFEB3B] transition-all duration-500' />
+                                <div className='flex items-center gap-1.5 md:gap-2 pr-5 md:pr-8 py-1.5 rounded-full transition-all duration-500 cursor-pointer '>
                                     <div className=''>
                                         <IconArrowNarrowRight stroke={1} className='w-8 h-8 md:w-10 md:h-10 rotate-[-35deg]' />
                                     </div>
-                                    <span className='text-[13px] md:text-lg font-semibold text-slate-600 tracking-tight whitespace-nowrap'>Program Offered</span>
+                                    <span className='text-[13px] md:text-lg font-semibold text-slate-600 tracking-tight whitespace-nowrap group-hover/program:text-black transition-all duration-500'>Program Offered</span>
                                 </div>
                             </div>
                         </div>

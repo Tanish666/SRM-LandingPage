@@ -88,7 +88,7 @@ const HomeSection7 = () => {
             </div>
 
             {/* Right Side: Content & Stats */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-12 lg:p-16">
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-12 lg:p-16 pb-0 md:pb-0 lg:pb-0">
                 <div className="max-w-2xl w-full">
                     {/* Header Text */}
                     <h2 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[44px] text-[#1F1F1F] leading-tight mb-6`}>

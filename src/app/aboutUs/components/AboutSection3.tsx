@@ -1,11 +1,37 @@
 'use client'
 import React from 'react'
 import { Marcellus } from 'next/font/google'
+import { motion, useMotionValue, useSpring, useTransform, useInView } from 'framer-motion'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
     weight: ['400'],
 })
+
+const Counter = ({ value }: { value: string }) => {
+    const numMatch = value.match(/(\d+)(.*)/);
+    const targetNum = numMatch ? parseInt(numMatch[1]) : 0;
+    const suffix = numMatch ? numMatch[2] : "";
+    
+    const count = useMotionValue(0);
+    const springValue = useSpring(count, {
+        stiffness: 50,
+        damping: 30,
+        restDelta: 0.001
+    });
+    const rounded = useTransform(springValue, (latest) => Math.round(latest) + suffix);
+    
+    const ref = React.useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+    React.useEffect(() => {
+        if (isInView) {
+            count.set(targetNum);
+        }
+    }, [isInView, count, targetNum]);
+
+    return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 
 const AboutSection3 = () => {
     const cards = [
@@ -20,10 +46,10 @@ const AboutSection3 = () => {
             {cards.map((card, idx) => (
                 <div key={idx} className={`flex-1 min-w-[240px] bg-[#FFF4B1] rounded-[24px] py-12 px-8 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-[#FFE043]`}>
                     <h3 className={`${marcellus.className} text-5xl lg:text-[56px] text-[#0071BC] mb-4 font-light`}>
-                        {card.num}
+                        <Counter value={card.num} />
                     </h3>
                     <p className={`text-[#515151] text-[15px] leading-relaxed max-w-[200px] `}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        {card.text}
                     </p>
                 </div>
             ))}

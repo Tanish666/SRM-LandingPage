@@ -42,7 +42,7 @@ export default function HomeSection3() {
                     <h2 className={`${marcellus.className} text-4xl md:text-5xl lg:text-[45px] text-slate-900 leading-[1.2] mb-10 w-full lg:w-[80%] lg:text-nowrap`}>
                         Our Allied Health<br className="hidden lg:block" /> Sciences Programs
                     </h2>
-                    <div className='flex justify-center items-center md:justify-start w-full'>
+                    <div className='flex justify-start w-full'>
                         <CTAButton
                             text="Explore Now"
                             onClick={() => console.log('Explore button clicked')}

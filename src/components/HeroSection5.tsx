@@ -63,7 +63,7 @@ export default function HeroSection5() {
                 const firstChild = container.firstElementChild as HTMLElement;
                 if (firstChild) {
                     const itemHeight = firstChild.offsetHeight + 20; // height + mb-5 (20px)
-                    
+
                     container.scrollTo({
                         top: container.scrollTop + itemHeight,
                         behavior: 'smooth'
@@ -93,11 +93,11 @@ export default function HeroSection5() {
             <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)] gap-10 lg:gap-14 max-w-7xl mx-auto items-start">
 
                 {/* Left Column: Latest News */}
-                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col lg:h-[520px] h-auto pb-4">
+                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col lg:h-[520px] h-[450px] pb-4">
                     <div className="bg-[#FFD700] rounded-lg py-2 text-center shadow-sm z-10 mx-1">
                         <h3 className={`${marcellus.className} text-[28px] text-[#000000] tracking-wide`}>Latest News</h3>
                     </div>
-                    <div 
+                    <div
                         ref={newsRef}
                         className="flex-1 overflow-y-auto px-7 py-6 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FFD700] [&::-webkit-scrollbar-thumb]:rounded-full"
                     >
@@ -125,13 +125,13 @@ export default function HeroSection5() {
                             Insights From Our Learners
                         </h2>
                         <div className="flex gap-3 pb-1">
-                            <button 
+                            <button
                                 onClick={handlePrev}
                                 className="bg-[#FFD700] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-yellow-400 transition-colors shrink-0"
                             >
                                 <IconArrowNarrowLeft className="text-white" size={30} strokeWidth={1.5} />
                             </button>
-                            <button 
+                            <button
                                 onClick={handleNext}
                                 className="bg-[#0073CF] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors shrink-0"
                             >
@@ -143,11 +143,11 @@ export default function HeroSection5() {
                     {/* Content Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-[260px_minmax(0,1fr)] gap-6 lg:h-[400px] h-auto">
 
-                        {/* Stacked Images */}
-                        <div className="flex flex-col gap-3 h-full overflow-hidden">
+                        {/* Stacked Images - Hidden on Mobile */}
+                        <div className="hidden md:flex flex-col gap-3 h-full overflow-hidden">
                             <AnimatePresence mode="popLayout">
                                 {/* Top Slot */}
-                                <motion.div 
+                                <motion.div
                                     key={`top-${getInsightAt(-1).name}`}
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
@@ -164,19 +164,19 @@ export default function HeroSection5() {
                                 </motion.div>
 
                                 {/* Middle Slot (Active) */}
-                                <motion.div 
+                                <motion.div
                                     key={`mid-${getInsightAt(0).name}`}
                                     initial={{ scale: 0.95, opacity: 0 }}
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 0.95, opacity: 0 }}
                                     transition={{ duration: 0.6 }}
-                                    className="relative w-full flex-1 rounded-2xl overflow-hidden shadow-sm border border-slate-100"
+                                    className="relative w-full flex-1 rounded-2xl overflow-hidden shadow-sm border border-slate-100 "
                                 >
                                     <Image src={getInsightAt(0).image} alt="Student" fill className="object-cover" />
                                 </motion.div>
 
                                 {/* Bottom Slot */}
-                                <motion.div 
+                                <motion.div
                                     key={`bot-${getInsightAt(1).name}`}
                                     initial={{ y: -20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
@@ -195,19 +195,19 @@ export default function HeroSection5() {
                         </div>
 
                         {/* Quote Card */}
-                        <motion.div 
+                        <motion.div
                             onClick={handleNext}
-                            className="relative border border-slate-300/80 rounded-[24px] p-8 lg:p-10 h-full flex flex-col justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
+                            className="relative border border-slate-300/80 rounded-[24px] p-5 sm:p-8 lg:p-10 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
                         >
-                            {/* Quotes Blocks - Small animation on change */}
-                            <motion.div 
+                            {/* Quotes Blocks - Background Watermark on Mobile */}
+                            <motion.div
                                 key={`quotes-${activeIndex}`}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="absolute top-10 left-10 flex gap-[12px] z-0"
+                                className="absolute top-[32%] md:top-10 left-2 md:left-10 flex gap-[6px] md:gap-[12px] z-0"
                             >
-                                <img src="sec5SVG.svg" alt="" />
-                                <img src="sec5SVG.svg" alt="" />
+                                <img src="sec5SVG.svg" alt="" className="w-32 md:w-auto opacity-[0.12] md:opacity-100" />
+                                <img src="sec5SVG.svg" alt="" className="w-32 md:w-auto opacity-[0.12] md:opacity-100" />
                             </motion.div>
 
                             <div className="relative z-10 h-full flex flex-col">
@@ -218,8 +218,17 @@ export default function HeroSection5() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -10 }}
                                         transition={{ duration: 0.4 }}
-                                        className="flex-1 flex flex-col justify-center"
+                                        className="flex-1 flex flex-col justify-center p-2"
                                     >
+                                        {/* Mobile Image */}
+                                        <div className="md:hidden relative w-full aspect-[3/1.9] rounded-[20px] overflow-hidden mb-6 shadow-sm">
+                                            <Image
+                                                src={insights[activeIndex].image}
+                                                alt={insights[activeIndex].name}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                         <p className="text-[#64748B] text-[15px] lg:text-[15.5px] leading-[1.8] mb-8 group-hover:text-slate-700 transition-colors w-full sm:w-[95%]">
                                             {insights[activeIndex].quote}
                                         </p>
@@ -242,4 +251,4 @@ export default function HeroSection5() {
             </div>
         </section>
     )
-}
+}

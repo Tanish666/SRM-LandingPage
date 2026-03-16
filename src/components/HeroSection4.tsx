@@ -1,10 +1,12 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Marcellus } from 'next/font/google'
 import CTAButton from './ui/CTA';
 import SectionPill from './SectionPill';
+import { IconArrowNarrowRight, IconArrowNarrowLeft } from '@tabler/icons-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -26,13 +28,33 @@ const Card = ({ icon, title, description }: { icon: React.ReactNode, title: stri
 );
 
 const HeroSection4 = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [direction, setDirection] = useState(1);
+
+    const handleNext = () => {
+        setDirection(1);
+        setActiveIndex((prev) => (prev + 1) % 4);
+    };
+
+    const handlePrev = () => {
+        setDirection(-1);
+        setActiveIndex((prev) => (prev - 1 + 4) % 4);
+    };
+
+    const cardsData = [
+        { icon: "/sec4Icon1.svg", title: "Advanced Laboratories & Facilities" },
+        { icon: "/sec4Icon2.svg", title: "Hands-On Clinical Training" },
+        { icon: "/sec4Icon3.svg", title: "Personalized Academic Mentorship" },
+        { icon: "/sec4Icon4.svg", title: "Industry Internships" },
+    ];
+
     return (
         <section className="w-full max-w-[98%] mx-auto px-4 py-12 lg:py-20">
             <div className="bg-[#30A0FF] rounded-[2.5rem] p-10 lg:px-14 lg:pt-14 lg:pb-0 relative overflow-hidden flex flex-col gap-10">
                 {/* Header Row */}
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
                     {/* Left Header */}
-                    <div className="flex flex-col gap-6 lg:w-1/2">
+                    <div className="flex w-full lg:w-1/2 flex-col gap-6 justify-start">
                         <SectionPill text="Why Choose SRM AHS" />
 
                         <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl lg:text-[45px]  tracking-wide leading-[1.2]`}>
@@ -53,8 +75,43 @@ const HeroSection4 = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-8 relative z-10 pb-8 lg:pb-10 max-w-[1550px] mx-auto w-full items-center">
+                    
+                    {/* Mobile Carousel View (Hidden on Desktop) */}
+                    <div className="flex lg:hidden flex-col gap-6 w-full overflow-hidden">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeIndex}
+                                initial={{ opacity: 0, x: direction * 50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: direction * -50 }}
+                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                className="w-full"
+                            >
+                                <Card
+                                    icon={<Image src={cardsData[activeIndex].icon} width={45} height={45} alt={`Icon ${activeIndex + 1}`} />}
+                                    title={cardsData[activeIndex].title}
+                                    description="Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore"
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+                        <div className="flex justify-center gap-3 w-full">
+                            <button
+                                onClick={handlePrev}
+                                className="bg-[#FFD700] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-yellow-400 transition-colors shrink-0"
+                            >
+                                <IconArrowNarrowLeft className="text-white" size={30} strokeWidth={1.5} />
+                            </button>
+                            <button
+                                onClick={handleNext}
+                                className="bg-[#0073CF] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors shrink-0"
+                            >
+                                <IconArrowNarrowRight className="text-white" size={30} strokeWidth={1.5} />
+                            </button>
+                        </div>
+                    </div>
+
                     {/* Left Cards */}
-                    <div className="flex flex-col gap-8 justify-center items-center lg:items-start">
+                    <div className="hidden lg:flex flex-col gap-8 justify-center items-center lg:items-start">
                         <Card
                             icon={<Image src="/sec4Icon1.svg" width={45} height={45} alt="Icon 1" />}
                             title="Advanced Laboratories & Facilities"
@@ -88,7 +145,7 @@ const HeroSection4 = () => {
                     </div>
 
                     {/* Right Cards */}
-                    <div className="flex flex-col gap-8 justify-center items-center lg:items-end">
+                    <div className="hidden lg:flex flex-col gap-8 justify-center items-center lg:items-end">
                         <Card
                             icon={<Image src="/sec4Icon3.svg" width={45} height={45} alt="Icon 3" />}
                             title="Personalized Academic Mentorship"
