@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
 import { Marcellus } from 'next/font/google'
 import CTAButton from './ui/CTA';
 import SectionPill from './SectionPill';
@@ -75,7 +74,7 @@ const HeroSection4 = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-8 relative z-10 pb-8 lg:pb-10 max-w-[1550px] mx-auto w-full items-center">
-                    
+
                     {/* Mobile Carousel View (Hidden on Desktop) */}
                     <div className="flex lg:hidden flex-col gap-6 w-full overflow-hidden">
                         <AnimatePresence mode="wait">

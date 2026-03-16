@@ -204,10 +204,10 @@ export default function HeroSection5() {
                                 key={`quotes-${activeIndex}`}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="absolute top-[32%] md:top-10 left-2 md:left-10 flex gap-[6px] md:gap-[12px] z-0"
+                                className="absolute top-[55%] md:top-10 left-10 md:left-10 flex gap-[6px] md:gap-[12px] z-0"
                             >
-                                <img src="sec5SVG.svg" alt="" className="w-32 md:w-auto opacity-[0.12] md:opacity-100" />
-                                <img src="sec5SVG.svg" alt="" className="w-32 md:w-auto opacity-[0.12] md:opacity-100" />
+                                <img src="sec5SVG.svg" alt="" className="w-12 md:w-auto md:opacity-100" />
+                                <img src="sec5SVG.svg" alt="" className="w-12 md:w-auto md:opacity-100" />
                             </motion.div>
 
                             <div className="relative z-10 h-full flex flex-col">
