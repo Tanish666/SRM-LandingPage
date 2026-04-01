@@ -25,17 +25,6 @@ interface NewsEvent {
 
 const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }) => {
     const [startIndex, setStartIndex] = React.useState(0);
-    const [currentMonth, setCurrentMonth] = React.useState(new Date());
-
-    const nextMonth = () => {
-        setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() + 1, 1));
-        setStartIndex(0);
-    };
-
-    const prevMonth = () => {
-        setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
-        setStartIndex(0);
-    };
 
     const staticEvents = [
         {
@@ -72,7 +61,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
         }
     ];
 
-    const mappedEvents = newsEventsData.length > 0 
+    const mappedEvents = newsEventsData.length > 0
         ? newsEventsData.map(item => ({
             id: item.id,
             date: item.date,
@@ -85,15 +74,25 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
 
     const displayEvents = mappedEvents;
 
+    const currentMonth = React.useMemo(() => {
+        if (displayEvents.length > 0) {
+            const firstEventDate = new Date(displayEvents[0].date);
+            if (!isNaN(firstEventDate.getTime())) {
+                return new Date(firstEventDate.getFullYear(), firstEventDate.getMonth(), 1);
+            }
+        }
+        return new Date();
+    }, [displayEvents]);
+
     const highlightedDays = React.useMemo(() => {
         return mappedEvents
             .map(event => {
                 const d = new Date(event.date);
                 return isNaN(d.getTime()) ? null : d;
             })
-            .filter((d): d is Date => 
-                d !== null && 
-                d.getMonth() === currentMonth.getMonth() && 
+            .filter((d): d is Date =>
+                d !== null &&
+                d.getMonth() === currentMonth.getMonth() &&
                 d.getFullYear() === currentMonth.getFullYear()
             )
             .map(d => String(d.getDate()));
@@ -120,7 +119,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
         const year = currentMonth.getFullYear();
         const month = currentMonth.getMonth();
         const monthNum = String(month + 1).padStart(2, '0') + ".";
-        
+
         const data = [
             { val: monthNum, type: "label" },
             { val: "Mo", type: "label" }, { val: "Tu", type: "label" }, { val: "We", type: "label" },
@@ -135,9 +134,9 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
         // Previous month days to fill the first week
         const daysInPrevMonth = new Date(year, month, 0).getDate();
         const prevDaysCount = startDay - 1;
-        
+
         const allDays = [];
-        
+
         for (let i = prevDaysCount - 1; i >= 0; i--) {
             allDays.push({ val: String(daysInPrevMonth - i), type: "other" });
         }
@@ -173,10 +172,10 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
             } else {
                 weekDate = new Date(year, month, Number(firstDayOfWeek.val));
             }
-            
+
             const thursday = new Date(weekDate);
-            thursday.setDate(weekDate.getDate() + 3); 
-            
+            thursday.setDate(weekDate.getDate() + 3);
+
             data.push({ val: String(getISOWeek(thursday)), type: "week" });
             data.push(...allDays.slice(i, i + 7));
         }
@@ -222,15 +221,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                         {/* Calendar Card */}
                         <div className="bg-[#C5E6FD] rounded-xl p-6 text-gray-800">
                             <div className="flex items-center justify-center gap-4 text-lg font-serif mb-6">
-                                <button onClick={prevMonth} className="hover:text-yellow-500 transition-colors" aria-label="Previous month">
-                                    <ArrowLeft size={16} />
-                                </button>
-                                <span>•</span>
                                 <span className={`${marcellus.className} text-[24px]`}>{monthNames[currentMonth.getMonth()]}</span>
-                                <span>•</span>
-                                <button onClick={nextMonth} className="hover:text-yellow-500 transition-colors" aria-label="Next month">
-                                    <ArrowRight size={16} />
-                                </button>
                             </div>
                             <div className='w-full h-[1px] border-t my-5 border-dashed border-[#9F9F9F]' />
                             <div className="grid grid-cols-8 gap-y-4 gap-x-2 text-[15px] md:text-[13px] lg:text-sm text-center font-medium">
@@ -262,9 +253,9 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                                     return (
                                         <div
                                             key={index}
-                                            className={`flex items-center justify-center w-7 h-7 mx-auto rounded-full transition-all ${isHighlighted
-                                                ? "bg-yellow-400 font-bold text-gray-900 shadow-sm"
-                                                : "text-gray-600"
+                                            className={`flex items-center justify-center w-7 h-7 mx-auto transition-all ${isHighlighted
+                                                ? "bg-yellow-400 font-bold text-gray-900 shadow-sm rounded-lg"
+                                                : "text-gray-600 rounded-full"
                                                 }`}
                                         >
                                             {item.val}
