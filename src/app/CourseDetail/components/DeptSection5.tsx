@@ -7,7 +7,11 @@ import SectionPill from '@/components/SectionPill'
 const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
-const DeptSection5 = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection5 = ({ courseData }: Props) => {
     const stats = [
         {
             icon: "/section5logo1.png", iconW: 83, iconH: 69,

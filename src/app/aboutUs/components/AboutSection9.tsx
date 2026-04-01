@@ -47,7 +47,7 @@ const AboutSection9 = () => {
                 </div>
 
                 {/* Navigation Arrows Container - Positioned above cards on the right */}
-                <div className="flex justify-end gap-3 mb-8 relative z-20 w-full max-w-[1300px] mx-auto px-4 lg:px-0">
+                <div className="flex sm:hidden justify-end gap-3 mb-8 relative z-20 w-full max-w-[1300px] mx-auto px-4 lg:px-0">
                     <button 
                         onClick={handlePrevious}
                         className="w-10 h-10 rounded-full bg-[#FFD100] flex items-center justify-center text-white shadow-lg hover:scale-110 active:scale-95 transition-all"
@@ -63,7 +63,7 @@ const AboutSection9 = () => {
                 </div>
 
                 {/* Desktop Cards Grid */}
-                <div className="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10 mb-8 w-full max-w-[1300px] mx-auto px-4 lg:px-0">
+                <div className="hidden sm:grid grid-cols-2 xl:grid-cols-4 gap-6 gap-y-10 relative z-10 mb-8 w-full max-w-[1300px] mx-auto px-4 lg:px-0">
                     {facilities.map((item, idx) => (
                         <div key={idx} className={`relative h-[335px] w-full max-w-[313px] mx-auto rounded-[15px] overflow-hidden ${item.img} group cursor-pointer shadow-2xl hover:-translate-y-2 transition-transform duration-500`}>
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>

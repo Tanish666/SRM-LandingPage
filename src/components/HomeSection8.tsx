@@ -1,4 +1,5 @@
 'use client'
+import { useRouter } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import { Marcellus } from "next/font/google";
 
@@ -7,7 +8,7 @@ const marcellus = Marcellus({
     weight: ['400'],
 })
 
-const programs = [
+const initialUgPrograms = [
     { id: 1, name: 'B.Sc Cardio Perfusion Technology' },
     { id: 2, name: 'B.Sc Clinical Psychology' },
     { id: 3, name: 'B.Sc Cardio Perfusion Technology' },
@@ -15,7 +16,7 @@ const programs = [
     { id: 5, name: 'B.Sc Physician Assistant' },
 ]
 
-const mastersPrograms = [
+const initialPgPrograms = [
     { id: 1, name: 'M.Sc Cardio Perfusion Technology' },
     { id: 2, name: 'M.Sc Clinical Psychology' },
     { id: 3, name: 'M.Sc Medical imaging Technology' },
@@ -23,13 +24,26 @@ const mastersPrograms = [
     { id: 5, name: 'M.Sc Physician Assistant' },
 ]
 
-const HomeSection8 = () => {
+const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
     const [activeTab, setActiveTab] = useState<'UG' | 'PG'>('UG');
     const [isOpen, setIsOpen] = useState(false);
     const [selectedCourse, setSelectedCourse] = useState<string>('SELECT COURSE');
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
+    const [ugPrograms, setUgPrograms] = useState<any[]>(initialUgPrograms);
+    const [pgPrograms, setPgPrograms] = useState<any[]>(initialPgPrograms);
 
-    const currentPrograms = activeTab === 'UG' ? programs : mastersPrograms;
+    const currentPrograms = activeTab === 'UG' ? ugPrograms : pgPrograms;
+
+    useEffect(() => {
+        if (coursesData && coursesData.length > 0) {
+            const pg = coursesData.filter((c: any) => /^(M\.|\bMaster\b|\bMBA\b|\bMCA\b|\bMTech\b|\bMD\b|\bMS\b)/i.test(c.name));
+            const ug = coursesData.filter((c: any) => !/^(M\.|\bMaster\b|\bMBA\b|\bMCA\b|\bMTech\b|\bMD\b|\bMS\b)/i.test(c.name));
+
+            if (ug.length > 0) setUgPrograms(ug);
+            if (pg.length > 0) setPgPrograms(pg);
+        }
+    }, [coursesData]);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -48,10 +62,10 @@ const HomeSection8 = () => {
 
     return (
         <section className="relative w-full py-4 px-4 md:px-8 max-w-[1300px] mx-auto overflow-visible">
-            <div className="relative bg-[#B9E3FF] rounded-[20px] px-8 py-6 md:px-12 md:py-8 lg:px-8 lg:py-6 flex flex-col md:flex-row items-center justify-between overflow-visible ">
+            <div className="relative bg-[#B9E3FF] rounded-[20px] px-8 py-6 md:px-12 md:py-8 lg:px-8 lg:py-6 flex flex-col lg:flex-row items-center justify-between overflow-visible ">
 
                 {/* Left Content */}
-                <div className="relative z-10 w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                <div className="relative z-10 w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
                     <h2 className={`text-[32px] md:text-4xl lg:text-[38px] ${marcellus.className} text-[#1e2a33] leading-[1.1] mb-3 lg:whitespace-nowrap`}>
                         Discover The Right Course For You
                     </h2>
@@ -61,7 +75,7 @@ const HomeSection8 = () => {
                 </div>
 
                 {/* Right Content - Card */}
-                <div className="relative w-full md:w-[360px] bg-white rounded-[15px] p-5 md:p-4 z-40 shadow-sm">
+                <div className="relative w-full lg:w-[360px] bg-white rounded-[15px] p-5 md:p-4 z-40 shadow-sm">
                     {/* Toggle Buttons */}
                     <div className="relative bg-[#FFEA00] rounded-full p-1.5 flex justify-between items-center mb-6 z-20">
                         <button
@@ -121,7 +135,20 @@ const HomeSection8 = () => {
 
                     {/* Explore Now Button */}
                     <div className="relative flex justify-center my-3 z-20">
-                        <button className="bg-[#FFD100] hover:bg-[#f0c500] text-black font-semibold py-2.5 px-10 rounded-full text-[14px] transition-colors shadow-sm active:scale-95 duration-200">
+                        <button 
+                            onClick={() => {
+                                if (selectedCourse !== 'SELECT COURSE') {
+                                    const prog = currentPrograms.find((p: any) => p.name === selectedCourse);
+                                    const progId = prog ? (prog._id || prog.id) : null;
+                                    if (progId) {
+                                        router.push(`/CourseDetail?id=${progId}`);
+                                    } else {
+                                        router.push('/CourseDetail');
+                                    }
+                                }
+                            }}
+                            disabled={selectedCourse === 'SELECT COURSE'}
+                            className={`bg-[#FFD100] hover:bg-[#f0c500] text-black font-semibold py-2.5 px-10 rounded-full text-[14px] transition-colors shadow-sm active:scale-95 duration-200 ${selectedCourse === 'SELECT COURSE' ? 'opacity-50 cursor-not-allowed hover:bg-[#FFD100]' : ''}`}>
                             Explore Now
                         </button>
                     </div>

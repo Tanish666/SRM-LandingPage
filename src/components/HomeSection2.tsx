@@ -31,15 +31,15 @@ const HomeSection2 = () => {
             {/* Cards Grid with Staggered Layout */}
             <div className="relative">
                 {/* Centered Read More Button - Absolutely positioned to float in the center */}
-                <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                <div className="hidden xl:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
                     <CTAButton
                         text="Read More"
                         onClick={() => console.log('Read More button clicked')}
                     />
                 </div>
 
-                {/* Mobile Read More Button */}
-                <div className="md:hidden w-full flex justify-center items-center mb-10">
+                {/* Mobile & Tablet Read More Button */}
+                <div className="xl:hidden w-full flex justify-center items-center mb-10">
                     <CTAButton
                         text="Read More"
                         onClick={() => console.log('Read More button clicked')}
@@ -48,9 +48,9 @@ const HomeSection2 = () => {
 
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-2 lg:flex lg:flex-wrap justify-center gap-x-4 gap-y-10 md:gap-20 max-w-6xl mx-auto px-4 md:px-0">
+                <div className="grid grid-cols-2 xl:flex xl:flex-nowrap justify-center sm:place-items-center gap-x-4 gap-y-10 md:gap-x-10 md:gap-y-12 xl:gap-20 max-w-6xl mx-auto px-4 md:px-0">
                     {/* Card 1: Leftmost (High) */}
-                    <div className="lg:translate-y-0">
+                    <div className="xl:translate-y-0 flex justify-center w-full">
                         <Card
                             number="25"
                             text="Year of Legacy"
@@ -59,7 +59,7 @@ const HomeSection2 = () => {
                     </div>
 
                     {/* Card 2: Center-Left (Low) */}
-                    <div className="lg:translate-y-20">
+                    <div className="xl:translate-y-20 flex justify-center w-full">
                         <Card
                             number="100+"
                             text="Research Publications Annually"
@@ -68,7 +68,7 @@ const HomeSection2 = () => {
                     </div>
 
                     {/* Card 3: Center-Right (Low) */}
-                    <div className="lg:translate-y-20">
+                    <div className="xl:translate-y-20 flex justify-center w-full">
                         <Card
                             number="25"
                             text="Experienced Faculty Members"
@@ -77,7 +77,7 @@ const HomeSection2 = () => {
                     </div>
 
                     {/* Card 4: Rightmost (High) */}
-                    <div className="lg:translate-y-0">
+                    <div className="xl:translate-y-0 flex justify-center w-full">
                         <Card
                             number="18+"
                             text="Specialized Programs"

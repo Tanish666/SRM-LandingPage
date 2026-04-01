@@ -34,7 +34,11 @@ const cards = [
     },
 ]
 
-const DeptSection9 = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection9 = ({ courseData }: Props) => {
     return (
         <section className="pt-20 px-6  max-w-[1440px] mx-auto w-full bg-white flex flex-col items-center">
             <SectionPill text="Achievements" className="mb-8" />

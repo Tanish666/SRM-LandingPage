@@ -13,7 +13,11 @@ const poppins = Poppins({
     weight: ['400', '700'],
 })
 
-const DeptSection7 = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection7 = ({ courseData }: Props) => {
     const [openIndex, setOpenIndex] = useState(0)
 
     const accordionItems = [
@@ -42,6 +46,39 @@ const DeptSection7 = () => {
         },
     ]
 
+    const displayItems = courseData?.po_pso_peo?.length > 0
+        ? courseData.po_pso_peo.map((item: any) => {
+            const text = item.text || '';
+            const titleMatch = text.match(/\*\*(.*?)\*\*/);
+            const title = titleMatch ? titleMatch[1] : 'Objectives';
+
+            const contentStr = text.replace(/\*\*(.*?)\*\*/g, '');
+
+            const pMatches = [...contentStr.matchAll(/<p[^>]*>(.*?)<\/p>/g)];
+            let items = pMatches.length > 0 ? pMatches.map((m: any) => m[1]) : [];
+            if (items.length === 0) {
+                items = contentStr.split('\n').filter((line: string) => line.trim().length > 0);
+            }
+
+            const content = items.map((line: string) => {
+                const cleanText = line.replace(/<[^>]+>/g, '').trim();
+                const colonMatch = cleanText.match(/^([A-Za-z0-9_]+)\s*[:|-]\s*(.*)/);
+                if (colonMatch) {
+                    return {
+                        label: colonMatch[1].trim(),
+                        text: colonMatch[2].trim()
+                    };
+                }
+                return {
+                    label: '',
+                    text: cleanText
+                };
+            }).filter((p: any) => p.label || p.text);
+
+            return { title, content };
+        })
+        : accordionItems;
+
     const toggleAccordion = (index: number) => {
         setOpenIndex(openIndex === index ? -1 : index)
     }
@@ -58,7 +95,7 @@ const DeptSection7 = () => {
 
                 {/* Accordion Container */}
                 <div className="w-full space-y-3 lg:space-y-[18px]">
-                    {accordionItems.map((item, index) => {
+                    {displayItems.map((item: any, index: number) => {
                         const isOpen = openIndex === index;
                         return (
                             <div key={index} className="w-full transition-all duration-300">
@@ -90,9 +127,9 @@ const DeptSection7 = () => {
                                         style={{ borderRadius: '10px', border: '1.68px solid #FFFFFF' }}
                                     >
                                         <div className="px-4 lg:px-[42px] pb-6 lg:pb-[40px] space-y-0.5 pt-10 lg:pt-[60px]">
-                                            {item.content.map((point, pIndex) => (
+                                            {item.content.map((point: any, pIndex: number) => (
                                                 <p key={pIndex} className={`${poppins.className} text-[14px] lg:text-[16px] font-bold text-[#595959] leading-[26px] lg:leading-[31px]`}>
-                                                    {point.label} – <span className="font-normal">{point.text}</span>
+                                                    {point.label && <>{point.label} – </>}<span className="font-normal">{point.text}</span>
                                                 </p>
                                             ))}
                                         </div>

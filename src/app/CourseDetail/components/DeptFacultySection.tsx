@@ -40,7 +40,11 @@ const faculty = [
     },
 ]
 
-const DeptFacultySection = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptFacultySection = ({ courseData }: Props) => {
     return (
         <section className="w-full bg-white mt-[88px]">
             <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-0 flex flex-col items-center">

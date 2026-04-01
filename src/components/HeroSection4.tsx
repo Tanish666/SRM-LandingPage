@@ -13,14 +13,14 @@ const marcellus = Marcellus({
 })
 
 const Card = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
-    <div className="bg-white rounded-[20px] py-5 px-5 lg:py-5 lg:px-7 shadow-sm flex flex-col gap-1 w-full  lg:h-[160px] ">
+    <div className="bg-white rounded-[20px] py-5 px-5 xl:py-5 xl:px-7 shadow-sm flex flex-col gap-1 w-full  xl:h-[160px] ">
         <div className="flex items-center gap-4">
             <div className="text-[#30A0FF]">
                 {icon}
             </div>
-            <h3 className="text-base lg:text-[20px] font-semibold text-[#515151] leading-tight">{title}</h3>
+            <h3 className="text-base xl:text-[20px] font-semibold text-[#515151] leading-tight">{title}</h3>
         </div>
-        <p className="text-md lg:text-[16.5px] text-gray-500 leading-relaxed font-normal">
+        <p className="text-md xl:text-[16.5px] text-gray-500 leading-relaxed font-normal">
             {description}
         </p>
     </div>
@@ -48,22 +48,22 @@ const HeroSection4 = () => {
     ];
 
     return (
-        <section className="w-full max-w-[98%] mx-auto px-4 py-12 lg:py-20">
-            <div className="bg-[#30A0FF] rounded-[2.5rem] p-10 lg:px-14 lg:pt-14 lg:pb-0 relative overflow-hidden flex flex-col gap-10">
+        <section className="w-full max-w-[98%] mx-auto px-4 py-12 xl:py-20">
+            <div className="bg-[#30A0FF] rounded-[2.5rem] p-10 xl:px-14 xl:pt-14 xl:pb-0 relative overflow-hidden flex flex-col gap-10">
                 {/* Header Row */}
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
+                <div className="flex flex-col xl:flex-row justify-between items-center gap-8 z-10 w-full relative max-w-[1550px] mx-auto ">
                     {/* Left Header */}
-                    <div className="flex w-full lg:w-1/2 flex-col gap-6 justify-start">
+                    <div className="flex w-full xl:w-1/2 flex-col gap-6 justify-start">
                         <SectionPill text="Why Choose SRM AHS" />
 
-                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl lg:text-[45px]  tracking-wide leading-[1.2]`}>
+                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl xl:text-[45px]  tracking-wide leading-[1.2]`}>
                             Empowering Future<br />Healthcare Professionals
                         </h2>
                     </div>
 
                     {/* Right Header */}
-                    <div className="flex flex-col gap-6 lg:w-[616px] text-white/90 lg:pt-10">
-                        <p className="text-sm lg:text-[15px] leading-relaxed font-light text-[#FFFFFF]">
+                    <div className="flex flex-col gap-6 xl:w-[616px] text-white/90 xl:pt-10">
+                        <p className="text-sm xl:text-[15px] leading-relaxed font-light text-[#FFFFFF]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                         <CTAButton
@@ -73,10 +73,10 @@ const HeroSection4 = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-8 relative z-10 pb-8 lg:pb-10 max-w-[1550px] mx-auto w-full items-center">
+                <div className="grid grid-cols-1 xl:grid-cols-[1fr_auto_1fr] gap-x-10 gap-y-8 relative z-10 pb-8 xl:pb-10 max-w-[1550px] mx-auto w-full items-center">
 
                     {/* Mobile Carousel View (Hidden on Desktop) */}
-                    <div className="flex lg:hidden flex-col gap-6 w-full overflow-hidden">
+                    <div className="flex xl:hidden flex-col gap-6 w-full overflow-hidden">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIndex}
@@ -110,7 +110,7 @@ const HeroSection4 = () => {
                     </div>
 
                     {/* Left Cards */}
-                    <div className="hidden lg:flex flex-col gap-8 justify-center items-center lg:items-start">
+                    <div className="hidden xl:flex flex-col gap-8 justify-center items-center xl:items-start">
                         <Card
                             icon={<Image src="/sec4Icon1.svg" width={45} height={45} alt="Icon 1" />}
                             title="Advanced Laboratories & Facilities"
@@ -125,7 +125,7 @@ const HeroSection4 = () => {
 
                     {/* Center Image */}
                     <div
-                        className="relative order-last lg:order-none w-full lg:w-[280px] lg:min-w-[280px] h-[348px] rounded-[25px] mx-auto shrink-0 mt-10 md:mt-0"
+                        className="relative order-last xl:order-none w-full xl:w-[280px] xl:min-w-[280px] h-[348px] rounded-[25px] mx-auto shrink-0 mt-28 xl:mt-0"
                         style={{
                             background: 'linear-gradient(180deg, #FFFFFF 0%, #FFEC22 100%)',
                             opacity: 1,
@@ -144,7 +144,7 @@ const HeroSection4 = () => {
                     </div>
 
                     {/* Right Cards */}
-                    <div className="hidden lg:flex flex-col gap-8 justify-center items-center lg:items-end">
+                    <div className="hidden xl:flex flex-col gap-8 justify-center items-center xl:items-end">
                         <Card
                             icon={<Image src="/sec4Icon3.svg" width={45} height={45} alt="Icon 3" />}
                             title="Personalized Academic Mentorship"

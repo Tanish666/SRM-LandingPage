@@ -13,7 +13,11 @@ const inter = Inter({
     weight: ['300', '400', '500', '600'],
 })
 
-const DeptCTABanner = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptCTABanner = ({ courseData }: Props) => {
     return (
         <section className="w-full mt-16 lg:mt-[100px] mb-20 lg:mb-[150px]">
             <div className="max-w-[1440px] mx-auto px-4 lg:px-6">

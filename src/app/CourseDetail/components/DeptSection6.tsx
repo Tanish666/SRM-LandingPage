@@ -10,7 +10,13 @@ const marcellus = Marcellus({
     weight: ['400'],
 })
 
-const DeptSection6 = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection6 = ({ courseData }: Props) => {
+    const courseName = courseData?.name || "B.Sc. Cardiac Care Technology";
+    const courseDesc = courseData?.about_the_course || "The B.Sc. Cardiac Care Technology Program Is Designed To Provide Broad Theoretical And Skill-Based Knowledge Related To How Well A Heart Is Functioning And Can Monitor Heart Rate.";
     return (
         <section className="py-12 w-full flex justify-center mt-10 px-4 md:px-10 lg:px-20">
             {/* Container */}
@@ -39,14 +45,12 @@ const DeptSection6 = () => {
 
                         {/* Title */}
                         <h2 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[40px] text-black capitalize mb-4 leading-tight`}>
-                            B.Sc. Cardiac Care Technology
+                            {courseName}
                         </h2>
 
                         {/* Description */}
                         <p className="text-sm md:text-[15px] text-[#515151] capitalize mb-8 leading-relaxed max-w-xl text-justify">
-                            The B.Sc. Cardiac Care Technology Program Is Designed To Provide Broad
-                            Theoretical And Skill-Based Knowledge Related To How Well A Heart Is
-                            Functioning And Can Monitor Heart Rate.
+                            {courseDesc}
                         </p>
 
                         {/* Button */}

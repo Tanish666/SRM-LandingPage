@@ -14,7 +14,11 @@ const inder = Inder({
     weight: ['400'],
 })
 
-const DeptSection8 = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection8 = ({ courseData }: Props) => {
     return (
         <section className="w-full overflow-hidden">
             {/* Full-width bg container */}

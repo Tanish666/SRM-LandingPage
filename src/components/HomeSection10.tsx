@@ -9,11 +9,35 @@ import SectionPill from './SectionPill';
 
 const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] });
 
-const HomeSection10 = () => {
-    const [selectedDates, setSelectedDates] = React.useState<(number | string)[]>([]);
-    const [startIndex, setStartIndex] = React.useState(0);
+const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
 
-    const eventsData = [
+interface NewsEvent {
+    id: number;
+    heading: string;
+    date: string;
+    content: string;
+    slug: string;
+    primary_image?: string | null;
+}
+
+const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }) => {
+    const [startIndex, setStartIndex] = React.useState(0);
+    const [currentMonth, setCurrentMonth] = React.useState(new Date());
+
+    const nextMonth = () => {
+        setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() + 1, 1));
+        setStartIndex(0);
+    };
+
+    const prevMonth = () => {
+        setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
+        setStartIndex(0);
+    };
+
+    const staticEvents = [
         {
             id: 1,
             date: "August 25, 2025",
@@ -48,16 +72,32 @@ const HomeSection10 = () => {
         }
     ];
 
-    const displayEvents = selectedDates.length > 0 
-        ? [...selectedDates].sort((a, b) => Number(a) - Number(b)).map((date, index) => ({
-            id: `dummy-${date}-${index}`,
-            date: `August ${date}, 2025`,
-            title: "Upcoming Event",
-            description: `This is a dummy event for August ${date}. Actual event data is not available yet.`,
-            image: "/",
-            link: "#"
+    const mappedEvents = newsEventsData.length > 0 
+        ? newsEventsData.map(item => ({
+            id: item.id,
+            date: item.date,
+            title: item.heading,
+            description: item.content.replace(/<[^>]*>?/gm, '').substring(0, 150) + "...", // Basic HTML strip and truncate
+            image: item.primary_image || "/placeholder-event.jpg", // Fallback image
+            link: `/news-events/${item.slug}`
         }))
-        : eventsData;
+        : staticEvents;
+
+    const displayEvents = mappedEvents;
+
+    const highlightedDays = React.useMemo(() => {
+        return mappedEvents
+            .map(event => {
+                const d = new Date(event.date);
+                return isNaN(d.getTime()) ? null : d;
+            })
+            .filter((d): d is Date => 
+                d !== null && 
+                d.getMonth() === currentMonth.getMonth() && 
+                d.getFullYear() === currentMonth.getFullYear()
+            )
+            .map(d => String(d.getDate()));
+    }, [mappedEvents, currentMonth]);
 
     const nextEvents = () => {
         if (startIndex + 2 < displayEvents.length) {
@@ -75,63 +115,74 @@ const HomeSection10 = () => {
         }
     };
 
-    // Initialize from localStorage on mount
-    React.useEffect(() => {
-        const saved = localStorage.getItem('selectedCalendarDates');
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved);
-                if (Array.isArray(parsed) && parsed.length > 0) {
-                    setSelectedDates(parsed.map(String));
-                } else {
-                    setSelectedDates(["4", "14", "18", "30"]);
-                }
-            } catch (e) {
-                console.error("Error parsing saved dates", e);
-                setSelectedDates(["4", "14", "18", "30"]);
+
+    const calendarData = React.useMemo(() => {
+        const year = currentMonth.getFullYear();
+        const month = currentMonth.getMonth();
+        const monthNum = String(month + 1).padStart(2, '0') + ".";
+        
+        const data = [
+            { val: monthNum, type: "label" },
+            { val: "Mo", type: "label" }, { val: "Tu", type: "label" }, { val: "We", type: "label" },
+            { val: "Th", type: "label" }, { val: "Fr", type: "label" }, { val: "Sa", type: "label" },
+            { val: "Su", type: "label" },
+        ];
+
+        const firstOfMonth = new Date(year, month, 1);
+        let startDay = firstOfMonth.getDay(); // 0 is Sun
+        if (startDay === 0) startDay = 7; // Convert to 1-7 (Mo-Su)
+
+        // Previous month days to fill the first week
+        const daysInPrevMonth = new Date(year, month, 0).getDate();
+        const prevDaysCount = startDay - 1;
+        
+        const allDays = [];
+        
+        for (let i = prevDaysCount - 1; i >= 0; i--) {
+            allDays.push({ val: String(daysInPrevMonth - i), type: "other" });
+        }
+
+        // Current month
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        for (let i = 1; i <= daysInMonth; i++) {
+            allDays.push({ val: String(i), type: "date" });
+        }
+
+        // Next month to fill the last week
+        const remaining = (7 - (allDays.length % 7)) % 7;
+        for (let i = 1; i <= remaining; i++) {
+            allDays.push({ val: String(i), type: "other" });
+        }
+
+        const getISOWeek = (d: Date) => {
+            const date = new Date(d.getTime());
+            date.setHours(0, 0, 0, 0);
+            date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+            const week1 = new Date(date.getFullYear(), 0, 4);
+            return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        };
+
+        // Group into weeks and add week number
+        for (let i = 0; i < allDays.length; i += 7) {
+            const firstDayOfWeek = allDays[i];
+            let weekDate;
+            if (firstDayOfWeek.type === 'other' && Number(firstDayOfWeek.val) > 7) {
+                weekDate = new Date(year, month - 1, Number(firstDayOfWeek.val));
+            } else if (firstDayOfWeek.type === 'other' && Number(firstDayOfWeek.val) < 7) {
+                weekDate = new Date(year, month + 1, Number(firstDayOfWeek.val));
+            } else {
+                weekDate = new Date(year, month, Number(firstDayOfWeek.val));
             }
-        } else {
-            setSelectedDates(["4", "14", "18", "30"]);
-        }
-    }, []);
-
-    // Persist to localStorage whenever selection changes
-    React.useEffect(() => {
-        if (selectedDates.length > 0 || localStorage.getItem('selectedCalendarDates')) {
-            localStorage.setItem('selectedCalendarDates', JSON.stringify(selectedDates));
-        }
-    }, [selectedDates]);
-
-    const toggleDate = (val: number | string) => {
-        setSelectedDates(prev => {
-            const stringVal = String(val);
-            const stringPrev = prev.map(String);
             
-            const newDates = stringPrev.includes(stringVal)
-                ? stringPrev.filter(d => d !== stringVal)
-                : [...stringPrev, stringVal];
+            const thursday = new Date(weekDate);
+            thursday.setDate(weekDate.getDate() + 3); 
             
-            return newDates.length > 0 ? newDates : ["4", "14", "18", "30"];
-        });
-        setStartIndex(0);
-    };
+            data.push({ val: String(getISOWeek(thursday)), type: "week" });
+            data.push(...allDays.slice(i, i + 7));
+        }
 
-    const calendarData = [
-        // Row 1 (Header)
-        { val: "08.", type: "label" }, { val: "Mo", type: "label" }, { val: "Tu", type: "label" }, { val: "We", type: "label" }, { val: "Th", type: "label" }, { val: "Fr", type: "label" }, { val: "Sa", type: "label" }, { val: "Su", type: "label" },
-        // Row 2
-        { val: "31", type: "week" }, { val: "28", type: "other" }, { val: "29", type: "other" }, { val: "30", type: "other" }, { val: "31", type: "other" }, { val: "1", type: "date" }, { val: "2", type: "date" }, { val: "3", type: "date" },
-        // Row 3
-        { val: "32", type: "week" }, { val: "4", type: "date" }, { val: "5", type: "date" }, { val: "6", type: "date" }, { val: "7", type: "date" }, { val: "8", type: "date" }, { val: "9", type: "date" }, { val: "10", type: "date" },
-        // Row 4
-        { val: "33", type: "week" }, { val: "11", type: "date" }, { val: "12", type: "date" }, { val: "13", type: "date" }, { val: "14", type: "date" }, { val: "15", type: "date" }, { val: "16", type: "date" }, { val: "17", type: "date" },
-        // Row 5
-        { val: "34", type: "week" }, { val: "18", type: "date" }, { val: "19", type: "date" }, { val: "20", type: "date" }, { val: "21", type: "date" }, { val: "22", type: "date" }, { val: "23", type: "date" }, { val: "24", type: "date" },
-        // Row 6
-        { val: "35", type: "week" }, { val: "25", type: "date" }, { val: "26", type: "date" }, { val: "27", type: "date" }, { val: "28", type: "date" }, { val: "29", type: "date" }, { val: "30", type: "date" }, { val: "31", type: "date" },
-        // Row 7
-        { val: "36", type: "week" }, { val: "1", type: "other" }, { val: "2", type: "other" }, { val: "3", type: "other" }, { val: "4", type: "other" }, { val: "5", type: "other" }, { val: "6", type: "other" }, { val: "7", type: "other" },
-    ];
+        return data;
+    }, [currentMonth]);
     return (
         <section className="w-full bg-white py-16 px-4 md:px-8 lg:px-16 overflow-hidden font-sans">
             <div className="max-w-6xl mx-auto">
@@ -167,13 +218,19 @@ const HomeSection10 = () => {
                         )}
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:h-[381px] h-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:h-[381px] h-auto">
                         {/* Calendar Card */}
                         <div className="bg-[#C5E6FD] rounded-xl p-6 text-gray-800">
                             <div className="flex items-center justify-center gap-4 text-lg font-serif mb-6">
+                                <button onClick={prevMonth} className="hover:text-yellow-500 transition-colors" aria-label="Previous month">
+                                    <ArrowLeft size={16} />
+                                </button>
                                 <span>•</span>
-                                <span className={`${marcellus.className} text-[24px]`}>August</span>
+                                <span className={`${marcellus.className} text-[24px]`}>{monthNames[currentMonth.getMonth()]}</span>
                                 <span>•</span>
+                                <button onClick={nextMonth} className="hover:text-yellow-500 transition-colors" aria-label="Next month">
+                                    <ArrowRight size={16} />
+                                </button>
                             </div>
                             <div className='w-full h-[1px] border-t my-5 border-dashed border-[#9F9F9F]' />
                             <div className="grid grid-cols-8 gap-y-4 gap-x-2 text-[15px] md:text-[13px] lg:text-sm text-center font-medium">
@@ -200,15 +257,14 @@ const HomeSection10 = () => {
                                         );
                                     }
 
-                                    const isSelected = selectedDates.includes(item.val);
+                                    const isHighlighted = highlightedDays.includes(item.val);
 
                                     return (
                                         <div
                                             key={index}
-                                            onClick={() => toggleDate(item.val)}
-                                            className={`flex items-center justify-center w-7 h-7 mx-auto cursor-pointer transition-colors rounded-sm ${isSelected
-                                                ? "bg-yellow-400 font-semibold"
-                                                : "hover:bg-yellow-200"
+                                            className={`flex items-center justify-center w-7 h-7 mx-auto rounded-full transition-all ${isHighlighted
+                                                ? "bg-yellow-400 font-bold text-gray-900 shadow-sm"
+                                                : "text-gray-600"
                                                 }`}
                                         >
                                             {item.val}

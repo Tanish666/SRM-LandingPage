@@ -16,7 +16,7 @@ const HeroSection = () => {
             <div className='max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 lg:py-20'>
                 {/* Hero Text Content */}
                 <div className='flex-1 lg:max-w-[55%] z-10'>
-                    <h1 className={`${marcellus.className} text-5xl md:text-7xl lg:text-[4rem] leading-[1.05] text-slate-900 mb-8 tracking-tight`}>
+                    <h1 className={`${marcellus.className} text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] text-slate-900 mb-8 tracking-tight`}>
                         Shaping Healthcare <br className='hidden md:block' /> Leaders of Tomorrow
                     </h1>
                     <p className='text-lg md:text-[1.35rem] text-slate-500/90 mb-12 max-w-[550px] leading-relaxed'>

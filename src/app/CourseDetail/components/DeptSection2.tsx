@@ -9,7 +9,13 @@ const marcellus = Marcellus({
     weight: ['400'],
 })
 
-const DeptSection2 = () => {
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection2 = ({ courseData }: Props) => {
+    const title = courseData?.about_sections?.[0]?.heading || "Department Of Cardiac Care Technology";
+    const contentHtml = courseData?.about_sections?.[0]?.content || "";
     return (
         <section className="py-12 md:py-20 w-full flex justify-center px-4 md:px-10 lg:px-20">
 
@@ -38,19 +44,25 @@ const DeptSection2 = () => {
                     <h2
                         className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize mb-6 leading-tight lg:max-w-[687px]`}
                     >
-                        Department Of Cardiac Care Technology
+                        {title}
                     </h2>
 
                     {/* Body text  */}
                     <div
                         className="font-light text-base md:text-[18px] text-black flex flex-col gap-5 leading-relaxed lg:max-w-[705px] text-justify"
                     >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        </p>
-                        <p>
-                            ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur
-                        </p>
+                        {contentHtml ? (
+                            <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+                        ) : (
+                            <>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                </p>
+                                <p>
+                                    ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur
+                                </p>
+                            </>
+                        )}
                     </div>
 
                     {/* Explore Program Button */}
