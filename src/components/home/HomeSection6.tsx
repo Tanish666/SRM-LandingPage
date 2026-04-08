@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Marcellus, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 import SectionPill from '@/components/home/SectionPill'
 import { motion, useInView, animate, useMotionValue, useTransform, useSpring } from 'framer-motion'

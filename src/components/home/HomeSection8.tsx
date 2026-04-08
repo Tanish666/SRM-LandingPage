@@ -1,12 +1,6 @@
 'use client'
 import { useRouter } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
-import { Marcellus } from "next/font/google";
-
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const initialUgPrograms = [
     { id: 1, name: 'B.Sc Cardio Perfusion Technology' },
@@ -61,32 +55,32 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
     };
 
     return (
-        <section className="relative w-full py-4 px-4 md:px-8 max-w-[1300px] mx-auto overflow-visible">
-            <div className="relative bg-[#B9E3FF] rounded-[20px] px-8 py-6 md:px-12 md:py-8 lg:px-8 lg:py-6 flex flex-col lg:flex-row items-center justify-between overflow-visible ">
+        <section className="py-12 md:py-20 3xl:py-32 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48 overflow-visible">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full relative bg-[#B9E3FF] rounded-[20px] 4xl:rounded-[40px] px-8 py-10 md:px-14 md:py-12 lg:px-12 lg:py-10 3xl:py-16 4xl:py-24 4xl:px-24 flex flex-col lg:flex-row items-center justify-between overflow-visible ">
 
                 {/* Left Content */}
-                <div className="relative z-10 w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
-                    <h2 className={`text-4xl md:text-4xl lg:text-[38px] ${marcellus.className} text-[#1e2a33] leading-[1.1] mb-3 lg:whitespace-nowrap`}>
+                <div className="relative z-10 w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-10 4xl:pr-20">
+                    <h2 className="text-4xl md:text-4xl lg:text-[38px] 3xl:text-[48px] 4xl:text-[65px] text-[#1e2a33] leading-[1.1] mb-3 4xl:mb-8 lg:whitespace-nowrap">
                         Discover The Right Course For You
                     </h2>
-                    <p className="text-[#3b4e5c] text-sm md:text-sm leading-[1.5] w-full lg:w-[600px] max-w-full">
+                    <p className="text-[#3b4e5c] text-sm md:text-sm 3xl:text-lg 4xl:text-2xl leading-[1.5] w-full lg:w-[600px] 4xl:w-[900px] max-w-full">
                         Start Your Journey In Healthcare With Programs Designed To Empower You With Academic Excellence And Hands-On Experience.
                     </p>
                 </div>
 
                 {/* Right Content - Card */}
-                <div className="relative w-full lg:w-[360px] bg-white rounded-[15px] p-5 md:p-4 z-40 shadow-sm">
+                <div className="relative w-full lg:w-[360px] 3xl:w-[450px] 4xl:w-[600px] bg-white rounded-[15px] 4xl:rounded-[30px] p-5 md:p-4 3xl:p-8 4xl:p-12 z-40 shadow-sm border border-blue-100">
                     {/* Toggle Buttons */}
-                    <div className="relative bg-[#FFEA00] rounded-full p-1.5 flex justify-between items-center mb-6 z-20">
+                    <div className="relative bg-[#FFEA00] rounded-full p-1.5 4xl:p-3 flex justify-between items-center mb-6 4xl:mb-10 z-20">
                         <button
                             onClick={() => { setActiveTab('UG'); setSelectedCourse('SELECT COURSE'); }}
-                            className={`flex-1 font-medium py-3 rounded-full text-center text-sm transition-all ${activeTab === 'UG' ? 'bg-white text-[#111] shadow-sm' : 'text-[#222]'}`}
+                            className={`flex-1 font-medium py-3 4xl:py-5 rounded-full text-center text-sm 3xl:text-base 4xl:text-xl transition-all ${activeTab === 'UG' ? 'bg-white text-[#111] shadow-sm' : 'text-[#222]'}`}
                         >
                             Under Graduate
                         </button>
                         <button
                             onClick={() => { setActiveTab('PG'); setSelectedCourse('SELECT COURSE'); }}
-                            className={`flex-1 font-medium py-3 rounded-full text-center text-sm transition-all ${activeTab === 'PG' ? 'bg-white text-[#111] shadow-sm' : 'text-[#222]'}`}
+                            className={`flex-1 font-medium py-3 4xl:py-5 rounded-full text-center text-sm 3xl:text-base 4xl:text-xl transition-all ${activeTab === 'PG' ? 'bg-white text-[#111] shadow-sm' : 'text-[#222]'}`}
                         >
                             Post Graduate
                         </button>
@@ -99,7 +93,7 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
                             className="relative flex items-center gap-2 mx-1 cursor-pointer group"
                         >
                             <div className="flex-1 h-[1px] bg-black"></div>
-                            <span className="text-black text-sm font-medium tracking-wider uppercase truncate max-w-[200px]">
+                            <span className="text-black text-sm 3xl:text-base 4xl:text-xl font-medium tracking-wider uppercase truncate max-w-[200px] 3xl:max-w-[280px] 4xl:max-w-[400px]">
                                 {selectedCourse}
                             </span>
                             <div className="flex-1 h-[1px] bg-black"></div>
@@ -109,7 +103,7 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
                                 viewBox="0 0 12 7"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                className={`ml-1 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                                className={`ml-1 4xl:size-6 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                             >
                                 <path d="M1 1L6 6L11 1" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -117,12 +111,12 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
 
                         {/* Dropdown Menu */}
                         {isOpen && (
-                            <div className="absolute left-0 right-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-2xl z-[100] max-h-[180px] overflow-y-auto custom-scrollbar">
+                            <div className="absolute left-0 right-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-2xl z-[100] max-h-[180px] 4xl:max-h-[300px] overflow-y-auto custom-scrollbar">
                                 {currentPrograms.map((program, index) => (
                                     <div
                                         key={`${program.id}-${index}`}
                                         onClick={() => handleSelect(program.name)}
-                                        className="px-4 py-2.5 text-[13px] text-[#444] hover:bg-gray-50 hover:text-black cursor-pointer transition-colors border-b border-gray-50 last:border-none"
+                                        className="px-4 py-2.5 4xl:px-8 4xl:py-5 text-[13px] 3xl:text-base 4xl:text-xl text-[#444] hover:bg-gray-50 hover:text-black cursor-pointer transition-colors border-b border-gray-50 last:border-none"
                                     >
                                         {program.name}
                                     </div>
@@ -131,11 +125,11 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
                         )}
                     </div>
 
-                    <div className="h-[1px] w-full bg-[#E6E6E6] my-2" />
+                    <div className="h-[1px] w-full bg-[#E6E6E6] my-2 4xl:my-6" />
 
                     {/* Explore Now Button */}
-                    <div className="relative flex justify-center my-3 z-20">
-                        <button 
+                    <div className="relative flex justify-center my-3 3xl:my-6 z-20">
+                        <button
                             onClick={() => {
                                 if (selectedCourse !== 'SELECT COURSE') {
                                     const prog = currentPrograms.find((p: any) => p.name === selectedCourse);
@@ -148,11 +142,12 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
                                 }
                             }}
                             disabled={selectedCourse === 'SELECT COURSE'}
-                            className={`bg-[#FFD100] hover:bg-[#f0c500] text-black font-semibold py-2.5 px-10 rounded-full text-sm transition-colors shadow-sm active:scale-95 duration-200 ${selectedCourse === 'SELECT COURSE' ? 'opacity-50 cursor-not-allowed hover:bg-[#FFD100]' : ''}`}>
+                            className={`bg-[#FFD100] hover:bg-[#f0c500] text-black font-semibold py-2.5 px-10 4xl:py-5 4xl:px-20 rounded-full text-sm 3xl:text-base 4xl:text-xl transition-colors shadow-sm active:scale-95 duration-200 ${selectedCourse === 'SELECT COURSE' ? 'opacity-50 cursor-not-allowed hover:bg-[#FFD100]' : ''}`}>
                             Explore Now
                         </button>
                     </div>
                 </div>
+
 
                 {/* Background SVGs with specific clipping */}
                 <div className="absolute inset-0 overflow-hidden rounded-[20px] pointer-events-none">

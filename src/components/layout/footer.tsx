@@ -12,33 +12,33 @@ function Footer() {
         <div className="absolute top-[20%] -right-[20%] w-[100%] h-[120%] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-black/10 via-transparent to-transparent rounded-[100%]" />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12">
+      <div className="relative z-10 max-w-[1400px] 3xl:max-w-[1800px] 4xl:max-w-[2400px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12 4xl:pb-24">
         {/* Column 1: Logo & Social */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 4xl:gap-10">
           <div className="inline-block" style={{ width: '208px', height: '156px' }}>
-            <img loading="lazy" decoding="async" src="/footerLogo.svg" alt="SRM Logo" className="w-full h-auto object-contain" />
+            <img loading="lazy" decoding="async" src="/footerLogo.svg" alt="SRM Logo" className="w-full h-auto object-contain 4xl:scale-125 4xl:origin-left" />
           </div>
-          <p className="text-[#E0F2FE] text-[15px] leading-relaxed pr-4 font-light">
+          <p className="text-[#E0F2FE] text-[15px] 3xl:text-lg 4xl:text-2xl leading-relaxed pr-4 font-light 4xl:max-w-[400px]">
             Lorem Ipsum Dolor Sit Amet,<br />
             Consectetur Adipiscing Elit, Sed Do<br />
             Eiusmod Tempor Incididunt Ut
           </p>
           <div className="mt-2">
-            <h4 className="font-serif text-xl sm:text-2xl mb-4 text-[#F8FAFC]">Follow Us</h4>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-yellow-400 transition-colors"><FaFacebookF size={30} /></a>
-              <a href="#" className="hover:text-yellow-400 transition-colors"><FaTwitter size={30} /></a>
-              <a href="#" className="hover:text-yellow-400 transition-colors"><FaYoutube size={30} /></a>
-              <a href="#" className="hover:text-yellow-400 transition-colors"><FaLinkedinIn size={30} /></a>
-              <a href="#" className="hover:text-yellow-400 transition-colors"><FaInstagram size={30} /></a>
+            <h4 className="font-serif text-xl sm:text-2xl 4xl:text-4xl mb-4 text-[#F8FAFC]">Follow Us</h4>
+            <div className="flex gap-6 4xl:gap-10">
+              <a href="#" className="hover:text-yellow-400 transition-colors"><FaFacebookF size={30} className="4xl:size-12" /></a>
+              <a href="#" className="hover:text-yellow-400 transition-colors"><FaTwitter size={30} className="4xl:size-12" /></a>
+              <a href="#" className="hover:text-yellow-400 transition-colors"><FaYoutube size={30} className="4xl:size-12" /></a>
+              <a href="#" className="hover:text-yellow-400 transition-colors"><FaLinkedinIn size={30} className="4xl:size-12" /></a>
+              <a href="#" className="hover:text-yellow-400 transition-colors"><FaInstagram size={30} className="4xl:size-12" /></a>
             </div>
           </div>
         </div>
 
         {/* Column 2: Quick Links */}
         <div className="lg:pl-6">
-          <h4 className="font-serif text-2xl sm:text-[28px] mb-6 text-[#F8FAFC]">Quick Link</h4>
-          <ul className="space-y-4 text-[15px] text-[#E0F2FE] font-light">
+          <h4 className="font-serif text-2xl sm:text-[28px] 4xl:text-5xl mb-6 4xl:mb-10 text-[#F8FAFC]">Quick Link</h4>
+          <ul className="space-y-4 text-[15px] 3xl:text-lg 4xl:text-2xl text-[#E0F2FE] font-light">
             <li><Link href="#" className="hover:underline">Admissions</Link></li>
             <li><Link href="#" className="hover:underline">Campus Life</Link></li>
             <li><Link href="#" className="hover:underline">Placements</Link></li>
@@ -49,8 +49,8 @@ function Footer() {
 
         {/* Column 3: Academics */}
         <div>
-          <h4 className="font-serif text-2xl sm:text-[28px] mb-6 text-[#F8FAFC]">Academics</h4>
-          <ul className="space-y-4 text-[15px] text-[#E0F2FE] font-light">
+          <h4 className="font-serif text-2xl sm:text-[28px] 4xl:text-5xl mb-6 4xl:mb-10 text-[#F8FAFC]">Academics</h4>
+          <ul className="space-y-4 text-[15px] 3xl:text-lg 4xl:text-2xl text-[#E0F2FE] font-light">
             <li><Link href="#" className="hover:underline">Bachelor of Physiotherapy</Link></li>
             <li><Link href="#" className="hover:underline">Master of Physiotherapy</Link></li>
             <li><Link href="#" className="hover:underline">Bachelor of Occupational Therapy</Link></li>
@@ -61,10 +61,10 @@ function Footer() {
 
         {/* Column 4: Contact Us */}
         <div>
-          <h4 className="font-serif text-2xl sm:text-[28px] mb-6 text-[#F8FAFC]">Contact Us</h4>
-          <div className="space-y-6 text-[15px] text-[#E0F2FE] font-light">
+          <h4 className="font-serif text-2xl sm:text-[28px] 4xl:text-5xl mb-6 4xl:mb-10 text-[#F8FAFC]">Contact Us</h4>
+          <div className="space-y-6 text-[15px] 3xl:text-lg 4xl:text-2xl text-[#E0F2FE] font-light">
             <div className="flex gap-4 items-start">
-              <FaLocationDot className="text-yellow-400 text-[22px] shrink-0 mt-1" />
+              <FaLocationDot className="text-yellow-400 text-[22px] 4xl:text-4xl shrink-0 mt-1" />
               <p className="leading-relaxed">
                 Trichy SRM Medical College Hospital & Research<br />
                 Center, SRM Nagar, Trichy – Chennai Highway,<br />
@@ -73,11 +73,11 @@ function Footer() {
               </p>
             </div>
             <div className="flex gap-4 items-center">
-              <FaEnvelope className="text-yellow-400 text-xl shrink-0" />
+              <FaEnvelope className="text-yellow-400 text-xl 4xl:text-3xl shrink-0" />
               <p>srmahs@gmail.com</p>
             </div>
             <div className="flex gap-4 items-center">
-              <FaPhone className="text-yellow-400 text-xl shrink-0" />
+              <FaPhone className="text-yellow-400 text-xl 4xl:text-3xl shrink-0" />
               <p>000-000-000</p>
             </div>
           </div>
@@ -93,7 +93,7 @@ function Footer() {
           }}
         >
           <div
-            className="bg-white text-black text-[10px] sm:text-xs md:text-sm py-2 px-12 md:px-24 lg:w-[1100px] flex items-center justify-center text-center font-semibold"
+            className="bg-white text-black text-[10px] sm:text-xs md:text-sm 3xl:text-lg 4xl:text-2xl py-2 px-12 md:px-24 4xl:px-48 lg:w-[1100px] 3xl:w-[1400px] 4xl:w-[1800px] flex items-center justify-center text-center font-semibold"
             style={{
               clipPath: "polygon(35px 0, calc(100% - 35px) 0, 100% 100%, 0 100%)"
             }}

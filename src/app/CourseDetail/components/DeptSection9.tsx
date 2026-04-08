@@ -1,12 +1,7 @@
 'use client'
 import React from 'react'
-import { Marcellus, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import SectionPill from '@/components/home/SectionPill'
-
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const inter = Inter({
     subsets: ['latin'],
@@ -40,75 +35,67 @@ interface Props {
 
 const DeptSection9 = ({ courseData }: Props) => {
     return (
-        <section className="pt-20 px-6  max-w-[1440px] mx-auto w-full bg-white flex flex-col items-center">
-            <SectionPill text="Achievements" className="mb-8" />
-            {/* Title */}
-            <h2
-                className={`${marcellus.className} text-[45px] text-black text-center capitalize`}
-                style={{ lineHeight: '56px' }}
-            >
-                Students &nbsp;Awards & Achievements
-            </h2>
+        <section className="py-12 md:py-20 4xl:py-36 px-4 md:px-10 lg:px-20 w-full bg-white flex flex-col items-center">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
+                <SectionPill text="Achievements" className="mb-8 4xl:mb-16" />
+                {/* Title */}
+                <h2 className={"text-3xl md:text-4xl lg:text-[45px] 3xl:text-6xl 4xl:text-[85px] text-black text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading"}>
+                    Students Awards & Achievements
+                </h2>
 
             {/* Cards + Arrows wrapper */}
-            <div className="mx-auto w-full lg:w-[1227px]">
+            <div className="w-full">
                 {/* Navigation Arrows */}
-                <div className="flex items-center justify-end gap-[15px] mt-6 mb-6">
+                <div className="flex items-center justify-end gap-[15px] 4xl:gap-8 mb-8 4xl:mb-16">
                     {/* Left Arrow Button  */}
                     <button
-                        className="p-0 border-none bg-transparent hover:brightness-95 active:scale-95 transition-all cursor-pointer"
-                        style={{ width: '43px', height: '42px' }}
+                        className="p-0 border-none bg-transparent hover:brightness-95 active:scale-95 transition-all cursor-pointer w-[43px] h-[42px] 4xl:w-[85px] 4xl:h-[85px]"
                     >
-                        <img loading="lazy" decoding="async" src="/left_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
+                        <img loading="lazy" decoding="async" src="/left_arrow.svg" alt="Previous" className="w-full h-full" />
                     </button>
 
                     {/* Right Arrow Button  */}
                     <button
-                        className="p-0 border-none bg-transparent hover:brightness-110 active:scale-95 transition-all cursor-pointer"
-                        style={{ width: '43px', height: '42px' }}
+                        className="p-0 border-none bg-transparent hover:brightness-110 active:scale-95 transition-all cursor-pointer w-[43px] h-[42px] 4xl:w-[85px] 4xl:h-[85px]"
                     >
-                        <img loading="lazy" decoding="async" src="/right_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
+                        <img loading="lazy" decoding="async" src="/right_arrow.svg" alt="Next" className="w-full h-full" />
                     </button>
                 </div>
 
-                {/* 3 Cards Row */}
-                <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0 pb-4">
+                {/* Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 4xl:gap-16 pb-4">
                     {cards.map((card, index) => (
-                        <div key={index} className="w-full lg:w-[373px]">
+                        <div key={index} className="flex flex-col">
                             {/* Image Placeholder */}
-                            <div
-                                className="bg-[#D9D9D9] rounded-[10px] w-full"
-                                style={{ height: '225px' }}
-                            />
+                            <div className="bg-[#D9D9D9] rounded-[10px] 4xl:rounded-[20px] w-full aspect-[373/225]" />
 
                             {/* Date Label with Yellow Bar */}
-                            <div className="flex items-center gap-[6px] mt-[14px] mb-1">
-                                <span style={{ width: '10px', height: '16px', background: '#FFD812' }} />
-                                <span className={`${inter.className} text-base font-normal text-[#333333]`} style={{ lineHeight: '26px' }}>
+                            <div className="flex items-center gap-[6px] 4xl:gap-3 mt-4 4xl:mt-8 mb-2 4xl:mb-4">
+                                <span className="w-[10px] h-[16px] 4xl:w-[20px] 4xl:h-[32px] bg-[#FFD812] flex-shrink-0" />
+                                <span className={`${inter.className} text-base 3xl:text-xl 4xl:text-3xl font-normal text-[#333333]`}>
                                     {card.date}
                                 </span>
                             </div>
 
                             {/* Title */}
-                            <h3 className={`${marcellus.className} text-[22px] font-normal text-black capitalize mb-1`} style={{ lineHeight: '28px' }}>
+                            <h3 className={"text-xl lg:text-[22px] 3xl:text-3xl 4xl:text-6xl font-normal text-black capitalize mb-2 4xl:mb-6 leading-tight font-heading"}>
                                 {card.title}
                             </h3>
 
                             {/* Description */}
-                            <p className={`${inter.className} text-[15px] font-normal text-[#333333] mb-2`} style={{ lineHeight: '26px' }}>
+                            <p className={`${inter.className} text-[15px] 3xl:text-lg 4xl:text-3xl font-normal text-[#333333] mb-4 4xl:mb-10 leading-relaxed`}>
                                 {card.description}
                             </p>
 
                             {/* Action Link */}
-                            <button
-                                className={`${inter.className} text-base text-[#0071BC] font-normal hover:underline cursor-pointer bg-transparent border-none p-0`}
-                                style={{ lineHeight: '26px' }}
-                            >
+                            <button className={`${inter.className} text-base 3xl:text-lg 4xl:text-3xl text-[#0071BC] font-normal hover:underline cursor-pointer bg-transparent border-none p-0 text-left`}>
                                 Read More
                             </button>
+
                         </div>
                     ))}
                 </div>
+            </div>
             </div>
         </section>
     )

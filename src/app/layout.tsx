@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/footer";
-import { Montserrat, Inter, Space_Grotesk } from 'next/font/google';
+import { Inter, Space_Grotesk, Marcellus } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,6 +14,12 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-space-grotesk',
+});
+
+const marcellus = Marcellus({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-marcellus',
 });
 
 export const metadata: Metadata = {
@@ -41,7 +47,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`antialiased bg-white/60  ${inter.className} text-black`}
+        className={`antialiased bg-white/60 ${inter.className} ${inter.variable} ${marcellus.variable} ${spaceGrotesk.variable} text-black font-sans`}
       >
         <Navbar />
         {children}

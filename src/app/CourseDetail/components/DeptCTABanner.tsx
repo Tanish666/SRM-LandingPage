@@ -1,12 +1,7 @@
 'use client'
 import React from 'react'
-import { Marcellus, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import SectionPill from '@/components/home/SectionPill'
-
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const inter = Inter({
     subsets: ['latin'],
@@ -19,11 +14,8 @@ interface Props {
 
 const DeptCTABanner = ({ courseData }: Props) => {
     return (
-        <section className="w-full mt-16 lg:mt-[100px] mb-20 lg:mb-[150px]">
-            <div className="max-w-[1440px] mx-auto px-4 lg:px-6">
-                <div
-                    className="relative mx-auto overflow-hidden bg-[#FFD812] rounded-[20px] w-full max-w-[1241px] py-10 lg:py-0 lg:h-[298px]"
-                >
+        <section className="py-12 md:py-20 4xl:py-36 w-full flex justify-center px-4 md:px-10 lg:px-20">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full relative overflow-hidden bg-[#FFD812] rounded-[30px] 4xl:rounded-[60px] py-12 lg:py-16 4xl:py-32">
                     <img loading="lazy" decoding="async"
                         src="/Contourdept.svg"
                         alt=""
@@ -32,18 +24,18 @@ const DeptCTABanner = ({ courseData }: Props) => {
                     />
 
                     <div
-                        className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full px-6 sm:px-10 lg:px-14 gap-6 lg:gap-4"
+                        className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full px-6 sm:px-10 lg:px-14 4xl:px-24 gap-6 lg:gap-4"
                     >
-                        <div className="flex flex-col gap-4 text-center lg:text-left items-center lg:items-start">
-                            <SectionPill text="Enquiry" className="mb-4" />
+                        <div className="flex flex-col gap-4 4xl:gap-8 text-center lg:text-left items-center lg:items-start">
+                            <SectionPill text="Enquiry" className="mb-4 4xl:mb-8" />
                             <h2
-                                className={`${marcellus.className} text-[28px] sm:text-[35px] lg:text-[45px] text-[#333333] capitalize leading-tight lg:leading-[56px] max-w-[711px]`}
+                                className={"text-[28px] sm:text-[35px] lg:text-[45px] 3xl:text-6xl 4xl:text-[85px] text-[#333333] capitalize leading-tight lg:leading-[56px] 4xl:leading-tight max-w-[711px] 4xl:max-w-7xl font-heading"}
                             >
                                 Shape The Future Of Healthcare<br className="hidden lg:block" />
                                 {' '}Start Your Journey Today!
                             </h2>
                             <p
-                                className={`${inter.className} text-sm lg:text-[15px] text-[#333333] font-normal capitalize leading-relaxed lg:leading-[25px] max-w-[631px]`}
+                                className={`${inter.className} text-sm lg:text-[15px] 3xl:text-xl 4xl:text-3xl text-[#333333] font-normal capitalize leading-relaxed lg:leading-[25px] 4xl:leading-normal max-w-[631px] 4xl:max-w-5xl`}
                             >
                                 Lorem Ipsum Odor Amet, Consectetuer Adipiscing Elit. Hac Arcu Primis Hac In Senectus
                                 Sit Penatibus. Efficitur Rutrum Pellentesque
@@ -51,18 +43,17 @@ const DeptCTABanner = ({ courseData }: Props) => {
                         </div>
 
                         <button
-                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal cursor-pointer transition-colors w-[220px] h-[55px] lg:w-[275px] lg:h-[70px] text-xl lg:text-[26.19px] border-none`}
+                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal cursor-pointer transition-colors w-[220px] h-[55px] lg:w-[275px] lg:h-[70px] 4xl:w-[450px] 4xl:h-[120px] text-xl lg:text-[26px] 4xl:text-4xl border-none rounded-[49px] 4xl:rounded-[60px]`}
                             style={{
-                                borderRadius: '49px',
-                                lineHeight: '32px',
+                                lineHeight: '1.2',
                             }}
                         >
                             Apply Now
                         </button>
                     </div>
-                </div>
             </div>
         </section>
+
     )
 }
 

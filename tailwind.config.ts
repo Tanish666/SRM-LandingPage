@@ -8,6 +8,15 @@ export default {
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+		screens: {
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
+			'3xl': '1920px',
+			'4xl': '2560px',
+		},
 		extend: {
 			transformStyle: {
 				'preserve-3d': 'preserve-3d',
@@ -74,7 +83,9 @@ export default {
 			},
 			fontFamily: {
 				sans: ["var(--font-inter)", "sans-serif"],
-				display: ["var(--font-space-grotesk)", "sans-serif"]
+				display: ["var(--font-space-grotesk)", "sans-serif"],
+				serif: ["var(--font-marcellus)", "serif"],
+				heading: ["var(--font-marcellus)", "serif"]
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

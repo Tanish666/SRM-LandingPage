@@ -1,16 +1,10 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import { IconArrowNarrowRight, IconArrowNarrowLeft } from '@tabler/icons-react';
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const insights = [
     {
@@ -89,27 +83,27 @@ export default function HeroSection5() {
     };
 
     return (
-        <section className="py-24 px-6 md:px-20 max-w-[1450px] mx-auto overflow-hidden bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)] gap-10 lg:gap-14 max-w-7xl mx-auto items-start">
+        <section className="py-12 md:py-20 3xl:py-32 4xl:py-48 w-full bg-white flex justify-center px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)] 3xl:grid-cols-[450px_minmax(0,1fr)] 4xl:grid-cols-[600px_minmax(0,1fr)] gap-10 lg:gap-14 4xl:gap-24 max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full items-start">
 
                 {/* Left Column: Latest News */}
-                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col lg:h-[520px] h-[450px] pb-4">
-                    <div className="bg-[#FFD700] rounded-lg py-2 text-center shadow-sm z-10 mx-1">
-                        <h3 className={`${marcellus.className} text-[28px] text-black tracking-wide`}>Latest News</h3>
+                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col lg:h-[520px] 3xl:h-[650px] 4xl:h-[850px] h-[450px] pb-4 shadow-sm border border-yellow-100/50">
+                    <div className="bg-[#FFD700] rounded-lg py-2 3xl:py-4 text-center shadow-sm z-10 mx-1">
+                        <h3 className="text-[28px] 3xl:text-[34px] 4xl:text-[45px] text-black tracking-wide">Latest News</h3>
                     </div>
                     <div
                         ref={newsRef}
-                        className="flex-1 overflow-y-auto px-7 py-6 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FFD700] [&::-webkit-scrollbar-thumb]:rounded-full"
+                        className="flex-1 overflow-y-auto px-7 4xl:px-12 py-6 4xl:py-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FFD700] [&::-webkit-scrollbar-thumb]:rounded-full"
                     >
                         {[...newsData, ...newsData].map((text, index) => (
-                            <div key={index} className={`mb-5 pb-5 ${index !== (newsData.length * 2 - 1) ? 'border-b border-yellow-200/60' : ''}`}>
-                                <p className="text-sm text-slate-600 mb-2.5 leading-relaxed pr-2">
+                            <div key={index} className={`mb-5 pb-5 4xl:mb-8 4xl:pb-8 ${index !== (newsData.length * 2 - 1) ? 'border-b border-yellow-200/60' : ''}`}>
+                                <p className="text-sm 3xl:text-base 4xl:text-xl text-slate-600 mb-2.5 4xl:mb-4 leading-relaxed pr-2">
                                     {text}
                                 </p>
-                                <button className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-800 transition-colors group">
+                                <button className="flex items-center gap-1.5 4xl:gap-3 text-xs 3xl:text-sm 4xl:text-lg text-slate-500 hover:text-slate-800 transition-colors group">
                                     Read More
-                                    <span className="bg-[#FFD700] rounded-full p-[2px] ml-1 group-hover:scale-110 transition-transform">
-                                        <ArrowUpRight className="size-[10px] text-slate-900" strokeWidth={2} />
+                                    <span className="bg-[#FFD700] rounded-full p-[2px] 4xl:p-1 ml-1 group-hover:scale-110 transition-transform">
+                                        <ArrowUpRight className="size-[10px] 4xl:size-4 text-slate-900" strokeWidth={2} />
                                     </span>
                                 </button>
                             </div>
@@ -120,11 +114,11 @@ export default function HeroSection5() {
                 {/* Right Column: Insights */}
                 <div className="flex flex-col">
                     {/* Header */}
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-4">
-                        <h2 className={`${marcellus.className} text-[38px] lg:text-[44px] text-slate-900 leading-[1.1]`}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 4xl:mb-16 gap-4">
+                        <h2 className="text-[38px] lg:text-[44px] 3xl:text-[54px] 4xl:text-[80px] text-slate-900 leading-[1.1]">
                             Insights From Our Learners
                         </h2>
-                        <div className="flex gap-3 pb-1">
+                        <div className="flex gap-3 pb-1 4xl:scale-125 4xl:origin-bottom-right">
                             <button
                                 onClick={handlePrev}
                                 className="bg-[#FFD700] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-yellow-400 transition-colors shrink-0"
@@ -141,10 +135,10 @@ export default function HeroSection5() {
                     </div>
 
                     {/* Content Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-[260px_minmax(0,1fr)] gap-6 lg:h-[400px] h-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-[260px_minmax(0,1fr)] 3xl:grid-cols-[320px_minmax(0,1fr)] 4xl:grid-cols-[450px_minmax(0,1fr)] gap-6 4xl:gap-12 lg:h-[400px] 3xl:h-[500px] 4xl:h-[650px] h-auto">
 
                         {/* Stacked Images - Hidden on Mobile */}
-                        <div className="hidden md:flex flex-col gap-3 h-full overflow-hidden">
+                        <div className="hidden md:flex flex-col gap-3 4xl:gap-6 h-full overflow-hidden">
                             <AnimatePresence mode="popLayout">
                                 {/* Top Slot */}
                                 <motion.div
@@ -153,13 +147,13 @@ export default function HeroSection5() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: -20, opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="relative w-full h-[90px] rounded-[20px] overflow-hidden group cursor-pointer"
+                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-[20px] overflow-hidden group cursor-pointer"
                                     onClick={handlePrev}
                                 >
                                     <Image src={getInsightAt(-1).image} alt="Student" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-end">
-                                        <h4 className={`${marcellus.className} text-white font-extralight text-xl leading-tight`}>{getInsightAt(-1).name}</h4>
-                                        <p className="text-white/80 text-[10px] mt-0.5 truncate">{getInsightAt(-1).program}</p>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 4xl:p-8 flex flex-col justify-end">
+                                        <h4 className="text-white font-extralight text-xl 3xl:text-2xl 4xl:text-4xl leading-tight">{getInsightAt(-1).name}</h4>
+                                        <p className="text-white/80 text-[10px] 3xl:text-xs 4xl:text-lg mt-0.5 truncate">{getInsightAt(-1).program}</p>
                                     </div>
                                 </motion.div>
 
@@ -170,7 +164,7 @@ export default function HeroSection5() {
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 0.95, opacity: 0 }}
                                     transition={{ duration: 0.6 }}
-                                    className="relative w-full flex-1 rounded-2xl overflow-hidden shadow-sm border border-slate-100 "
+                                    className="relative w-full flex-1 rounded-2xl 4xl:rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 "
                                 >
                                     <Image src={getInsightAt(0).image} alt="Student" fill className="object-cover" />
                                 </motion.div>
@@ -182,13 +176,13 @@ export default function HeroSection5() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: 20, opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="relative w-full h-[90px] rounded-2xl overflow-hidden group cursor-pointer"
+                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-2xl overflow-hidden group cursor-pointer"
                                     onClick={handleNext}
                                 >
                                     <Image src={getInsightAt(1).image} alt="Student" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-end">
-                                        <h4 className={`${marcellus.className} text-white  text-xl leading-tight`}>{getInsightAt(1).name}</h4>
-                                        <p className="text-white/80 text-[10px] mt-0.5 truncate">{getInsightAt(1).program}</p>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 4xl:p-8 flex flex-col justify-end">
+                                        <h4 className="text-white text-xl 3xl:text-2xl 4xl:text-4xl leading-tight">{getInsightAt(1).name}</h4>
+                                        <p className="text-white/80 text-[10px] 3xl:text-xs 4xl:text-lg mt-0.5 truncate">{getInsightAt(1).program}</p>
                                     </div>
                                 </motion.div>
                             </AnimatePresence>
@@ -197,17 +191,17 @@ export default function HeroSection5() {
                         {/* Quote Card */}
                         <motion.div
                             onClick={handleNext}
-                            className="relative border border-slate-300/80 rounded-[24px] p-5 sm:p-8 lg:p-10 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
+                            className="relative border border-slate-300/80 rounded-[24px] 4xl:rounded-[3rem] p-5 sm:p-8 lg:p-10 4xl:p-20 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
                         >
                             {/* Quotes Blocks - Background Watermark on Mobile */}
                             <motion.div
                                 key={`quotes-${activeIndex}`}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="absolute top-[55%] md:top-10 left-10 md:left-10 flex gap-[6px] md:gap-[12px] z-0"
+                                className="absolute top-[55%] md:top-10 left-10 md:left-10 flex gap-[6px] md:gap-[12px] 4xl:gap-8 z-0"
                             >
-                                <img loading="lazy" decoding="async" src="sec5SVG.svg" alt="" className="w-12 md:w-auto md:opacity-100" />
-                                <img loading="lazy" decoding="async" src="sec5SVG.svg" alt="" className="w-12 md:w-auto md:opacity-100" />
+                                <img loading="lazy" decoding="async" src="sec5SVG.svg" alt="" className="w-12 md:w-auto 4xl:w-[120px] md:opacity-100" />
+                                <img loading="lazy" decoding="async" src="sec5SVG.svg" alt="" className="w-12 md:w-auto 4xl:w-[120px] md:opacity-100" />
                             </motion.div>
 
                             <div className="relative z-10 h-full flex flex-col">
@@ -229,14 +223,14 @@ export default function HeroSection5() {
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <p className="text-[#64748B] text-[15px] lg:text-[15.5px] leading-[1.8] mb-8 group-hover:text-slate-700 transition-colors w-full sm:w-[95%]">
+                                        <p className="text-[#64748B] text-[15px] lg:text-[15.5px] 3xl:text-xl 4xl:text-[2.25rem] 3xl:leading-[1.8] 4xl:leading-[1.4] mb-8 4xl:mb-16 group-hover:text-slate-700 transition-colors w-full sm:w-[95%]">
                                             {insights[activeIndex].quote}
                                         </p>
                                         <div className="flex flex-col mt-auto">
-                                            <span className={`${marcellus.className} text-[#3695EB] text-[22px] font-medium mb-0.5`}>
+                                            <span className="font-heading text-[#3695EB] text-[22px] 3xl:text-[28px] 4xl:text-[45px] font-medium mb-0.5 4xl:mb-3">
                                                 {insights[activeIndex].name}
                                             </span>
-                                            <span className="text-slate-500 text-[14.5px]">
+                                            <span className="text-slate-500 text-[14.5px] 3xl:text-[18px] 4xl:text-[24px]">
                                                 {insights[activeIndex].program}
                                             </span>
                                         </div>
@@ -250,5 +244,6 @@ export default function HeroSection5() {
 
             </div>
         </section>
+
     )
 }

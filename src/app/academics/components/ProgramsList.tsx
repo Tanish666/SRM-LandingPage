@@ -1,12 +1,6 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
-import { Marcellus } from 'next/font/google'
 import Link from 'next/link'
-
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const initialUgPrograms = [
     { name: "B.Sc Cardio Perfusion Technology", duration: "3 Year" },
@@ -79,23 +73,24 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
     }, [])
 
     return (
-        <section className="flex flex-col items-center justify-center w-full px-8 md:px-20 py-16">
-            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-black mb-10 text-center`}>
-                Our Allied Health Sciences Programs
-            </h2>
+        <section className="py-12 md:py-20 3xl:py-28 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-40 4xl:px-60 overflow-hidden">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2400px] w-full flex flex-col items-center">
+                <h2 className={"text-3xl md:text-[45px] 3xl:text-7xl 4xl:text-[110px] text-black mb-10 3xl:mb-16 4xl:mb-24 text-center font-heading"}>
+                    Our Allied Health Sciences Programs
+                </h2>
 
-            <div className="w-full max-w-6xl mx-auto rounded-[21.04px] border border-gray-200 overflow-hidden shadow-sm bg-[#EEEEEE]">
+                <div className="w-full rounded-[21.04px] 3xl:rounded-[40px] 4xl:rounded-[60px] border border-gray-200 overflow-hidden shadow-sm bg-[#EEEEEE]">
                 {/* Header Bar */}
-                <div className="bg-[#0071BC] p-4 lg:p-6 flex flex-col items-center justify-between gap-6 rounded-t-[21.04px] lg:flex-row">
+                <div className="bg-[#0071BC] p-4 lg:p-6 3xl:p-10 4xl:p-20 flex flex-col items-center justify-between gap-6 3xl:gap-10 4xl:gap-16 rounded-t-[21.04px] 3xl:rounded-t-[40px] 4xl:rounded-t-[60px] lg:flex-row">
                     {/* Toggle Buttons */}
-                    <div className="flex items-center bg-[#FFD812] rounded-full p-1 overflow-x-auto w-full lg:w-auto overflow-hidden shrink-0 no-scrollbar">
+                    <div className="flex items-center bg-[#FFD812] rounded-full p-1 3xl:p-2 4xl:p-4 overflow-x-auto w-full lg:w-auto overflow-hidden shrink-0 no-scrollbar">
                         <button
                             onClick={() => {
                                 setActiveTab('Under Graduate')
                                 setFinalFilter('') // Refresh list on tab change
                                 setInputValue('')
                             }}
-                            className={`flex-1 lg:flex-none px-4 lg:px-6 py-2 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base transition-colors ${activeTab === 'Under Graduate' ? 'bg-white text-gray-900' : 'text-gray-900 bg-transparent hover:bg-white/50'}`}
+                            className={`flex-1 lg:flex-none px-4 lg:px-6 4xl:px-12 py-2 4xl:py-6 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base 3xl:text-xl 4xl:text-3xl transition-colors ${activeTab === 'Under Graduate' ? 'bg-white text-gray-900' : 'text-gray-900 bg-transparent hover:bg-white/50'}`}
                         >
                             Under Graduate
                         </button>
@@ -105,15 +100,15 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                                 setFinalFilter('') // Refresh list on tab change
                                 setInputValue('')
                             }}
-                            className={`flex-1 lg:flex-none px-4 lg:px-6 py-2 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base transition-colors ${activeTab === 'Post Graduate' ? 'bg-white text-gray-900' : 'text-gray-900 bg-transparent hover:bg-white/50'}`}
+                            className={`flex-1 lg:flex-none px-4 lg:px-6 4xl:px-12 py-2 4xl:py-6 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base 3xl:text-xl 4xl:text-3xl transition-colors ${activeTab === 'Post Graduate' ? 'bg-white text-gray-900' : 'text-gray-900 bg-transparent hover:bg-white/50'}`}
                         >
                             Post Graduate
                         </button>
                     </div>
 
                     {/* Search Bar Container */}
-                    <div className="flex-1 w-full max-w-2xl relative" ref={dropdownRef}>
-                        <div className="flex items-center bg-white rounded-full overflow-hidden border border-gray-100 pl-4 lg:pl-6 py-1 pr-1 w-full relative">
+                    <div className="flex-1 w-full max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl relative" ref={dropdownRef}>
+                        <div className="flex items-center bg-white rounded-full overflow-hidden border border-gray-100 pl-4 lg:pl-6 3xl:pl-8 4xl:pl-12 py-1 3xl:py-2 4xl:py-4 pr-1 3xl:pr-2 4xl:pr-4 w-full relative">
                             <input
                                 type="text"
                                 placeholder="Search Your Program...."
@@ -126,11 +121,11 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter') handleSearch()
                                 }}
-                                className="flex-1 min-w-0 px-2 py-2 outline-none text-gray-700 bg-transparent text-sm placeholder-gray-300"
+                                className="flex-1 min-w-0 px-2 py-2 4xl:py-4 outline-none text-gray-700 bg-transparent text-sm 3xl:text-lg 4xl:text-2xl placeholder-gray-300"
                             />
                             <button
                                 onClick={handleSearch}
-                                className="bg-[#FFD812] text-gray-900 px-4 lg:px-8 py-2.5 rounded-full font-medium shadow-sm hover:bg-yellow-400 transition-colors text-xs lg:text-sm whitespace-nowrap shrink-0"
+                                className="bg-[#FFD812] text-gray-900 px-4 lg:px-8 4xl:px-12 py-2.5 4xl:py-5 rounded-full font-medium shadow-sm hover:bg-yellow-400 transition-colors text-xs lg:text-sm 3xl:text-base 4xl:text-2xl whitespace-nowrap shrink-0"
                             >
                                 Search
                             </button>
@@ -138,17 +133,17 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
 
                         {/* Dropdown Suggestions */}
                         {showDropdown && suggestions.length > 0 && (
-                            <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 max-h-[300px] overflow-y-auto">
+                            <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 max-h-[300px] 4xl:max-h-[500px] overflow-y-auto">
                                 {suggestions.map((suggestion, idx) => {
                                     const suggestionId = suggestion._id || suggestion.id || `suggestion-${idx}`;
                                     return (
                                         <div
                                             key={suggestionId}
                                             onClick={() => handleSelectSuggestion(suggestion.name)}
-                                            className="px-6 py-3 hover:bg-[#F2F9FF] cursor-pointer transition-colors border-b border-gray-50 last:border-none flex items-center justify-between group"
+                                            className="px-6 py-3 4xl:px-10 4xl:py-6 hover:bg-[#F2F9FF] cursor-pointer transition-colors border-b border-gray-50 last:border-none flex items-center justify-between group"
                                         >
-                                            <span className="text-gray-700 text-sm font-medium group-hover:text-[#0071BC]">{suggestion.name}</span>
-                                            <span className="text-[10px] bg-gray-100 px-2 py-1 rounded-full text-gray-500">{suggestion.duration || "3 Year"}</span>
+                                            <span className="text-gray-700 text-sm 3xl:text-lg 4xl:text-2xl font-medium group-hover:text-[#0071BC]">{suggestion.name}</span>
+                                            <span className="text-[10px] 3xl:text-xs 4xl:text-lg bg-gray-100 px-2 py-1 rounded-full text-gray-500">{suggestion.duration || "3 Year"}</span>
                                         </div>
                                     );
                                 })}
@@ -158,26 +153,26 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                 </div>
 
                 {/* List Section */}
-                <div className="bg-[#EEEEEE] min-h-[400px]">
+                <div className="bg-[#EEEEEE] min-h-[400px] 3xl:min-h-[600px] 4xl:min-h-[800px]">
                     {filteredPrograms.length > 0 ? (
                         filteredPrograms.map((program, idx) => {
                             const programId = program._id || program.id || `program-${idx}`;
                             return (
-                                <div key={programId} className="px-6 md:px-10">
-                                    <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center py-6 border-b`} style={{ borderColor: '#c0c0c0' }}>
+                                <div key={programId} className="px-6 md:px-10 3xl:px-16 4xl:px-32">
+                                    <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center py-6 3xl:py-10 4xl:py-16 border-b`} style={{ borderColor: '#c0c0c0' }}>
                                         <div className="mb-6 lg:mb-0 w-full lg:w-auto">
-                                            <h3 className={`${marcellus.className} text-lg lg:text-xl text-gray-900 mb-[4px]`}>{program.name}</h3>
-                                            <div className="text-xs lg:text-[13px] text-gray-500 flex flex-wrap items-center gap-3 lg:gap-4">
+                                            <h3 className={"text-lg lg:text-xl 3xl:text-2xl 4xl:text-[2.25rem] text-gray-900 mb-[4px] 4xl:mb-4"}>{program.name}</h3>
+                                            <div className="text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl text-gray-500 flex flex-wrap items-center gap-3 lg:gap-4 4xl:gap-8">
                                                 <span>Duration : {program.duration || "3 Year"}</span>
                                                 <span className="hidden lg:inline text-gray-300">|</span>
                                                 <Link href={`/CourseDetail?id=${programId}`} className="text-[#0070c0] hover:underline font-medium">Explore Program</Link>
                                             </div>
                                         </div>
                                         <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
-                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 py-2.5 bg-[#0070c0] text-white rounded-full font-medium text-xs lg:text-[13px] hover:bg-blue-700 transition-all whitespace-nowrap">
+                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 4xl:px-12 py-2.5 4xl:py-6 bg-[#0070c0] text-white rounded-full font-medium text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl hover:bg-blue-700 transition-all whitespace-nowrap">
                                                 Check Eligibility
                                             </button>
-                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 py-2.5 bg-[#FFD812] text-gray-900 rounded-full font-medium text-xs lg:text-[13px] hover:bg-yellow-400 transition-all shadow-sm whitespace-nowrap">
+                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 4xl:px-12 py-2.5 4xl:py-6 bg-[#FFD812] text-gray-900 rounded-full font-medium text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl hover:bg-yellow-400 transition-all shadow-sm whitespace-nowrap">
                                                 Apply Now
                                             </button>
                                         </div>
@@ -186,25 +181,26 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                             );
                         })
                     ) : (
-                        <div className="py-20 text-center flex flex-col items-center justify-center">
-                            <div className="text-gray-400 mb-2">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                        <div className="py-20 4xl:py-40 text-center flex flex-col items-center justify-center">
+                            <div className="text-gray-400 mb-2 4xl:mb-6">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="4xl:w-24 4xl:h-24">
                                     <circle cx="11" cy="11" r="8"></circle>
                                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                 </svg>
                             </div>
-                            <p className="text-gray-500 font-medium">No programs found matching your search.</p>
+                            <p className="text-gray-500 font-medium 3xl:text-xl 4xl:text-3xl">No programs found matching your search.</p>
                             <button
                                 onClick={() => {
                                     setInputValue('')
                                     setFinalFilter('')
                                 }}
-                                className="mt-4 text-[#0071BC] text-sm font-semibold hover:underline"
+                                className="mt-4 4xl:mt-8 text-[#0071BC] text-sm 3xl:text-lg 4xl:text-2xl font-semibold hover:underline"
                             >
                                 Clear all filters
                             </button>
                         </div>
                     )}
+                </div>
                 </div>
             </div>
         </section>

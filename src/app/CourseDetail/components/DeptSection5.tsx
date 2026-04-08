@@ -1,10 +1,9 @@
 'use client'
 import React from 'react'
-import { Marcellus, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import SectionPill from '@/components/home/SectionPill'
 
-const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
 interface Props {
@@ -44,122 +43,26 @@ const DeptSection5 = ({ courseData }: Props) => {
     ]
 
     return (
-        <section className="w-full bg-white flex justify-center py-12 lg:py-20 px-4 lg:px-0 overflow-hidden mb-[30px] lg:mb-[-80px]">
+        <section className="w-full bg-white flex justify-center py-12 md:py-20 4xl:py-36 px-4 md:px-10 lg:px-20 overflow-hidden">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
+                {/* Header Section */}
+                <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
+                    <SectionPill text="Career Opportunities" className="mb-6 4xl:mb-12" />
+                    
+                    <h2 className={"text-3xl md:text-4xl lg:text-[45px] 3xl:text-6xl 4xl:text-[85px] leading-tight text-black capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading"}>
+                        Empowering The Next Generation Of Healthcare Leaders
+                    </h2>
 
-            {/* MOBILE LAYOUT */}
-            <div className="flex flex-col items-center w-full lg:hidden">
-                {/* Pill Badge */}
-                <SectionPill text="Career Opportunities" className="mb-4" />
+                    <p className={`${inter.className} text-[#515151] text-sm md:text-base 3xl:text-xl 4xl:text-3xl leading-relaxed capitalize max-w-2xl 4xl:max-w-5xl mb-8 4xl:mb-16`}>
+                        At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
+                    </p>
 
-                {/* Main Heading */}
-                <h2 className={`${marcellus.className} text-center text-[28px] leading-[36px] text-black capitalize mt-4 max-w-[90%]`}>
-                    Empowering The Next Generation Of Healthcare Leaders
-                </h2>
-
-                {/* Subtitle */}
-                <p className={`${inter.className} text-center text-[#515151] text-sm leading-[22px] capitalize mt-3 max-w-[90%]`}>
-                    Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.
-                </p>
-
-                {/* CTA Button */}
-                <button
-                    className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer mt-6"
-                    style={{
-                        width: '267px',
-                        height: '47px',
-                        borderRadius: '33.57px',
-                        border: '1.12px solid #E5E5E5',
-                        paddingLeft: '20px',
-                        paddingRight: '4px',
-                    }}
-                >
-                    <span className={`${inter.className} text-lg font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
-                    <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="5" y1="19" x2="19" y2="5" />
-                            <polyline points="9 5 19 5 19 15" />
-                        </svg>
-                    </span>
-                </button>
-
-                {/* Mobile Stat Cards */}
-                <div className="flex flex-col gap-4 mt-8 w-full max-w-[400px]">
-                    {stats.map((stat, index) => (
-                        <div
-                            key={index}
-                            className="w-full rounded-[20px] p-[1px]"
-                            style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
-                        >
-                            <div
-                                className="w-full rounded-[19px] p-5"
-                                style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
-                            >
-                                <div className="flex items-start justify-between mb-3">
-                                    <h3 className={`${marcellus.className} text-4xl leading-[36px] text-[#0071BC]`}>
-                                        {stat.num}
-                                    </h3>
-                                    <Image
-                                        src={stat.icon}
-                                        alt={stat.label}
-                                        width={stat.iconW}
-                                        height={stat.iconH}
-                                        className="object-contain max-w-[50px] max-h-[50px]"
-                                    />
-                                </div>
-                                <p className={`${marcellus.className} text-lg leading-[24px] text-black capitalize mb-1`}>
-                                    {stat.label}
-                                </p>
-                                <p className={`${inter.className} text-sm leading-[22px] text-[#515151] capitalize`}>
-                                    {stat.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* DESKTOP LAYOUT  */}
-            <div className="relative hidden lg:block" style={{ width: '1245px', height: '650px' }}>
-                {/* Pill Badge */}
-                <div
-                    className="absolute"
-                    style={{ left: '514px', top: '0px' }}
-                >
-                    <SectionPill text="Career Opportunities" />
-                </div>
-
-                {/* Main Heading */}
-                <h2
-                    className={`${marcellus.className} absolute text-center text-[45px] leading-[56px] text-black capitalize`}
-                    style={{ width: '1166px', left: '41.5px', top: '65px' }}
-                >
-                    Empowering The Next Generation Of Healthcare Leaders
-                </h2>
-
-                {/* Subtitle */}
-                <p
-                    className={`${inter.className} absolute text-center text-[#515151] text-[15px] leading-[25px] capitalize`}
-                    style={{ width: '623px', left: '312.5px', top: '135px' }}
-                >
-                    Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.
-                </p>
-
-                {/* CTA Button */}
-                <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer"
-                        style={{
-                            width: '267px',
-                            height: '47px',
-                            borderRadius: '33.57px',
-                            border: '1.12px solid #E5E5E5',
-                            paddingLeft: '20px',
-                            paddingRight: '4px',
-                        }}
+                        className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer w-[267px] 4xl:w-[480px] h-[47px] 4xl:h-[100px] rounded-full border border-[#E5E5E5] pl-6 4xl:pl-12 pr-1 4xl:pr-2 group"
                     >
-                        <span className={`${inter.className} text-lg font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
-                        <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <span className={`${inter.className} text-lg 4xl:text-3xl font-normal text-black capitalize`}>Explore Our Research</span>
+                        <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px] 4xl:w-[85px] 4xl:h-[85px]">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="4xl:w-10 4xl:h-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <line x1="5" y1="19" x2="19" y2="5" />
                                 <polyline points="9 5 19 5 19 15" />
                             </svg>
@@ -167,42 +70,45 @@ const DeptSection5 = ({ courseData }: Props) => {
                     </button>
                 </div>
 
-                {/* Desktop Stat Cards*/}
-                <div className="absolute w-full" style={{ top: '0px' }}>
+                {/* Stats Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 4xl:gap-16 w-full">
                     {stats.map((stat, index) => {
-                        const isShortCard = index === 1 || index === 2
+                        const isEven = index % 2 === 1;
                         return (
-                            <div key={index} className="absolute rounded-[20px] p-[1px]" style={{
-                                width: stat.width, height: stat.height, left: stat.left, top: stat.top,
-                                background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)'
-                            }}>
-                                <div className="w-full h-full rounded-[19px] relative overflow-hidden" style={{
-                                    background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)',
-                                }}>
-                                    <div className={`absolute ${isShortCard ? 'top-[27px] right-[18px]' : 'top-[66px] left-[17px]'}`}>
-                                        <Image src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
+                            <div
+                                key={index}
+                                className={`group relative rounded-[20px] 4xl:rounded-[40px] p-[1px] transition-all duration-300 hover:-translate-y-2 ${isEven ? 'lg:mt-12 4xl:mt-24' : ''}`}
+                                style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                            >
+                                <div
+                                    className="h-full w-full rounded-[19px] 4xl:rounded-[39px] p-8 xl:p-10 4xl:p-16 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px]"
+                                    style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
+                                >
+                                    <div className="w-full flex justify-end mb-4 4xl:mb-8">
+                                        <div className="4xl:scale-[2] transform-origin-right">
+                                            <Image
+                                                src={stat.icon}
+                                                alt={stat.label}
+                                                width={stat.iconW}
+                                                height={stat.iconH}
+                                                className="object-contain"
+                                            />
+                                        </div>
                                     </div>
-                                    <h3
-                                        className={`${marcellus.className} absolute text-5xl leading-[40px] text-[#0071BC]`}
-                                        style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
-                                    >
-                                        {stat.num}
-                                    </h3>
-                                    <p
-                                        className={`${marcellus.className} absolute text-xl leading-[25px] text-black capitalize`}
-                                        style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
-                                    >
-                                        {stat.label}
-                                    </p>
-                                    <p
-                                        className={`${inter.className} absolute text-[15px] leading-[25px] text-[#515151] capitalize`}
-                                        style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
-                                    >
-                                        {stat.desc}
-                                    </p>
+                                    <div className="mt-auto">
+                                        <h3 className={"text-4xl md:text-5xl 3xl:text-6xl 4xl:text-[100px] leading-tight text-[#0071BC] mb-4 4xl:mb-8 font-heading"}>
+                                            {stat.num}
+                                        </h3>
+                                        <p className="font-heading text-lg md:text-xl 3xl:text-2xl 4xl:text-[2.5rem] leading-tight text-black capitalize mb-2 4xl:mb-4">
+                                            {stat.label}
+                                        </p>
+                                        <p className={`${inter.className} text-sm md:text-[15px] 3xl:text-lg 4xl:text-3xl leading-relaxed text-[#515151] capitalize`}>
+                                            {stat.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        )
+                        );
                     })}
                 </div>
             </div>

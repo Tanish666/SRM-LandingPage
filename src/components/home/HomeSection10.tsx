@@ -2,12 +2,8 @@
 import React from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { IconArrowNarrowRight, IconArrowNarrowLeft } from '@tabler/icons-react';
-import { Marcellus } from 'next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionPill from '@/components/home/SectionPill';
-
-
-const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] });
 
 const monthNames = [
     "January", "February", "March", "April", "May", "June",
@@ -183,22 +179,22 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
         return data;
     }, [currentMonth]);
     return (
-        <section className="w-full bg-white py-16 px-4 md:px-8 lg:px-16 overflow-hidden font-sans">
-            <div className="max-w-6xl mx-auto">
+        <section className="py-12 md:py-20 3xl:py-32 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48 overflow-hidden">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col">
                 {/* Top Section */}
-                <div className="mb-20">
-                    <div className="flex flex-col items-center relative mb-12">
+                <div className="mb-20 4xl:mb-40">
+                    <div className="flex flex-col items-center relative mb-12 4xl:mb-24">
                         {/* Pill */}
-                        <SectionPill text="News & Events" className="mb-10" />
+                        <SectionPill text="News & Events" className="mb-10 4xl:mb-16" />
 
                         {/* Heading */}
-                        <h2 className={`text-3xl md:text-5xl font-serif text-center text-gray-900 leading-tight ${marcellus.className}`}>
+                        <h2 className="text-3xl md:text-5xl 3xl:text-[55px] 4xl:text-[80px] text-center text-gray-900 leading-tight">
                             Stay Updated With What's Happening <br /> At SRM AHS
                         </h2>
 
                         {/* Arrows (Desktop positioned right, Mobile flow below) */}
                         {displayEvents.length > 2 && (
-                            <div className="hidden md:flex absolute right-0 bottom-2 gap-3">
+                            <div className="hidden md:flex absolute right-0 bottom-2 4xl:bottom-10 gap-3 4xl:gap-6 4xl:scale-125">
                                 <button
                                     onClick={prevEvents}
                                     className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-white hover:-translate-x-1 transition-transform"
@@ -217,32 +213,32 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                         )}
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:h-[381px] h-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 4xl:gap-16 lg:h-[381px] 3xl:h-[450px] 4xl:h-[600px] h-auto">
                         {/* Calendar Card */}
-                        <div className="bg-[#C5E6FD] rounded-xl p-6 text-gray-800">
-                            <div className="flex items-center justify-center gap-4 text-lg font-serif mb-6">
-                                <span className={`${marcellus.className} text-2xl`}>{monthNames[currentMonth.getMonth()]}</span>
+                        <div className="bg-[#C5E6FD] rounded-xl 4xl:rounded-3xl p-6 4xl:p-12 text-gray-800 flex flex-col">
+                            <div className="flex items-center justify-center gap-4 text-lg font-serif mb-6 4xl:mb-12">
+                                <span className="font-heading text-2xl 3xl:text-3xl 4xl:text-5xl">{monthNames[currentMonth.getMonth()]}</span>
                             </div>
-                            <div className='w-full h-[1px] border-t my-5 border-dashed border-[#9F9F9F]' />
-                            <div className="grid grid-cols-8 gap-y-4 gap-x-2 text-[15px] md:text-[13px] lg:text-sm text-center font-medium">
+                            <div className='w-full h-[1px] border-t my-5 4xl:my-8 border-dashed border-[#9F9F9F]' />
+                            <div className="grid grid-cols-8 gap-y-4 4xl:gap-y-8 gap-x-2 text-[15px] md:text-[13px] 3xl:text-base 4xl:text-2xl lg:text-sm text-center font-medium">
                                 {calendarData.map((item, index) => {
                                     if (item.type === "label") {
                                         return (
-                                            <div key={index} className="flex items-center justify-center h-7 text-[#333333]">
+                                            <div key={index} className="flex items-center justify-center h-7 4xl:h-12 text-[#333333]">
                                                 {item.val}
                                             </div>
                                         );
                                     }
                                     if (item.type === "week") {
                                         return (
-                                            <div key={index} className="flex items-center justify-center h-7 text-[#333333] text-sm">
+                                            <div key={index} className="flex items-center justify-center h-7 4xl:h-12 text-[#333333] text-sm 3xl:text-base 4xl:text-2xl">
                                                 {item.val}
                                             </div>
                                         );
                                     }
                                     if (item.type === "other") {
                                         return (
-                                            <div key={index} className="flex items-center justify-center h-7 text-[#333333]">
+                                            <div key={index} className="flex items-center justify-center h-7 4xl:h-12 text-[#333333]">
                                                 {item.val}
                                             </div>
                                         );
@@ -253,7 +249,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                                     return (
                                         <div
                                             key={index}
-                                            className={`flex items-center justify-center w-7 h-7 mx-auto transition-all ${isHighlighted
+                                            className={`flex items-center justify-center w-7 h-7 3xl:w-9 3xl:h-9 4xl:w-14 4xl:h-14 mx-auto transition-all ${isHighlighted
                                                 ? "bg-yellow-400 font-bold text-gray-900 shadow-sm rounded-lg"
                                                 : "text-gray-600 rounded-full"
                                                 }`}
@@ -273,9 +269,9 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: -20 }}
                                     transition={{ duration: 0.3, ease: "easeOut" }}
-                                    className="flex flex-col gap-4"
+                                    className="flex flex-col gap-4 4xl:gap-8"
                                 >
-                                    <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden group relative">
+                                    <div className="w-full aspect-[4/3] bg-gray-100 rounded-lg 4xl:rounded-3xl overflow-hidden group relative">
                                         <img loading="lazy" decoding="async"
                                             src={event.image}
 
@@ -283,20 +279,20 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                                         />
                                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors pointer-events-none"></div>
                                     </div>
-                                    <div className="flex flex-col gap-2">
+                                    <div className="flex flex-col gap-2 4xl:gap-4">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-1 h-4 bg-yellow-400"></div>
-                                            <span className="text-sm text-gray-600 font-medium">{event.date}</span>
+                                            <div className="w-1 h-4 4xl:w-2 4xl:h-8 bg-yellow-400"></div>
+                                            <span className="text-sm 3xl:text-base 4xl:text-2xl text-gray-600 font-medium">{event.date}</span>
                                         </div>
-                                        <h3 className={`${marcellus.className} text-xl font-serif text-gray-900 leading-tight`}>
+                                        <h3 className="text-xl 3xl:text-2xl 4xl:text-4xl text-gray-900 leading-tight">
                                             {event.title}
                                         </h3>
-                                        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
+                                        <p className="text-sm 3xl:text-base 4xl:text-2xl text-gray-500 leading-relaxed line-clamp-2">
                                             {event.description}
                                         </p>
-                                        <a href={event.link} className="text-sm text-[#006BB3] hover:underline mt-1 font-medium inline-flex items-center gap-1 group">
+                                        <a href={event.link} className="text-sm 3xl:text-base 4xl:text-2xl text-[#006BB3] hover:underline mt-1 font-medium inline-flex items-center gap-1 group">
                                             Read More
-                                            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                            <ArrowUpRight size={14} className="4xl:size-6 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                         </a>
                                     </div>
                                 </motion.div>
@@ -326,38 +322,38 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                 </div>
 
                 {/* Bottom Section */}
-                <div className="mt-24">
-                    <h2 className={`text-3xl md:text-4xl font-serif text-center text-gray-900 mb-12 ${marcellus.className}`}>
+                <div className="mt-24 4xl:mt-48">
+                    <h2 className="text-3xl md:text-4xl 3xl:text-[45px] 4xl:text-[70px] text-center text-gray-900 mb-12 4xl:mb-24">
                         Start Your Journey Today!
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 4xl:gap-16">
                         {/* Card 1 */}
-                        <div className="bg-[#A4DEFF] rounded-[20px] h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
-                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
-                                <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg]" size={40} strokeWidth={1.5} />
+                        <div className="bg-[#A4DEFF] rounded-[20px] 4xl:rounded-[40px] h-[240px] 3xl:h-[300px] 4xl:h-[450px] flex flex-col items-center justify-center p-6 4xl:p-12 relative group cursor-pointer hover:-translate-y-1 transition-transform">
+                            <div className="w-14 h-14 3xl:w-18 3xl:h-18 4xl:w-28 4xl:h-28 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
+                                <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg] 4xl:scale-150" size={40} strokeWidth={1.5} />
                             </div>
-                            <div className="bg-white rounded-full py-2.5 px-8 shadow-sm text-sm font-medium text-gray-800">
+                            <div className="bg-white rounded-full py-2.5 px-8 4xl:py-5 4xl:px-14 shadow-sm text-sm 3xl:text-lg 4xl:text-2xl font-medium text-gray-800">
                                 Connect With Us
                             </div>
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-[#FFF3B0] rounded-[20px] h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
-                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
-                                <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg]" size={40} strokeWidth={1.5} />
+                        <div className="bg-[#FFF3B0] rounded-[20px] 4xl:rounded-[40px] h-[240px] 3xl:h-[300px] 4xl:h-[450px] flex flex-col items-center justify-center p-6 4xl:p-12 relative group cursor-pointer hover:-translate-y-1 transition-transform">
+                            <div className="w-14 h-14 3xl:w-18 3xl:h-18 4xl:w-28 4xl:h-28 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
+                                <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg] 4xl:scale-150" size={40} strokeWidth={1.5} />
                             </div>
-                            <div className="bg-white rounded-full py-2.5 px-8 shadow-sm text-sm font-medium text-gray-800">
+                            <div className="bg-white rounded-full py-2.5 px-8 4xl:py-5 4xl:px-14 shadow-sm text-sm 3xl:text-lg 4xl:text-2xl font-medium text-gray-800">
                                 Course Enquiry
                             </div>
                         </div>
 
                         {/* Card 3 */}
-                        <div className="bg-[#E0E0E0] rounded-[20px] h-[240px] flex flex-col items-center justify-center p-6 relative group cursor-pointer hover:-translate-y-1 transition-transform">
-                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
-                                <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg]" size={40} strokeWidth={1.5} />
+                        <div className="bg-[#E0E0E0] rounded-[20px] 4xl:rounded-[40px] h-[240px] 3xl:h-[300px] 4xl:h-[450px] flex flex-col items-center justify-center p-6 4xl:p-12 relative group cursor-pointer hover:-translate-y-1 transition-transform">
+                            <div className="w-14 h-14 3xl:w-18 3xl:h-18 4xl:w-28 4xl:h-28 bg-white rounded-full flex items-center justify-center shadow-md mb-8 group-hover:scale-110 transition-transform">
+                                <IconArrowNarrowRight className="text-gray-900 -rotate-[35deg] 4xl:scale-150" size={40} strokeWidth={1.5} />
                             </div>
-                            <div className="bg-white rounded-full py-2.5 px-8 shadow-sm text-sm font-medium text-gray-800">
+                            <div className="bg-white rounded-full py-2.5 px-8 4xl:py-5 4xl:px-14 shadow-sm text-sm 3xl:text-lg 4xl:text-2xl font-medium text-gray-800">
                                 Apply Now
                             </div>
                         </div>
@@ -365,6 +361,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                 </div>
             </div>
         </section>
+
     );
 };
 

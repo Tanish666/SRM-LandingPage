@@ -1,18 +1,12 @@
 'use client'
 import React from 'react'
-import { Marcellus } from 'next/font/google'
 import { motion, useMotionValue, useSpring, useTransform, useInView } from 'framer-motion'
-
-const marcellus = Marcellus({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const Counter = ({ value }: { value: string }) => {
     const numMatch = value.match(/(\d+)(.*)/);
     const targetNum = numMatch ? parseInt(numMatch[1]) : 0;
     const suffix = numMatch ? numMatch[2] : "";
-    
+
     const count = useMotionValue(0);
     const springValue = useSpring(count, {
         stiffness: 50,
@@ -20,7 +14,7 @@ const Counter = ({ value }: { value: string }) => {
         restDelta: 0.001
     });
     const rounded = useTransform(springValue, (latest) => Math.round(latest) + suffix);
-    
+
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -42,17 +36,19 @@ const AboutSection3 = () => {
     ]
 
     return (
-        <section className="py-12 px-6 md:px-20 max-w-8xl mx-auto w-full flex flex-wrap lg:flex-nowrap justify-center gap-8">
-            {cards.map((card, idx) => (
-                <div key={idx} className={`flex-1 min-w-[240px] bg-[#FFF4B1] rounded-[24px] py-12 px-8 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-[#FFE043]`}>
-                    <h3 className={`${marcellus.className} text-5xl lg:text-6xl text-[#0071BC] mb-4 font-light`}>
-                        <Counter value={card.num} />
-                    </h3>
-                    <p className={`text-[#515151] text-[15px] leading-relaxed max-w-[200px] `}>
-                        {card.text}
-                    </p>
-                </div>
-            ))}
+        <section className="py-12 md:py-20 3xl:py-32 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 3xl:gap-12 4xl:gap-16">
+                {cards.map((card, idx) => (
+                    <div key={idx} className={`bg-[#FFF4B1] rounded-[24px] 4xl:rounded-[48px] py-12 px-8 3xl:py-20 3xl:px-12 4xl:py-28 4xl:px-16 flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform border border-[#FFE043]`}>
+                        <h3 className={"text-5xl lg:text-6xl 3xl:text-7xl 4xl:text-[6.5rem] text-[#0071BC] mb-4 4xl:mb-8 font-light"}>
+                            <Counter value={card.num} />
+                        </h3>
+                        <p className={`text-[#515151] text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-[200px] 3xl:max-w-[250px] 4xl:max-w-[350px] font-medium`}>
+                            {card.text}
+                        </p>
+                    </div>
+                ))}
+            </div>
         </section>
     )
 }

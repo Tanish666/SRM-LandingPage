@@ -1,19 +1,18 @@
 'use client'
 import React from 'react'
-import { Marcellus, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 import SectionPill from '@/components/home/SectionPill'
 import { motion, useInView, animate, useMotionValue, useTransform, useSpring } from 'framer-motion'
 
 
-const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
 const Counter = ({ value }: { value: string }) => {
     const numMatch = value.match(/(\d+)(.*)/);
     const targetNum = numMatch ? parseInt(numMatch[1]) : 0;
     const suffix = numMatch ? numMatch[2] : "";
-    
+
     const count = useMotionValue(0);
     const springValue = useSpring(count, {
         stiffness: 50,
@@ -21,7 +20,7 @@ const Counter = ({ value }: { value: string }) => {
         restDelta: 0.001
     });
     const rounded = useTransform(springValue, (latest) => Math.round(latest) + suffix);
-    
+
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -40,178 +39,84 @@ const HemeSection6 = () => {
             icon: "sec5Svg1.svg", iconW: 83, iconH: 69,
             num: "94+", label: "Active Research Projects",
             desc: "Across Rehabilitation, Diagnostics, Imaging & Community Health.",
-            width: '295px', height: '345px', top: '182px', left: '0px',
-            descWidth: '283px'
         },
         {
             icon: "sec5Svg2.svg", iconW: 57, iconH: 58,
             num: "468+", label: "Intellectual Property Rights",
             desc: "Under Our Intellectual Property Rights (IPR) Cell.",
-            width: '295px', height: '227px', top: '300px', left: '314px',
-            descWidth: '247px'
         },
         {
             icon: "sec5Svg3.svg", iconW: 66, iconH: 66,
             num: "20+", label: "Collaborative Partnerships",
             desc: "With Hospitals, Research Bodies & Academic Institutions.",
-            width: '295px', height: '227px', top: '300px', left: '628px',
-            descWidth: '247px'
         },
         {
             icon: "sec5Svg4.svg", iconW: 84, iconH: 84,
             num: "100+", label: "Student Research Engagement",
             desc: "With Hospitals, Research Bodies & Academic Institutions.",
-            width: '303px', height: '345px', top: '182px', left: '942px',
-            descWidth: '247px'
         }
     ]
 
     return (
-        <section className="w-full bg-white flex justify-center py-12 lg:py-20 px-4 lg:px-0 overflow-hidden mb-[30px] lg:mb-[-80px]">
+        <section className="w-full bg-white flex justify-center py-12 md:py-20 3xl:py-32 4xl:py-48 px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48 overflow-hidden">
+            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
 
-            {/* MOBILE LAYOUT */}
-            <div className="flex flex-col items-center w-full lg:hidden">
-                <SectionPill text="Research" className="uppercase" />
+                {/* Header Section */}
+                <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
+                    <SectionPill text="Research" className="mb-6 4xl:mb-12" />
 
+                    <h2 className="text-3xl md:text-4xl lg:text-[45px] 3xl:text-[55px] 4xl:text-[80px] leading-tight text-black capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl">
+                        Driving Innovation In Allied Health Research
+                    </h2>
 
-                {/* Main Heading */}
-                <h2 className={`${marcellus.className} text-center text-[28px] leading-[36px] text-black capitalize mt-4 max-w-[90%]`}>
-                    Driving Innovation In Allied Health Research
-                </h2>
+                    <p className={`${inter.className} text-[#515151] text-sm md:text-base 3xl:text-xl 4xl:text-2xl leading-relaxed capitalize max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl mb-8 4xl:mb-16`}>
+                        Research at SRM Allied Health Sciences is driven by our mission to advance clinical practice, diagnostics, and public health outcomes.
+                    </p>
 
-                {/* Subtitle */}
-                <p className={`${inter.className} text-center text-[#515151] text-sm leading-[22px] capitalize mt-3 max-w-[90%]`}>
-                    Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
-                </p>
-
-                {/* CTA Button */}
-                <button
-                    className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer mt-6"
-                    style={{
-                        width: '267px',
-                        height: '47px',
-                        borderRadius: '33.57px',
-                        border: '1.12px solid #E5E5E5',
-                        paddingLeft: '20px',
-                        paddingRight: '4px',
-                    }}
-                >
-                    <span className={`${inter.className} text-lg font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
-                    <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
-                        <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-black' size={24} />
-                    </span>
-                </button>
-
-                {/* Mobile Stat Cards */}
-                <div className="flex flex-col gap-4 mt-8 w-full max-w-[400px]">
-                    {stats.map((stat, index) => (
-                        <div
-                            key={index}
-                            className="w-full rounded-[20px] p-[1px]"
-                            style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                    <div className="4xl:scale-125">
+                        <button
+                            className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer w-[267px] h-[47px] rounded-full border border-[#E5E5E5] pl-6 pr-1"
                         >
-                            <div
-                                className="w-full rounded-[19px] p-5"
-                                style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
-                            >
-                                <div className="flex items-start justify-between mb-3">
-                                    <h3 className={`${marcellus.className} text-4xl leading-[36px] text-[#0066CC]`}>
-                                        <Counter value={stat.num} />
-                                    </h3>
-                                    <img loading="lazy" decoding="async"
-                                        src={stat.icon}
-                                        alt={stat.label}
-                                        className="object-contain max-w-[50px] max-h-[50px]"
-                                    />
-                                </div>
-                                <p className={`${marcellus.className} text-lg leading-[24px] text-black capitalize mb-1`}>
-                                    {stat.label}
-                                </p>
-                                <p className={`${inter.className} text-sm leading-[22px] text-[#515151] capitalize`}>
-                                    {stat.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* DESKTOP LAYOUT  */}
-            <div className="relative hidden lg:block" style={{ width: '1245px', height: '650px' }}>
-                <div className='w-full flex justify-center items-center'>
-                    <SectionPill text="Research" className="mb-8" />
+                            <span className={`${inter.className} text-lg font-normal text-black capitalize`}>Explore Our Research</span>
+                            <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px]">
+                                <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-black' size={24} />
+                            </span>
+                        </button>
+                    </div>
                 </div>
 
-
-                {/* Main Heading */}
-                <h2
-                    className={`${marcellus.className} absolute text-center text-[45px] leading-[56px] text-black capitalize`}
-                    style={{ width: '1166px', left: '41.5px', top: '65px' }}
-                >
-                    Driving Innovation In Allied Health Research
-                </h2>
-
-                {/* Subtitle */}
-                <p
-                    className={`${inter.className} absolute text-center text-[#515151] text-[15px] leading-[25px] capitalize`}
-                    style={{ width: '623px', left: '312.5px', top: '135px' }}
-                >
-                    Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
-                </p>
-
-                {/* CTA Button */}
-                <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
-                    <button
-                        className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer"
-                        style={{
-                            width: '267px',
-                            height: '47px',
-                            borderRadius: '33.57px',
-                            border: '1.12px solid #E5E5E5',
-                            paddingLeft: '20px',
-                            paddingRight: '4px',
-                        }}
-                    >
-                        <span className={`${inter.className} text-lg font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
-                        <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
-                            <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-black' size={24} />
-                        </span>
-                    </button>
-                </div>
-
-                {/* Desktop Stat Cards*/}
-                <div className="absolute w-full" style={{ top: '0px' }}>
+                {/* Stats Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-10 4xl:gap-16 w-full">
                     {stats.map((stat, index) => {
-                        const isShortCard = index === 1 || index === 2
+                        const isEven = index % 2 === 1;
                         return (
-                            <div key={index} className="absolute rounded-[20px] p-[1px]" style={{
-                                width: stat.width, height: stat.height, left: stat.left, top: stat.top,
-                                background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)'
-                            }}>
-                                <div className="w-full h-full rounded-[19px] relative overflow-hidden" style={{
-                                    background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)',
-                                }}>
-                                    <div className={`absolute ${isShortCard ? 'top-[27px] right-[18px]' : 'top-[66px] left-[17px]'}`}>
-                                        <img loading="lazy" decoding="async" src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
+                            <div
+                                key={index}
+                                className={`group relative rounded-[20px] 4xl:rounded-[40px] p-[1px] transition-all duration-300 hover:-translate-y-2 ${isEven ? 'lg:mt-12 4xl:mt-24' : ''}`}
+                                style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                            >
+                                <div
+                                    className="h-full w-full rounded-[19px] 4xl:rounded-[39px] p-8 4xl:p-14 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px]"
+                                    style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
+                                >
+                                    <div className="w-full flex justify-end mb-4 4xl:mb-8">
+                                        <img loading="lazy" decoding="async"
+                                            src={stat.icon}
+                                            alt={stat.label}
+                                            className="object-contain max-w-[60px] max-h-[60px] 3xl:max-w-[80px] 4xl:max-w-[120px]"
+                                        />
                                     </div>
-                                    <h3
-                                        className={`${marcellus.className} absolute text-5xl leading-[40px] text-[#0066CC]`}
-                                        style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
-                                    >
-                                        <Counter value={stat.num} />
-                                    </h3>
-                                    <p
-                                        className={`${marcellus.className} absolute text-xl leading-[25px] text-black capitalize`}
-                                        style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
-                                    >
-                                        {stat.label}
-                                    </p>
-                                    <p
-                                        className={`${inter.className} absolute text-[15px] leading-[25px] text-[#515151] capitalize`}
-                                        style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
-                                    >
-                                        {stat.desc}
-                                    </p>
+                                    <div className="mt-auto">
+                                        <h3 className="text-4xl md:text-5xl 4xl:text-[5rem] leading-[40px] 4xl:leading-tight text-[#0066CC] mb-4 4xl:mb-8">
+                                            <Counter value={stat.num} />
+                                        </h3>
+                                        <p className="font-heading text-lg md:text-xl 3xl:text-2xl 4xl:text-[2.5rem] leading-tight text-black capitalize mb-2 4xl:mb-6">
+                                            {stat.label}
+                                        </p>
+                                        <p className={`${inter.className} text-sm md:text-[15px] 3xl:text-lg 4xl:text-[1.75rem] leading-relaxed text-[#515151] capitalize`}>
+                                            {stat.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -219,6 +124,7 @@ const HemeSection6 = () => {
                 </div>
             </div>
         </section>
+
     )
 }
 

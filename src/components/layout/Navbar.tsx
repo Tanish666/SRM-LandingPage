@@ -22,14 +22,14 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen)
 
     return (
-        <nav className='sticky top-0 z-50 bg-white items-center justify-between w-full px-6 md:px-16 py-1 shadow-sm'>
+        <nav className='sticky top-0 z-50 bg-white items-center justify-between w-full px-6 md:px-16 4xl:px-32 py-1 shadow-sm'>
             <div className='flex items-center justify-between w-full'>
                 {/* Logo */}
                 <div className='flex items-center shrink-0'>
                     <img loading="lazy" decoding="async"
                         src="srmLogo.svg"
                         alt="Logo"
-                        className="cursor-pointer h-12 md:h-16"
+                        className="cursor-pointer h-12 md:h-16 4xl:h-24"
                         onClick={() => {
                             router.push('/')
                             setIsOpen(false)
@@ -39,7 +39,7 @@ const Navbar = () => {
 
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex items-center'>
-                    <ul className='flex items-center gap-8 cursor-pointer list-none'>
+                    <ul className='flex items-center gap-8 3xl:gap-12 4xl:gap-16 cursor-pointer list-none'>
                         {navLinks.map((link) => {
                             const active = pathname === link.path;
                             return (
@@ -47,7 +47,7 @@ const Navbar = () => {
                                     key={link.label}
                                     style={{ fontWeight: 400 }}
                                     onClick={() => router.push(link.path)}
-                                    className={`transition-all duration-200 text-[15px] font-medium active:scale-95 active:text-blue-600 ${active
+                                    className={`transition-all duration-200 text-[15px] 3xl:text-lg 4xl:text-2xl font-medium active:scale-95 active:text-blue-600 ${active
                                         ? 'text-blue-500 hover:text-blue-600'
                                         : 'text-slate-500 hover:text-black'
                                         }`}
@@ -60,15 +60,15 @@ const Navbar = () => {
                 </div>
 
                 {/* Action Buttons & Mobile Toggle */}
-                <div className='flex items-center gap-3'>
+                <div className='flex items-center gap-3 4xl:gap-6'>
                     <div
-                        className='flex items-center bg-[#FFEB3B] rounded-full p-1 sm:p-1.5 transition-all relative'
+                        className='flex items-center bg-[#FFEB3B] rounded-full p-1 sm:p-1.5 4xl:p-2.5 transition-all relative'
                         onMouseLeave={() => setHoveredTab('admission')}
                     >
                         <button
                             onMouseEnter={() => setHoveredTab('admission')}
                             disabled={false}
-                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-semibold text-[13px] sm:text-base leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
+                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 4xl:px-10 4xl:py-4 rounded-full font-semibold text-[13px] sm:text-base 4xl:text-2xl leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
                         >
                             <span className="relative z-10">Admission</span>
                             {hoveredTab === 'admission' && (
@@ -82,7 +82,7 @@ const Navbar = () => {
                         <button
                             onMouseEnter={() => setHoveredTab('contact')}
                             disabled={false}
-                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-semibold text-[13px] sm:text-base leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
+                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 4xl:px-10 4xl:py-4 rounded-full font-semibold text-[13px] sm:text-base 4xl:text-2xl leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
                         >
                             <span className="relative z-10">Contact</span>
                             {hoveredTab === 'contact' && (
