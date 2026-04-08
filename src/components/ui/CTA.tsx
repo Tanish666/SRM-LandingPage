@@ -15,10 +15,10 @@ const CTAButton = ({ text, onClick, className, disabled = false }: ExploreButton
             onClick={onClick}
             disabled={disabled}
             className={cn(
-                "group flex items-center justify-between gap-4 bg-[#FFEC22] pl-8 pr-1.5 py-1.5 border border-[#E5E5E5] rounded-[33.57px] shadow-md transition-all duration-300 w-fit min-w-[160px]",
-                "hover:shadow-lg hover:bg-[#ffe100]", // Hover state
+                "group flex items-center justify-between gap-4 bg-brand-yellow pl-8 pr-1.5 py-1.5 border border-brandBorder rounded-full shadow-md transition-all duration-300 w-fit min-w-[160px]",
+                "hover:shadow-lg hover:bg-brand-yellow/90", // Hover state
                 "active:scale-[0.98] active:shadow-sm", // Active state
-                "disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-md disabled:active:scale-100 disabled:hover:bg-[#FFEC22]", // Disabled state
+                "disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-md disabled:active:scale-100 disabled:hover:bg-brand-yellow", // Disabled state
                 className
             )}
         >

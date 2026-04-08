@@ -73,7 +73,7 @@ const DeptSection11 = ({ courseData }: Props) => {
             <div className="w-full max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto flex flex-col items-center">
                 <SectionPill text="Testimonials" className="mb-8 4xl:mb-16" />
                 {/* Title */}
-                <h2 className={"text-3xl md:text-4xl lg:text-[45px] 3xl:text-6xl 4xl:text-[85px] text-black text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading"}>
+                <h2 className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading font-normal"}>
                     Insights From Our Learners
                 </h2>
 
@@ -99,7 +99,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: -50 }}
                                     transition={{ duration: 0.3 }}
-                                    className="absolute inset-0 rounded-[20px] overflow-hidden shadow-xl"
+                                    className="absolute inset-0 rounded-3xl overflow-hidden shadow-xl"
                                 >
                                     <Image
                                         src={active.image}
@@ -135,10 +135,7 @@ const DeptSection11 = ({ courseData }: Props) => {
 
                     {/* Testimonial Text Below Card */}
                     <div
-                        className="relative bg-[#FDFDFD] rounded-[16px] md:rounded-[24px] mt-5 md:mt-8 p-5 md:p-8 mx-auto overflow-hidden w-full max-w-[340px] md:max-w-[550px]"
-                        style={{
-                            border: '1.5px solid #E8E8E8',
-                        }}
+                        className="relative bg-white rounded-2xl md:rounded-3xl mt-5 md:mt-8 p-5 md:p-8 mx-auto overflow-hidden w-full max-w-[340px] md:max-w-[550px] border border-brandBorder shadow-sm"
                     >
                         <img loading="lazy" decoding="async"
                             src="/quoteicon.svg"
@@ -165,17 +162,17 @@ const DeptSection11 = ({ courseData }: Props) => {
                                 style={{ zIndex: 1 }}
                             >
                                 <p
-                                    className={`${inter.className} font-normal text-[#4B4B4B] capitalize text-[13px] md:text-base leading-[21px] md:leading-[26px]`}
+                                    className={`${inter.className} font-normal text-navy-800/70 capitalize text-[13px] md:text-base leading-[21px] md:leading-[26px]`}
                                 >
                                     {active.quote}
                                 </p>
                                 <p
-                                    className="font-heading text-[#0071BC] mt-4 md:mt-6 text-lg md:text-2xl leading-[24px] md:leading-[32px]"
+                                    className="font-heading text-brand-blue-dark mt-4 md:mt-6 text-lg md:text-2xl leading-[24px] md:leading-[32px]"
                                 >
                                     {active.name}
                                 </p>
                                 <p
-                                    className={`${inter.className} font-normal text-[#4B4B4B] capitalize mt-0.5 text-[13px] md:text-[15px] leading-[20px] md:leading-[24px]`}
+                                    className={`${inter.className} font-normal text-navy-800/60 capitalize mt-0.5 text-[13px] md:text-[15px] leading-[20px] md:leading-[24px]`}
                                 >
                                     {active.department}
                                 </p>
@@ -186,7 +183,7 @@ const DeptSection11 = ({ courseData }: Props) => {
 
                 {/* DESKTOP LAYOUT */}
                 <div
-                    className="relative mx-auto hidden xl:block w-full max-w-[1281px] aspect-[1281/533] mt-[-55px] 3xl:max-w-[1600px] 4xl:max-w-[2200px] 4xl:mt-[50px]"
+                    className="relative mx-auto hidden xl:block w-full max-w-[1281px] aspect-[1281/533] mt-[-14] 3xl:max-w-[1600px] 4xl:max-w-[2200px] 4xl:mt-12"
                 >
                     {testimonials.map((t, index) => {
                         let position = 'hidden';
@@ -225,7 +222,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                                     zIndex: zIndexVal,
                                 }}
                             >
-                                <div className={`relative w-full h-full rounded-[15.38px] 4xl:rounded-[30px] overflow-hidden shadow-md transition-all duration-500 bg-black`}>
+                                <div className={`relative w-full h-full rounded-2xl 4xl:rounded-brand-md overflow-hidden shadow-md transition-all duration-500 bg-black`}>
                                     <Image
                                         src={t.image}
                                         alt={t.name}
@@ -234,13 +231,13 @@ const DeptSection11 = ({ courseData }: Props) => {
                                     />
                                     <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 ${isCenter ? 'px-5 pb-5 pt-16' : 'px-4 pb-3 pt-12'}`}>
                                         <p
-                                            className="font-heading text-white capitalize transition-all duration-500 text-[1.4rem] 3xl:text-[1.8rem] 4xl:text-[2.5rem]"
+                                            className="font-heading text-white capitalize transition-all duration-500 text-2xl 3xl:text-3xl 4xl:text-6xl"
                                             style={{ lineHeight: '1.2' }}
                                         >
                                             {t.name}
                                         </p>
                                         <p
-                                            className={`${inter.className} text-white font-normal capitalize mt-0.5 whitespace-nowrap transition-all duration-500 text-[0.9rem] 3xl:text-[1.1rem] 4xl:text-[1.6rem]`}
+                                            className={`${inter.className} text-white font-normal capitalize mt-0.5 whitespace-nowrap transition-all duration-500 text-sm 3xl:text-lg 4xl:text-2xl`}
                                             style={{ lineHeight: '1.2' }}
                                         >
                                             {t.department}
@@ -259,10 +256,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.3 }}
-                            className="absolute bg-[#FDFDFD] rounded-[18.64px] 4xl:rounded-[40px] z-20 overflow-hidden w-[45%] h-[62%] left-[34.6%] top-[31.5%]"
-                            style={{
-                                border: '1.86px solid #E8E8E8',
-                            }}
+                            className="absolute bg-white rounded-3xl 4xl:rounded-brand-md z-20 overflow-hidden w-[45%] h-[62%] left-[34.6%] top-[31.5%] border border-brandBorder shadow-lg"
                         >
                             <img loading="lazy" decoding="async"
                                 src="/quoteicon.svg"
@@ -276,18 +270,18 @@ const DeptSection11 = ({ courseData }: Props) => {
                                 style={{ zIndex: 1 }}
                             >
                                 <p
-                                    className={`${inter.className} font-normal text-[#4B4B4B] capitalize mb-4 3xl:mb-6 4xl:mb-8 text-[0.9rem] 3xl:text-[1.1rem] 4xl:text-[1.6rem] leading-relaxed 4xl:leading-[1.6]`}
+                                    className={`${inter.className} font-normal text-navy-800/70 capitalize mb-4 3xl:mb-6 4xl:mb-8 text-[0.9rem] 3xl:text-[1.1rem] 4xl:text-[1.6rem] leading-relaxed 4xl:leading-[1.6]`}
                                 >
                                     {active.quote}
                                 </p>
                                 <p
-                                    className="font-heading text-[#0071BC] mt-2 3xl:mt-4 text-[1.5rem] 3xl:text-[2rem] 4xl:text-[3.2rem]"
+                                    className="font-heading text-brand-blue-dark mt-2 3xl:mt-4 text-[1.5rem] 3xl:text-[2rem] 4xl:text-[3.2rem]"
                                     style={{ lineHeight: '1.2' }}
                                 >
                                     {active.name}
                                 </p>
                                 <p
-                                    className={`${inter.className} font-normal text-[#4B4B4B] capitalize mt-1 text-[1rem] 3xl:text-[1.3rem] 4xl:text-[2rem]`}
+                                    className={`${inter.className} font-normal text-navy-800/60 capitalize mt-1 text-[1rem] 3xl:text-[1.3rem] 4xl:text-[2rem]`}
                                     style={{ lineHeight: '1.2' }}
                                 >
                                     {active.department}
@@ -323,11 +317,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                     {testimonials.map((_, i) => (
                         <span
                             key={i}
-                            className="h-[10px] 4xl:h-[20px] rounded-[8px] transition-all duration-300"
-                            style={{
-                                width: i === activeIndex ? '88px' : '30px',
-                                background: i === activeIndex ? '#FFE45E' : '#D9D9D9',
-                            }}
+                            className={`h-2.5 4xl:h-5 rounded-full transition-all duration-300 ${i === activeIndex ? 'bg-brand-yellow w-22' : 'bg-slate-200 w-7.5'}`}
                         />
                     ))}
                 </div>

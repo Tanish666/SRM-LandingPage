@@ -45,12 +45,12 @@ const DeptFacultySection = ({ courseData }: Props) => {
             <div className="w-full max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] flex flex-col items-center">
                 <SectionPill text="Our Faculty" className="mb-8 4xl:mb-16" />
                 {/* Title */}
-                <h2 className={"text-3xl md:text-4xl lg:text-[45px] 3xl:text-6xl 4xl:text-[85px] text-black text-center capitalize leading-tight mb-6 4xl:mb-12 font-heading"}>
+                <h2 className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-6 4xl:mb-12 font-heading font-normal"}>
                     Our Faculty
                 </h2>
 
                 {/* Description */}
-                <p className={`${inter.className} font-light text-base md:text-lg 3xl:text-xl 4xl:text-3xl text-black text-center max-w-3xl 4xl:max-w-5xl mx-auto mb-10 4xl:mb-20`}>
+                <p className={`${inter.className} font-light text-body md:text-body-lg 3xl:text-xl 4xl:text-3xl text-navy-800 text-center max-w-3xl 4xl:max-w-5xl mx-auto mb-10 4xl:mb-20`}>
                     Our dedicated faculty members bring years of clinical and academic experience to mentor and guide the next generation of healthcare professionals.
                 </p>
 
@@ -59,7 +59,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                     {faculty.map((member, index) => (
                         <div key={index} className="w-full">
                             {/* Image */}
-                            <div className="overflow-hidden rounded-[20px] 4xl:rounded-[40px] w-full h-[300px] lg:h-[394px] 3xl:h-[500px] 4xl:h-[700px] relative bg-[#e8e8ed] border border-[#e0e0e0]">
+                            <div className="overflow-hidden rounded-3xl 4xl:rounded-brand-md w-full h-75 lg:h-[24.625rem] 3xl:h-125 4xl:h-175 relative bg-slate-100 border border-brandBorder">
                                 <Image
                                     src={member.image}
                                     alt={member.name}
@@ -70,19 +70,12 @@ const DeptFacultySection = ({ courseData }: Props) => {
                             </div>
 
                             {/* Info below image */}
-                            <div className="flex items-start gap-[6px] 4xl:gap-4 mt-4 4xl:mt-8">
-                                <span
-                                    className="mt-2 flex-shrink-0"
-                                    style={{
-                                        width: '9px',
-                                        height: '22px',
-                                        backgroundColor: '#FFD812',
-                                    }}
-                                />
+                            <div className="flex items-start gap-1.5 4xl:gap-4 mt-4 4xl:mt-8">
+                                <span className="mt-2 w-2 h-5.5 4xl:w-4 4xl:h-11 bg-brand-yellow flex-shrink-0" />
                                 <div className="flex flex-col">
                                     <div className="flex items-baseline gap-[6px] 4xl:gap-3 flex-wrap">
                                         <span
-                                            className="font-heading text-2xl lg:text-3xl 3xl:text-4xl 4xl:text-6xl text-black"
+                                            className="font-heading text-xl lg:text-2xl 3xl:text-3xl 4xl:text-6xl text-navy-900"
                                             style={{
                                                 lineHeight: '1.2',
                                                 letterSpacing: '-0.03em',
@@ -91,7 +84,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                             {member.name}
                                         </span>
                                         <span
-                                            className="font-heading text-sm lg:text-base 3xl:text-lg 4xl:text-3xl text-black"
+                                            className="font-heading text-sm lg:text-base 3xl:text-lg 4xl:text-3xl text-navy-800"
                                             style={{
                                                 lineHeight: '1.2',
                                                 letterSpacing: '-0.03em',
@@ -101,7 +94,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                         </span>
                                     </div>
                                     <span
-                                        className={`${inder.className} font-normal text-[#0071BC] text-[19px] 3xl:text-2xl 4xl:text-4xl mt-1`}
+                                        className={`${inder.className} font-normal text-brand-blue-dark text-lg 3xl:text-2xl 4xl:text-4xl mt-1`}
                                         style={{
                                             lineHeight: '1.2',
                                             letterSpacing: '-0.03em',
@@ -118,16 +111,16 @@ const DeptFacultySection = ({ courseData }: Props) => {
                 {/* View All Faculty Button */}
                 <div className="flex justify-center mt-12 4xl:mt-24">
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFEC22] hover:brightness-95 transition-all cursor-pointer w-[216px] 4xl:w-[450px] h-[47px] 4xl:h-[100px] rounded-[33.57px] 4xl:rounded-[50px] border border-[#E5E5E5] pl-6 4xl:pl-12 pr-1 4xl:pr-2 group"
+                        className="inline-flex items-center justify-between bg-brand-yellow hover:bg-brand-yellow/90 transition-all cursor-pointer w-54 4xl:w-110 h-12 4xl:h-24 rounded-full border border-brandBorder pl-6 4xl:pl-12 pr-1 4xl:pr-2 group shadow-md"
                     >
                         <span
-                            className={`${inter.className} font-normal text-lg 4xl:text-3xl text-black capitalize`}
+                            className={`${inter.className} font-normal text-lg 4xl:text-3xl text-navy-900 capitalize`}
                             style={{ lineHeight: '1.2' }}
                         >
                             View All Faculty
                         </span>
                         <span
-                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px] 4xl:w-[85px] 4xl:h-[85px]"
+                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-10 h-10 4xl:w-20 4xl:h-20"
                         >
                             <svg
                                 width="20"

@@ -19,12 +19,12 @@ const DeptSection2 = ({ courseData }: Props) => {
                     <div className="relative w-full max-w-[462px] 3xl:max-w-[600px] 4xl:max-w-[800px] aspect-[462/480] mx-auto lg:mx-0">
                         {/* Blue background rectangle  */}
                         <div
-                            className="absolute rounded-[20px] 4xl:rounded-[40px] bg-[#008EED] w-[95%] h-[95%] top-[5%] left-[5%]"
+                            className="absolute rounded-3xl 4xl:rounded-brand-md bg-brand-blue w-[95%] h-[95%] top-[5%] left-[5%]"
                         />
 
                         {/* Main Image  */}
                         <div
-                            className="relative overflow-hidden z-10 w-[95%] h-[95%] rounded-[10.72px] 4xl:rounded-[20px]"
+                            className="relative overflow-hidden z-10 w-[95%] h-[95%] rounded-xl 4xl:rounded-3xl"
                         >
                             <img loading="lazy" decoding="async" src='/deptsecpic2.png' className='w-full h-full object-cover' alt="Department students" />
                         </div>
@@ -36,14 +36,14 @@ const DeptSection2 = ({ courseData }: Props) => {
                     <SectionPill text="About Us" className="mb-6 4xl:mb-20" />
                     {/* Title*/}
                     <h2
-                        className={"text-3xl md:text-4xl lg:text-[45px] 3xl:text-6xl 4xl:text-[110px] text-black capitalize mb-6 4xl:mb-16 leading-[1.1] lg:max-w-[800px] 4xl:max-w-[1400px] font-heading font-normal"}
+                        className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-1 text-navy-900 capitalize mb-6 4xl:mb-16 leading-[1.1] lg:max-w-[800px] 4xl:max-w-[1400px] font-heading font-normal"}
                     >
                         {title}
                     </h2>
 
                     {/* Body text  */}
                     <div
-                        className="font-light text-base md:text-lg 3xl:text-2xl 4xl:text-[2.65rem] text-black flex flex-col gap-5 4xl:gap-12 leading-relaxed lg:max-w-[800px] 4xl:max-w-[1300px] text-justify"
+                        className="font-light text-body md:text-body-lg 3xl:text-2xl 4xl:text-4xl text-navy-900/80 flex flex-col gap-5 4xl:gap-12 leading-relaxed lg:max-w-[800px] 4xl:max-w-[1300px] text-justify"
                     >
                         {contentHtml ? (
                             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
@@ -62,12 +62,12 @@ const DeptSection2 = ({ courseData }: Props) => {
 
                     {/* Explore Program Button */}
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFEC22] transition-colors mt-8 4xl:mt-16 cursor-pointer w-[224px] 4xl:w-[450px] h-[47px] 4xl:h-[100px] rounded-[33.57px] 4xl:rounded-[50px] border border-[#E5E5E5] pl-5 4xl:pl-10 pr-1 4xl:pr-2 self-center lg:self-start group"
-                    >  <span className="text-lg 4xl:text-3xl font-normal text-black leading-none font-heading">Explore Program</span>
+                        className="inline-flex items-center justify-between bg-brand-yellow transition-colors mt-8 4xl:mt-16 cursor-pointer w-56 4xl:w-100 h-12 4xl:h-24 rounded-full border border-brandBorder pl-5 4xl:pl-10 pr-1 4xl:pr-2 self-center lg:self-start group"
+                    >  <span className="text-lg 4xl:text-3xl font-normal text-navy-900 leading-none font-heading">Explore Program</span>
                         <span
-                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px] 4xl:w-[85px] 4xl:h-[85px]"
+                            className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-10 h-10 4xl:w-20 4xl:h-20"
                         >
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="4xl:w-10 4xl:h-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="4xl:w-10 4xl:h-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-navy-900">
                                 <line x1="5" y1="19" x2="19" y2="5" />
                                 <polyline points="9 5 19 5 19 15" />
                             </svg>

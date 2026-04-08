@@ -28,86 +28,86 @@ const AboutSection8 = () => {
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
                 <SectionPill text="Our History" className="mb-8 4xl:mb-16" />
 
-                <h2 className="text-3xl md:text-[54px] 3xl:text-7xl 4xl:text-[6rem] text-slate-900 mb-24 4xl:mb-48 text-center leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl whitespace-normal font-heading">
+                <h2 className="text-h2 md:text-h1 3xl:text-7xl 4xl:text-display-1 text-navy-900 mb-24 4xl:mb-48 text-center leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl whitespace-normal font-heading font-normal">
                     A Legacy Of Excellence In Engineering Education
                 </h2>
 
                 <div className="relative w-full max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl flex flex-col items-center">
                     {/* Vertical Dotted Line */}
-                    <div className="absolute top-10 bottom-0 left-4 md:left-1/2 -translate-x-1/2 border-l-2 border-dashed border-gray-400 h-[85%]"></div>
+                    <div className="absolute top-10 bottom-0 left-4 md:left-1/2 -translate-x-1/2 border-l-2 border-dashed border-brandBorder h-[85%]"></div>
 
                     {/* Timeline Items */}
                     {/* 2001 */}
-                    <div className="w-full relative flex flex-col md:flex-row mb-24 3xl:mb-32 4xl:mb-48">
+                    <div className="w-full relative flex flex-col md:flex-row mb-24 3xl:mb-32 4xl:mb-48 font-heading">
                         <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-14 text-left md:text-right">
-                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-black`}>2001</h3>
+                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-navy-900 font-normal`}>2001</h3>
                         </div>
                         {/* Yellow Circle */}
                         <motion.div
-                            animate={{ backgroundColor: currentYear === 2001 ? "#FFD812" : "#38BDF8" }}
+                            animate={{ backgroundColor: currentYear === 2001 ? "#FFEC22" : "#33AEFF" }}
                             transition={{ duration: 0.5 }}
-                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-brand-blue-bright z-10 shadow-md"
                         ></motion.div>
                         <div className="w-full md:w-1/2 pl-12 md:pl-14 mt-4 md:mt-0">
-                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-black font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
-                            <p className="text-slate-500 text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
+                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-navy-900 font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
+                            <p className="text-navy-800/60 font-sans text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
 
                     {/* 2003 */}
-                    <div className="w-full relative flex flex-col md:flex-row-reverse mb-24 3xl:mb-32 4xl:mb-48">
+                    <div className="w-full relative flex flex-col md:flex-row-reverse mb-24 3xl:mb-32 4xl:mb-48 font-heading">
                         <div className="w-full md:w-1/2 pl-12 md:pl-14 text-left">
-                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-black`}>2003</h3>
+                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-navy-900 font-normal`}>2003</h3>
                         </div>
                         {/* Blue Circle */}
                         <motion.div
-                            animate={{ backgroundColor: currentYear === 2003 ? "#FFD812" : "#38BDF8" }}
+                            animate={{ backgroundColor: currentYear === 2003 ? "#FFEC22" : "#33AEFF" }}
                             transition={{ duration: 0.5 }}
-                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-brand-blue-bright z-10 shadow-md"
                         ></motion.div>
                         <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-14 text-left md:text-right mt-4 md:mt-0">
-                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-black font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
-                            <p className="text-slate-500 text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
+                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-navy-900 font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
+                            <p className="text-navy-800/60 font-sans text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
 
                     {/* 2008 */}
-                    <div className="w-full relative flex flex-col md:flex-row mb-24 3xl:mb-32 4xl:mb-48">
+                    <div className="w-full relative flex flex-col md:flex-row mb-24 3xl:mb-32 4xl:mb-48 font-heading">
                         <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-14 text-left md:text-right">
-                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-black`}>2008</h3>
+                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-navy-900 font-normal`}>2008</h3>
                         </div>
                         {/* Blue Circle */}
                         <motion.div
-                            animate={{ backgroundColor: currentYear === 2008 ? "#FFD812" : "#38BDF8" }}
+                            animate={{ backgroundColor: currentYear === 2008 ? "#FFEC22" : "#33AEFF" }}
                             transition={{ duration: 0.5 }}
-                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-brand-blue-bright z-10 shadow-md"
                         ></motion.div>
                         <div className="w-full md:w-1/2 pl-12 md:pl-14 mt-4 md:mt-0">
-                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-black font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
-                            <p className="text-slate-500 text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
+                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-navy-900 font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
+                            <p className="text-navy-800/60 font-sans text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
                     </div>
 
                     {/* 2011 */}
-                    <div className="w-full relative flex flex-col md:flex-row-reverse">
+                    <div className="w-full relative flex flex-col md:flex-row-reverse font-heading">
                         <div className="w-full md:w-1/2 pl-12 md:pl-14 text-left">
-                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-black`}>2011</h3>
+                            <h3 className={`text-3xl 3xl:text-5xl 4xl:text-7xl text-navy-900 font-normal`}>2011</h3>
                         </div>
                         {/* Blue Circle */}
                         <motion.div
-                            animate={{ backgroundColor: currentYear === 2011 ? "#FFD812" : "#38BDF8" }}
+                            animate={{ backgroundColor: currentYear === 2011 ? "#FFEC22" : "#33AEFF" }}
                             transition={{ duration: 0.5 }}
-                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-[#38BDF8] z-10 shadow-md"
+                            className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 rounded-full border-[5px] border-white ring-2 ring-brand-blue-bright z-10 shadow-md"
                         ></motion.div>
                         <div className="w-full md:w-1/2 pl-12 md:pl-0 md:pr-14 text-left md:text-right mt-4 md:mt-0">
-                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-black font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
-                            <p className="text-slate-500 text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
+                            <h4 className="text-[22px] 3xl:text-3xl 4xl:text-5xl text-navy-900 font-normal mb-3 4xl:mb-6 font-heading">Empowering Generations</h4>
+                            <p className="text-navy-800/60 font-sans text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-5xl">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>

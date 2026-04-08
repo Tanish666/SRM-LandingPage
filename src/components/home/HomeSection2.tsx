@@ -87,7 +87,7 @@ const HomeSection2 = () => {
 }
 
 const Card = ({ number, text, imageSrc, className }: { number: string, text: string, imageSrc: string, className?: string }) => (
-    <div className={`group relative rounded-[7.7px] overflow-hidden bg-slate-100 cursor-pointer w-full md:w-[221.88px] 3xl:w-[280px] 4xl:w-[380px] aspect-[221/231] md:h-[231.89px] 3xl:h-[290px] 4xl:h-[400px] ${className || ''}`}>
+    <div className={`group relative rounded-2xl overflow-hidden bg-slate-100 cursor-pointer w-full md:w-[221.88px] 3xl:w-[280px] 4xl:w-[380px] aspect-[221/231] md:h-[231.89px] 3xl:h-[290px] 4xl:h-[400px] ${className || ''}`}>
         {/* Background Image */}
         <Image
             src={imageSrc}
@@ -105,7 +105,7 @@ const Card = ({ number, text, imageSrc, className }: { number: string, text: str
             <h3 className="text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl 4xl:text-[5rem] mb-1 4xl:mb-4">
                 {number}
             </h3>
-            <p className="text-sm md:text-base 3xl:text-xl 4xl:text-2xl font-light leading-snug">
+            <p className="text-sm md:text-base 3xl:text-xl 4xl:text-2xl font-light leading-snug text-white">
                 {text}
             </p>
         </div>

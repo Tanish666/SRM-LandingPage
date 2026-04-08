@@ -55,7 +55,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                 <div className="flex flex-col items-start">
                     <SectionPill text="Program Offered" className="mb-8 4xl:mb-12" />
 
-                    <h2 className="text-4xl md:text-5xl xl:text-[45px] 3xl:text-[55px] 4xl:text-[80px] text-slate-900 leading-[1.2] mb-10 4xl:mb-16 w-full xl:w-[80%] xl:text-nowrap">
+                    <h2 className="text-h2 md:text-h1 xl:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-[1.2] mb-10 4xl:mb-16 w-full xl:w-[80%] xl:text-nowrap font-heading font-normal">
                         Our Allied Health<br className="hidden xl:block" /> Sciences Programs
                     </h2>
                     <div className='flex justify-start w-full 4xl:scale-125 4xl:origin-left'>
@@ -68,7 +68,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
 
                 {/* Middle Column */}
                 <div className="flex justify-center w-full">
-                    <div className="relative w-full max-w-[320px] 3xl:max-w-[400px] 4xl:max-w-[550px] aspect-[4/5] rounded-[2rem] 4xl:rounded-[4rem] overflow-hidden shadow-lg group">
+                    <div className="relative w-full max-w-[320px] 3xl:max-w-[400px] 4xl:max-w-[550px] aspect-[4/5] rounded-brand-pill 4xl:rounded-brand-lg overflow-hidden shadow-lg group">
                         <Image
                             src={activeProgramObj?.image || "/sec3Pic1.svg"}
                             alt={activeProgramObj?.name || "Programs"}
@@ -80,7 +80,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                             <p className="text-white/90 text-sm 3xl:text-lg 4xl:text-2xl leading-relaxed mb-3 4xl:mb-6 line-clamp-2">
                                 {activeProgramObj?.description || "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod"}
                             </p>
-                            <p className="text-[#FCF01E] text-sm 3xl:text-lg 4xl:text-2xl font-medium">
+                            <p className="text-brand-yellow text-sm 3xl:text-lg 4xl:text-2xl font-medium">
                                 Duration : {activeProgramObj?.duration || "3 Year"}
                             </p>
                         </div>
@@ -91,9 +91,9 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                 <div className="flex flex-col pl-0 xl:pl-10 3xl:pl-20">
                     {/* Tabs */}
                     <div className='w-full flex justify-center items-center md:justify-start'>
-                        <div className="flex bg-[#FCF01E] rounded-full p-2 mb-8 4xl:mb-16 w-fit shrink-0 4xl:scale-125 4xl:origin-left">
+                        <div className="flex bg-brand-yellow rounded-full p-2 mb-8 4xl:mb-16 w-fit shrink-0 4xl:scale-125 4xl:origin-left">
                             <button
-                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-[#0071BC] shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-brand-blue-dark shadow-sm leading-none' : 'text-navy-900 hover:bg-white/50 leading-none'}`}
                                 onClick={() => {
                                     setActiveTab('Under Graduate')
                                     setActiveProgram(ugPrograms[0]?._id || ugPrograms[0]?.id || 1)
@@ -102,7 +102,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                                 Under Graduate
                             </button>
                             <button
-                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-[#0071BC] shadow-sm leading-none' : 'text-slate-800 hover:bg-white/50 leading-none'}`}
+                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-brand-blue-dark shadow-sm leading-none' : 'text-navy-900 hover:bg-white/50 leading-none'}`}
                                 onClick={() => {
                                     setActiveTab('Post Graduate')
                                     setActiveProgram(pgPrograms[0]?._id || pgPrograms[0]?.id || 1)
@@ -114,7 +114,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                     </div>
                     {/* Programs List */}
                     <div className="relative">
-                        <div className="flex flex-col h-[320px] 3xl:h-[400px] 4xl:h-[600px] overflow-y-auto pr-6 4xl:pr-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FCF01E] [&::-webkit-scrollbar-thumb]:rounded-full">
+                        <div className="flex flex-col h-[320px] 3xl:h-[400px] 4xl:h-[600px] overflow-y-auto pr-6 4xl:pr-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-brand-yellow [&::-webkit-scrollbar-thumb]:rounded-full">
                             {(activeTab === 'Under Graduate' ? ugPrograms : pgPrograms).map((program) => {
                                 const progId = program._id || program.id;
                                 const isActive = activeProgram === progId;
@@ -123,10 +123,10 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                                         href={`/CourseDetail?id=${progId}`}
                                         key={progId}
                                         onClick={() => setActiveProgram(progId)}
-                                        className={`group flex items-center justify-between py-5 4xl:py-8 border-b cursor-pointer transition-colors ${isActive ? 'border-slate-800 text-[#0071BC]' : 'border-slate-200 text-slate-700 hover:text-[#0071BC]'
+                                        className={`group flex items-center justify-between py-5 4xl:py-8 border-b cursor-pointer transition-colors ${isActive ? 'border-navy-900 text-brand-blue-dark' : 'border-slate-200 text-navy-800/70 hover:text-brand-blue-dark'
                                             }`}
                                     >
-                                        <span className={`font-heading text-[22px] 3xl:text-[28px] 4xl:text-[40px] transition-colors truncate max-w-full xl:max-w-[300px] 4xl:max-w-[500px] xl:whitespace-nowrap ${isActive ? 'text-[#0071BC]' : 'text-black group-hover:text-[#0071BC]'}`}>{program.name}</span>
+                                        <span className={`font-heading text-xl lg:text-2xl 3xl:text-[28px] 4xl:text-[40px] transition-colors truncate max-w-full xl:max-w-[300px] 4xl:max-w-[500px] xl:whitespace-nowrap ${isActive ? 'text-brand-blue-dark' : 'text-navy-900 group-hover:text-brand-blue-dark'}`}>{program.name}</span>
                                         <svg
                                             width="30"
                                             height="30"
@@ -136,7 +136,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            className={`size-7 3xl:size-9 4xl:size-14 shrink-0 transition-colors ${isActive ? 'text-[#0071BC]' : 'text-slate-300 group-hover:text-[#0071BC]'}`}
+                                            className={`size-7 3xl:size-9 4xl:size-14 shrink-0 transition-colors ${isActive ? 'text-brand-blue-dark' : 'text-slate-300 group-hover:text-brand-blue-dark'}`}
                                         >
                                             <line x1="5" y1="19" x2="19" y2="5"></line>
                                             <polyline points="9 5 19 5 19 15"></polyline>

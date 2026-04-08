@@ -29,21 +29,21 @@ const Counter = ({ value }: { value: string }) => {
 
 const AboutSection3 = () => {
     const cards = [
-        { num: '94+', text: 'Undergraduate and Postgraduate Programs', bg: 'bg-[#FFF7C4]', textCol: 'text-slate-700' },
-        { num: '468+', text: 'Publications in reputed peer-reviewed journals', bg: 'bg-[#F2EDC2]', textCol: 'text-slate-700' },
-        { num: '20+', text: 'State-of-the-art labs & research centers', bg: 'bg-[#FEF5B3]', textCol: 'text-slate-700' },
-        { num: '100+', text: 'Placement partners across healthcare sectors', bg: 'bg-[#FCED9A]', textCol: 'text-slate-700' }
+        { num: '94+', text: 'Undergraduate and Postgraduate Programs', bg: 'bg-brand-yellow-light' },
+        { num: '468+', text: 'Publications in reputed peer-reviewed journals', bg: 'bg-brand-yellow-light/80' },
+        { num: '20+', text: 'State-of-the-art labs & research centers', bg: 'bg-brand-yellow-light/90' },
+        { num: '100+', text: 'Placement partners across healthcare sectors', bg: 'bg-brand-yellow-light/70' }
     ]
 
     return (
         <section className="py-12 md:py-20 3xl:py-32 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48">
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 3xl:gap-12 4xl:gap-16">
                 {cards.map((card, idx) => (
-                    <div key={idx} className={`bg-[#FFF4B1] rounded-[24px] 4xl:rounded-[48px] py-12 px-8 3xl:py-20 3xl:px-12 4xl:py-28 4xl:px-16 flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform border border-[#FFE043]`}>
-                        <h3 className={"text-5xl lg:text-6xl 3xl:text-7xl 4xl:text-[6.5rem] text-[#0071BC] mb-4 4xl:mb-8 font-light"}>
+                    <div key={idx} className={`bg-brand-yellow-light rounded-3xl 4xl:rounded-brand-md py-12 px-8 3xl:py-20 3xl:px-12 4xl:py-28 4xl:px-16 flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform border border-brand-yellow/20`}>
+                        <h3 className={"text-5xl lg:text-6xl 3xl:text-7xl 4xl:text-display-1 text-brand-blue-dark mb-4 4xl:mb-8 font-light font-heading leading-tight"}>
                             <Counter value={card.num} />
                         </h3>
-                        <p className={`text-[#515151] text-[15px] 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-[200px] 3xl:max-w-[250px] 4xl:max-w-[350px] font-medium`}>
+                        <p className={`text-navy-800/70 text-sm 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-[12rem] 3xl:max-w-[16rem] 4xl:max-w-[22rem] font-medium`}>
                             {card.text}
                         </p>
                     </div>

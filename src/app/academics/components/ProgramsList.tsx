@@ -75,22 +75,22 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
     return (
         <section className="py-12 md:py-20 3xl:py-28 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-40 4xl:px-60 overflow-hidden">
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2400px] w-full flex flex-col items-center">
-                <h2 className={"text-3xl md:text-[45px] 3xl:text-7xl 4xl:text-[110px] text-black mb-10 3xl:mb-16 4xl:mb-24 text-center font-heading"}>
+                <h2 className={"text-h2 md:text-h1 3xl:text-7xl 4xl:text-display-1 text-navy-900 mb-10 3xl:mb-16 4xl:mb-24 text-center font-heading font-normal"}>
                     Our Allied Health Sciences Programs
                 </h2>
 
-                <div className="w-full rounded-[21.04px] 3xl:rounded-[40px] 4xl:rounded-[60px] border border-gray-200 overflow-hidden shadow-sm bg-[#EEEEEE]">
+                <div className="w-full rounded-brand-pill 3xl:rounded-brand-md 4xl:rounded-brand-lg border border-brandBorder overflow-hidden shadow-sm bg-slate-100">
                 {/* Header Bar */}
-                <div className="bg-[#0071BC] p-4 lg:p-6 3xl:p-10 4xl:p-20 flex flex-col items-center justify-between gap-6 3xl:gap-10 4xl:gap-16 rounded-t-[21.04px] 3xl:rounded-t-[40px] 4xl:rounded-t-[60px] lg:flex-row">
+                <div className="bg-brand-blue-dark p-4 lg:p-6 3xl:p-10 4xl:p-20 flex flex-col items-center justify-between gap-6 3xl:gap-10 4xl:gap-16 rounded-t-brand-pill 3xl:rounded-t-brand-md 4xl:rounded-t-brand-lg lg:flex-row">
                     {/* Toggle Buttons */}
-                    <div className="flex items-center bg-[#FFD812] rounded-full p-1 3xl:p-2 4xl:p-4 overflow-x-auto w-full lg:w-auto overflow-hidden shrink-0 no-scrollbar">
+                    <div className="flex items-center bg-brand-yellow rounded-full p-1 3xl:p-2 4xl:p-4 overflow-x-auto w-full lg:w-auto overflow-hidden shrink-0 no-scrollbar">
                         <button
                             onClick={() => {
                                 setActiveTab('Under Graduate')
                                 setFinalFilter('') // Refresh list on tab change
                                 setInputValue('')
                             }}
-                            className={`flex-1 lg:flex-none px-4 lg:px-6 4xl:px-12 py-2 4xl:py-6 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base 3xl:text-xl 4xl:text-3xl transition-colors ${activeTab === 'Under Graduate' ? 'bg-white text-gray-900' : 'text-gray-900 bg-transparent hover:bg-white/50'}`}
+                            className={`flex-1 lg:flex-none px-4 lg:px-6 4xl:px-12 py-2 4xl:py-6 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base 3xl:text-xl 4xl:text-3xl transition-colors ${activeTab === 'Under Graduate' ? 'bg-white text-navy-900' : 'text-navy-900 bg-transparent hover:bg-white/50'}`}
                         >
                             Under Graduate
                         </button>
@@ -100,7 +100,7 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                                 setFinalFilter('') // Refresh list on tab change
                                 setInputValue('')
                             }}
-                            className={`flex-1 lg:flex-none px-4 lg:px-6 4xl:px-12 py-2 4xl:py-6 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base 3xl:text-xl 4xl:text-3xl transition-colors ${activeTab === 'Post Graduate' ? 'bg-white text-gray-900' : 'text-gray-900 bg-transparent hover:bg-white/50'}`}
+                            className={`flex-1 lg:flex-none px-4 lg:px-6 4xl:px-12 py-2 4xl:py-6 rounded-full font-medium whitespace-nowrap shadow-sm text-sm lg:text-base 3xl:text-xl 4xl:text-3xl transition-colors ${activeTab === 'Post Graduate' ? 'bg-white text-navy-900' : 'text-navy-900 bg-transparent hover:bg-white/50'}`}
                         >
                             Post Graduate
                         </button>
@@ -123,9 +123,9 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                                 }}
                                 className="flex-1 min-w-0 px-2 py-2 4xl:py-4 outline-none text-gray-700 bg-transparent text-sm 3xl:text-lg 4xl:text-2xl placeholder-gray-300"
                             />
-                            <button
+                             <button
                                 onClick={handleSearch}
-                                className="bg-[#FFD812] text-gray-900 px-4 lg:px-8 4xl:px-12 py-2.5 4xl:py-5 rounded-full font-medium shadow-sm hover:bg-yellow-400 transition-colors text-xs lg:text-sm 3xl:text-base 4xl:text-2xl whitespace-nowrap shrink-0"
+                                className="bg-brand-yellow text-navy-900 px-4 lg:px-8 4xl:px-12 py-2.5 4xl:py-5 rounded-full font-medium shadow-sm hover:bg-brand-yellow/80 transition-colors text-xs lg:text-sm 3xl:text-base 4xl:text-2xl whitespace-nowrap shrink-0"
                             >
                                 Search
                             </button>
@@ -140,10 +140,10 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                                         <div
                                             key={suggestionId}
                                             onClick={() => handleSelectSuggestion(suggestion.name)}
-                                            className="px-6 py-3 4xl:px-10 4xl:py-6 hover:bg-[#F2F9FF] cursor-pointer transition-colors border-b border-gray-50 last:border-none flex items-center justify-between group"
+                                            className="px-6 py-3 4xl:px-10 4xl:py-6 hover:bg-brand-lightBlue-soft/10 cursor-pointer transition-colors border-b border-brandBorder last:border-none flex items-center justify-between group"
                                         >
-                                            <span className="text-gray-700 text-sm 3xl:text-lg 4xl:text-2xl font-medium group-hover:text-[#0071BC]">{suggestion.name}</span>
-                                            <span className="text-[10px] 3xl:text-xs 4xl:text-lg bg-gray-100 px-2 py-1 rounded-full text-gray-500">{suggestion.duration || "3 Year"}</span>
+                                            <span className="text-navy-800 text-sm 3xl:text-lg 4xl:text-2xl font-medium group-hover:text-brand-blue-dark">{suggestion.name}</span>
+                                            <span className="text-xs 3xl:text-xs 4xl:text-lg bg-slate-100 px-2 py-1 rounded-full text-navy-800/50">{suggestion.duration || "3 Year"}</span>
                                         </div>
                                     );
                                 })}
@@ -159,20 +159,20 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                             const programId = program._id || program.id || `program-${idx}`;
                             return (
                                 <div key={programId} className="px-6 md:px-10 3xl:px-16 4xl:px-32">
-                                    <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center py-6 3xl:py-10 4xl:py-16 border-b`} style={{ borderColor: '#c0c0c0' }}>
+                                    <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center py-6 3xl:py-10 4xl:py-16 border-b border-brandBorder`}>
                                         <div className="mb-6 lg:mb-0 w-full lg:w-auto">
-                                            <h3 className={"text-lg lg:text-xl 3xl:text-2xl 4xl:text-[2.25rem] text-gray-900 mb-[4px] 4xl:mb-4"}>{program.name}</h3>
-                                            <div className="text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl text-gray-500 flex flex-wrap items-center gap-3 lg:gap-4 4xl:gap-8">
+                                            <h3 className={"text-lg lg:text-h3 3xl:text-2xl 4xl:text-4xl text-navy-900 mb-1 4xl:mb-4 font-heading"}>{program.name}</h3>
+                                            <div className="text-xs lg:text-sm 3xl:text-base 4xl:text-2xl text-navy-800/60 flex flex-wrap items-center gap-3 lg:gap-4 4xl:gap-8">
                                                 <span>Duration : {program.duration || "3 Year"}</span>
-                                                <span className="hidden lg:inline text-gray-300">|</span>
-                                                <Link href={`/CourseDetail?id=${programId}`} className="text-[#0070c0] hover:underline font-medium">Explore Program</Link>
+                                                <span className="hidden lg:inline text-navy-800/20">|</span>
+                                                <Link href={`/CourseDetail?id=${programId}`} className="text-brand-blue-dark hover:underline font-medium">Explore Program</Link>
                                             </div>
                                         </div>
                                         <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
-                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 4xl:px-12 py-2.5 4xl:py-6 bg-[#0070c0] text-white rounded-full font-medium text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl hover:bg-blue-700 transition-all whitespace-nowrap">
+                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 4xl:px-12 py-2.5 4xl:py-6 bg-brand-blue-dark text-white rounded-full font-medium text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl hover:bg-brand-blue-dark/90 transition-all whitespace-nowrap">
                                                 Check Eligibility
                                             </button>
-                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 4xl:px-12 py-2.5 4xl:py-6 bg-[#FFD812] text-gray-900 rounded-full font-medium text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl hover:bg-yellow-400 transition-all shadow-sm whitespace-nowrap">
+                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 4xl:px-12 py-2.5 4xl:py-6 bg-brand-yellow text-navy-900 rounded-full font-medium text-xs lg:text-[13px] 3xl:text-base 4xl:text-2xl hover:bg-brand-yellow/80 transition-all shadow-sm whitespace-nowrap">
                                                 Apply Now
                                             </button>
                                         </div>

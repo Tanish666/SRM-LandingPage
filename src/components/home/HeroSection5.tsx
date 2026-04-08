@@ -87,23 +87,23 @@ export default function HeroSection5() {
             <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)] 3xl:grid-cols-[450px_minmax(0,1fr)] 4xl:grid-cols-[600px_minmax(0,1fr)] gap-10 lg:gap-14 4xl:gap-24 max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full items-start">
 
                 {/* Left Column: Latest News */}
-                <div className="bg-[#FFFDF1] rounded-lg overflow-hidden flex flex-col lg:h-[520px] 3xl:h-[650px] 4xl:h-[850px] h-[450px] pb-4 shadow-sm border border-yellow-100/50">
-                    <div className="bg-[#FFD700] rounded-lg py-2 3xl:py-4 text-center shadow-sm z-10 mx-1">
-                        <h3 className="text-[28px] 3xl:text-[34px] 4xl:text-[45px] text-black tracking-wide">Latest News</h3>
+                <div className="bg-brand-yellow-light rounded-lg overflow-hidden flex flex-col lg:h-[520px] 3xl:h-[650px] 4xl:h-[850px] h-[450px] pb-4 shadow-sm border border-brandBorder">
+                    <div className="bg-brand-yellow rounded-lg py-2 3xl:py-4 text-center shadow-sm z-10 mx-1">
+                        <h3 className="text-h3 3xl:text-h2 4xl:text-h1 text-navy-900 tracking-wide font-heading">Latest News</h3>
                     </div>
                     <div
                         ref={newsRef}
-                        className="flex-1 overflow-y-auto px-7 4xl:px-12 py-6 4xl:py-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#FFD700] [&::-webkit-scrollbar-thumb]:rounded-full"
+                        className="flex-1 overflow-y-auto px-7 4xl:px-12 py-6 4xl:py-10 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-brand-yellow [&::-webkit-scrollbar-thumb]:rounded-full"
                     >
                         {[...newsData, ...newsData].map((text, index) => (
                             <div key={index} className={`mb-5 pb-5 4xl:mb-8 4xl:pb-8 ${index !== (newsData.length * 2 - 1) ? 'border-b border-yellow-200/60' : ''}`}>
                                 <p className="text-sm 3xl:text-base 4xl:text-xl text-slate-600 mb-2.5 4xl:mb-4 leading-relaxed pr-2">
                                     {text}
                                 </p>
-                                <button className="flex items-center gap-1.5 4xl:gap-3 text-xs 3xl:text-sm 4xl:text-lg text-slate-500 hover:text-slate-800 transition-colors group">
+                                <button className="flex items-center gap-1.5 4xl:gap-3 text-xs 3xl:text-sm 4xl:text-lg text-navy-800/60 hover:text-navy-900 transition-colors group">
                                     Read More
-                                    <span className="bg-[#FFD700] rounded-full p-[2px] 4xl:p-1 ml-1 group-hover:scale-110 transition-transform">
-                                        <ArrowUpRight className="size-[10px] 4xl:size-4 text-slate-900" strokeWidth={2} />
+                                    <span className="bg-brand-yellow rounded-full p-[2px] 4xl:p-1 ml-1 group-hover:scale-110 transition-transform">
+                                        <ArrowUpRight className="size-[10px] 4xl:size-4 text-navy-900" strokeWidth={2} />
                                     </span>
                                 </button>
                             </div>
@@ -115,19 +115,19 @@ export default function HeroSection5() {
                 <div className="flex flex-col">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 4xl:mb-16 gap-4">
-                        <h2 className="text-[38px] lg:text-[44px] 3xl:text-[54px] 4xl:text-[80px] text-slate-900 leading-[1.1]">
+                        <h2 className="text-h2 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-[1.1] font-heading font-normal">
                             Insights From Our Learners
                         </h2>
                         <div className="flex gap-3 pb-1 4xl:scale-125 4xl:origin-bottom-right">
                             <button
                                 onClick={handlePrev}
-                                className="bg-[#FFD700] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-yellow-400 transition-colors shrink-0"
+                                className="bg-brand-yellow w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-brand-yellow/90 transition-colors shrink-0"
                             >
                                 <IconArrowNarrowLeft className="text-white" size={30} strokeWidth={1.5} />
                             </button>
                             <button
                                 onClick={handleNext}
-                                className="bg-[#0073CF] w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors shrink-0"
+                                className="bg-brand-blue-dark w-[42px] h-[42px] rounded-full flex items-center justify-center hover:bg-brand-blue-dark/90 transition-colors shrink-0"
                             >
                                 <IconArrowNarrowRight className="text-white" size={30} strokeWidth={1.5} />
                             </button>
@@ -147,7 +147,7 @@ export default function HeroSection5() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: -20, opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-[20px] overflow-hidden group cursor-pointer"
+                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-brand-pill overflow-hidden group cursor-pointer"
                                     onClick={handlePrev}
                                 >
                                     <Image src={getInsightAt(-1).image} alt="Student" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -164,7 +164,7 @@ export default function HeroSection5() {
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 0.95, opacity: 0 }}
                                     transition={{ duration: 0.6 }}
-                                    className="relative w-full flex-1 rounded-2xl 4xl:rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 "
+                                    className="relative w-full flex-1 rounded-brand-pill overflow-hidden shadow-sm border border-slate-100 "
                                 >
                                     <Image src={getInsightAt(0).image} alt="Student" fill className="object-cover" />
                                 </motion.div>
@@ -176,7 +176,7 @@ export default function HeroSection5() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: 20, opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-2xl overflow-hidden group cursor-pointer"
+                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-brand-pill overflow-hidden group cursor-pointer"
                                     onClick={handleNext}
                                 >
                                     <Image src={getInsightAt(1).image} alt="Student" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -191,7 +191,7 @@ export default function HeroSection5() {
                         {/* Quote Card */}
                         <motion.div
                             onClick={handleNext}
-                            className="relative border border-slate-300/80 rounded-[24px] 4xl:rounded-[3rem] p-5 sm:p-8 lg:p-10 4xl:p-20 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
+                            className="relative border border-slate-300/80 rounded-brand-pill 4xl:rounded-brand-md p-5 sm:p-8 lg:p-10 4xl:p-20 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
                         >
                             {/* Quotes Blocks - Background Watermark on Mobile */}
                             <motion.div
@@ -215,7 +215,7 @@ export default function HeroSection5() {
                                         className="flex-1 flex flex-col justify-center p-2"
                                     >
                                         {/* Mobile Image */}
-                                        <div className="md:hidden relative w-full aspect-[3/1.9] rounded-[20px] overflow-hidden mb-6 shadow-sm">
+                                        <div className="md:hidden relative w-full aspect-[3/1.9] rounded-brand-pill overflow-hidden mb-6 shadow-sm">
                                             <Image
                                                 src={insights[activeIndex].image}
                                                 alt={insights[activeIndex].name}
@@ -223,14 +223,14 @@ export default function HeroSection5() {
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <p className="text-[#64748B] text-[15px] lg:text-[15.5px] 3xl:text-xl 4xl:text-[2.25rem] 3xl:leading-[1.8] 4xl:leading-[1.4] mb-8 4xl:mb-16 group-hover:text-slate-700 transition-colors w-full sm:w-[95%]">
+                                        <p className="text-navy-800/60 text-sm lg:text-base 3xl:text-xl 4xl:text-[2.25rem] 3xl:leading-[1.8] 4xl:leading-[1.4] mb-8 4xl:mb-16 group-hover:text-navy-900 transition-colors w-full sm:w-[95%]">
                                             {insights[activeIndex].quote}
                                         </p>
                                         <div className="flex flex-col mt-auto">
-                                            <span className="font-heading text-[#3695EB] text-[22px] 3xl:text-[28px] 4xl:text-[45px] font-medium mb-0.5 4xl:mb-3">
+                                            <span className="font-heading text-brand-blue text-xl lg:text-2xl 3xl:text-h3 4xl:text-h1 font-medium mb-0.5 4xl:mb-3">
                                                 {insights[activeIndex].name}
                                             </span>
-                                            <span className="text-slate-500 text-[14.5px] 3xl:text-[18px] 4xl:text-[24px]">
+                                            <span className="text-navy-800/50 text-xs md:text-sm 3xl:text-lg 4xl:text-2xl">
                                                 {insights[activeIndex].program}
                                             </span>
                                         </div>

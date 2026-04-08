@@ -16,7 +16,8 @@ const HomeSection9 = () => {
 
                 {/* Gradient Overlay & Text Content */}
                 <div className="relative w-full pt-10 pb-16 4xl:pb-32 px-8 lg:px-14 4xl:px-24 flex flex-col items-start gap-4 4xl:gap-8 z-10">
-                    <div className='absolute top-0 left-0 w-full h-full bg-white/66 backdrop-blur-sm -z-10' />
+                    <div className='absolute inset-0 bg-gradient-to-b from-white/20 via-white/50 to-white/80 backdrop-blur-xl -z-10' />
+                    <div className='absolute -left-10 top-0 w-72 h-72 bg-[#FFD100]/15 blur-[120px] rounded-full -z-10' />
                     <h2 className="text-4xl md:text-5xl lg:text-[54px] 3xl:text-[65px] 4xl:text-[100px] leading-[1.1] text-black tracking-tight">
                         World Class Facilities
                     </h2>

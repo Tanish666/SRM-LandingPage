@@ -35,7 +35,7 @@ const AboutSection6 = () => {
                 <div>
                     <SectionPill text="Our Leadership" className="mb-6 4xl:mb-10" />
 
-                    <div className="font-heading text-3xl md:text-[44px] 3xl:text-[54px] 4xl:text-[68px] text-slate-900 leading-tight max-w-2xl 3xl:max-w-4xl whitespace-normal">
+                    <div className="font-heading text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-tight max-w-2xl 3xl:max-w-4xl font-normal whitespace-normal">
                         <p>Meet The Leaders Driving Academic Innovation And Institutional Growth</p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const AboutSection6 = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 4xl:gap-12 w-full">
                 {leaders.map((leader, idx) => (
                     <div key={idx} className="flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform">
-                        <div className="w-full aspect-[3/4] xl:aspect-auto xl:h-[563px] 3xl:h-[700px] 4xl:h-[850px] rounded-[2rem] bg-slate-200 overflow-hidden mb-6 4xl:mb-10 relative">
+                        <div className="w-full aspect-[3/4] xl:aspect-auto xl:h-140 3xl:h-160 4xl:h-200 rounded-brand-pill bg-slate-200 overflow-hidden mb-6 4xl:mb-10 relative">
                             {/* Replace with leader image */}
                             <Image
                                 src={leader.imgSrc}
@@ -62,12 +62,12 @@ const AboutSection6 = () => {
                             />
                         </div>
                         <div className='flex items-center gap-1.5'>
-                            <div className='w-[7px] h-[18px] lg:w-[9px] lg:h-[22px] 4xl:w-[12px] 4xl:h-[30px] bg-[#FFD812] shrink-0' />
-                            <h3 className={"text-xl lg:text-[26px] 3xl:text-[32px] 4xl:text-[40px] text-slate-900 leading-tight"}>{leader.name}</h3>
+                            <div className='w-1.5 h-4.5 lg:w-2 lg:h-5 4xl:w-3 4xl:h-8 bg-brand-yellow shrink-0' />
+                            <h3 className={"text-xl lg:text-2xl 3xl:text-3xl 4xl:text-4xl text-navy-900 leading-tight font-heading font-normal"}>{leader.name}</h3>
                         </div>
                         <div className="mt-2 4xl:mt-4">
-                            <p className="text-[#0071BC] font-medium text-[15px] lg:text-[19.31px] 3xl:text-[22px] 4xl:text-[28px]">{leader.role}</p>
-                            <p className="text-[#333333] text-sm lg:text-[19.31px] 3xl:text-[22px] 4xl:text-[28px] leading-relaxed max-w-[95%]">{leader.desc}</p>
+                            <p className="text-brand-blue-dark font-medium text-sm lg:text-lg 3xl:text-xl 4xl:text-2xl font-heading">{leader.role}</p>
+                            <p className="text-navy-800/70 text-sm lg:text-lg 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-[95%]">{leader.desc}</p>
                         </div>
                     </div>
                 ))}

@@ -1,17 +1,17 @@
 'use client'
-
 import React from 'react'
 import { IconArrowNarrowRight } from '@tabler/icons-react';
 import { Play, ArrowUpRight } from 'lucide-react'
 
 const HeroSection = () => {
     return (
-        <section className='relative min-h-[85vh] 4xl:min-h-[70vh] flex items-center bg-[url("/HeroSectionBg.gif")] bg-cover bg-center overflow-hidden px-4 md:px-10 lg:px-20 mx-4 md:mx-10 round-[2rem] mt-5'>
+        <section className='relative min-h-[85vh] 4xl:min-h-[70vh] flex items-center bg-[url("/HeroSectionBg.gif")] bg-cover bg-center overflow-hidden px-4 md:px-10 lg:px-20 mx-4 md:mx-10 rounded-brand-pill mt-5'>
             <div className='max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 4xl:gap-32 py-12 lg:py-20 4xl:py-32'>
                 {/* Hero Text Content */}
-                <div className='flex-1 lg:max-w-[55%] z-10'>
+                <div className='flex-1 lg:max-w-[65%] z-10'>
                     <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] 3xl:text-[5.5rem] 4xl:text-[7rem] leading-[1.05] text-slate-900 mb-8 4xl:mb-12 tracking-tight">
-                        Shaping Healthcare <br className='hidden md:block' /> Leaders of Tomorrow
+                        Shaping Healthcare <br className='hidden md:block' />
+                        <span className='md:whitespace-nowrap'>Leaders of Tomorrow</span>
                     </h1>
                     <p className='text-lg md:text-[1.35rem] 3xl:text-[1.6rem] 4xl:text-[2rem] text-slate-500/90 mb-12 4xl:mb-16 max-w-[550px] 3xl:max-w-[700px] 4xl:max-w-[900px] leading-relaxed'>
                         Immerse Yourself In A Dynamic Learning Environment Dedicated To Excellence In Healthcare Education.
@@ -28,7 +28,7 @@ const HeroSection = () => {
 
                 {/* Hero Image Section */}
                 <div className='relative flex-1 w-full'>
-                    <div className='relative rounded-[4rem] perspective-1000'>
+                    <div className='relative rounded-brand-lg perspective-1000'>
                         <img loading="lazy" decoding="async"
                             src="/srmHero.svg"
                             alt="SRM Campus"
@@ -45,7 +45,7 @@ const HeroSection = () => {
                         </div>
 
                         {/* Program Offered Badge */}
-                        <div className='absolute bottom-2 -right-10 md:bottom-8 md:-right-7 4xl:bottom-16 4xl:-right-20 z-20'>
+                        <div className='absolute bottom-2 -right-10 md:bottom-5 md:-right-12 4xl:bottom-16 4xl:-right-20 z-20'>
                             <div className='relative group/program'>
                                 <div className='absolute size-14 md:size-20 4xl:size-32 -z-10 bg-white rounded-full -top-2 md:-top-3.5 4xl:-top-6 -left-2.5 md:-left-4 4xl:-left-8 group-hover/program:bg-[#FFEB3B] transition-all duration-500' />
                                 <div className='flex items-center gap-1.5 md:gap-2 4xl:gap-4 pr-5 md:pr-8 4xl:pr-12 py-1.5 rounded-full transition-all duration-500 cursor-pointer '>

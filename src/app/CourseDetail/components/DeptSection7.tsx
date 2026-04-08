@@ -79,17 +79,17 @@ const DeptSection7 = ({ courseData }: Props) => {
     }
 
     return (
-        <section className="relative w-full overflow-hidden flex justify-center bg-[#FFF4B1] px-4 md:px-10 lg:px-20 py-12 md:py-20 4xl:py-36">
+        <section className="relative w-full overflow-hidden flex justify-center bg-brand-yellow-light px-4 md:px-10 lg:px-20 py-12 md:py-20 4xl:py-36">
             <div className="w-full max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] flex flex-col items-center">
                 <SectionPill text="POs, PSOs, PEOs" className="mb-8 4xl:mb-16" />
 
                 {/* Title */}
-                <h2 className={"text-[28px] lg:text-[45px] 3xl:text-6xl 4xl:text-[85px] text-black leading-tight capitalize mb-6 lg:mb-[40px] 4xl:mb-[80px] text-center font-heading"}>
+                <h2 className={"text-h2 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-tight capitalize mb-6 lg:mb-10 4xl:mb-20 text-center font-heading font-normal"}>
                     POs,PSOs And PEOs
                 </h2>
 
                 {/* Accordion Container */}
-                <div className="w-full space-y-3 lg:space-y-[18px] 4xl:space-y-12">
+                <div className="w-full space-y-3 lg:space-y-4.5 4xl:space-y-12">
                     {displayItems.map((item: any, index: number) => {
                         const isOpen = openIndex === index;
                         return (
@@ -97,15 +97,15 @@ const DeptSection7 = ({ courseData }: Props) => {
                                 {/* Accordion Header */}
                                 <button
                                     onClick={() => toggleAccordion(index)}
-                                    className={`w-full flex items-center justify-between px-4 lg:px-[42px] 4xl:px-16 transition-all duration-200 rounded-[10px] 4xl:rounded-[20px] relative z-[1] cursor-pointer h-[50px] lg:h-[63.16px] 4xl:h-[120px] ${isOpen ? 'bg-[#0071BC]' : 'bg-white'}`}
+                                    className={`w-full flex items-center justify-between px-4 lg:px-[42px] 4xl:px-16 transition-all duration-200 rounded-xl 4xl:rounded-3xl relative z-[1] cursor-pointer h-12 lg:h-16 4xl:h-30 ${isOpen ? 'bg-brand-blue-dark' : 'bg-white'}`}
                                 >
-                                    <span className={`font-heading text-base lg:text-[23.46px] 3xl:text-3xl 4xl:text-[2.75rem] leading-tight text-left ${isOpen ? 'text-white' : 'text-[#595959]'}`}>
+                                    <span className={`font-heading text-lg lg:text-xl 3xl:text-3xl 4xl:text-4xl leading-tight text-left ${isOpen ? 'text-white' : 'text-navy-800/70'}`}>
                                         {item.title}
                                     </span>
                                     <img loading="lazy" decoding="async"
                                         src={isOpen ? '/POuparrow.png' : '/POdropdown.svg'}
                                         alt=""
-                                        className="w-[25px] h-[25px] lg:w-[35px] lg:h-[35px] 4xl:w-[70px] 4xl:h-[70px] flex-shrink-0 ml-2"
+                                        className="w-6 h-6 lg:w-9 lg:h-9 4xl:w-18 4xl:h-18 flex-shrink-0 ml-2"
                                     />
                                 </button>
 
@@ -123,7 +123,7 @@ const DeptSection7 = ({ courseData }: Props) => {
                                     >
                                         <div className="px-4 lg:px-[42px] 4xl:px-16 pb-6 lg:pb-[40px] 4xl:pb-20 space-y-0.5 pt-10 lg:pt-[60px] 4xl:pt-[100px]">
                                             {item.content.map((point: any, pIndex: number) => (
-                                                <p key={pIndex} className={`${poppins.className} text-sm lg:text-base 3xl:text-xl 4xl:text-3xl font-bold text-[#595959] leading-relaxed 4xl:leading-[1.6]`}>
+                                                <p key={pIndex} className={`${poppins.className} text-sm lg:text-base 3xl:text-xl 4xl:text-3xl font-bold text-navy-800/80 leading-relaxed 4xl:leading-[1.6]`}>
                                                     {point.label && <>{point.label} – </>}<span className="font-normal">{point.text}</span>
                                                 </p>
                                             ))}

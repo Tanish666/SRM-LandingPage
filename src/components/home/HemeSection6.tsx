@@ -65,21 +65,21 @@ const HemeSection6 = () => {
                 <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
                     <SectionPill text="Research" className="mb-6 4xl:mb-12" />
 
-                    <h2 className="text-3xl md:text-4xl lg:text-[45px] 3xl:text-[55px] 4xl:text-[80px] leading-tight text-black capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl">
+                    <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 leading-tight text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal">
                         Driving Innovation In Allied Health Research
                     </h2>
 
-                    <p className={`${inter.className} text-[#515151] text-sm md:text-base 3xl:text-xl 4xl:text-2xl leading-relaxed capitalize max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl mb-8 4xl:mb-16`}>
+                    <p className={`${inter.className} text-navy-800/70 text-sm md:text-base 3xl:text-xl 4xl:text-3xl leading-relaxed capitalize max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl mb-8 4xl:mb-16`}>
                         Research at SRM Allied Health Sciences is driven by our mission to advance clinical practice, diagnostics, and public health outcomes.
                     </p>
 
                     <div className="4xl:scale-125">
                         <button
-                            className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer w-[267px] h-[47px] rounded-full border border-[#E5E5E5] pl-6 pr-1"
+                            className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer w-[267px] h-[47px] rounded-full border border-brandBorder pl-6 pr-1"
                         >
-                            <span className={`${inter.className} text-lg font-normal text-black capitalize`}>Explore Our Research</span>
+                            <span className={`${inter.className} text-lg font-normal text-navy-900 capitalize`}>Explore Our Research</span>
                             <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px]">
-                                <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-black' size={24} />
+                                <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-navy-900' size={24} />
                             </span>
                         </button>
                     </div>
@@ -92,12 +92,10 @@ const HemeSection6 = () => {
                         return (
                             <div
                                 key={index}
-                                className={`group relative rounded-[20px] 4xl:rounded-[40px] p-[1px] transition-all duration-300 hover:-translate-y-2 ${isEven ? 'lg:mt-12 4xl:mt-24' : ''}`}
-                                style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                                className={`group relative rounded-brand-pill 4xl:rounded-brand-md p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue ${isEven ? 'lg:mt-12 4xl:mt-24' : ''}`}
                             >
                                 <div
-                                    className="h-full w-full rounded-[19px] 4xl:rounded-[39px] p-8 4xl:p-14 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px]"
-                                    style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
+                                    className="h-full w-full rounded-brand-pill 4xl:rounded-brand-md p-8 4xl:p-14 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px] bg-gradient-to-b from-white to-brand-lightBlue-soft"
                                 >
                                     <div className="w-full flex justify-end mb-4 4xl:mb-8">
                                         <img loading="lazy" decoding="async"
@@ -107,13 +105,13 @@ const HemeSection6 = () => {
                                         />
                                     </div>
                                     <div className="mt-auto">
-                                        <h3 className="text-4xl md:text-5xl 4xl:text-[5rem] leading-[40px] 4xl:leading-tight text-[#0066CC] mb-4 4xl:mb-8">
+                                        <h3 className="text-4xl md:text-5xl 4xl:text-display-1 leading-[40px] 4xl:leading-tight text-brand-blue mb-4 4xl:mb-8 font-heading font-normal">
                                             <Counter value={stat.num} />
                                         </h3>
-                                        <p className="font-heading text-lg md:text-xl 3xl:text-2xl 4xl:text-[2.5rem] leading-tight text-black capitalize mb-2 4xl:mb-6">
+                                        <p className="font-heading text-lg md:text-xl 3xl:text-2xl 4xl:text-[2.5rem] leading-tight text-navy-900 capitalize mb-2 4xl:mb-6">
                                             {stat.label}
                                         </p>
-                                        <p className={`${inter.className} text-sm md:text-[15px] 3xl:text-lg 4xl:text-[1.75rem] leading-relaxed text-[#515151] capitalize`}>
+                                        <p className={`${inter.className} text-sm md:text-base 3xl:text-lg 4xl:text-3xl leading-relaxed text-navy-800/70 capitalize`}>
                                             {stat.desc}
                                         </p>
                                     </div>
