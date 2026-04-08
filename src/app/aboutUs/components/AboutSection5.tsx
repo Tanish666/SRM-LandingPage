@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { Marcellus } from 'next/font/google'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const marcellus = Marcellus({
@@ -39,14 +39,14 @@ const AboutSection5 = () => {
 
             <SectionPill text="Accreditations" className="mb-6" />
 
-            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-16 text-center leading-tight max-w-2xl`}>
+            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-black mb-16 text-center leading-tight max-w-2xl`}>
                 Accredited For Excellence In Technical Education
             </h2>
 
             <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4 gap-4">
                 <button 
                     onClick={handlePrevious}
-                    className="flex items-center justify-center text-[#000000] hover:text-blue-600 transition-colors shrink-0"
+                    className="flex items-center justify-center text-black hover:text-blue-600 transition-colors shrink-0"
                 >
                     <ChevronLeft className="size-10 font-thin" strokeWidth={1.5} />
                 </button>
@@ -56,7 +56,7 @@ const AboutSection5 = () => {
                     <div className="hidden md:flex flex-wrap justify-center items-center gap-10 md:gap-24">
                         {marqueeLogos.map((logo, idx) => (
                             <div key={idx} className="w-[200px] flex items-center justify-center">
-                                <img src={`/${logo}`} alt={`Logo ${idx}`} className="max-w-full max-h-[190px] object-contain" />
+                                <img loading="lazy" decoding="async" src={`/${logo}`} alt={`Logo ${idx}`} className="max-w-full max-h-[190px] object-contain" />
                             </div>
                         ))}
                     </div>
@@ -72,7 +72,7 @@ const AboutSection5 = () => {
                                 transition={{ duration: 0.5 }}
                                 className="w-[140px] flex items-center justify-center"
                             >
-                                <img 
+                                <img loading="lazy" decoding="async" 
                                     src={`/${marqueeLogos[currentIndex]}`} 
                                     alt={`Logo ${currentIndex}`} 
                                     className="max-w-full max-h-[160px] object-contain" 
@@ -84,7 +84,7 @@ const AboutSection5 = () => {
 
                 <button 
                     onClick={handleNext}
-                    className="flex items-center justify-center text-[#000000] hover:text-blue-600 transition-colors shrink-0"
+                    className="flex items-center justify-center text-black hover:text-blue-600 transition-colors shrink-0"
                 >
                     <ChevronRight className="size-10 font-extralight" strokeWidth={1.5} />
                 </button>

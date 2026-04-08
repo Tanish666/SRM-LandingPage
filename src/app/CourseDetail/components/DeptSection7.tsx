@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Marcellus, Poppins } from 'next/font/google'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -104,10 +104,10 @@ const DeptSection7 = ({ courseData }: Props) => {
                                     onClick={() => toggleAccordion(index)}
                                     className={`w-full flex items-center justify-between px-4 lg:px-[42px] transition-all duration-200 rounded-[10px] relative z-[1] cursor-pointer h-[50px] lg:h-[63.16px] ${isOpen ? 'bg-[#0071BC]' : 'bg-white'}`}
                                 >
-                                    <span className={`${marcellus.className} text-[16px] lg:text-[23.46px] leading-[22px] lg:leading-[29px] text-left ${isOpen ? 'text-white' : 'text-[#595959]'}`}>
+                                    <span className={`${marcellus.className} text-base lg:text-[23.46px] leading-[22px] lg:leading-[29px] text-left ${isOpen ? 'text-white' : 'text-[#595959]'}`}>
                                         {item.title}
                                     </span>
-                                    <img
+                                    <img loading="lazy" decoding="async"
                                         src={isOpen ? '/POuparrow.png' : '/POdropdown.svg'}
                                         alt=""
                                         className="w-[25px] h-[25px] lg:w-[35px] lg:h-[35px] flex-shrink-0 ml-2"
@@ -128,7 +128,7 @@ const DeptSection7 = ({ courseData }: Props) => {
                                     >
                                         <div className="px-4 lg:px-[42px] pb-6 lg:pb-[40px] space-y-0.5 pt-10 lg:pt-[60px]">
                                             {item.content.map((point: any, pIndex: number) => (
-                                                <p key={pIndex} className={`${poppins.className} text-[14px] lg:text-[16px] font-bold text-[#595959] leading-[26px] lg:leading-[31px]`}>
+                                                <p key={pIndex} className={`${poppins.className} text-sm lg:text-base font-bold text-[#595959] leading-[26px] lg:leading-[31px]`}>
                                                     {point.label && <>{point.label} – </>}<span className="font-normal">{point.text}</span>
                                                 </p>
                                             ))}

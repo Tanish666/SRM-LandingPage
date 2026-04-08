@@ -2,7 +2,7 @@
 import React from 'react'
 import { Marcellus, Inter, Inder } from 'next/font/google'
 import Image from 'next/image'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -59,7 +59,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
 
                 {/* Description */}
                 <p
-                    className={`${inter.className} font-light text-[16px] lg:text-[18px] text-black text-center max-w-[1005px] mx-auto mt-4`}
+                    className={`${inter.className} font-light text-base lg:text-lg text-black text-center max-w-[1005px] mx-auto mt-4`}
                     style={{ lineHeight: '27px' }}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -95,7 +95,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                 <div>
                                     <div className="flex items-baseline gap-[6px] flex-wrap">
                                         <span
-                                            className={`${marcellus.className} text-[24px] lg:text-[30px] text-black`}
+                                            className={`${marcellus.className} text-2xl lg:text-3xl text-black`}
                                             style={{
                                                 lineHeight: '38px',
                                                 letterSpacing: '-0.03em',
@@ -104,7 +104,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                             {member.name}
                                         </span>
                                         <span
-                                            className={`${marcellus.className} text-[14px] lg:text-[16px] text-black`}
+                                            className={`${marcellus.className} text-sm lg:text-base text-black`}
                                             style={{
                                                 lineHeight: '20px',
                                                 letterSpacing: '-0.03em',
@@ -143,7 +143,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                         }}
                     >
                         <span
-                            className={`${inter.className} font-normal text-[18px] text-black capitalize`}
+                            className={`${inter.className} font-normal text-lg text-black capitalize`}
                             style={{ lineHeight: '28px' }}
                         >
                             View All Faculty

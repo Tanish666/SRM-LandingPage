@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Marcellus, Inter } from 'next/font/google'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -95,7 +95,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                             className="absolute left-0 md:left-[5%] lg:left-[8%] z-40 p-0 border-none bg-transparent cursor-pointer w-[36px] h-[36px] md:w-[48px] md:h-[48px] hover:scale-110 transition-transform"
                             aria-label="Previous testimonial"
                         >
-                            <img src="/left_arrow.svg" alt="" className="w-full h-full" />
+                            <img loading="lazy" decoding="async" src="/left_arrow.svg" alt="" className="w-full h-full" />
                         </button>
 
                         {/* Single Card */}
@@ -117,12 +117,12 @@ const DeptSection11 = ({ courseData }: Props) => {
                                     />
                                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent px-4 pb-4 pt-12 md:px-6 md:pb-6 md:pt-16">
                                         <p
-                                            className={`${marcellus.className} text-white capitalize text-[18px] md:text-[24px] leading-[22px] md:leading-[28px]`}
+                                            className={`${marcellus.className} text-white capitalize text-lg md:text-2xl leading-[22px] md:leading-[28px]`}
                                         >
                                             {active.name}
                                         </p>
                                         <p
-                                            className={`${inter.className} text-white font-normal capitalize mt-0.5 text-[12px] md:text-[15px] leading-[18px] md:leading-[22px]`}
+                                            className={`${inter.className} text-white font-normal capitalize mt-0.5 text-xs md:text-[15px] leading-[18px] md:leading-[22px]`}
                                         >
                                             {active.department}
                                         </p>
@@ -137,7 +137,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                             className="absolute right-0 md:right-[5%] lg:right-[8%] z-40 p-0 border-none bg-transparent cursor-pointer w-[36px] h-[36px] md:w-[48px] md:h-[48px] hover:scale-110 transition-transform"
                             aria-label="Next testimonial"
                         >
-                            <img src="/right_arrow.svg" alt="" className="w-full h-full" />
+                            <img loading="lazy" decoding="async" src="/right_arrow.svg" alt="" className="w-full h-full" />
                         </button>
                     </div>
 
@@ -148,7 +148,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                             border: '1.5px solid #E8E8E8',
                         }}
                     >
-                        <img
+                        <img loading="lazy" decoding="async"
                             src="/quoteicon.svg"
                             alt=""
                             aria-hidden="true"
@@ -173,12 +173,12 @@ const DeptSection11 = ({ courseData }: Props) => {
                                 style={{ zIndex: 1 }}
                             >
                                 <p
-                                    className={`${inter.className} font-normal text-[#4B4B4B] capitalize text-[13px] md:text-[16px] leading-[21px] md:leading-[26px]`}
+                                    className={`${inter.className} font-normal text-[#4B4B4B] capitalize text-[13px] md:text-base leading-[21px] md:leading-[26px]`}
                                 >
                                     {active.quote}
                                 </p>
                                 <p
-                                    className={`${marcellus.className} text-[#0071BC] mt-4 md:mt-6 text-[18px] md:text-[24px] leading-[24px] md:leading-[32px]`}
+                                    className={`${marcellus.className} text-[#0071BC] mt-4 md:mt-6 text-lg md:text-2xl leading-[24px] md:leading-[32px]`}
                                 >
                                     {active.name}
                                 </p>
@@ -292,7 +292,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                                 border: '1.86px solid #E8E8E8',
                             }}
                         >
-                            <img
+                            <img loading="lazy" decoding="async"
                                 src="/quoteicon.svg"
                                 alt=""
                                 aria-hidden="true"
@@ -316,13 +316,13 @@ const DeptSection11 = ({ courseData }: Props) => {
                                     {active.quote}
                                 </p>
                                 <p
-                                    className={`${marcellus.className} text-[24px] text-[#0071BC] mt-5`}
+                                    className={`${marcellus.className} text-2xl text-[#0071BC] mt-5`}
                                     style={{ lineHeight: '30px' }}
                                 >
                                     {active.name}
                                 </p>
                                 <p
-                                    className={`${inter.className} font-normal text-[16px] text-[#4B4B4B] capitalize mt-1`}
+                                    className={`${inter.className} font-normal text-base text-[#4B4B4B] capitalize mt-1`}
                                     style={{ lineHeight: '25px' }}
                                 >
                                     {active.department}
@@ -338,7 +338,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                         style={{ width: '43px', height: '42px', left: '0px', top: '322px' }}
                         aria-label="Previous testimonial"
                     >
-                        <img src="/left_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
+                        <img loading="lazy" decoding="async" src="/left_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
                     </button>
 
                     {/* Right Arrow */}
@@ -348,7 +348,7 @@ const DeptSection11 = ({ courseData }: Props) => {
                         style={{ width: '43px', height: '42px', left: '1238px', top: '322px' }}
                         aria-label="Next testimonial"
                     >
-                        <img src="/right_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
+                        <img loading="lazy" decoding="async" src="/right_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
                     </button>
                 </div>
 

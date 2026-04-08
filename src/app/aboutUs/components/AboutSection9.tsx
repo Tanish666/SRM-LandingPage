@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const marcellus = Marcellus({
@@ -41,7 +41,7 @@ const AboutSection9 = () => {
                 {/* Header Content */}
                 <div className="flex flex-col items-center mb-12 relative z-10">
                     <SectionPill text="Our Facility" className="mb-6" />
-                    <h2 className={`${marcellus.className} text-[#FFFFFF] text-3xl md:text-[45px] lg:text-[48px] leading-tight max-w-4xl text-center`}>
+                    <h2 className={`${marcellus.className} text-white text-3xl md:text-[45px] lg:text-5xl leading-tight max-w-4xl text-center`}>
                         Empowering Future Healthcare Professionals
                     </h2>
                 </div>
@@ -72,7 +72,7 @@ const AboutSection9 = () => {
                             <div className="absolute bottom-0 left-0 right-0 z-20 h-16 backdrop-blur-[2px] flex items-center justify-center">
                                 <div className="flex items-center gap-3 w-full px-4">
                                     <div className="h-[1.5px] w-7 shrink-0 bg-[#FFD812]" />
-                                    <span className={`${marcellus.className} text-white text-[13px] lg:text-[14px]  tracking-wide uppercase whitespace-nowrap`}>
+                                    <span className={`${marcellus.className} text-white text-[13px] lg:text-sm  tracking-wide uppercase whitespace-nowrap`}>
                                         {item.title}
                                     </span>
                                     <div className="h-[1.5px] flex-grow bg-[#FFD812]" />
@@ -99,7 +99,7 @@ const AboutSection9 = () => {
                             <div className="absolute bottom-0 left-0 right-0 z-20 h-16 backdrop-blur-[2px] flex items-center justify-center">
                                 <div className="flex items-center gap-3 w-full px-4">
                                     <div className="h-[1.5px] w-7 shrink-0 bg-[#FFD812]" />
-                                    <span className={`${marcellus.className} text-white text-[13px] lg:text-[14px]  tracking-wide uppercase whitespace-nowrap`}>
+                                    <span className={`${marcellus.className} text-white text-[13px] lg:text-sm  tracking-wide uppercase whitespace-nowrap`}>
                                         {facilities[currentIndex].title}
                                     </span>
                                     <div className="h-[1.5px] flex-grow bg-[#FFD812]" />

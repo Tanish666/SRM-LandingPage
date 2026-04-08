@@ -2,7 +2,7 @@
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
 import Image from 'next/image'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
@@ -57,7 +57,7 @@ const DeptSection5 = ({ courseData }: Props) => {
                 </h2>
 
                 {/* Subtitle */}
-                <p className={`${inter.className} text-center text-[#515151] text-[14px] leading-[22px] capitalize mt-3 max-w-[90%]`}>
+                <p className={`${inter.className} text-center text-[#515151] text-sm leading-[22px] capitalize mt-3 max-w-[90%]`}>
                     Research At SRM Allied Health We Blend Academic Excellence With Real-World Applications To Prepare Our Students For Impactful Career.
                 </p>
 
@@ -73,7 +73,7 @@ const DeptSection5 = ({ courseData }: Props) => {
                         paddingRight: '4px',
                     }}
                 >
-                    <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                    <span className={`${inter.className} text-lg font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
                     <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="5" y1="19" x2="19" y2="5" />
@@ -95,7 +95,7 @@ const DeptSection5 = ({ courseData }: Props) => {
                                 style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
                             >
                                 <div className="flex items-start justify-between mb-3">
-                                    <h3 className={`${marcellus.className} text-[36px] leading-[36px] text-[#0071BC]`}>
+                                    <h3 className={`${marcellus.className} text-4xl leading-[36px] text-[#0071BC]`}>
                                         {stat.num}
                                     </h3>
                                     <Image
@@ -106,10 +106,10 @@ const DeptSection5 = ({ courseData }: Props) => {
                                         className="object-contain max-w-[50px] max-h-[50px]"
                                     />
                                 </div>
-                                <p className={`${marcellus.className} text-[18px] leading-[24px] text-black capitalize mb-1`}>
+                                <p className={`${marcellus.className} text-lg leading-[24px] text-black capitalize mb-1`}>
                                     {stat.label}
                                 </p>
-                                <p className={`${inter.className} text-[14px] leading-[22px] text-[#515151] capitalize`}>
+                                <p className={`${inter.className} text-sm leading-[22px] text-[#515151] capitalize`}>
                                     {stat.desc}
                                 </p>
                             </div>
@@ -157,7 +157,7 @@ const DeptSection5 = ({ courseData }: Props) => {
                             paddingRight: '4px',
                         }}
                     >
-                        <span className={`${inter.className} text-[18px] font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                        <span className={`${inter.className} text-lg font-normal text-black capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
                         <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="19" x2="19" y2="5" />
@@ -183,13 +183,13 @@ const DeptSection5 = ({ courseData }: Props) => {
                                         <Image src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
                                     </div>
                                     <h3
-                                        className={`${marcellus.className} absolute text-[40px] leading-[40px] text-[#0071BC]`}
+                                        className={`${marcellus.className} absolute text-5xl leading-[40px] text-[#0071BC]`}
                                         style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
                                     >
                                         {stat.num}
                                     </h3>
                                     <p
-                                        className={`${marcellus.className} absolute text-[20px] leading-[25px] text-black capitalize`}
+                                        className={`${marcellus.className} absolute text-xl leading-[25px] text-black capitalize`}
                                         style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
                                     >
                                         {stat.label}

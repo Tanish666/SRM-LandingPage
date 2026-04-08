@@ -47,7 +47,7 @@ const Faq = () => {
                                 onClick={() => setOpenIndex(isOpen ? -1 : idx)}
                                 className={`w-full text-left px-6 md:px-8 py-5 flex items-center justify-between transition-colors ${isOpen ? 'bg-[#0070c0] text-white' : 'text-[#444] hover:bg-[#e8eaed]'}`}
                             >
-                                <span className={`text-[14px] md:text-[16px] pr-4 ${isOpen ? 'font-medium' : 'font-normal'}`}>
+                                <span className={`text-sm md:text-base pr-4 ${isOpen ? 'font-medium' : 'font-normal'}`}>
                                     {faq.question}
                                 </span>
                                 <span className="shrink-0">

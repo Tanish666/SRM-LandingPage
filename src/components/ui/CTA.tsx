@@ -6,20 +6,28 @@ interface ExploreButtonProps {
     text: string
     onClick?: () => void
     className?: string
+    disabled?: boolean
 }
 
-const CTAButton = ({ text, onClick, className }: ExploreButtonProps) => {
+const CTAButton = ({ text, onClick, className, disabled = false }: ExploreButtonProps) => {
     return (
         <button
             onClick={onClick}
+            disabled={disabled}
             className={cn(
-                "group flex items-center justify-between gap-4 bg-[#FFEC22] pl-8 pr-1.5 py-1.5 border border-[#E5E5E5] rounded-[33.57px] shadow-md hover:shadow-lg transition-all duration-300 w-fit min-w-[160px]",
+                "group flex items-center justify-between gap-4 bg-[#FFEC22] pl-8 pr-1.5 py-1.5 border border-[#E5E5E5] rounded-[33.57px] shadow-md transition-all duration-300 w-fit min-w-[160px]",
+                "hover:shadow-lg hover:bg-[#ffe100]", // Hover state
+                "active:scale-[0.98] active:shadow-sm", // Active state
+                "disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-md disabled:active:scale-100 disabled:hover:bg-[#FFEC22]", // Disabled state
                 className
             )}
         >
-            <span className="text-[#000000] font-medium tracking-wide whitespace-nowrap">{text}</span>
-            <div className="bg-[#FFFFFF] rounded-full p-2.5 group-hover:bg-slate-50 transition-colors shadow-sm">
-                <ArrowUpRight className="size-5 text-slate-900" />
+            <span className="text-black font-medium tracking-wide whitespace-nowrap">{text}</span>
+            <div className={cn(
+                "bg-white rounded-full p-2.5 shadow-sm transition-colors",
+                !disabled && "group-hover:bg-slate-50"
+            )}>
+                <ArrowUpRight className={cn("size-5", disabled ? "text-slate-400" : "text-slate-900")} />
             </div>
         </button>
     )

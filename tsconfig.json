@@ -38,6 +38,7 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
+    "src_backup",
     "node_modules"
   ]
 }

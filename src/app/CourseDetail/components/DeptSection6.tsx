@@ -3,7 +3,7 @@ import React from 'react'
 import { Marcellus } from 'next/font/google'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -44,7 +44,7 @@ const DeptSection6 = ({ courseData }: Props) => {
                         <SectionPill text="Programs offered" className="mb-5 self-center lg:self-start mt-4 lg:mt-0" />
 
                         {/* Title */}
-                        <h2 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[40px] text-black capitalize mb-4 leading-tight`}>
+                        <h2 className={`${marcellus.className} text-3xl md:text-4xl lg:text-5xl text-black capitalize mb-4 leading-tight`}>
                             {courseName}
                         </h2>
 

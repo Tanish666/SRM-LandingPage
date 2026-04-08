@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus } from 'next/font/google'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -21,11 +21,11 @@ const AboutSection12 = () => {
                 <div className="flex flex-col relative z-10 w-full lg:w-3/5">
                     <SectionPill text="Enquiry" className="mb-6" />
 
-                    <h2 className={`${marcellus.className} text-4xl md:text-[48px] text-white leading-[1.2] mb-6`}>
+                    <h2 className={`${marcellus.className} text-4xl md:text-5xl text-white leading-[1.2] mb-6`}>
                         Shape The Future Of Healthcare — Start Your Journey Today!
                     </h2>
 
-                    <p className="text-white text-[16px] leading-[1.6] max-w-2xl opacity-90">
+                    <p className="text-white text-base leading-[1.6] max-w-2xl opacity-90">
                         Curious About Our Cutting-Edge Programs, Research, Or Campus Life? Connect With SRM College Of Allied Health Sciences To Explore How We Can Guide Your Career In The Dynamic World Of Healthcare And Medical Sciences.
                     </p>
                 </div>

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -59,7 +59,7 @@ const DeptSection9 = ({ courseData }: Props) => {
                         className="p-0 border-none bg-transparent hover:brightness-95 active:scale-95 transition-all cursor-pointer"
                         style={{ width: '43px', height: '42px' }}
                     >
-                        <img src="/left_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
+                        <img loading="lazy" decoding="async" src="/left_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
                     </button>
 
                     {/* Right Arrow Button  */}
@@ -67,7 +67,7 @@ const DeptSection9 = ({ courseData }: Props) => {
                         className="p-0 border-none bg-transparent hover:brightness-110 active:scale-95 transition-all cursor-pointer"
                         style={{ width: '43px', height: '42px' }}
                     >
-                        <img src="/right_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
+                        <img loading="lazy" decoding="async" src="/right_arrow.svg" alt="" style={{ width: '43px', height: '42px' }} />
                     </button>
                 </div>
 
@@ -84,7 +84,7 @@ const DeptSection9 = ({ courseData }: Props) => {
                             {/* Date Label with Yellow Bar */}
                             <div className="flex items-center gap-[6px] mt-[14px] mb-1">
                                 <span style={{ width: '10px', height: '16px', background: '#FFD812' }} />
-                                <span className={`${inter.className} text-[16px] font-normal text-[#333333]`} style={{ lineHeight: '26px' }}>
+                                <span className={`${inter.className} text-base font-normal text-[#333333]`} style={{ lineHeight: '26px' }}>
                                     {card.date}
                                 </span>
                             </div>
@@ -101,7 +101,7 @@ const DeptSection9 = ({ courseData }: Props) => {
 
                             {/* Action Link */}
                             <button
-                                className={`${inter.className} text-[16px] text-[#0071BC] font-normal hover:underline cursor-pointer bg-transparent border-none p-0`}
+                                className={`${inter.className} text-base text-[#0071BC] font-normal hover:underline cursor-pointer bg-transparent border-none p-0`}
                                 style={{ lineHeight: '26px' }}
                             >
                                 Read More

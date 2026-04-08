@@ -23,9 +23,9 @@ const AboutSection4 = () => {
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 md:gap-6 mb-6 md:mb-8">
                             <div className="text-[#46A2FF] w-12 md:w-auto">
-                                <img src="ASec4Svg1.svg" alt="" className="w-full h-auto" />
+                                <img loading="lazy" decoding="async" src="ASec4Svg1.svg" alt="" className="w-full h-auto" />
                             </div>
-                            <h3 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-[#000000] capitalize`}>Vision</h3>
+                            <h3 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize`}>Vision</h3>
                         </div>
                         <p className={`${inter.className} text-[#515151] capitalize text-sm md:text-base leading-relaxed`}>
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore Eu Fugiat Nulla Pariatur.
@@ -38,9 +38,9 @@ const AboutSection4 = () => {
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 md:gap-6 mb-6 md:mb-8">
                             <div className="text-[#46A2FF] w-12 md:w-auto">
-                                <img src="ASec4Svg2.svg" alt="" className="w-full h-auto" />
+                                <img loading="lazy" decoding="async" src="ASec4Svg2.svg" alt="" className="w-full h-auto" />
                             </div>
-                            <h3 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-[#000000] capitalize`}>Mission</h3>
+                            <h3 className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize`}>Mission</h3>
                         </div>
                         <p className={`${inter.className} text-[#515151] capitalize text-sm md:text-base leading-relaxed`}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

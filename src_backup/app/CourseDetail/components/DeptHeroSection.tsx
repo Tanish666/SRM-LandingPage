@@ -1,0 +1,43 @@
+'use client'
+import React from 'react'
+import {
+    Marcellus, Inter
+
+} from 'next/font/google'
+
+const inter = Inter({
+    subsets: ['latin'],
+    weight: ['400'],
+})
+
+interface Props {
+    courseData?: any;
+}
+
+const DeptHeroSection = ({ courseData }: Props) => {
+    return (
+        <section className="relative w-full h-80 md:h-[400px] flex items-center justify-start overflow-hidden px-4 md:px-20 mt-5">
+            {/* Background */}
+            <div className="absolute inset-0 bg-slate-900 overflow-hidden mx-2 md:mx-5 rounded-3xl">
+
+                {/* Fallback pattern or image could go here */}
+                <img loading="lazy" decoding="async" src={courseData?.banners?.[0]?.image_url || "/ASec1Pic1.svg"} className="w-full h-full object-cover" />
+            </div>
+
+            <div className="absolute z-20 flex flex-col items-start w-full bottom-8 md:bottom-14 px-4 md:px-0 md:left-16 lg:left-20">
+                <h1 className={`font-display text-white text-4xl md:text-5xl lg:text-7xl mb-4 md:mb-6 font-light text-left capitalize`}>
+                    {courseData?.name?.toLowerCase() || "Cardiac Care Technology"}
+                </h1>
+                <div className={`${inter.className} inline-flex flex-wrap items-center justify-start gap-x-2 gap-y-1 bg-white/95 rounded-full px-4 py-2 md:px-5 md:py-3 shadow-sm font-normal text-xs md:text-base max-w-72 md:max-w-none`}>
+                    <span className="text-foreground font-normal">HOME</span>
+                    <span className="size-[8px] md:size-[16px] rounded-full bg-[#FFD812]" />
+                    <span className="text-foreground font-normal uppercase">DEPARTMENT PAGE</span>
+                    <span className="hidden md:inline-block size-[8px] md:size-[16px] rounded-full bg-[#FFD812]" />
+                    <span className="text-foreground font-normal uppercase">{courseData?.name || "CARDIAC CARE TECHNOLOGY"}</span>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default DeptHeroSection;

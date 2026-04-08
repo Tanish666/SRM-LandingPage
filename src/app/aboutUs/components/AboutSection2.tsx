@@ -2,7 +2,7 @@
 import React from 'react'
 import { Marcellus } from 'next/font/google'
 import Image from 'next/image'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -18,7 +18,7 @@ const AboutSection2 = () => {
                     <div className="relative w-full aspect-square rounded-[20px] overflow-hidden ">
                         {/* Placeholder for the main group image */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <img src='ASec2Pic1.svg' className='w-full h-full object-cover' />
+                            <img loading="lazy" decoding="async" src='ASec2Pic1.svg' className='w-full h-full object-cover' />
                         </div>
                     </div>
                     {/* Overlay Info Bar */}
@@ -28,7 +28,7 @@ const AboutSection2 = () => {
                             <div className="w-12 md:w-24 h-4 md:h-6 bg-[#FFD100] skew-x-[15deg]"></div>
                             <div className="w-5 md:w-8 h-4 md:h-6 bg-[#006BB3] skew-x-[15deg]"></div>
                         </div>
-                        <span className={`${marcellus.className} text-lg md:text-2xl text-[#000000] whitespace-normal md:whitespace-nowrap`}>
+                        <span className={`${marcellus.className} text-lg md:text-2xl text-black whitespace-normal md:whitespace-nowrap`}>
                             From house of SRM Trichy
                         </span>
                     </div>
@@ -38,7 +38,7 @@ const AboutSection2 = () => {
                 <div className="w-full lg:flex-1 flex flex-col items-center md:items-start justify-center mt-8 lg:mt-0 text-center md:text-left">
                     <SectionPill text="About Us" className="mb-8" />
 
-                    <div className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-6 leading-[1.2]`}>
+                    <div className={`${marcellus.className} text-3xl md:text-[45px] text-black mb-6 leading-[1.2]`}>
                         <p>Shaping Healthcare Leaders</p>
                         <p>For A Better Tomorrow</p>
                     </div>
@@ -57,7 +57,7 @@ const AboutSection2 = () => {
                             <div className="bg-gradient-to-b from-[#0071BC] to-[#0096FA] rounded-[5px] w-[70px] h-[70px] md:w-[90px] md:h-[90px] flex items-center justify-center shrink-0">
                                 <span className={`${marcellus.className} text-white text-3xl md:text-5xl`}>25</span>
                             </div>
-                            <div className={`${marcellus.className} text-lg md:text-2xl leading-tight text-[#000000] text-left`}>
+                            <div className={`${marcellus.className} text-lg md:text-2xl leading-tight text-black text-left`}>
                                 Year of<br />Legacy
                             </div>
                         </div>
@@ -66,7 +66,7 @@ const AboutSection2 = () => {
 
                         <div className="flex items-center gap-3 md:gap-4">
                             <span className={`${marcellus.className} text-[#0071BC] text-4xl md:text-6xl leading-none`}>18+</span>
-                            <div className={`${marcellus.className} text-lg md:text-2xl leading-tight text-[#000000] text-left`}>
+                            <div className={`${marcellus.className} text-lg md:text-2xl leading-tight text-black text-left`}>
                                 Specialized<br />Programs
                             </div>
                         </div>

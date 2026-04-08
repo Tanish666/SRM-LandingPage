@@ -1,8 +1,8 @@
 
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/footer";
 import { Montserrat, Inter, Space_Grotesk } from 'next/font/google';
 
 const inter = Inter({
@@ -18,6 +18,16 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "SRM Institute of Science and Technology",
+  description: "Official portal of SRM Institute of Science and Technology. Discover programs, news, and events.",
+  keywords: "SRM, university, education, technology, institute",
+  openGraph: {
+    title: "SRM Institute of Science and Technology",
+    description: "Official portal of SRM Institute of Science and Technology.",
+    url: "https://srmist.edu.in",
+    siteName: "SRMIST",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +41,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`antialiased bg-[#FFFFFF99]  ${inter.className} text-black`}
+        className={`antialiased bg-white/60  ${inter.className} text-black`}
       >
         <Navbar />
         {children}

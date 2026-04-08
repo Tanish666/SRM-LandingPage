@@ -25,7 +25,7 @@ const DeptHeroSection = ({ courseData }: Props) => {
             <div className="absolute inset-0 bg-slate-900 overflow-hidden mx-2 md:mx-5 rounded-[20px]">
 
                 {/* Fallback pattern or image could go here */}
-                <img src={courseData?.banners?.[0]?.image_url || "/ASec1Pic1.svg"} className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={courseData?.banners?.[0]?.image_url || "/ASec1Pic1.svg"} className="w-full h-full object-cover" />
             </div>
 
             <div className="absolute z-20 flex flex-col items-start w-full bottom-8 md:bottom-14 px-4 md:px-0 md:left-[60px] lg:left-[80px]">

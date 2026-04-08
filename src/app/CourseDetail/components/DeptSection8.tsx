@@ -2,7 +2,7 @@
 import React from 'react'
 import { Marcellus, Inder } from 'next/font/google'
 import Image from 'next/image'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -46,21 +46,21 @@ const DeptSection8 = ({ courseData }: Props) => {
                     <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
                         <SectionPill text="Principal's Note" className="mb-6" />
                         <h3
-                            className={`${marcellus.className} text-[28px] lg:text-[40px] text-[#0D1B2A] leading-tight mb-4`}
+                            className={`${marcellus.className} text-[28px] lg:text-5xl text-[#0D1B2A] leading-tight mb-4`}
                         >
                             Dr.Kumar Ebenezer K
                         </h3>
                         <p
-                            className={`${inder.className} text-[#0071BC] font-normal mb-8 text-[24px] lg:text-[35px]`}
+                            className={`${inder.className} text-[#0071BC] font-normal mb-8 text-2xl lg:text-[35px]`}
                             style={{ lineHeight: '38.11px', letterSpacing: '-0.03em' }}
                         >
                             Professor &amp; Principal
                         </p>
-                        <p className={`${inder.className} text-[14px] lg:text-[16px] text-[#1a1a1a] mb-3`}>
+                        <p className={`${inder.className} text-sm lg:text-base text-[#1a1a1a] mb-3`}>
                             <span className="font-bold">Email:</span>{' '}
                             drkumarebenezerk@gmail.com
                         </p>
-                        <p className={`${inder.className} text-[14px] lg:text-[16px] text-[#1a1a1a]`}>
+                        <p className={`${inder.className} text-sm lg:text-base text-[#1a1a1a]`}>
                             <span className="font-bold">Phone:</span>{' '}
                             000-000-000
                         </p>

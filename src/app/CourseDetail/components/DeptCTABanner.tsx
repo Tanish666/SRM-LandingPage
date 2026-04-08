@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -24,7 +24,7 @@ const DeptCTABanner = ({ courseData }: Props) => {
                 <div
                     className="relative mx-auto overflow-hidden bg-[#FFD812] rounded-[20px] w-full max-w-[1241px] py-10 lg:py-0 lg:h-[298px]"
                 >
-                    <img
+                    <img loading="lazy" decoding="async"
                         src="/Contourdept.svg"
                         alt=""
                         aria-hidden="true"
@@ -43,7 +43,7 @@ const DeptCTABanner = ({ courseData }: Props) => {
                                 {' '}Start Your Journey Today!
                             </h2>
                             <p
-                                className={`${inter.className} text-[14px] lg:text-[15px] text-[#333333] font-normal capitalize leading-relaxed lg:leading-[25px] max-w-[631px]`}
+                                className={`${inter.className} text-sm lg:text-[15px] text-[#333333] font-normal capitalize leading-relaxed lg:leading-[25px] max-w-[631px]`}
                             >
                                 Lorem Ipsum Odor Amet, Consectetuer Adipiscing Elit. Hac Arcu Primis Hac In Senectus
                                 Sit Penatibus. Efficitur Rutrum Pellentesque
@@ -51,7 +51,7 @@ const DeptCTABanner = ({ courseData }: Props) => {
                         </div>
 
                         <button
-                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal cursor-pointer transition-colors w-[220px] h-[55px] lg:w-[275px] lg:h-[70px] text-[20px] lg:text-[26.19px] border-none`}
+                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-gray-50 text-black font-normal cursor-pointer transition-colors w-[220px] h-[55px] lg:w-[275px] lg:h-[70px] text-xl lg:text-[26.19px] border-none`}
                             style={{
                                 borderRadius: '49px',
                                 lineHeight: '32px',

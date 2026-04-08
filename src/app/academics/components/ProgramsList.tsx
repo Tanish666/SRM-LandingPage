@@ -80,7 +80,7 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
 
     return (
         <section className="flex flex-col items-center justify-center w-full px-8 md:px-20 py-16">
-            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-10 text-center`}>
+            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-black mb-10 text-center`}>
                 Our Allied Health Sciences Programs
             </h2>
 
@@ -166,18 +166,18 @@ const ProgramsList = ({ coursesData }: { coursesData?: any[] }) => {
                                 <div key={programId} className="px-6 md:px-10">
                                     <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center py-6 border-b`} style={{ borderColor: '#c0c0c0' }}>
                                         <div className="mb-6 lg:mb-0 w-full lg:w-auto">
-                                            <h3 className={`${marcellus.className} text-[18px] lg:text-[20px] text-gray-900 mb-[4px]`}>{program.name}</h3>
-                                            <div className="text-[12px] lg:text-[13px] text-gray-500 flex flex-wrap items-center gap-3 lg:gap-4">
+                                            <h3 className={`${marcellus.className} text-lg lg:text-xl text-gray-900 mb-[4px]`}>{program.name}</h3>
+                                            <div className="text-xs lg:text-[13px] text-gray-500 flex flex-wrap items-center gap-3 lg:gap-4">
                                                 <span>Duration : {program.duration || "3 Year"}</span>
                                                 <span className="hidden lg:inline text-gray-300">|</span>
                                                 <Link href={`/CourseDetail?id=${programId}`} className="text-[#0070c0] hover:underline font-medium">Explore Program</Link>
                                             </div>
                                         </div>
                                         <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
-                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 py-2.5 bg-[#0070c0] text-white rounded-full font-medium text-[12px] lg:text-[13px] hover:bg-blue-700 transition-all whitespace-nowrap">
+                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 py-2.5 bg-[#0070c0] text-white rounded-full font-medium text-xs lg:text-[13px] hover:bg-blue-700 transition-all whitespace-nowrap">
                                                 Check Eligibility
                                             </button>
-                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 py-2.5 bg-[#FFD812] text-gray-900 rounded-full font-medium text-[12px] lg:text-[13px] hover:bg-yellow-400 transition-all shadow-sm whitespace-nowrap">
+                                            <button className="flex-1 lg:flex-none px-6 lg:px-8 py-2.5 bg-[#FFD812] text-gray-900 rounded-full font-medium text-xs lg:text-[13px] hover:bg-yellow-400 transition-all shadow-sm whitespace-nowrap">
                                                 Apply Now
                                             </button>
                                         </div>

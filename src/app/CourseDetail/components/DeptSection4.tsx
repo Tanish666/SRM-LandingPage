@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Marcellus, Inter } from 'next/font/google'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -35,10 +35,10 @@ const DeptSection4 = ({ courseData }: Props) => {
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 md:gap-6 mb-6 md:mb-8">
                             <div className="text-[#46A2FF] w-12 md:w-auto">
-                                <img src="deptvision.png" alt="Vision Icon" className="w-full h-auto" />
+                                <img loading="lazy" decoding="async" src="deptvision.png" alt="Vision Icon" className="w-full h-auto" />
                             </div>
                             <h3
-                                className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-[#000000] capitalize`}
+                                className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize`}
                             >
                                 Vision
                             </h3>
@@ -56,10 +56,10 @@ const DeptSection4 = ({ courseData }: Props) => {
                     <div className="relative z-10">
                         <div className="flex items-center gap-4 md:gap-6 mb-6 md:mb-8">
                             <div className="text-[#46A2FF] w-12 md:w-auto">
-                                <img src="deptmission.png" alt="Mission Icon" className="w-full h-auto" />
+                                <img loading="lazy" decoding="async" src="deptmission.png" alt="Mission Icon" className="w-full h-auto" />
                             </div>
                             <h3
-                                className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-[#000000] capitalize`}
+                                className={`${marcellus.className} text-3xl md:text-4xl lg:text-[45px] text-black capitalize`}
                             >
                                 Mission
                             </h3>

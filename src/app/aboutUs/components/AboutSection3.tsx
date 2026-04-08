@@ -45,7 +45,7 @@ const AboutSection3 = () => {
         <section className="py-12 px-6 md:px-20 max-w-8xl mx-auto w-full flex flex-wrap lg:flex-nowrap justify-center gap-8">
             {cards.map((card, idx) => (
                 <div key={idx} className={`flex-1 min-w-[240px] bg-[#FFF4B1] rounded-[24px] py-12 px-8 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-[#FFE043]`}>
-                    <h3 className={`${marcellus.className} text-5xl lg:text-[56px] text-[#0071BC] mb-4 font-light`}>
+                    <h3 className={`${marcellus.className} text-5xl lg:text-6xl text-[#0071BC] mb-4 font-light`}>
                         <Counter value={card.num} />
                     </h3>
                     <p className={`text-[#515151] text-[15px] leading-relaxed max-w-[200px] `}>

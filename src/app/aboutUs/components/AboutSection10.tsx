@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Marcellus } from 'next/font/google'
 import Image from 'next/image'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const marcellus = Marcellus({
@@ -51,7 +51,7 @@ const AboutSection10 = () => {
         <section className="py-24 px-6 md:px-20 max-w-7xl mx-auto flex flex-col items-center relative overflow-hidden">
             <SectionPill text="Achievements" className="mb-8" />
 
-            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-[#000000] mb-16 text-center leading-tight max-w-2xl`}>
+            <h2 className={`${marcellus.className} text-3xl md:text-[45px] text-black mb-16 text-center leading-tight max-w-2xl`}>
                 Achievements & Awards
             </h2>
 
@@ -60,7 +60,7 @@ const AboutSection10 = () => {
                 {/* Left Arrow */}
                 <button 
                     onClick={handlePrevious}
-                    className="absolute -left-4 lg:-left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFD100] flex items-center justify-center text-[#ffffff]  shadow-md hover:-translate-x-1 transition-transform z-10"
+                    className="absolute -left-4 lg:-left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFD100] flex items-center justify-center text-white  shadow-md hover:-translate-x-1 transition-transform z-10"
                 >
                     <ArrowLeft size={20} />
                 </button>
@@ -69,7 +69,7 @@ const AboutSection10 = () => {
                 <div className="hidden md:grid grid-cols-4 gap-6 w-full max-w-6xl mx-auto flex-1">
                     {achievements.map((num, idx) => (
                         <div key={idx} className="bg-[#FFF7C7] border border-[#FDEB96] rounded-[10px] p-8 flex flex-col items-center justify-center text-center shadow-sm relative group hover:-translate-y-1 transition-transform cursor-pointer overflow-hidden w-full max-w-[260px] h-[191px] mx-auto">
-                            <img src={num.img} alt="" className="max-w-full h-auto" />
+                            <img loading="lazy" decoding="async" src={num.img} alt="" className="max-w-full h-auto" />
                         </div>
                     ))}
                 </div>
@@ -85,7 +85,7 @@ const AboutSection10 = () => {
                             transition={{ duration: 0.5 }}
                             className="bg-[#FFF7C7] border border-[#FDEB96] rounded-[10px] p-8 flex flex-col items-center justify-center text-center shadow-sm relative w-full max-w-[260px] h-[191px] mx-auto"
                         >
-                            <img src={achievements[currentIndex].img} alt="" className="max-w-full h-auto" />
+                            <img loading="lazy" decoding="async" src={achievements[currentIndex].img} alt="" className="max-w-full h-auto" />
                         </motion.div>
                     </AnimatePresence>
                 </div>

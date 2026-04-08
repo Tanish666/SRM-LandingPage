@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Marcellus } from 'next/font/google'
 import { ChevronDown, ArrowUp } from 'lucide-react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -34,13 +34,13 @@ const AboutSection11 = () => {
     return (
         <section className="relative w-full bg-[#FFD100] overflow-hidden">
             {/* Some graphic overlay */}
-            <img src="ASec11Vector.svg" className='absolute z-10 bottom-0' alt="" />
+            <img loading="lazy" decoding="async" src="ASec11Vector.svg" className='absolute z-10 bottom-0' alt="" />
             <div className="max-w-[1450px] mx-auto px-6 md:px-20 py-24 flex flex-col lg:flex-row gap-16 lg:gap-24 relative z-10">
 
                 {/* Left Text */}
                 <div className="w-full lg:w-1/2 flex flex-col">
                     <SectionPill text="Our Principles" className="mb-6" />
-                    <h2 className={`${marcellus.className} text-4xl md:text-[60px] text-slate-900 mb-6 md:mb-8 leading-tight`}>
+                    <h2 className={`${marcellus.className} text-4xl md:text-6xl text-slate-900 mb-6 md:mb-8 leading-tight`}>
                         Our Principles
                     </h2>
                     <p className="text-[#3E3E3E] text-[15px] leading-[1.8] max-w-xl mb-8 font-normal">
@@ -62,7 +62,7 @@ const AboutSection11 = () => {
                                 </span>
                             </button>
                             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openIdx === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <div className="px-8 pb-8 pt-4 text-[#3E3E3E] leading-relaxed text-[16px] font-normal">
+                                <div className="px-8 pb-8 pt-4 text-[#3E3E3E] leading-relaxed text-base font-normal">
                                     {item.a}
                                 </div>
                             </div>

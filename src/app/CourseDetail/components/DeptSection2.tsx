@@ -2,7 +2,7 @@
 import React from 'react'
 import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -32,7 +32,7 @@ const DeptSection2 = ({ courseData }: Props) => {
                         <div
                             className="relative overflow-hidden z-10 w-[95%] h-[95%] rounded-[10.72px]"
                         >
-                            <img src='/deptsecpic2.png' className='w-full h-full object-cover' alt="Department students" />
+                            <img loading="lazy" decoding="async" src='/deptsecpic2.png' className='w-full h-full object-cover' alt="Department students" />
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ const DeptSection2 = ({ courseData }: Props) => {
 
                     {/* Body text  */}
                     <div
-                        className="font-light text-base md:text-[18px] text-black flex flex-col gap-5 leading-relaxed lg:max-w-[705px] text-justify"
+                        className="font-light text-base md:text-lg text-black flex flex-col gap-5 leading-relaxed lg:max-w-[705px] text-justify"
                     >
                         {contentHtml ? (
                             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />

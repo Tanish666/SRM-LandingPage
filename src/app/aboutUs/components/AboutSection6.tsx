@@ -4,7 +4,7 @@ import { Marcellus } from 'next/font/google'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import CTAButton from '@/components/ui/CTA'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const marcellus = Marcellus({
     subsets: ['latin'],
@@ -68,11 +68,11 @@ const AboutSection6 = () => {
                         </div>
                         <div className='flex items-center gap-1.5'>
                             <div className='w-[7px] h-[18px] lg:w-[9px] lg:h-[22px] bg-[#FFD812] shrink-0' />
-                            <h3 className={`${marcellus.className} text-[20px] lg:text-[26px] text-slate-900 leading-tight`}>{leader.name}</h3>
+                            <h3 className={`${marcellus.className} text-xl lg:text-[26px] text-slate-900 leading-tight`}>{leader.name}</h3>
                         </div>
                         <div className="mt-2">
                             <p className="text-[#0071BC] font-medium text-[15px] lg:text-[19.31px]">{leader.role}</p>
-                            <p className="text-[#333333] text-[14px] lg:text-[19.31px] leading-relaxed max-w-[95%]">{leader.desc}</p>
+                            <p className="text-[#333333] text-sm lg:text-[19.31px] leading-relaxed max-w-[95%]">{leader.desc}</p>
                         </div>
                     </div>
                 ))}
