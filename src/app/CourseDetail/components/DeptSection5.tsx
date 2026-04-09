@@ -49,18 +49,18 @@ const DeptSection5 = ({ courseData }: Props) => {
                 <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
                     <SectionPill text="Career Opportunities" className="mb-6 4xl:mb-12" />
                     
-                    <h2 className={"text-h2 md:text-h2 lg:text-h1 3xl:text-6xl 4xl:text-display-2 leading-tight text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal"}>
+                    <h2 className="text-h2 md:text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 leading-tight text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal">
                         Empowering The Next Generation Of Healthcare Leaders
                     </h2>
 
-                    <p className={`${inter.className} text-navy-800/70 text-sm md:text-base 3xl:text-xl 4xl:text-3xl leading-relaxed capitalize max-w-2xl 4xl:max-w-5xl mb-8 4xl:mb-16`}>
+                    <p className={`${inter.className} text-navy-800/70 text-15px md:text-body 3xl:text-20px 4xl:text-28px leading-relaxed capitalize max-w-2xl 4xl:max-w-5xl mb-8 4xl:mb-16`}>
                         At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
                     </p>
 
                     <button
                         className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer w-68 4xl:w-120 h-12 4xl:h-24 rounded-full border border-brandBorder pl-6 4xl:pl-12 pr-1 4xl:pr-2 group"
                     >
-                        <span className={`${inter.className} text-lg 4xl:text-3xl font-normal text-navy-900 capitalize`}>Explore Our Research</span>
+                        <span className={`${inter.className} text-18px 4xl:text-28px font-normal text-navy-900 capitalize`}>Explore Our Research</span>
                         <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-10 h-10 4xl:w-20 4xl:h-20">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="4xl:w-10 4xl:h-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-navy-900">
                                 <line x1="5" y1="19" x2="19" y2="5" />
@@ -94,13 +94,13 @@ const DeptSection5 = ({ courseData }: Props) => {
                                         </div>
                                     </div>
                                     <div className="mt-auto">
-                                        <h3 className={"text-4xl md:text-5xl 3xl:text-6xl 4xl:text-display-1 leading-tight text-brand-blue-dark mb-4 4xl:mb-8 font-heading font-light"}>
+                                        <h3 className="text-38px md:text-48px 3xl:text-65px 4xl:text-display-1 leading-tight text-brand-blue-dark mb-4 4xl:mb-8 font-heading font-light">
                                             {stat.num}
                                         </h3>
-                                        <p className="font-heading text-lg md:text-xl 3xl:text-2xl 4xl:text-4xl leading-tight text-navy-900 capitalize mb-2 4xl:mb-4">
+                                        <p className="font-heading text-18px md:text-20px 3xl:text-24px 4xl:text-38px leading-tight text-navy-900 capitalize mb-2 4xl:mb-4">
                                             {stat.label}
                                         </p>
-                                        <p className={`${inter.className} text-sm md:text-base 3xl:text-lg 4xl:text-3xl leading-relaxed text-navy-800/70 capitalize`}>
+                                        <p className={`${inter.className} text-15px md:text-body 3xl:text-18px 4xl:text-28px leading-relaxed text-navy-800/70 capitalize`}>
                                             {stat.desc}
                                         </p>
                                     </div>

@@ -1,7 +1,13 @@
 'use client'
 import React, { useState } from 'react'
+import { Marcellus } from 'next/font/google'
 import { ChevronDown, ArrowUp } from 'lucide-react'
 import SectionPill from '@/components/home/SectionPill'
+
+const marcellus = Marcellus({
+    subsets: ['latin'],
+    weight: ['400'],
+})
 
 const AboutSection11 = () => {
     const [openIdx, setOpenIdx] = useState<number | null>(0)
@@ -26,37 +32,37 @@ const AboutSection11 = () => {
     ]
 
     return (
-        <section className="relative w-full bg-brand-yellow overflow-hidden flex justify-center py-12 md:py-20 3xl:py-32 4xl:py-48 px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48">
+        <section className="relative w-full bg-brand-yellow-primary overflow-hidden">
             {/* Some graphic overlay */}
-            <img loading="lazy" decoding="async" src="ASec11Vector.svg" className='absolute z-10 bottom-0' alt="" />
-            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col lg:flex-row gap-16 lg:gap-24 4xl:gap-36 relative z-10">
+            <img src="ASec11Vector.svg" className='absolute z-10 bottom-0' alt="" />
+            <div className="max-w-layout 3xl:max-w-[1800px] 4xl:max-w-[2200px] mx-auto w-full px-6 md:px-20 py-24 3xl:py-32 4xl:py-48 flex flex-col lg:flex-row gap-16 lg:gap-24 3xl:gap-32 4xl:gap-40 relative z-10">
 
                 {/* Left Text */}
-                <div className="w-full lg:w-1/2 flex flex-col font-heading">
-                    <SectionPill text="Our Principles" className="mb-6 4xl:mb-12" />
-                    <h2 className={"text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-1 text-navy-900 mb-6 md:mb-8 4xl:mb-16 leading-tight font-normal"}>
+                <div className="w-full lg:w-1/2 flex flex-col">
+                    <SectionPill text="Our Principles" className="mb-6 3xl:mb-10 4xl:mb-16" />
+                    <h2 className={`${marcellus.className} text-4xl md:text-60px 3xl:text-80px 4xl:text-100px text-slate-900 mb-6 md:mb-8 4xl:mb-12 leading-tight`}>
                         Our Principles
                     </h2>
-                    <p className="text-navy-900/80 font-sans text-sm 3xl:text-xl 4xl:text-3xl leading-[1.8] max-w-xl 3xl:max-w-3xl 4xl:max-w-5xl mb-8 4xl:mb-16 font-normal">
+                    <p className="text-gray-dark text-15px 3xl:text-20px 4xl:text-28px leading-1-8 max-w-xl 3xl:max-w-2xl 4xl:max-w-4xl mb-8 4xl:mb-16 font-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
                     </p>
                 </div>
 
                 {/* Right Accordion */}
-                <div className="w-full lg:w-1/2 flex flex-col gap-4 4xl:gap-8">
+                <div className="w-full lg:w-1/2 flex flex-col gap-4 3xl:gap-6 4xl:gap-8">
                     {faq.map((item, idx) => (
                         <div key={idx} className="bg-white rounded-none overflow-hidden transition-all duration-300">
                             <button
                                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                                className={`w-full text-left px-6 md:px-8 4xl:px-12 py-4 md:py-6 4xl:py-10 flex items-center justify-between font-normal text-lg md:text-xl 3xl:text-3xl 4xl:text-4xl transition-colors font-heading ${openIdx === idx ? 'bg-brand-blue-dark text-white' : 'text-navy-900 hover:bg-slate-50'}`}
+                                className={`w-full text-left px-6 md:px-8 3xl:px-12 4xl:px-16 py-4 md:py-6 3xl:py-8 4xl:py-12 flex items-center justify-between font-normal text-lg md:text-22px 3xl:text-28px 4xl:text-[38px] transition-colors ${marcellus.className} ${openIdx === idx ? 'bg-brand-blue-cyan text-white' : 'text-gray-dark hover:bg-slate-50'}`}
                             >
                                 {item.q}
                                 <span>
-                                    {openIdx === idx ? <ArrowUp strokeWidth={1.5} className="text-white size-5 md:size-6 3xl:size-8 4xl:size-12" /> : <ChevronDown strokeWidth={1.5} className="text-brand-blue-dark size-5 md:size-6 3xl:size-8 4xl:size-12" />}
+                                    {openIdx === idx ? <ArrowUp strokeWidth={1.5} className="text-white size-5 md:size-6 3xl:size-8 4xl:size-10" /> : <ChevronDown strokeWidth={1.5} className="text-brand-blue-cyan size-5 md:size-6 3xl:size-8 4xl:size-10" />}
                                 </span>
                             </button>
-                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openIdx === idx ? 'max-h-96 4xl:max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <div className="px-8 pb-8 pt-4 4xl:px-12 4xl:pb-12 4xl:pt-8 text-navy-800/80 leading-relaxed text-base 3xl:text-xl 4xl:text-2xl font-normal">
+                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openIdx === idx ? 'max-h-[600px] 4xl:max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <div className="px-8 3xl:px-12 4xl:px-16 pb-8 3xl:pb-12 4xl:pb-16 pt-4 4xl:pt-8 text-gray-dark leading-relaxed text-16px 3xl:text-20px 4xl:text-28px font-normal">
                                     {item.a}
                                 </div>
                             </div>

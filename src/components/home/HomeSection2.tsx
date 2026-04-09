@@ -14,11 +14,11 @@ const HomeSection2 = () => {
                 <div className="flex flex-col items-center text-center mb-10 md:mb-20 4xl:mb-32">
                     <SectionPill text="About Us" className="mb-8 4xl:mb-12" />
 
-                    <h2 className="text-4xl md:text-5xl lg:text-[45px] 3xl:text-[55px] 4xl:text-[80px] text-black mb-8 4xl:mb-12 leading-tight lg:whitespace-nowrap text-center w-full max-w-none font-medium">
+                    <h2 className="text-4xl md:text-5xl lg:text-45px 3xl:text-55px 4xl:text-80px text-black mb-8 4xl:mb-12 leading-tight lg:whitespace-nowrap text-center w-full max-w-none font-medium">
                         Shaping Healthcare Leaders For A Better Tomorrow
                     </h2>
 
-                    <p className="text-[#515151] max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl text-lg md:text-[17px] 3xl:text-[22px] 4xl:text-[28px] leading-relaxed">
+                    <p className="text-[#515151] max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl text-lg md:text-17px 3xl:text-22px 4xl:text-28px leading-relaxed">
                         Welcome To SRM Institute Of Allied Health Sciences, A Pioneering Institution Where Academic Excellence Meets Clinical Innovation. Our Programs Are Designed To Empower Students
                     </p>
                 </div>
@@ -102,7 +102,7 @@ const Card = ({ number, text, imageSrc, className }: { number: string, text: str
 
         {/* Text Content */}
         <div className="absolute bottom-5 left-5 4xl:bottom-10 4xl:left-10 z-20 text-white max-w-[85%]">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl 4xl:text-[5rem] mb-1 4xl:mb-4">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl 4xl:text-5rem mb-1 4xl:mb-4">
                 {number}
             </h3>
             <p className="text-sm md:text-base 3xl:text-xl 4xl:text-2xl font-light leading-snug text-white">

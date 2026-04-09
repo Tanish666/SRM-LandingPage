@@ -257,7 +257,7 @@ export const PreviewCard = ({
 
       <div className='absolute flex justify-center items-center w-full bottom-[0.80rem] gap-3'>
 
-        <div className='items-center w-[70%] rounded-[1.9rem] bg-black  text-white  px-2 py-[0.7rem]  gap-5 overflow-hidden'><h1 className='text-[1rem] opacity-70 text-nowrap  w-full text-center'>Say Hello</h1>
+        <div className='items-center w-[70%] rounded-[1.9rem] bg-black  text-white  px-2 py-[0.7rem]  gap-5 overflow-hidden'><h1 className='text-1rem opacity-70 text-nowrap  w-full text-center'>Say Hello</h1>
         </div>
         <div className='relative flex justify-center items-center'>
           <span className='p-2 bg-white rounded-full z-10'>

@@ -84,7 +84,7 @@ const DeptSection7 = ({ courseData }: Props) => {
                 <SectionPill text="POs, PSOs, PEOs" className="mb-8 4xl:mb-16" />
 
                 {/* Title */}
-                <h2 className={"text-h2 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-tight capitalize mb-6 lg:mb-10 4xl:mb-20 text-center font-heading font-normal"}>
+                <h2 className="text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 leading-tight capitalize mb-6 lg:mb-10 4xl:mb-20 text-center font-heading font-normal">
                     POs,PSOs And PEOs
                 </h2>
 
@@ -99,7 +99,7 @@ const DeptSection7 = ({ courseData }: Props) => {
                                     onClick={() => toggleAccordion(index)}
                                     className={`w-full flex items-center justify-between px-4 lg:px-[42px] 4xl:px-16 transition-all duration-200 rounded-xl 4xl:rounded-3xl relative z-[1] cursor-pointer h-12 lg:h-16 4xl:h-30 ${isOpen ? 'bg-brand-blue-dark' : 'bg-white'}`}
                                 >
-                                    <span className={`font-heading text-lg lg:text-xl 3xl:text-3xl 4xl:text-4xl leading-tight text-left ${isOpen ? 'text-white' : 'text-navy-800/70'}`}>
+                                    <span className={`font-heading text-18px lg:text-20px 3xl:text-28px 4xl:text-38px leading-tight text-left ${isOpen ? 'text-white' : 'text-navy-800/70'}`}>
                                         {item.title}
                                     </span>
                                     <img loading="lazy" decoding="async"
@@ -123,7 +123,7 @@ const DeptSection7 = ({ courseData }: Props) => {
                                     >
                                         <div className="px-4 lg:px-[42px] 4xl:px-16 pb-6 lg:pb-[40px] 4xl:pb-20 space-y-0.5 pt-10 lg:pt-[60px] 4xl:pt-[100px]">
                                             {item.content.map((point: any, pIndex: number) => (
-                                                <p key={pIndex} className={`${poppins.className} text-sm lg:text-base 3xl:text-xl 4xl:text-3xl font-bold text-navy-800/80 leading-relaxed 4xl:leading-[1.6]`}>
+                                                <p key={pIndex} className={`${poppins.className} text-15px lg:text-body 3xl:text-20px 4xl:text-28px font-bold text-navy-800/80 leading-relaxed 4xl:leading-normal`}>
                                                     {point.label && <>{point.label} – </>}<span className="font-normal">{point.text}</span>
                                                 </p>
                                             ))}

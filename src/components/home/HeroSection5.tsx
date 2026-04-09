@@ -87,7 +87,7 @@ export default function HeroSection5() {
             <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)] 3xl:grid-cols-[450px_minmax(0,1fr)] 4xl:grid-cols-[600px_minmax(0,1fr)] gap-10 lg:gap-14 4xl:gap-24 max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full items-start">
 
                 {/* Left Column: Latest News */}
-                <div className="bg-brand-yellow-light rounded-lg overflow-hidden flex flex-col lg:h-[520px] 3xl:h-[650px] 4xl:h-[850px] h-[450px] pb-4 shadow-sm border border-brandBorder">
+                <div className="bg-brand-yellow-light2 rounded-lg overflow-hidden flex flex-col lg:h-[520px] 3xl:h-[650px] 4xl:h-[850px] h-[450px] pb-4 shadow-sm border border-brandBorder">
                     <div className="bg-brand-yellow rounded-lg py-2 3xl:py-4 text-center shadow-sm z-10 mx-1">
                         <h3 className="text-h3 3xl:text-h2 4xl:text-h1 text-navy-900 tracking-wide font-heading">Latest News</h3>
                     </div>
@@ -147,13 +147,13 @@ export default function HeroSection5() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: -20, opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-brand-pill overflow-hidden group cursor-pointer"
+                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-20px overflow-hidden group cursor-pointer"
                                     onClick={handlePrev}
                                 >
                                     <Image src={getInsightAt(-1).image} alt="Student" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 4xl:p-8 flex flex-col justify-end">
                                         <h4 className="text-white font-extralight text-xl 3xl:text-2xl 4xl:text-4xl leading-tight">{getInsightAt(-1).name}</h4>
-                                        <p className="text-white/80 text-[10px] 3xl:text-xs 4xl:text-lg mt-0.5 truncate">{getInsightAt(-1).program}</p>
+                                        <p className="text-white/80 text-10px 3xl:text-xs 4xl:text-lg mt-0.5 truncate">{getInsightAt(-1).program}</p>
                                     </div>
                                 </motion.div>
 
@@ -164,7 +164,7 @@ export default function HeroSection5() {
                                     animate={{ scale: 1, opacity: 1 }}
                                     exit={{ scale: 0.95, opacity: 0 }}
                                     transition={{ duration: 0.6 }}
-                                    className="relative w-full flex-1 rounded-brand-pill overflow-hidden shadow-sm border border-slate-100 "
+                                    className="relative w-full flex-1 rounded-20px overflow-hidden shadow-sm border border-slate-100 "
                                 >
                                     <Image src={getInsightAt(0).image} alt="Student" fill className="object-cover" />
                                 </motion.div>
@@ -176,13 +176,13 @@ export default function HeroSection5() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: 20, opacity: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-brand-pill overflow-hidden group cursor-pointer"
+                                    className="relative w-full h-[90px] 3xl:h-[110px] 4xl:h-[150px] rounded-20px overflow-hidden group cursor-pointer"
                                     onClick={handleNext}
                                 >
                                     <Image src={getInsightAt(1).image} alt="Student" fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 4xl:p-8 flex flex-col justify-end">
                                         <h4 className="text-white text-xl 3xl:text-2xl 4xl:text-4xl leading-tight">{getInsightAt(1).name}</h4>
-                                        <p className="text-white/80 text-[10px] 3xl:text-xs 4xl:text-lg mt-0.5 truncate">{getInsightAt(1).program}</p>
+                                        <p className="text-white/80 text-10px 3xl:text-xs 4xl:text-lg mt-0.5 truncate">{getInsightAt(1).program}</p>
                                     </div>
                                 </motion.div>
                             </AnimatePresence>
@@ -191,7 +191,7 @@ export default function HeroSection5() {
                         {/* Quote Card */}
                         <motion.div
                             onClick={handleNext}
-                            className="relative border border-slate-300/80 rounded-brand-pill 4xl:rounded-brand-md p-5 sm:p-8 lg:p-10 4xl:p-20 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
+                            className="relative border border-slate-300/80 rounded-20px 4xl:rounded-brand-md p-5 sm:p-8 lg:p-10 4xl:p-20 h-full flex flex-col justify-start md:justify-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] overflow-hidden group cursor-pointer"
                         >
                             {/* Quotes Blocks - Background Watermark on Mobile */}
                             <motion.div
@@ -223,7 +223,7 @@ export default function HeroSection5() {
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <p className="text-navy-800/60 text-sm lg:text-base 3xl:text-xl 4xl:text-[2.25rem] 3xl:leading-[1.8] 4xl:leading-[1.4] mb-8 4xl:mb-16 group-hover:text-navy-900 transition-colors w-full sm:w-[95%]">
+                                        <p className="text-navy-800/60 text-sm lg:text-base 3xl:text-xl 4xl:text-2-25rem 3xl:leading-[1.8] 4xl:leading-[1.4] mb-8 4xl:mb-16 group-hover:text-navy-900 transition-colors w-full sm:w-[95%]">
                                             {insights[activeIndex].quote}
                                         </p>
                                         <div className="flex flex-col mt-auto">

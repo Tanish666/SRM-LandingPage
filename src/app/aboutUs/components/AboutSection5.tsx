@@ -33,7 +33,7 @@ const AboutSection5 = () => {
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
                 <SectionPill text="Accreditations" className="mb-6 4xl:mb-12" />
 
-                <h2 className={"text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-1 text-navy-900 mb-16 4xl:mb-32 text-center leading-tight max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl font-heading font-normal"}>
+                <h2 className="text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 text-navy-900 mb-16 4xl:mb-32 text-center max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl font-heading font-normal">
                     Accredited For Excellence In Technical Education
                 </h2>
 

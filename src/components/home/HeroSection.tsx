@@ -9,11 +9,11 @@ const HeroSection = () => {
             <div className='max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 4xl:gap-32 py-12 lg:py-20 4xl:py-32'>
                 {/* Hero Text Content */}
                 <div className='flex-1 lg:max-w-[65%] z-10'>
-                    <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] 3xl:text-[5.5rem] 4xl:text-[7rem] leading-[1.05] text-slate-900 mb-8 4xl:mb-12 tracking-tight">
+                    <h1 className="text-5xl md:text-6xl lg:text-4-5rem 3xl:text-5-5rem 4xl:text-7rem leading-[1.05] text-slate-900 mb-8 4xl:mb-12 tracking-tight">
                         Shaping Healthcare <br className='hidden md:block' />
                         <span className='md:whitespace-nowrap'>Leaders of Tomorrow</span>
                     </h1>
-                    <p className='text-lg md:text-[1.35rem] 3xl:text-[1.6rem] 4xl:text-[2rem] text-slate-500/90 mb-12 4xl:mb-16 max-w-[550px] 3xl:max-w-[700px] 4xl:max-w-[900px] leading-relaxed'>
+                    <p className='text-lg md:text-1-35rem 3xl:text-1-6rem 4xl:text-2rem text-slate-500/90 mb-12 4xl:mb-16 max-w-[550px] 3xl:max-w-[700px] 4xl:max-w-[900px] leading-relaxed'>
                         Immerse Yourself In A Dynamic Learning Environment Dedicated To Excellence In Healthcare Education.
                     </p>
 
@@ -45,14 +45,14 @@ const HeroSection = () => {
                         </div>
 
                         {/* Program Offered Badge */}
-                        <div className='absolute bottom-2 -right-10 md:bottom-5 md:-right-12 4xl:bottom-16 4xl:-right-20 z-20'>
+                        <div className='absolute bottom-2 -right-10 md:bottom-5 md:-right-12 4xl:bottom-10 4xl:-right-28 z-20'>
                             <div className='relative group/program'>
                                 <div className='absolute size-14 md:size-20 4xl:size-32 -z-10 bg-white rounded-full -top-2 md:-top-3.5 4xl:-top-6 -left-2.5 md:-left-4 4xl:-left-8 group-hover/program:bg-[#FFEB3B] transition-all duration-500' />
                                 <div className='flex items-center gap-1.5 md:gap-2 4xl:gap-4 pr-5 md:pr-8 4xl:pr-12 py-1.5 rounded-full transition-all duration-500 cursor-pointer '>
                                     <div className=''>
                                         <IconArrowNarrowRight stroke={1} className='w-8 h-8 md:w-10 md:h-10 4xl:w-16 4xl:h-16 rotate-[-35deg]' />
                                     </div>
-                                    <span className='text-[13px] md:text-lg 3xl:text-xl 4xl:text-[2rem] font-semibold text-slate-600 tracking-tight whitespace-nowrap group-hover/program:text-black transition-all duration-500'>Program Offered</span>
+                                    <span className='text-13px md:text-lg 3xl:text-xl 4xl:text-2rem font-semibold text-slate-600 tracking-tight whitespace-nowrap group-hover/program:text-black transition-all duration-500'>Program Offered</span>
                                 </div>
                             </div>
                         </div>

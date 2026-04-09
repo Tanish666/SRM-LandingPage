@@ -38,12 +38,12 @@ const DeptSection6 = ({ courseData }: Props) => {
                         <SectionPill text="Programs offered" className="mb-5 4xl:mb-10 self-center lg:self-start mt-4 lg:mt-0" />
 
                         {/* Title */}
-                        <h2 className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 capitalize mb-4 4xl:mb-10 leading-tight font-heading font-normal"}>
+                        <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 capitalize mb-4 4xl:mb-10 leading-tight font-heading font-normal">
                             {courseName}
                         </h2>
 
                         {/* Description */}
-                        <p className="text-sm md:text-base 3xl:text-xl 4xl:text-3xl text-navy-800/70 capitalize mb-8 4xl:mb-16 leading-relaxed max-w-xl 3xl:max-w-2xl 4xl:max-w-4xl text-justify font-light">
+                        <p className="text-15px md:text-body 3xl:text-20px 4xl:text-28px text-navy-800/70 capitalize mb-8 4xl:mb-16 leading-relaxed max-w-xl 3xl:max-w-2xl 4xl:max-w-4xl text-justify font-light">
                             {courseDesc}
                         </p>
 
@@ -51,7 +51,7 @@ const DeptSection6 = ({ courseData }: Props) => {
                         <button
                             className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer w-60 4xl:w-110 h-12 4xl:h-24 rounded-full border border-brandBorder pl-6 4xl:pl-12 pr-1 4xl:pr-2 self-center lg:self-start group"
                         >
-                            <span className="text-lg 4xl:text-3xl font-normal text-navy-900 capitalize leading-none font-heading">Explore Program</span>
+                            <span className="text-18px 4xl:text-28px font-normal text-navy-900 capitalize leading-none font-heading">Explore Program</span>
                             <span
                                 className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-10 h-10 4xl:w-20 4xl:h-20"
                             >

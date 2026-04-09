@@ -68,12 +68,12 @@ const HomeSection7 = () => {
 
                         {/* Card Info Box (Bottom Left) */}
                         <div className="relative z-20">
-                            <p className={`text-[10px] sm:text-xs 3xl:text-base 4xl:text-xl font-medium mb-1.5 4xl:mb-4 ${card.batchColor}`}>
+                            <p className={`text-10px sm:text-xs 3xl:text-base 4xl:text-xl font-medium mb-1.5 4xl:mb-4 ${card.batchColor}`}>
                                 Batch 2024-2025
                             </p>
                             <div className="font-heading bg-gradient-to-r from-white/55 to-white/50 backdrop-blur-sm rounded-md p-2.5 sm:p-2 4xl:p-6 shadow-sm inline-block min-w-[110px] sm:min-w-[150px] 4xl:min-w-[300px] border border-white/40">
                                 <h3 className={`text-sm sm:text-lg 3xl:text-xl 4xl:text-3xl font-medium text-navy-900 leading-tight`}>{card.name}</h3>
-                                <p className="text-[11px] sm:text-[13px] 3xl:text-base 4xl:text-2xl text-brand-blue-dark mt-0.5">{card.role}</p>
+                                <p className="text-11px sm:text-13px 3xl:text-base 4xl:text-2xl text-brand-blue-dark mt-0.5">{card.role}</p>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@ const HomeSection7 = () => {
                         <div className="flex flex-col items-start w-1/2 sm:w-[45%]">
                             <span className="font-heading text-4xl sm:text-5xl lg:text-6xlBase 3xl:text-display-2 4xl:text-display-1 font-light text-brand-blue-dark leading-none mb-4 4xl:mb-8 font-heading">104 +</span>
                             <span className="font-heading bg-brand-yellow text-navy-900 px-3 sm:px-4 py-1 sm:py-1.5 4xl:px-8 4xl:py-3 rounded-md text-xs sm:text-sm 3xl:text-lg 4xl:text-2xl font-medium">Companies</span>
-                            <p className="text-navy-800/50 text-[10px] sm:text-sm 3xl:text-base 4xl:text-xl mt-4 leading-tight max-w-[180px] 4xl:max-w-[300px]">2023–24 Campus Placement Drive</p>
+                            <p className="text-navy-800/50 text-10px sm:text-sm 3xl:text-base 4xl:text-xl mt-4 leading-tight max-w-[180px] 4xl:max-w-[300px]">2023–24 Campus Placement Drive</p>
                         </div>
 
                         {/* Vertical Divider */}
@@ -107,7 +107,7 @@ const HomeSection7 = () => {
                         <div className="flex flex-col items-start w-1/2 sm:w-[45%]">
                             <span className="font-heading text-4xl sm:text-5xl lg:text-6xlBase 3xl:text-display-2 4xl:text-display-1 font-light text-brand-blue-dark leading-none mb-4 4xl:mb-8 font-heading">206+</span>
                             <span className="font-heading bg-brand-yellow text-navy-900 px-3 sm:px-4 py-1 sm:py-1.5 4xl:px-8 4xl:py-3 rounded-md text-xs sm:text-sm 3xl:text-lg 4xl:text-2xl font-medium">Placements</span>
-                            <p className="text-navy-800/50 text-[10px] sm:text-sm 3xl:text-base 4xl:text-xl mt-4 leading-tight max-w-[180px] 4xl:max-w-[300px]">Offers Extended To Our Talented Graduates</p>
+                            <p className="text-navy-800/50 text-10px sm:text-sm 3xl:text-base 4xl:text-xl mt-4 leading-tight max-w-[180px] 4xl:max-w-[300px]">Offers Extended To Our Talented Graduates</p>
                         </div>
                     </div>
 

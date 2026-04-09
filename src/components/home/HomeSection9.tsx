@@ -18,10 +18,10 @@ const HomeSection9 = () => {
                 <div className="relative w-full pt-10 pb-16 4xl:pb-32 px-8 lg:px-14 4xl:px-24 flex flex-col items-start gap-4 4xl:gap-8 z-10">
                     <div className='absolute inset-0 bg-gradient-to-b from-white/20 via-white/50 to-white/80 backdrop-blur-xl -z-10' />
                     <div className='absolute -left-10 top-0 w-72 h-72 bg-[#FFD100]/15 blur-[120px] rounded-full -z-10' />
-                    <h2 className="text-4xl md:text-5xl lg:text-[54px] 3xl:text-[65px] 4xl:text-[100px] leading-[1.1] text-black tracking-tight">
+                    <h2 className="text-4xl md:text-5xl lg:text-54px 3xl:text-65px 4xl:text-100px leading-[1.1] text-black tracking-tight">
                         World Class Facilities
                     </h2>
-                    <p className="text-gray-900 text-[15px] md:text-base 3xl:text-xl 4xl:text-3xl max-w-[95%] leading-relaxed font-medium mt-2">
+                    <p className="text-gray-900 text-15px md:text-base 3xl:text-xl 4xl:text-3xl max-w-[95%] leading-relaxed font-medium mt-2">
                         SRM College Of Allied Health Sciences Offers A Dynamic And Student-Focused Campus Designed To Nurture Academic Excellence And Holistic Development
                     </p>
 
@@ -152,7 +152,7 @@ const FacilityCard = ({ title, heightClass, imgSrc, widthClass = "w-full" }: { t
             {title && (
                 <div className="flex items-center w-full px-4 sm:px-6 4xl:px-12 gap-3 4xl:gap-6">
                     <div className="h-[2px] flex-1 bg-[#FFD100]"></div>
-                    <span className="text-white text-[13px] sm:text-[15px] lg:text-base 3xl:text-xl 4xl:text-3xl font-medium lg:whitespace-nowrap drop-shadow-md">
+                    <span className="text-white text-13px sm:text-15px lg:text-base 3xl:text-xl 4xl:text-3xl font-medium lg:whitespace-nowrap drop-shadow-md">
                         {title}
                     </span>
                     <div className="h-[2px] flex-1 bg-[#FFD100]"></div>

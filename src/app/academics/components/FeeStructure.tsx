@@ -7,16 +7,16 @@ const FeeStructure = () => {
 
                 {/* Decorative background element if needed */}
                 <div className="max-w-3xl 3xl:max-w-5xl 4xl:max-w-7xl relative z-10 text-center md:text-left">
-                    <h2 className={"text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 mb-4 4xl:mb-8 font-heading font-normal"}>
+                    <h2 className="text-h2 md:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 mb-4 4xl:mb-8 font-heading font-normal">
                         Fee Structure
                     </h2>
-                    <p className="text-navy-900/80 text-sm md:text-base 3xl:text-xl 4xl:text-4xl leading-relaxed 3xl:leading-snug 4xl:leading-normal opacity-90 max-w-xl 3xl:max-w-3xl 4xl:max-w-5xl mx-auto md:mx-0">
+                    <p className="text-navy-900/80 text-15px md:text-body 3xl:text-20px 4xl:text-38px leading-relaxed 3xl:leading-snug 4xl:leading-normal opacity-90 max-w-xl 3xl:max-w-3xl 4xl:max-w-5xl mx-auto md:mx-0">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                     </p>
                 </div>
 
                 <div className="relative z-10 shrink-0 w-full md:w-auto flex justify-center md:justify-end">
-                    <button className="bg-white text-navy-900 px-10 py-3 md:px-8 md:py-2 3xl:px-12 3xl:py-4 4xl:px-20 4xl:py-8 rounded-full font-semibold shadow-sm hover:bg-slate-50 transition-colors whitespace-nowrap text-sm md:text-base 3xl:text-xl 4xl:text-4xl flex items-center gap-3 3xl:gap-5 4xl:gap-8 active:scale-95">
+                    <button className="bg-white text-navy-900 px-10 py-3 md:px-8 md:py-2 3xl:px-12 3xl:py-4 4xl:px-20 4xl:py-8 rounded-full font-semibold shadow-sm hover:bg-slate-50 transition-colors whitespace-nowrap text-15px md:text-body 3xl:text-20px 4xl:text-38px flex items-center gap-3 3xl:gap-5 4xl:gap-8 active:scale-95">
                         <span className="text-navy-900">Download PDF</span>
                     </button>
                 </div>

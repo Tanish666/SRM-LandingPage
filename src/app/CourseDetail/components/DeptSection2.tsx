@@ -36,14 +36,14 @@ const DeptSection2 = ({ courseData }: Props) => {
                     <SectionPill text="About Us" className="mb-6 4xl:mb-20" />
                     {/* Title*/}
                     <h2
-                        className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-1 text-navy-900 capitalize mb-6 4xl:mb-16 leading-[1.1] lg:max-w-[800px] 4xl:max-w-[1400px] font-heading font-normal"}
+                        className="text-h2 md:text-h1 lg:text-h1 3xl:text-65px 4xl:text-display-1 text-navy-900 capitalize mb-6 4xl:mb-16 leading-tight lg:max-w-[800px] 4xl:max-w-[1400px] font-heading font-normal"
                     >
                         {title}
                     </h2>
 
                     {/* Body text  */}
                     <div
-                        className="font-light text-body md:text-body-lg 3xl:text-2xl 4xl:text-4xl text-navy-900/80 flex flex-col gap-5 4xl:gap-12 leading-relaxed lg:max-w-[800px] 4xl:max-w-[1300px] text-justify"
+                        className="font-light text-body md:text-body-lg 3xl:text-24px 4xl:text-38px text-navy-900/80 flex flex-col gap-5 4xl:gap-12 leading-relaxed lg:max-w-[800px] 4xl:max-w-[1300px] text-justify"
                     >
                         {contentHtml ? (
                             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
@@ -63,7 +63,7 @@ const DeptSection2 = ({ courseData }: Props) => {
                     {/* Explore Program Button */}
                     <button
                         className="inline-flex items-center justify-between bg-brand-yellow transition-colors mt-8 4xl:mt-16 cursor-pointer w-56 4xl:w-100 h-12 4xl:h-24 rounded-full border border-brandBorder pl-5 4xl:pl-10 pr-1 4xl:pr-2 self-center lg:self-start group"
-                    >  <span className="text-lg 4xl:text-3xl font-normal text-navy-900 leading-none font-heading">Explore Program</span>
+                    >  <span className="text-18px 4xl:text-28px font-normal text-navy-900 leading-none font-heading">Explore Program</span>
                         <span
                             className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-10 h-10 4xl:w-20 4xl:h-20"
                         >

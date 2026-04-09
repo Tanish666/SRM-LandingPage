@@ -47,7 +47,7 @@ const Navbar = () => {
                                     key={link.label}
                                     style={{ fontWeight: 400 }}
                                     onClick={() => router.push(link.path)}
-                                    className={`transition-all duration-200 text-[15px] 3xl:text-lg 4xl:text-2xl font-medium active:scale-95 active:text-blue-600 ${active
+                                    className={`transition-all duration-200 text-15px 3xl:text-lg 4xl:text-2xl font-medium active:scale-95 active:text-blue-600 ${active
                                         ? 'text-blue-500 hover:text-blue-600'
                                         : 'text-slate-500 hover:text-black'
                                         }`}
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <button
                             onMouseEnter={() => setHoveredTab('admission')}
                             disabled={false}
-                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 4xl:px-10 4xl:py-4 rounded-full font-semibold text-[13px] sm:text-base 4xl:text-2xl leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
+                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 4xl:px-10 4xl:py-4 rounded-full font-semibold text-13px sm:text-base 4xl:text-2xl leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
                         >
                             <span className="relative z-10">Admission</span>
                             {hoveredTab === 'admission' && (
@@ -82,7 +82,7 @@ const Navbar = () => {
                         <button
                             onMouseEnter={() => setHoveredTab('contact')}
                             disabled={false}
-                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 4xl:px-10 4xl:py-4 rounded-full font-semibold text-[13px] sm:text-base 4xl:text-2xl leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
+                            className='relative text-black px-3 py-1.5 sm:px-5 sm:py-2 4xl:px-10 4xl:py-4 rounded-full font-semibold text-13px sm:text-base 4xl:text-2xl leading-none transition-all duration-200 hover:text-slate-700 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:text-black disabled:active:scale-100'
                         >
                             <span className="relative z-10">Contact</span>
                             {hoveredTab === 'contact' && (

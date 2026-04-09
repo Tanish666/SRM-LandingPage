@@ -45,12 +45,12 @@ const DeptFacultySection = ({ courseData }: Props) => {
             <div className="w-full max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] flex flex-col items-center">
                 <SectionPill text="Our Faculty" className="mb-8 4xl:mb-16" />
                 {/* Title */}
-                <h2 className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-6 4xl:mb-12 font-heading font-normal"}>
+                <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-6 4xl:mb-12 font-heading font-normal">
                     Our Faculty
                 </h2>
 
                 {/* Description */}
-                <p className={`${inter.className} font-light text-body md:text-body-lg 3xl:text-xl 4xl:text-3xl text-navy-800 text-center max-w-3xl 4xl:max-w-5xl mx-auto mb-10 4xl:mb-20`}>
+                <p className={`${inter.className} font-light text-body md:text-body-lg 3xl:text-20px 4xl:text-28px text-navy-800 text-center max-w-3xl 4xl:max-w-5xl mx-auto mb-10 4xl:mb-20`}>
                     Our dedicated faculty members bring years of clinical and academic experience to mentor and guide the next generation of healthcare professionals.
                 </p>
 
@@ -75,7 +75,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                 <div className="flex flex-col">
                                     <div className="flex items-baseline gap-[6px] 4xl:gap-3 flex-wrap">
                                         <span
-                                            className="font-heading text-xl lg:text-2xl 3xl:text-3xl 4xl:text-6xl text-navy-900"
+                                            className="font-heading text-20px lg:text-24px 3xl:text-28px 4xl:text-65px text-navy-900"
                                             style={{
                                                 lineHeight: '1.2',
                                                 letterSpacing: '-0.03em',
@@ -84,7 +84,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                             {member.name}
                                         </span>
                                         <span
-                                            className="font-heading text-sm lg:text-base 3xl:text-lg 4xl:text-3xl text-navy-800"
+                                            className="font-heading text-15px lg:text-body 3xl:text-18px 4xl:text-28px text-navy-800"
                                             style={{
                                                 lineHeight: '1.2',
                                                 letterSpacing: '-0.03em',
@@ -94,7 +94,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                                         </span>
                                     </div>
                                     <span
-                                        className={`${inder.className} font-normal text-brand-blue-dark text-lg 3xl:text-2xl 4xl:text-4xl mt-1`}
+                                        className={`${inder.className} font-normal text-brand-blue-dark text-18px 3xl:text-24px 4xl:text-38px mt-1`}
                                         style={{
                                             lineHeight: '1.2',
                                             letterSpacing: '-0.03em',
@@ -114,7 +114,7 @@ const DeptFacultySection = ({ courseData }: Props) => {
                         className="inline-flex items-center justify-between bg-brand-yellow hover:bg-brand-yellow/90 transition-all cursor-pointer w-54 4xl:w-110 h-12 4xl:h-24 rounded-full border border-brandBorder pl-6 4xl:pl-12 pr-1 4xl:pr-2 group shadow-md"
                     >
                         <span
-                            className={`${inter.className} font-normal text-lg 4xl:text-3xl text-navy-900 capitalize`}
+                            className={`${inter.className} font-normal text-18px 4xl:text-28px text-navy-900 capitalize`}
                             style={{ lineHeight: '1.2' }}
                         >
                             View All Faculty

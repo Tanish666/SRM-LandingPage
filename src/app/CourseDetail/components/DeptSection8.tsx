@@ -35,22 +35,22 @@ const DeptSection8 = ({ courseData }: Props) => {
                     <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
                         <SectionPill text="Principal's Note" className="mb-6 4xl:mb-12" />
                         <h3
-                            className={"text-h3 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-tight mb-4 4xl:mb-8 font-heading font-normal"}
+                            className="text-h3 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 leading-tight mb-4 4xl:mb-8 font-heading font-normal"
                         >
                             Dr.Kumar Ebenezer K
                         </h3>
                         <p
-                            className={`${inder.className} text-brand-blue-dark font-normal mb-8 4xl:mb-16 text-2xl lg:text-h2 3xl:text-4xl 4xl:text-6xl`}
+                            className={`${inder.className} text-brand-blue-dark font-normal mb-8 4xl:mb-16 text-24px lg:text-h2 3xl:text-38px 4xl:text-65px`}
                             style={{ lineHeight: '1.2', letterSpacing: '-0.03em' }}
                         >
                             Professor &amp; Principal
                         </p>
                         <div className="space-y-3 4xl:space-y-6">
-                            <p className={`${inder.className} text-sm lg:text-base 3xl:text-xl 4xl:text-3xl text-navy-800/80`}>
+                            <p className={`${inder.className} text-15px lg:text-body 3xl:text-20px 4xl:text-28px text-navy-800/80`}>
                                 <span className="font-bold">Email:</span>{' '}
                                 drkumarebenezerk@gmail.com
                             </p>
-                            <p className={`${inder.className} text-sm lg:text-base 3xl:text-xl 4xl:text-3xl text-navy-800/80`}>
+                            <p className={`${inder.className} text-15px lg:text-body 3xl:text-20px 4xl:text-28px text-navy-800/80`}>
                                 <span className="font-bold">Phone:</span>{' '}
                                 000-000-000
                             </p>

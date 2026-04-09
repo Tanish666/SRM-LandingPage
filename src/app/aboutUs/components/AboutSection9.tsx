@@ -35,7 +35,7 @@ const AboutSection9 = () => {
                 {/* Header Content */}
                 <div className="flex flex-col items-center mb-12 4xl:mb-24 relative z-10">
                     <SectionPill text="Our Facility" className="mb-6 4xl:mb-10" />
-                    <h2 className={"text-white text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-1 leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl text-center font-heading font-normal"}>
+                    <h2 className="text-white text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl text-center font-heading font-normal">
                         Empowering Future Healthcare Professionals
                     </h2>
                 </div>
@@ -70,7 +70,7 @@ const AboutSection9 = () => {
                             <div className="absolute bottom-0 left-0 right-0 z-20 h-16 4xl:h-24 backdrop-blur-[2px] flex items-center justify-center">
                                 <div className="flex items-center gap-3 w-full px-4 4xl:px-8">
                                     <div className="h-px w-7 4xl:w-12 shrink-0 bg-brand-yellow" />
-                                    <span className="font-heading text-white text-xs lg:text-sm 3xl:text-base 4xl:text-2xl tracking-wide uppercase whitespace-nowrap">
+                                    <span className="font-heading text-white text-13px lg:text-15px 3xl:text-body 4xl:text-24px tracking-wide uppercase whitespace-nowrap">
                                         {item.title}
                                     </span>
                                     <div className="h-px flex-grow bg-brand-yellow" />
@@ -98,7 +98,7 @@ const AboutSection9 = () => {
                             <div className="absolute bottom-0 left-0 right-0 z-20 h-16 backdrop-blur-[2px] flex items-center justify-center">
                                 <div className="flex items-center gap-3 w-full px-4">
                                     <div className="h-[1.5px] w-7 shrink-0 bg-brand-yellow" />
-                                    <span className="font-heading text-white text-[13px] lg:text-sm tracking-wide uppercase whitespace-nowrap">
+                                    <span className="font-heading text-white text-13px lg:text-15px tracking-wide uppercase whitespace-nowrap">
                                         {facilities[currentIndex].title}
                                     </span>
                                     <div className="h-[1.5px] flex-grow bg-brand-yellow" />

@@ -25,7 +25,7 @@ const Faq = () => {
     return (
         <section className="py-12 md:py-20 3xl:py-28 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-40 4xl:px-60 overflow-hidden">
             <div className="max-w-3xl 3xl:max-w-5xl 4xl:max-w-7xl w-full flex flex-col items-center">
-                <h2 className={"text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-1 text-navy-900 mb-10 md:mb-14 3xl:mb-20 4xl:mb-32 text-center font-heading font-normal"}>
+                <h2 className="text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 text-navy-900 mb-10 md:mb-14 3xl:mb-20 4xl:mb-32 text-center font-heading font-normal">
                     Frequently Asked Questions
                 </h2>
 
@@ -41,7 +41,7 @@ const Faq = () => {
                                     onClick={() => setOpenIndex(isOpen ? -1 : idx)}
                                     className={`w-full text-left px-6 md:px-8 3xl:px-12 4xl:px-20 py-5 3xl:py-8 4xl:py-12 flex items-center justify-between transition-colors ${isOpen ? 'bg-brand-blue-dark text-white' : 'text-navy-800/70 hover:bg-slate-200'}`}
                                 >
-                                    <span className={`text-sm md:text-base 3xl:text-2xl 4xl:text-4xl pr-4 font-heading ${isOpen ? 'font-medium' : 'font-normal'}`}>
+                                    <span className={`text-15px md:text-body 3xl:text-24px 4xl:text-38px pr-4 font-heading ${isOpen ? 'font-medium' : 'font-normal'}`}>
                                         {faq.question}
                                     </span>
                                     <span className="shrink-0">
@@ -58,7 +58,7 @@ const Faq = () => {
                                 </button>
 
                                 {isOpen && (
-                                    <div className="p-6 md:p-8 3xl:p-12 4xl:p-20 text-navy-800/80 text-sm 3xl:text-xl 4xl:text-3xl leading-relaxed 3xl:leading-snug 4xl:leading-normal bg-slate-50 border-t border-brandBorder">
+                                    <div className="p-6 md:p-8 3xl:p-12 4xl:p-20 text-navy-800/80 text-15px 3xl:text-20px 4xl:text-28px leading-relaxed 3xl:leading-snug 4xl:leading-normal bg-slate-50 border-t border-brandBorder">
                                         {faq.answer}
                                     </div>
                                 )}

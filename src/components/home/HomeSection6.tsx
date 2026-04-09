@@ -74,28 +74,27 @@ const HemeSection6 = () => {
 
 
                 {/* Main Heading */}
-                <h2 className={`font-display text-center text-3xl leading-[36px] text-foreground capitalize mt-4 max-w-[90%]`}>
+                <h2 className={`font-display text-center text-28px leading-tight text-foreground capitalize mt-4 max-w-[90%]`}>
                     Driving Innovation In Allied Health Research
                 </h2>
 
                 {/* Subtitle */}
-                <p className={`${inter.className} text-center text-muted-foreground text-sm leading-[22px] capitalize mt-3 max-w-[90%]`}>
+                <p className={`${inter.className} text-center text-muted-foreground text-15px leading-relaxed capitalize mt-3 max-w-[90%]`}>
                     Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
                 </p>
 
                 {/* CTA Button */}
                 <button
-                    className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer mt-6"
+                    className="inline-flex items-center justify-between bg-brand-yellow border-[1.12px] border-brandBorder transition-colors cursor-pointer mt-6"
                     style={{
                         width: '267px',
                         height: '47px',
                         borderRadius: '33.57px',
-                        border: '1.12px solid #E5E5E5',
                         paddingLeft: '20px',
                         paddingRight: '4px',
                     }}
                 >
-                    <span className={`${inter.className} text-lg font-normal text-foreground capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                    <span className={`${inter.className} text-18px leading-[28.2px] font-normal text-foreground capitalize`}>Explore Our Research</span>
                     <span className="rounded-full bg-background flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
                         <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-foreground' size={24} />
                     </span>
@@ -106,15 +105,13 @@ const HemeSection6 = () => {
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className="w-full rounded-3xl p-px"
-                            style={{ background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)' }}
+                            className="w-full rounded-3xl p-px bg-gradient-to-b from-[#C0C0C0] to-brand-blue-bright"
                         >
                             <div
-                                className="w-full rounded-3xl p-5"
-                                style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)' }}
+                                className="w-full rounded-3xl p-5 bg-gradient-to-b from-white to-brand-lightBlue-soft"
                             >
                                 <div className="flex items-start justify-between mb-3">
-                                    <h3 className={`font-display text-4xl leading-[36px] text-[#0066CC]`}>
+                                    <h3 className={`font-display text-38px leading-tight text-navy-600`}>
                                         <Counter value={stat.num} />
                                     </h3>
                                     <img loading="lazy" decoding="async"
@@ -123,10 +120,10 @@ const HemeSection6 = () => {
                                         className="object-contain max-w-14 max-h-14"
                                     />
                                 </div>
-                                <p className={`font-display text-lg leading-[24px] text-foreground capitalize mb-1`}>
+                                <p className={`font-display text-18px leading-tight text-foreground capitalize mb-1`}>
                                     {stat.label}
                                 </p>
-                                <p className={`${inter.className} text-sm leading-[22px] text-muted-foreground capitalize`}>
+                                <p className={`${inter.className} text-15px leading-relaxed text-muted-foreground capitalize`}>
                                     {stat.desc}
                                 </p>
                             </div>
@@ -144,7 +141,7 @@ const HemeSection6 = () => {
 
                 {/* Main Heading */}
                 <h2
-                    className={`font-display absolute text-center text-5xl leading-[56px] text-foreground capitalize`}
+                    className={`font-display absolute text-center text-48px leading-tight text-foreground capitalize`}
                     style={{ width: '1166px', left: '41.5px', top: '65px' }}
                 >
                     Driving Innovation In Allied Health Research
@@ -152,7 +149,7 @@ const HemeSection6 = () => {
 
                 {/* Subtitle */}
                 <p
-                    className={`${inter.className} absolute text-center text-muted-foreground text-base leading-[25px] capitalize`}
+                    className={`${inter.className} absolute text-center text-muted-foreground text-body capitalize`}
                     style={{ width: '623px', left: '312.5px', top: '135px' }}
                 >
                     Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
@@ -161,17 +158,16 @@ const HemeSection6 = () => {
                 {/* CTA Button */}
                 <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
                     <button
-                        className="inline-flex items-center justify-between bg-[#FFD812] transition-colors cursor-pointer"
+                        className="inline-flex items-center justify-between bg-brand-yellow border-[1.12px] border-brandBorder transition-colors cursor-pointer"
                         style={{
                             width: '267px',
                             height: '47px',
                             borderRadius: '33.57px',
-                            border: '1.12px solid #E5E5E5',
                             paddingLeft: '20px',
                             paddingRight: '4px',
                         }}
                     >
-                        <span className={`${inter.className} text-lg font-normal text-foreground capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                        <span className={`${inter.className} text-18px leading-[28.2px] font-normal text-foreground capitalize`}>Explore Our Research</span>
                         <span className="rounded-full bg-background flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
                             <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-foreground' size={24} />
                         </span>
@@ -183,30 +179,27 @@ const HemeSection6 = () => {
                     {stats.map((stat, index) => {
                         const isShortCard = index === 1 || index === 2
                         return (
-                            <div key={index} className="absolute rounded-3xl p-px" style={{
-                                width: stat.width, height: stat.height, left: stat.left, top: stat.top,
-                                background: 'linear-gradient(180deg, #C0C0C0 0%, #17A1FA 100%)'
+                            <div key={index} className="absolute rounded-3xl p-px bg-gradient-to-b from-[#C0C0C0] to-brand-blue-bright" style={{
+                                width: stat.width, height: stat.height, left: stat.left, top: stat.top
                             }}>
-                                <div className="w-full h-full rounded-3xl relative overflow-hidden" style={{
-                                    background: 'linear-gradient(180deg, #FFFFFF 0%, #D2EDFF 100%)',
-                                }}>
+                                <div className="w-full h-full rounded-3xl relative overflow-hidden bg-gradient-to-b from-white to-brand-lightBlue-soft">
                                     <div className={`absolute ${isShortCard ? 'top-7 right-5' : 'top-20 left-5'}`}>
                                         <img loading="lazy" decoding="async" src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
                                     </div>
                                     <h3
-                                        className={`font-display absolute text-5xl leading-[40px] text-[#0066CC]`}
+                                        className={`font-display absolute text-48px leading-none text-navy-600`}
                                         style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
                                     >
                                         <Counter value={stat.num} />
                                     </h3>
                                     <p
-                                        className={`font-display absolute text-xl leading-[25px] text-foreground capitalize`}
+                                        className={`font-display absolute text-20px leading-tight text-foreground capitalize`}
                                         style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
                                     >
                                         {stat.label}
                                     </p>
                                     <p
-                                        className={`${inter.className} absolute text-base leading-[25px] text-muted-foreground capitalize`}
+                                        className={`${inter.className} absolute text-body text-muted-foreground capitalize`}
                                         style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
                                     >
                                         {stat.desc}

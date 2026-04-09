@@ -73,7 +73,7 @@ const DeptSection11 = ({ courseData }: Props) => {
             <div className="w-full max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto flex flex-col items-center">
                 <SectionPill text="Testimonials" className="mb-8 4xl:mb-16" />
                 {/* Title */}
-                <h2 className={"text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading font-normal"}>
+                <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading font-normal">
                     Insights From Our Learners
                 </h2>
 
@@ -162,17 +162,17 @@ const DeptSection11 = ({ courseData }: Props) => {
                                 style={{ zIndex: 1 }}
                             >
                                 <p
-                                    className={`${inter.className} font-normal text-navy-800/70 capitalize text-[13px] md:text-base leading-[21px] md:leading-[26px]`}
+                                    className={`${inter.className} font-normal text-navy-800/70 capitalize text-13px md:text-body leading-[21px] md:leading-[26px]`}
                                 >
                                     {active.quote}
                                 </p>
                                 <p
-                                    className="font-heading text-brand-blue-dark mt-4 md:mt-6 text-lg md:text-2xl leading-[24px] md:leading-[32px]"
+                                    className="font-heading text-brand-blue-dark mt-4 md:mt-6 text-18px md:text-24px leading-[24px] md:leading-[32px]"
                                 >
                                     {active.name}
                                 </p>
                                 <p
-                                    className={`${inter.className} font-normal text-navy-800/60 capitalize mt-0.5 text-[13px] md:text-[15px] leading-[20px] md:leading-[24px]`}
+                                    className={`${inter.className} font-normal text-navy-800/60 capitalize mt-0.5 text-13px md:text-15px leading-[20px] md:leading-[24px]`}
                                 >
                                     {active.department}
                                 </p>
@@ -231,13 +231,13 @@ const DeptSection11 = ({ courseData }: Props) => {
                                     />
                                     <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 ${isCenter ? 'px-5 pb-5 pt-16' : 'px-4 pb-3 pt-12'}`}>
                                         <p
-                                            className="font-heading text-white capitalize transition-all duration-500 text-2xl 3xl:text-3xl 4xl:text-6xl"
+                                            className="font-heading text-white capitalize transition-all duration-500 text-24px 3xl:text-28px 4xl:text-65px"
                                             style={{ lineHeight: '1.2' }}
                                         >
                                             {t.name}
                                         </p>
                                         <p
-                                            className={`${inter.className} text-white font-normal capitalize mt-0.5 whitespace-nowrap transition-all duration-500 text-sm 3xl:text-lg 4xl:text-2xl`}
+                                            className={`${inter.className} text-white font-normal capitalize mt-0.5 whitespace-nowrap transition-all duration-500 text-15px 3xl:text-18px 4xl:text-24px`}
                                             style={{ lineHeight: '1.2' }}
                                         >
                                             {t.department}
@@ -270,18 +270,18 @@ const DeptSection11 = ({ courseData }: Props) => {
                                 style={{ zIndex: 1 }}
                             >
                                 <p
-                                    className={`${inter.className} font-normal text-navy-800/70 capitalize mb-4 3xl:mb-6 4xl:mb-8 text-[0.9rem] 3xl:text-[1.1rem] 4xl:text-[1.6rem] leading-relaxed 4xl:leading-[1.6]`}
+                                    className={`${inter.className} font-normal text-navy-800/70 capitalize mb-4 3xl:mb-6 4xl:mb-8 text-15px 3xl:text-18px 4xl:text-28px leading-relaxed 4xl:leading-normal`}
                                 >
                                     {active.quote}
                                 </p>
                                 <p
-                                    className="font-heading text-brand-blue-dark mt-2 3xl:mt-4 text-[1.5rem] 3xl:text-[2rem] 4xl:text-[3.2rem]"
+                                    className="font-heading text-brand-blue-dark mt-2 3xl:mt-4 text-24px 3xl:text-38px 4xl:text-50px"
                                     style={{ lineHeight: '1.2' }}
                                 >
                                     {active.name}
                                 </p>
                                 <p
-                                    className={`${inter.className} font-normal text-navy-800/60 capitalize mt-1 text-[1rem] 3xl:text-[1.3rem] 4xl:text-[2rem]`}
+                                    className={`${inter.className} font-normal text-navy-800/60 capitalize mt-1 text-body 3xl:text-20px 4xl:text-38px`}
                                     style={{ lineHeight: '1.2' }}
                                 >
                                     {active.department}

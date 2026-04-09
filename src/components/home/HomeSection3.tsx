@@ -93,7 +93,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                     <div className='w-full flex justify-center items-center md:justify-start'>
                         <div className="flex bg-brand-yellow rounded-full p-2 mb-8 4xl:mb-16 w-fit shrink-0 4xl:scale-125 4xl:origin-left">
                             <button
-                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-brand-blue-dark shadow-sm leading-none' : 'text-navy-900 hover:bg-white/50 leading-none'}`}
+                                className={`px-5 py-2.5 rounded-full text-15px font-medium transition-all ${activeTab === 'Under Graduate' ? 'bg-white text-brand-blue-dark shadow-sm leading-none' : 'text-navy-900 hover:bg-white/50 leading-none'}`}
                                 onClick={() => {
                                     setActiveTab('Under Graduate')
                                     setActiveProgram(ugPrograms[0]?._id || ugPrograms[0]?.id || 1)
@@ -102,7 +102,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                                 Under Graduate
                             </button>
                             <button
-                                className={`px-5 py-2.5 rounded-full text-[15px] font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-brand-blue-dark shadow-sm leading-none' : 'text-navy-900 hover:bg-white/50 leading-none'}`}
+                                className={`px-5 py-2.5 rounded-full text-15px font-medium transition-all ${activeTab === 'Post Graduate' ? 'bg-white text-brand-blue-dark shadow-sm leading-none' : 'text-navy-900 hover:bg-white/50 leading-none'}`}
                                 onClick={() => {
                                     setActiveTab('Post Graduate')
                                     setActiveProgram(pgPrograms[0]?._id || pgPrograms[0]?.id || 1)
@@ -126,7 +126,7 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                                         className={`group flex items-center justify-between py-5 4xl:py-8 border-b cursor-pointer transition-colors ${isActive ? 'border-navy-900 text-brand-blue-dark' : 'border-slate-200 text-navy-800/70 hover:text-brand-blue-dark'
                                             }`}
                                     >
-                                        <span className={`font-heading text-xl lg:text-2xl 3xl:text-[28px] 4xl:text-[40px] transition-colors truncate max-w-full xl:max-w-[300px] 4xl:max-w-[500px] xl:whitespace-nowrap ${isActive ? 'text-brand-blue-dark' : 'text-navy-900 group-hover:text-brand-blue-dark'}`}>{program.name}</span>
+                                        <span className={`font-heading text-xl lg:text-2xl 3xl:text-28px 4xl:text-40px transition-colors truncate max-w-full xl:max-w-[300px] 4xl:max-w-[500px] xl:whitespace-nowrap ${isActive ? 'text-brand-blue-dark' : 'text-navy-900 group-hover:text-brand-blue-dark'}`}>{program.name}</span>
                                         <svg
                                             width="30"
                                             height="30"

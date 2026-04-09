@@ -18,9 +18,9 @@ const Card = ({ icon, title, description }: { icon: React.ReactNode, title: stri
             <div className="text-[#30A0FF] flex-shrink-0 3xl:scale-125 4xl:scale-150 origin-left">
                 {icon}
             </div>
-            <h3 className="text-base xl:text-[20px] 3xl:text-[24px] 4xl:text-[28px] font-semibold text-[#515151] leading-tight">{title}</h3>
+            <h3 className="text-base xl:text-20px 3xl:text-24px 4xl:text-28px font-semibold text-[#515151] leading-tight">{title}</h3>
         </div>
-        <p className="text-md xl:text-[16.5px] 3xl:text-[18px] 4xl:text-[20px] text-gray-500 leading-relaxed font-normal">
+        <p className="text-md xl:text-16-5px 3xl:text-18px 4xl:text-20px text-gray-500 leading-relaxed font-normal">
             {description}
         </p>
     </div>
@@ -56,14 +56,14 @@ const HeroSection4 = () => {
                     <div className="flex w-full xl:w-1/2 flex-col gap-6 justify-start">
                         <SectionPill text="Why Choose SRM AHS" />
 
-                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl xl:text-[45px] 3xl:text-[55px] 4xl:text-[70px] tracking-wide leading-[1.2]`}>
+                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl xl:text-45px 3xl:text-55px 4xl:text-70px tracking-wide leading-[1.2]`}>
                             Empowering Future<br />Healthcare Professionals
                         </h2>
                     </div>
 
                     {/* Right Header */}
                     <div className="flex flex-col gap-6 3xl:gap-8 4xl:gap-10 xl:w-[616px] 3xl:w-[800px] 4xl:w-[1000px] text-white/90 xl:pt-10 3xl:pt-14 4xl:pt-16">
-                        <p className="text-sm xl:text-[15px] 3xl:text-[18px] 4xl:text-[22px] leading-relaxed font-light text-[#FFFFFF]">
+                        <p className="text-sm xl:text-15px 3xl:text-18px 4xl:text-22px leading-relaxed font-light text-[#FFFFFF]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                         <CTAButton

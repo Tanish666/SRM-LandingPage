@@ -29,11 +29,11 @@ const DeptSection3 = ({ courseData }: Props) => {
                 <SectionPill text="Impact & Stats" className="mb-12 3xl:mb-16 4xl:mb-24" />
                 <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 4xl:gap-16'>
             {cards.map((card: any, idx: number) => (
-                <div key={idx} className={`w-full bg-brand-yellow-light rounded-3xl 4xl:rounded-brand-md py-8 md:py-12 4xl:py-24 px-6 md:px-8 4xl:px-16 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-brand-yellow-border`}>
-                    <h3 className={"text-4xl md:text-5xl lg:text-h1 4xl:text-display-1 text-brand-blue-dark mb-4 4xl:mb-10 font-light font-heading leading-none"}>
+                <div key={idx} className="w-full bg-brand-yellow-light rounded-3xl 4xl:rounded-brand-md py-8 md:py-12 4xl:py-24 px-6 md:px-8 4xl:px-16 flex flex-col items-center text-center shadow-sm hover:-translate-y-1 transition-transform border border-brand-yellow-border">
+                    <h3 className="text-38px md:text-48px lg:text-h1 4xl:text-display-1 text-brand-blue-dark mb-4 4xl:mb-10 font-light font-heading leading-none">
                         {card.num}
                     </h3>
-                    <p className={`${card.textCol} text-sm md:text-base 3xl:text-xl 4xl:text-3xl font-medium leading-relaxed max-w-[12rem] 3xl:max-w-[16rem] 4xl:max-w-[24rem]`}>
+                    <p className={`${card.textCol} text-15px md:text-body 3xl:text-20px 4xl:text-28px font-medium leading-relaxed max-w-[12rem] 3xl:max-w-[16rem] 4xl:max-w-[24rem]`}>
                         {card.text}
                     </p>
                 </div>

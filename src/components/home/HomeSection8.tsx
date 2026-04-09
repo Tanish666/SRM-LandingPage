@@ -60,7 +60,7 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
 
                 {/* Left Content */}
                 <div className="relative z-10 w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-10 4xl:pr-20">
-                    <h2 className="text-h2 md:text-h1 lg:text-[38px] 3xl:text-[48px] 4xl:text-[65px] text-navy-900 leading-[1.1] mb-3 4xl:mb-8 lg:whitespace-nowrap font-heading font-normal">
+                    <h2 className="text-h2 md:text-h1 lg:text-38px 3xl:text-48px 4xl:text-65px text-navy-900 leading-[1.1] mb-3 4xl:mb-8 lg:whitespace-nowrap font-heading font-normal">
                         Discover The Right Course For You
                     </h2>
                     <p className="text-navy-800/70 text-sm md:text-base 3xl:text-lg 4xl:text-2xl leading-[1.5] w-full lg:w-[600px] 4xl:w-[900px] max-w-full">
@@ -116,7 +116,7 @@ const HomeSection8 = ({ coursesData }: { coursesData?: any[] }) => {
                                     <div
                                         key={`${program.id}-${index}`}
                                         onClick={() => handleSelect(program.name)}
-                                        className="px-4 py-2.5 4xl:px-8 4xl:py-5 text-[13px] 3xl:text-base 4xl:text-xl text-[#444] hover:bg-gray-50 hover:text-black cursor-pointer transition-colors border-b border-gray-50 last:border-none"
+                                        className="px-4 py-2.5 4xl:px-8 4xl:py-5 text-13px 3xl:text-base 4xl:text-xl text-[#444] hover:bg-gray-50 hover:text-black cursor-pointer transition-colors border-b border-gray-50 last:border-none"
                                     >
                                         {program.name}
                                     </div>

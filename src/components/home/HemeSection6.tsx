@@ -1,11 +1,12 @@
 'use client'
 import React from 'react'
-import { Inter } from 'next/font/google'
+import { Marcellus, Inter } from 'next/font/google'
 import { IconArrowNarrowRight } from '@tabler/icons-react'
 import SectionPill from '@/components/home/SectionPill'
 import { motion, useInView, animate, useMotionValue, useTransform, useSpring } from 'framer-motion'
 
 
+const marcellus = Marcellus({ subsets: ['latin'], weight: ['400'] })
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
 const Counter = ({ value }: { value: string }) => {
@@ -39,86 +40,175 @@ const HemeSection6 = () => {
             icon: "sec5Svg1.svg", iconW: 83, iconH: 69,
             num: "94+", label: "Active Research Projects",
             desc: "Across Rehabilitation, Diagnostics, Imaging & Community Health.",
+            width: '295px', height: '345px', top: '182px', left: '0px',
+            descWidth: '283px'
         },
         {
             icon: "sec5Svg2.svg", iconW: 57, iconH: 58,
             num: "468+", label: "Intellectual Property Rights",
             desc: "Under Our Intellectual Property Rights (IPR) Cell.",
+            width: '295px', height: '227px', top: '300px', left: '314px',
+            descWidth: '247px'
         },
         {
             icon: "sec5Svg3.svg", iconW: 66, iconH: 66,
             num: "20+", label: "Collaborative Partnerships",
             desc: "With Hospitals, Research Bodies & Academic Institutions.",
+            width: '295px', height: '227px', top: '300px', left: '628px',
+            descWidth: '247px'
         },
         {
             icon: "sec5Svg4.svg", iconW: 84, iconH: 84,
             num: "100+", label: "Student Research Engagement",
             desc: "With Hospitals, Research Bodies & Academic Institutions.",
+            width: '303px', height: '345px', top: '182px', left: '942px',
+            descWidth: '247px'
         }
     ]
 
     return (
-        <section className="w-full bg-white flex justify-center py-12 md:py-20 3xl:py-32 4xl:py-48 px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48 overflow-hidden">
-            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
+        <section className="w-full bg-white flex justify-center py-12 lg:py-20 px-4 lg:px-0 overflow-hidden mb-[30px] lg:mb-[-80px] 3xl:py-16 4xl:py-24 3xl:px-32 4xl:px-48">
 
-                {/* Header Section */}
-                <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
-                    <SectionPill text="Research" className="mb-6 4xl:mb-12" />
+            {/* MOBILE LAYOUT */}
+            <div className="flex flex-col items-center w-full lg:hidden">
+                <SectionPill text="Research" className="uppercase" />
 
-                    <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 leading-tight text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal">
+                {/* Main Heading */}
+                <h2 className={`${marcellus.className} text-center text-[28px] leading-[36px] text-navy-900 capitalize mt-4 max-w-[90%]`}>
+                    Driving Innovation In Allied Health Research
+                </h2>
+
+                {/* Subtitle */}
+                <p className={`${inter.className} text-center text-navy-800/70 text-[14px] leading-[22px] capitalize mt-3 max-w-[90%]`}>
+                    Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
+                </p>
+
+                {/* CTA Button */}
+                <button
+                    className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer mt-6"
+                    style={{
+                        width: '267px',
+                        height: '47px',
+                        borderRadius: '33.57px',
+                        border: '1.12px solid #E5E5E5',
+                        paddingLeft: '20px',
+                        paddingRight: '4px',
+                    }}
+                >
+                    <span className={`${inter.className} text-[18px] font-normal text-navy-900 capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                    <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
+                        <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-navy-900' size={24} />
+                    </span>
+                </button>
+
+                {/* Mobile Stat Cards */}
+                <div className="flex flex-col gap-4 mt-8 w-full max-w-[400px]">
+                    {stats.map((stat, index) => (
+                        <div
+                            key={index}
+                            className="w-full rounded-[20px] p-[1px] bg-gradient-to-b from-slate-400 to-brand-blue"
+                        >
+                            <div
+                                className="w-full rounded-[19px] p-5 bg-gradient-to-b from-white to-brand-lightBlue-soft"
+                            >
+                                <div className="flex items-start justify-between mb-3">
+                                    <h3 className={`${marcellus.className} text-[36px] leading-[36px] text-brand-blue`}>
+                                        <Counter value={stat.num} />
+                                    </h3>
+                                    <img
+                                        src={stat.icon}
+                                        alt={stat.label}
+                                        className="object-contain max-w-[50px] max-h-[50px]"
+                                    />
+                                </div>
+                                <p className={`${marcellus.className} text-[18px] leading-[24px] text-navy-900 capitalize mb-1`}>
+                                    {stat.label}
+                                </p>
+                                <p className={`${inter.className} text-[14px] leading-[22px] text-navy-800/70 capitalize`}>
+                                    {stat.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* DESKTOP LAYOUT  */}
+            <div className="hidden lg:flex flex-col items-center w-full 4xl:mt-12 3xl:mt-8 4xl:mb-[400px] 3xl:mb-[250px]">
+                <SectionPill text="Research" className="" />
+
+                <div className="relative 4xl:scale-[1.75] 3xl:scale-[1.4] transition-all duration-500 transform-gpu origin-top" style={{ width: '1245px', height: '650px' }}>
+                    {/* Main Heading */}
+                    <h2
+                        className={`${marcellus.className} absolute text-center text-[45px] leading-[56px] text-navy-900 capitalize`}
+                        style={{ width: '1166px', left: '41.5px', top: '65px' }}
+                    >
                         Driving Innovation In Allied Health Research
                     </h2>
 
-                    <p className={`${inter.className} text-navy-800/70 text-sm md:text-base 3xl:text-xl 4xl:text-3xl leading-relaxed capitalize max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl mb-8 4xl:mb-16`}>
-                        Research at SRM Allied Health Sciences is driven by our mission to advance clinical practice, diagnostics, and public health outcomes.
+                    {/* Subtitle */}
+                    <p
+                        className={`${inter.className} absolute text-center text-navy-800/70 text-[15px] leading-[25px] capitalize`}
+                        style={{ width: '623px', left: '312.5px', top: '135px' }}
+                    >
+                        Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
                     </p>
 
-                    <div className="4xl:scale-125">
+                    {/* CTA Button */}
+                    <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>
                         <button
-                            className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer w-[267px] h-[47px] rounded-full border border-brandBorder pl-6 pr-1"
+                            className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer"
+                            style={{
+                                width: '267px',
+                                height: '47px',
+                                borderRadius: '33.57px',
+                                border: '1.12px solid #E5E5E5',
+                                paddingLeft: '20px',
+                                paddingRight: '4px',
+                            }}
                         >
-                            <span className={`${inter.className} text-lg font-normal text-navy-900 capitalize`}>Explore Our Research</span>
-                            <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-[39px] h-[38px]">
+                            <span className={`${inter.className} text-[18px] font-normal text-navy-900 capitalize`} style={{ lineHeight: '28.2px' }}>Explore Our Research</span>
+                            <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0" style={{ width: '39px', height: '38px' }}>
                                 <IconArrowNarrowRight stroke={1.5} className='-rotate-[30deg] text-navy-900' size={24} />
                             </span>
                         </button>
                     </div>
-                </div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 3xl:gap-10 4xl:gap-16 w-full">
-                    {stats.map((stat, index) => {
-                        const isEven = index % 2 === 1;
-                        return (
-                            <div
-                                key={index}
-                                className={`group relative rounded-brand-pill 4xl:rounded-brand-md p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue ${isEven ? 'lg:mt-12 4xl:mt-24' : ''}`}
-                            >
-                                <div
-                                    className="h-full w-full rounded-brand-pill 4xl:rounded-brand-md p-8 4xl:p-14 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px] bg-gradient-to-b from-white to-brand-lightBlue-soft"
-                                >
-                                    <div className="w-full flex justify-end mb-4 4xl:mb-8">
-                                        <img loading="lazy" decoding="async"
-                                            src={stat.icon}
-                                            alt={stat.label}
-                                            className="object-contain max-w-[60px] max-h-[60px] 3xl:max-w-[80px] 4xl:max-w-[120px]"
-                                        />
-                                    </div>
-                                    <div className="mt-auto">
-                                        <h3 className="text-4xl md:text-5xl 4xl:text-display-1 leading-[40px] 4xl:leading-tight text-brand-blue mb-4 4xl:mb-8 font-heading font-normal">
+                    {/* Desktop Stat Cards*/}
+                    <div className="absolute w-full" style={{ top: '0px' }}>
+                        {stats.map((stat, index) => {
+                            const isShortCard = index === 1 || index === 2
+                            return (
+                                <div key={index} className="absolute rounded-[20px] p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue" style={{
+                                    width: stat.width, height: stat.height, left: stat.left, top: stat.top,
+                                }}>
+                                    <div className="w-full h-full rounded-[19px] relative overflow-hidden bg-gradient-to-b from-white to-brand-lightBlue-soft">
+                                        <div className={`absolute ${isShortCard ? 'top-[27px] right-[18px]' : 'top-[66px] left-[17px]'}`}>
+                                            <img src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
+                                        </div>
+                                        <h3
+                                            className={`${marcellus.className} absolute text-[40px] leading-[40px] text-brand-blue`}
+                                            style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
+                                        >
                                             <Counter value={stat.num} />
                                         </h3>
-                                        <p className="font-heading text-lg md:text-xl 3xl:text-2xl 4xl:text-[2.5rem] leading-tight text-navy-900 capitalize mb-2 4xl:mb-6">
+                                        <p
+                                            className={`${marcellus.className} absolute text-[20px] leading-[25px] text-navy-900 capitalize`}
+                                            style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
+                                        >
                                             {stat.label}
                                         </p>
-                                        <p className={`${inter.className} text-sm md:text-base 3xl:text-lg 4xl:text-3xl leading-relaxed text-navy-800/70 capitalize`}>
+                                        <p
+                                            className={`${inter.className} absolute text-[15px] leading-[25px] text-navy-800/70 capitalize`}
+                                            style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
+                                        >
                                             {stat.desc}
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </section>

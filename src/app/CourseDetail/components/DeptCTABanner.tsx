@@ -29,13 +29,13 @@ const DeptCTABanner = ({ courseData }: Props) => {
                         <div className="flex flex-col gap-4 4xl:gap-8 text-center lg:text-left items-center lg:items-start">
                             <SectionPill text="Enquiry" className="mb-4 4xl:mb-8" />
                             <h2
-                                className={"text-h2 sm:text-h2 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 capitalize leading-tight lg:leading-[56px] 4xl:leading-tight max-w-[711px] 4xl:max-w-7xl font-heading font-normal"}
+                                className="text-h2 sm:text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 capitalize leading-tight max-w-[711px] 4xl:max-w-7xl font-heading font-normal"
                             >
                                 Shape The Future Of Healthcare<br className="hidden lg:block" />
                                 {' '}Start Your Journey Today!
                             </h2>
                             <p
-                                className={`${inter.className} text-sm lg:text-base 3xl:text-xl 4xl:text-3xl text-navy-800/80 font-normal capitalize leading-relaxed lg:leading-[25px] 4xl:leading-normal max-w-[631px] 4xl:max-w-5xl`}
+                                className={`${inter.className} text-15px lg:text-body 3xl:text-20px 4xl:text-28px text-navy-800/80 font-normal capitalize leading-relaxed 4xl:leading-normal max-w-[631px] 4xl:max-w-5xl`}
                             >
                                 Lorem Ipsum Odor Amet, Consectetuer Adipiscing Elit. Hac Arcu Primis Hac In Senectus
                                 Sit Penatibus. Efficitur Rutrum Pellentesque
@@ -43,7 +43,7 @@ const DeptCTABanner = ({ courseData }: Props) => {
                         </div>
 
                         <button
-                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-white/90 text-navy-900 font-normal cursor-pointer transition-colors w-56 h-14 lg:w-70 lg:h-18 4xl:w-110 4xl:h-30 text-xl lg:text-2xl 4xl:text-4xl border-none rounded-full`}
+                            className={`${inter.className} flex-shrink-0 inline-flex items-center justify-center bg-white hover:bg-white/90 text-navy-900 font-normal cursor-pointer transition-colors w-56 h-14 lg:w-70 lg:h-18 4xl:w-110 4xl:h-30 text-20px lg:text-24px 4xl:text-38px border-none rounded-full`}
                         >
                             Apply Now
                         </button>

@@ -30,48 +30,49 @@ const AboutSection6 = () => {
     return (
         <section className="py-12 md:py-20 3xl:py-28 4xl:py-36 w-full flex justify-center px-4 md:px-10 lg:px-20 overflow-hidden">
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full">
-            {/* Header row */}
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 4xl:mb-24 gap-6">
-                <div>
-                    <SectionPill text="Our Leadership" className="mb-6 4xl:mb-10" />
+                {/* Header row */}
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-6">
+                    <div>
+                        <SectionPill text="Our Leadership" className="mb-6 4xl:mb-10" />
 
-                    <div className="font-heading text-h2 md:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-tight max-w-2xl 3xl:max-w-4xl font-normal whitespace-normal">
-                        <p>Meet The Leaders Driving Academic Innovation And Institutional Growth</p>
+                        <h2 className="font-heading text-3xl md:text-display-4 3xl:text-70px 4xl:text-display-2 leading-[1.1] text-navy-900">
+                            Meet The Leaders Driving <br className="hidden md:block" /> Academic Innovation And <br className="hidden md:block" /> Institutional Growth
+                        </h2>
+                    </div>
+
+                    <div className="shrink-0">
+                        <CTAButton
+                            text="Meet the Leaders"
+                            onClick={() => console.log('Meet the Leaders button clicked')}
+                            className="4xl:py-2.5 4xl:pl-12 4xl:pr-2.5 4xl:gap-8 [&_span]:4xl:text-[24px] [&>div]:4xl:p-4 [&_svg]:4xl:w-8 [&_svg]:4xl:h-8"
+                        />
                     </div>
                 </div>
 
-                <div className="shrink-0">
-                    <CTAButton
-                        text="Meet the Leaders"
-                        onClick={() => console.log('Meet the Leaders button clicked')}
-                    />
+                {/* Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 4xl:gap-12 w-full">
+                    {leaders.map((leader, idx) => (
+                        <div key={idx} className="flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform">
+                            <div className="w-full aspect-[3/4] xl:aspect-auto xl:h-140 3xl:h-160 4xl:h-200 rounded-brand-pill bg-slate-200 overflow-hidden mb-6 4xl:mb-10 relative">
+                                {/* Replace with leader image */}
+                                <Image
+                                    src={leader.imgSrc}
+                                    alt={leader.name}
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                            </div>
+                            <div className='flex items-center gap-1.5'>
+                                <div className='w-1.5 h-4.5 lg:w-2 lg:h-5 4xl:w-3 4xl:h-8 bg-brand-yellow shrink-0' />
+                                <h3 className="text-20px lg:text-24px 3xl:text-28px 4xl:text-38px text-navy-900 leading-tight font-heading font-normal">{leader.name}</h3>
+                            </div>
+                            <div className="mt-2 4xl:mt-4">
+                                <p className="text-brand-blue-dark font-medium text-15px lg:text-18px 3xl:text-20px 4xl:text-24px font-heading">{leader.role}</p>
+                                <p className="text-navy-800/70 text-15px lg:text-18px 3xl:text-20px 4xl:text-24px leading-relaxed max-w-[95%]">{leader.desc}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            </div>
-
-            {/* Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 4xl:gap-12 w-full">
-                {leaders.map((leader, idx) => (
-                    <div key={idx} className="flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform">
-                        <div className="w-full aspect-[3/4] xl:aspect-auto xl:h-140 3xl:h-160 4xl:h-200 rounded-brand-pill bg-slate-200 overflow-hidden mb-6 4xl:mb-10 relative">
-                            {/* Replace with leader image */}
-                            <Image
-                                src={leader.imgSrc}
-                                alt={leader.name}
-                                fill
-                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                            />
-                        </div>
-                        <div className='flex items-center gap-1.5'>
-                            <div className='w-1.5 h-4.5 lg:w-2 lg:h-5 4xl:w-3 4xl:h-8 bg-brand-yellow shrink-0' />
-                            <h3 className={"text-xl lg:text-2xl 3xl:text-3xl 4xl:text-4xl text-navy-900 leading-tight font-heading font-normal"}>{leader.name}</h3>
-                        </div>
-                        <div className="mt-2 4xl:mt-4">
-                            <p className="text-brand-blue-dark font-medium text-sm lg:text-lg 3xl:text-xl 4xl:text-2xl font-heading">{leader.role}</p>
-                            <p className="text-navy-800/70 text-sm lg:text-lg 3xl:text-xl 4xl:text-2xl leading-relaxed max-w-[95%]">{leader.desc}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
             </div>
         </section>
     )

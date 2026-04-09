@@ -2,7 +2,7 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 
-const tsxFiles = glob.sync('src/components/home/*.tsx').concat(glob.sync('src/app/page.tsx')).concat(glob.sync('src/components/layout/*.tsx'));
+const tsxFiles = glob.sync('src/app/aboutUs/components/*.tsx').concat(glob.sync('src/app/aboutUs/page.tsx'));
 
 let sizes = new Set();
 const pattern = /text-\[([0-9\.]+(?:px|rem|em|vh|vw|%))\]/g;
@@ -29,8 +29,15 @@ sizeArray.forEach(size => {
 // Update globals.css
 const cssFile = 'src/app/globals.css';
 let cssContent = fs.readFileSync(cssFile, 'utf8');
-const rootConfig = sizeArray.map(size => `    ${sizeMapping[size].varName}: ${size};`).join('\n');
-if (!cssContent.includes('--fs-')) {
+const rootConfig = sizeArray.map(size => {
+    // Only add if not already present
+    if (!cssContent.includes(`--fs-${size.replace(/\./g, '-')}:`)) {
+        return `    --fs-${size.replace(/\./g, '-')}: ${size};`;
+    }
+    return '';
+}).filter(line => line !== '').join('\n');
+
+if (rootConfig) {
     cssContent = cssContent.replace(
         /:root \{/,
         `:root {\n${rootConfig}`
@@ -41,8 +48,15 @@ if (!cssContent.includes('--fs-')) {
 // Update tailwind.config.ts
 const twFile = 'tailwind.config.ts';
 let twContent = fs.readFileSync(twFile, 'utf8');
-if (!twContent.includes('fs-')) {
-    const twConfig = sizeArray.map(size => `				'${size.replace(/\./g, '-')}': 'var(${sizeMapping[size].varName})',`).join('\n');
+const twConfig = sizeArray.map(size => {
+    const keyStr = `'${size.replace(/\./g, '-')}'`;
+    if (!twContent.includes(keyStr)) {
+        return `				${keyStr}: 'var(--fs-${size.replace(/\./g, '-')})',`;
+    }
+    return '';
+}).filter(line => line !== '').join('\n');
+
+if (twConfig) {
     twContent = twContent.replace(
         /fontSize: \{/,
         `fontSize: {\n${twConfig}`
@@ -55,7 +69,6 @@ tsxFiles.forEach(file => {
     let content = fs.readFileSync(file, 'utf8');
     let modified = false;
     
-    // We need to replace cases like text-[2rem] and variants like md:text-[2rem]
     const filePattern = /text-\[([0-9\.]+(?:px|rem|em|vh|vw|%))\]/g;
     content = content.replace(filePattern, (match, size) => {
         if (sizeMapping[size]) {

@@ -188,7 +188,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                         <SectionPill text="News & Events" className="mb-10 4xl:mb-16" />
 
                         {/* Heading */}
-                        <h2 className="text-3xl md:text-5xl 3xl:text-[55px] 4xl:text-[80px] text-center text-gray-900 leading-tight">
+                        <h2 className="text-3xl md:text-5xl 3xl:text-55px 4xl:text-80px text-center text-gray-900 leading-tight">
                             Stay Updated With What's Happening <br /> At SRM AHS
                         </h2>
 
@@ -220,7 +220,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                                 <span className="font-heading text-2xl 3xl:text-3xl 4xl:text-5xl">{monthNames[currentMonth.getMonth()]}</span>
                             </div>
                             <div className='w-full h-[1px] border-t my-5 4xl:my-8 border-dashed border-[#9F9F9F]' />
-                            <div className="grid grid-cols-8 gap-y-4 4xl:gap-y-8 gap-x-2 text-[15px] md:text-[13px] 3xl:text-base 4xl:text-2xl lg:text-sm text-center font-medium">
+                            <div className="grid grid-cols-8 gap-y-4 4xl:gap-y-8 gap-x-2 text-15px md:text-13px 3xl:text-base 4xl:text-2xl lg:text-sm text-center font-medium">
                                 {calendarData.map((item, index) => {
                                     if (item.type === "label") {
                                         return (
@@ -323,7 +323,7 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
 
                 {/* Bottom Section */}
                 <div className="mt-24 4xl:mt-48">
-                    <h2 className="text-3xl md:text-4xl 3xl:text-[45px] 4xl:text-[70px] text-center text-gray-900 mb-12 4xl:mb-24">
+                    <h2 className="text-3xl md:text-4xl 3xl:text-45px 4xl:text-70px text-center text-gray-900 mb-12 4xl:mb-24">
                         Start Your Journey Today!
                     </h2>
 
