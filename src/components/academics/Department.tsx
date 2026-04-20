@@ -18,12 +18,12 @@ const Department = () => {
     return (
         <section className="py-12 md:py-20 3xl:py-28 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-40 4xl:px-60 overflow-hidden text-center">
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2400px] w-full flex flex-col items-center">
-                <h2 className="text-h2 md:text-h1 3xl:text-70px 4xl:text-display-1 text-navy-900 mb-4 4xl:mb-12 font-heading font-normal">
+                <h1 className="text-headText text-navy-900 mb-4 4xl:mb-12 font-heading font-normal">
                     Department
-                </h2>
-                <p className="max-w-4xl 3xl:max-w-6xl 4xl:max-w-[1700px] text-navy-800/70 mb-10 md:mb-12 3xl:mb-16 4xl:mb-24 text-15px md:text-body 3xl:text-20px 4xl:text-38px leading-relaxed 3xl:leading-snug 4xl:leading-normal">
+                </h1>
+                <h2 className="max-w-4xl 3xl:max-w-6xl 4xl:max-w-[1700px] text-navy-800/70 mb-10 md:mb-12 3xl:mb-16 4xl:mb-24 text-subText leading-relaxed 3xl:leading-snug 4xl:leading-normal">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                </p>
+                </h2>
 
                 <div className="flex items-center bg-brand-yellow rounded-full p-1 3xl:p-2 4xl:p-4 mb-10 md:mb-14 3xl:mb-20 4xl:mb-32 shadow-sm w-fit">
                     <button className="px-6 md:px-8 py-2 md:py-2.5 3xl:px-12 3xl:py-4 4xl:px-20 4xl:py-8 bg-white text-navy-900 font-medium rounded-full text-15px 3xl:text-20px 4xl:text-38px shadow-sm whitespace-nowrap">

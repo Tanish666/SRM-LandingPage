@@ -20,9 +20,9 @@ const AboutSection4 = () => {
                             <div className="text-brand-blue-bright w-12 md:w-auto 3xl:scale-110 4xl:scale-150 origin-left">
                                 <img loading="lazy" decoding="async" src="ASec4Svg1.svg" alt="" className="w-full h-auto" />
                             </div>
-                            <h3 className="text-28px md:text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 capitalize font-heading font-normal leading-tight">Vision</h3>
+                            <h1 className="text-heroText text-navy-900 capitalize font-heading font-normal leading-tight">Vision</h1>
                         </div>
-                        <p className={`${inter.className} text-navy-800/70 capitalize text-15px md:text-body 3xl:text-20px 4xl:text-24px leading-relaxed font-medium`}>
+                        <p className={`${inter.className} text-navy-800/70 capitalize text-subText  leading-relaxed font-medium`}>
                             Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore Eu Fugiat Nulla Pariatur.
                         </p>
                     </div>
@@ -35,9 +35,9 @@ const AboutSection4 = () => {
                             <div className="text-brand-blue-bright w-12 md:w-auto 3xl:scale-110 4xl:scale-150 origin-left">
                                 <img loading="lazy" decoding="async" src="ASec4Svg2.svg" alt="" className="w-full h-auto" />
                             </div>
-                            <h3 className="text-28px md:text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 capitalize font-heading font-normal leading-tight">Mission</h3>
+                            <h1 className="text-heroText text-navy-900 capitalize font-heading font-normal leading-tight">Mission</h1>
                         </div>
-                        <p className={`${inter.className} text-navy-800/70 capitalize text-15px md:text-body 3xl:text-20px 4xl:text-24px leading-relaxed font-medium`}>
+                        <p className={`${inter.className} text-navy-800/70 capitalize text-subText leading-relaxed font-medium`}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         </p>
                     </div>

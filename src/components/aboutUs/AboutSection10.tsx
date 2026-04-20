@@ -46,9 +46,9 @@ const AboutSection10 = () => {
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center relative">
                 <SectionPill text="Achievements" className="mb-8 4xl:mb-16" />
 
-                <h2 className="text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 text-navy-900 mb-16 4xl:mb-32 text-center leading-tight max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl font-heading font-normal">
+                <h1 className="text-headText text-navy-900 mb-16 4xl:mb-32 text-center leading-tight max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl font-heading font-normal">
                     Achievements & Awards
-                </h2>
+                </h1>
 
                 <div className="w-full flex items-center justify-between gap-6 relative">
 

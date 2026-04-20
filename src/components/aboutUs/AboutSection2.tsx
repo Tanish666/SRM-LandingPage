@@ -31,22 +31,22 @@ const AboutSection2 = () => {
                     <div className="w-full lg:flex-1 flex flex-col items-center md:items-start justify-center mt-8 lg:mt-0 text-center md:text-left">
                         <SectionPill text="About Us" className="mb-8 4xl:mb-16" />
 
-                        <h2 className="font-heading text-3xl md:text-display-4 3xl:text-70px leading-[1.1] text-navy-900 mb-6 4xl:mb-12 break-words">
+                        <h1 className="font-heading text-headText leading-[1.1] text-navy-900 mb-6 4xl:mb-12 break-words">
                             <span className="4xl:whitespace-nowrap">Shaping Healthcare Leaders</span> <br /> For A Better Tomorrow
-                        </h2>
+                        </h1>
 
-                        <p className="text-navy-800/70 text-body 3xl:text-20px 4xl:text-28px leading-relaxed mb-5 4xl:mb-10 font-normal">
+                        <p className="text-navy-800/70 text-body text-subText leading-relaxed mb-5 4xl:mb-10 font-normal">
                             Welcome To SRM Institute Of Allied Health Sciences, A Pioneering Institution Where Academic Excellence Meets Clinical Innovation. Our Programs Are Designed To Empower Students With The Knowledge.
                         </p>
 
-                        <p className="text-navy-800/70 text-body 3xl:text-20px 4xl:text-28px leading-relaxed mb-8 4xl:mb-16 font-normal">
+                        <p className="text-navy-800/70 text-body text-subText leading-relaxed mb-8 4xl:mb-16 font-normal">
                             At SRM AHS, We Are Not Just A College — We Are A Vibrant Community Of Future Healthcare Professionals, Researchers, And Innovators. Join Us As We Redefine The Future Of Health And Wellness Through World-Class Education, Hands-On Training, And A Passion For Making A Difference.
                         </p>
 
                         {/* Stats Boxes */}
                         <div className="flex items-center justify-center md:justify-start gap-6 md:gap-8 4xl:gap-16 w-full flex-wrap sm:flex-nowrap">
                             <div className="flex items-center gap-3 md:gap-4 4xl:gap-8">
-                                <div className="bg-gradient-to-b from-brand-blue-dark to-brand-blue-bright rounded-xl 4xl:rounded-3xl w-20 h-20 md:w-24 md:h-24 3xl:w-32 3xl:h-32 4xl:w-40 4xl:h-40 flex items-center justify-center shrink-0">
+                                <div className="bg-gradient-to-b from-brand-blue-dark to-brand-blue-bright rounded-md w-20 h-20 md:w-24 md:h-24 3xl:w-32 3xl:h-32 4xl:w-40 4xl:h-40 flex items-center justify-center shrink-0">
                                     <span className="font-heading text-white text-28px md:text-48px 3xl:text-65px 4xl:text-100px">25</span>
                                 </div>
                                 <div className="font-heading text-18px md:text-24px 3xl:text-28px 4xl:text-2-75rem leading-tight text-navy-900 text-left">

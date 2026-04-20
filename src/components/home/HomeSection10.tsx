@@ -188,9 +188,9 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
                         <SectionPill text="News & Events" className="mb-10 4xl:mb-16" />
 
                         {/* Heading */}
-                        <h2 className="text-3xl md:text-5xl 3xl:text-55px 4xl:text-80px text-center text-gray-900 leading-tight">
+                        <h1 className="text-headText text-center text-gray-900 leading-tight">
                             Stay Updated With What's Happening <br /> At SRM AHS
-                        </h2>
+                        </h1>
 
                         {/* Arrows (Desktop positioned right, Mobile flow below) */}
                         {displayEvents.length > 2 && (
@@ -323,9 +323,9 @@ const HomeSection10 = ({ newsEventsData = [] }: { newsEventsData?: NewsEvent[] }
 
                 {/* Bottom Section */}
                 <div className="mt-24 4xl:mt-48">
-                    <h2 className="text-3xl md:text-4xl 3xl:text-45px 4xl:text-70px text-center text-gray-900 mb-12 4xl:mb-24">
+                    <h1 className="text-headText text-center text-gray-900 mb-12 4xl:mb-24">
                         Start Your Journey Today!
-                    </h2>
+                    </h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 4xl:gap-16">
                         {/* Card 1 */}

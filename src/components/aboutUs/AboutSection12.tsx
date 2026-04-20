@@ -1,6 +1,9 @@
 'use client'
 import React from 'react'
+import { Inter } from 'next/font/google'
 import SectionPill from '@/components/home/SectionPill'
+
+const inter = Inter({ subsets: ['latin'], weight: '400' })
 
 const AboutSection12 = () => {
     return (
@@ -12,22 +15,22 @@ const AboutSection12 = () => {
                 <div className="absolute -bottom-32 -right-20 w-100 4xl:w-200 h-100 4xl:h-200 bg-white/5 rounded-full blur-3xl mix-blend-overlay"></div>
 
                 {/* Left Text */}
-                <div className="flex flex-col relative z-10 w-full lg:w-3/5">
+                <div className="flex flex-col relative z-10 w-full lg:w-4/6">
                     <SectionPill text="Enquiry" className="mb-6 4xl:mb-10" />
 
-                    <h2 className="text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 text-white leading-tight mb-6 4xl:mb-12 font-heading font-normal">
+                    <h1 className="text-headText text-white leading-tight mb-6 4xl:mb-12 font-heading font-normal">
                         Shape The Future Of Healthcare — Start Your Journey Today!
-                    </h2>
+                    </h1>
 
-                    <p className="text-white text-body 3xl:text-20px 4xl:text-28px leading-relaxed max-w-2xl 4xl:max-w-5xl opacity-90 font-medium font-sans">
+                    <h2 className={`${inter.className} text-white text-subText leading-relaxed max-w-2xl 4xl:max-w-5xl `}>
                         Curious About Our Cutting-Edge Programs, Research, Or Campus Life? Connect With SRM College Of Allied Health Sciences To Explore How We Can Guide Your Career In The Dynamic World Of Healthcare And Medical Sciences.
-                    </p>
+                    </h2>
                 </div>
 
                 {/* Right Buttons */}
                 <div className="flex flex-col gap-4 relative z-10 w-full lg:w-auto shrink-0 mt-6 lg:mt-0 4xl:gap-8 font-heading uppercase">
                     <div className="flex flex-col gap-4 4xl:gap-8">
-                        <button className="bg-white hover:bg-white/95 transition-colors text-navy-900 rounded-full px-12 py-4 3xl:px-16 3xl:py-6 4xl:px-24 4xl:py-10 flex items-center justify-center shadow-sm font-semibold w-full min-w-[18rem] 3xl:min-w-[22rem] 4xl:min-w-[32rem] text-15px 3xl:text-18px 4xl:text-24px tracking-wide">
+                        <button className="bg-white hover:bg-white transition-colors text-navy-900 rounded-full px-12 py-4 3xl:px-16 3xl:py-6 4xl:px-24 4xl:py-10 flex items-center justify-center shadow-sm font-semibold w-full min-w-[18rem] 3xl:min-w-[22rem] 4xl:min-w-[32rem] text-15px 3xl:text-18px 4xl:text-24px tracking-wide">
                             Connect With Us
                         </button>
 

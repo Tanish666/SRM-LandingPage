@@ -40,10 +40,10 @@ const AboutSection11 = () => {
                 {/* Left Text */}
                 <div className="w-full lg:w-1/2 flex flex-col">
                     <SectionPill text="Our Principles" className="mb-6 3xl:mb-10 4xl:mb-16" />
-                    <h2 className={`${marcellus.className} text-4xl md:text-60px 3xl:text-80px 4xl:text-100px text-slate-900 mb-6 md:mb-8 4xl:mb-12 leading-tight`}>
+                    <h1 className={`${marcellus.className} text-headText text-slate-900 mb-6 md:mb-8 4xl:mb-12 leading-tight`}>
                         Our Principles
-                    </h2>
-                    <p className="text-gray-dark text-15px 3xl:text-20px 4xl:text-28px leading-1-8 max-w-xl 3xl:max-w-2xl 4xl:max-w-4xl mb-8 4xl:mb-16 font-normal">
+                    </h1>
+                    <p className="text-gray-dark text-subText leading-1-8 max-w-xl 3xl:max-w-2xl 4xl:max-w-4xl mb-8 4xl:mb-16 font-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
                     </p>
                 </div>

@@ -9,21 +9,16 @@ const HeroSection = () => {
             <div className='max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 4xl:gap-32 py-12 lg:py-20 4xl:py-32'>
                 {/* Hero Text Content */}
                 <div className='flex-1 lg:max-w-[65%] z-10'>
-                    <h1 className="text-5xl md:text-6xl lg:text-4-5rem 3xl:text-5-5rem 4xl:text-7rem leading-[1.05] text-slate-900 mb-8 4xl:mb-12 tracking-tight">
+                    <h1 className="text-heroText leading-[1.05] text-slate-900 mb-8 4xl:mb-12 tracking-tight">
                         Shaping Healthcare <br className='hidden md:block' />
                         <span className='md:whitespace-nowrap'>Leaders of Tomorrow</span>
                     </h1>
-                    <p className='text-lg md:text-1-35rem 3xl:text-1-6rem 4xl:text-2rem text-slate-500/90 mb-12 4xl:mb-16 max-w-[550px] 3xl:max-w-[700px] 4xl:max-w-[900px] leading-relaxed'>
+                    <h2 className='text-subText text-slate-500/90 mb-12 4xl:mb-16 max-w-[470px] 3xl:max-w-[700px] 4xl:max-w-[900px] leading-relaxed'>
                         Immerse Yourself In A Dynamic Learning Environment Dedicated To Excellence In Healthcare Education.
-                    </p>
+                    </h2>
 
                     {/* Explore Now Button */}
-                    <button className='group flex items-center gap-6 4xl:gap-10 bg-white/60 backdrop-blur-md border border-white/50 pl-10 4xl:pl-14 pr-2 py-2 4xl:py-4 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300'>
-                        <span className='font-medium text-slate-800 text-lg 3xl:text-xl 4xl:text-2xl'>Explore Now</span>
-                        <div className='p-1 bg-[#F7E707] rounded-full shadow-md group-hover:bg-[#eadd00] transition-colors duration-300'>
-                            <IconArrowNarrowRight stroke={1} size={40} className='rotate-[-30deg] 4xl:w-[60px] 4xl:h-[60px]' />
-                        </div>
-                    </button>
+                    <ExploreNowButton />
                 </div>
 
                 {/* Hero Image Section */}
@@ -65,5 +60,17 @@ const HeroSection = () => {
         </section>
     )
 }
+
+export function ExploreNowButton() {
+    return (
+        <button className='group flex items-center gap-6 4xl:gap-10 bg-[#F4F4F4] backdrop-blur-md border border-white/50 pl-10 4xl:pl-14 pr-1 py-1 4xl:py-4 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300'>
+            <span className='font-medium text-slate-800 text-lg 3xl:text-xl 4xl:text-2xl'>Explore Now</span>
+            <div className='p-1 bg-[#F7E707] rounded-full shadow-md group-hover:bg-[#eadd00] transition-colors duration-300'>
+                <IconArrowNarrowRight stroke={1} size={40} className='rotate-[-30deg] 4xl:w-[60px] 4xl:h-[60px]' />
+            </div>
+        </button>
+    )
+}
+
 
 export default HeroSection

@@ -55,9 +55,9 @@ export default function HomeSection3({ coursesData }: { coursesData?: any[] }) {
                 <div className="flex flex-col items-start">
                     <SectionPill text="Program Offered" className="mb-8 4xl:mb-12" />
 
-                    <h2 className="text-h2 md:text-h1 xl:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-[1.2] mb-10 4xl:mb-16 w-full xl:w-[80%] xl:text-nowrap font-heading font-normal">
+                    <h1 className="text-headText text-navy-900 leading-[1.2] mb-10 4xl:mb-16 w-full xl:w-[80%] xl:text-nowrap font-heading font-normal">
                         Our Allied Health<br className="hidden xl:block" /> Sciences Programs
-                    </h2>
+                    </h1>
                     <div className='flex justify-start w-full 4xl:scale-125 4xl:origin-left'>
                         <CTAButton
                             text="Explore Now"

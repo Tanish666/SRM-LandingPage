@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import SectionPill from '@/components/SectionPill'
+import SectionPill from '@/components/home/SectionPill'
 
 const AboutSection12 = () => {
     return (
@@ -27,7 +27,7 @@ const AboutSection12 = () => {
                 {/* Right Buttons */}
                 <div className="flex flex-col gap-4 relative z-10 w-full lg:w-auto shrink-0 mt-6 lg:mt-0">
                     <div className="flex flex-col gap-4">
-                        <button className="bg-background hover:bg-white/95 transition-colors text-foreground rounded-full px-12 py-4 flex items-center justify-center shadow-sm font-semibold w-full min-w-72 text-base tracking-wide uppercase">
+                        <button className="bg-background hover:bg-white transition-colors text-foreground rounded-full px-12 py-4 flex items-center justify-center shadow-sm font-semibold w-full min-w-72 text-base tracking-wide uppercase">
                             Connect With Us
                         </button>
 

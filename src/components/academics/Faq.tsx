@@ -25,9 +25,9 @@ const Faq = () => {
     return (
         <section className="py-12 md:py-20 3xl:py-28 4xl:py-48 w-full flex justify-center px-4 md:px-10 lg:px-20 3xl:px-40 4xl:px-60 overflow-hidden">
             <div className="max-w-3xl 3xl:max-w-5xl 4xl:max-w-7xl w-full flex flex-col items-center">
-                <h2 className="text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 text-navy-900 mb-10 md:mb-14 3xl:mb-20 4xl:mb-32 text-center font-heading font-normal">
+                <h1 className="text-headText text-navy-900 mb-10 md:mb-14 3xl:mb-20 4xl:mb-32 text-center font-heading font-normal">
                     Frequently Asked Questions
-                </h2>
+                </h1>
 
                 <div className="w-full flex flex-col gap-4 3xl:gap-8 4xl:gap-12">
                     {faqs.map((faq, idx) => {
@@ -41,7 +41,7 @@ const Faq = () => {
                                     onClick={() => setOpenIndex(isOpen ? -1 : idx)}
                                     className={`w-full text-left px-6 md:px-8 3xl:px-12 4xl:px-20 py-5 3xl:py-8 4xl:py-12 flex items-center justify-between transition-colors ${isOpen ? 'bg-brand-blue-dark text-white' : 'text-navy-800/70 hover:bg-slate-200'}`}
                                 >
-                                    <span className={`text-15px md:text-body 3xl:text-24px 4xl:text-38px pr-4 font-heading ${isOpen ? 'font-medium' : 'font-normal'}`}>
+                                    <span className={`text-subText pr-4 font-heading ${isOpen ? 'font-medium' : 'font-normal'}`}>
                                         {faq.question}
                                     </span>
                                     <span className="shrink-0">

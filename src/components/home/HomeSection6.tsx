@@ -12,7 +12,7 @@ const Counter = ({ value }: { value: string }) => {
     const numMatch = value.match(/(\d+)(.*)/);
     const targetNum = numMatch ? parseInt(numMatch[1]) : 0;
     const suffix = numMatch ? numMatch[2] : "";
-    
+
     const count = useMotionValue(0);
     const springValue = useSpring(count, {
         stiffness: 50,
@@ -20,7 +20,7 @@ const Counter = ({ value }: { value: string }) => {
         restDelta: 0.001
     });
     const rounded = useTransform(springValue, (latest) => Math.round(latest) + suffix);
-    
+
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -140,20 +140,20 @@ const HemeSection6 = () => {
 
 
                 {/* Main Heading */}
-                <h2
-                    className={`font-display absolute text-center text-48px leading-tight text-foreground capitalize`}
+                <h1
+                    className={`text-headText absolute text-center leading-tight text-foreground capitalize`}
                     style={{ width: '1166px', left: '41.5px', top: '65px' }}
                 >
                     Driving Innovation In Allied Health Research
-                </h2>
+                </h1>
 
                 {/* Subtitle */}
-                <p
-                    className={`${inter.className} absolute text-center text-muted-foreground text-body capitalize`}
+                <h2
+                    className={`text-subText absolute text-center text-muted-foreground text-body capitalize`}
                     style={{ width: '623px', left: '312.5px', top: '135px' }}
                 >
                     Research At SRM Allied Health Sciences Is Driven By Our Mission To Advance Clinical Practice, Diagnostics, And Public Health Outcomes.
-                </p>
+                </h2>
 
                 {/* CTA Button */}
                 <div className="absolute z-50 cursor-pointer" style={{ left: '507.5px', top: '210px' }}>

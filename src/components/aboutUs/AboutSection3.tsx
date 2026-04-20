@@ -40,12 +40,12 @@ const AboutSection3 = () => {
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 3xl:gap-12 4xl:gap-16">
                 {cards.map((card, idx) => (
                     <div key={idx} className={`${card.bg} rounded-3xl 4xl:rounded-brand-md py-12 px-8 3xl:py-20 3xl:px-12 4xl:py-28 4xl:px-16 flex flex-col items-center text-center shadow-sm hover:-translate-y-2 transition-transform border border-brand-yellow/20`}>
-                        <h3 className="text-48px lg:text-65px 3xl:text-70px 4xl:text-display-1 text-brand-blue-dark mb-4 4xl:mb-8 font-light font-heading leading-tight">
+                        <h1 className="text-headText text-brand-blue-dark mb-4 4xl:mb-8 font-light font-heading leading-tight">
                             <Counter value={card.num} />
-                        </h3>
-                        <p className="text-navy-800/70 text-15px 3xl:text-20px 4xl:text-24px leading-relaxed max-w-[12rem] 3xl:max-w-[16rem] 4xl:max-w-[22rem] font-medium">
+                        </h1>
+                        <h2 className="text-navy-800/70 text-subText leading-relaxed max-w-[12rem] 3xl:max-w-[16rem] 4xl:max-w-[22rem] font-medium">
                             {card.text}
-                        </p>
+                        </h2>
                     </div>
                 ))}
             </div>

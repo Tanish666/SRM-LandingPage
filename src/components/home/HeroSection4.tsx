@@ -56,16 +56,16 @@ const HeroSection4 = () => {
                     <div className="flex w-full xl:w-1/2 flex-col gap-6 justify-start">
                         <SectionPill text="Why Choose SRM AHS" />
 
-                        <h2 className={`${marcellus.className} text-[#FFFFFF] text-4xl xl:text-45px 3xl:text-55px 4xl:text-70px tracking-wide leading-[1.2]`}>
+                        <h1 className={`${marcellus.className} text-[#FFFFFF] text-headText tracking-wide leading-[1.2]`}>
                             Empowering Future<br />Healthcare Professionals
-                        </h2>
+                        </h1>
                     </div>
 
                     {/* Right Header */}
                     <div className="flex flex-col gap-6 3xl:gap-8 4xl:gap-10 xl:w-[616px] 3xl:w-[800px] 4xl:w-[1000px] text-white/90 xl:pt-10 3xl:pt-14 4xl:pt-16">
-                        <p className="text-sm xl:text-15px 3xl:text-18px 4xl:text-22px leading-relaxed font-light text-[#FFFFFF]">
+                        <h2 className="text-subText leading-relaxed font-light text-[#FFFFFF]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                        </h2>
                         <CTAButton
                             text="Explore Now"
                             onClick={() => console.log('Explore Now button clicked')}

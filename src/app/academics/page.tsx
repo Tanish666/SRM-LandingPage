@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect, useState } from "react";
-import AcademicsHero from "./components/AcademicsHero";
-import ProgramsList from "./components/ProgramsList";
-import FeeStructure from "./components/FeeStructure";
-import Department from "./components/Department";
-import Faq from "./components/Faq";
+import AcademicsHero from "@/components/academics/AcademicsHero";
+import ProgramsList from "@/components/academics/ProgramsList";
+import FeeStructure from "@/components/academics/FeeStructure";
+import Department from "@/components/academics/Department";
+import Faq from "@/components/academics/Faq";
 
 const Academics = () => {
     const [coursesData, setCoursesData] = useState<any[]>([]);

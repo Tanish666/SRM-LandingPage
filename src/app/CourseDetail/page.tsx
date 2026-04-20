@@ -1,17 +1,17 @@
 'use client'
-import DeptHeroSection from "./components/DeptHeroSection";
-import DeptSection2 from "./components/DeptSection2";
-import DeptSection3 from "./components/DeptSection3";
-import DeptSection4 from "./components/DeptSection4";
-import DeptSection5 from "./components/DeptSection5";
-import DeptSection6 from "./components/DeptSection6";
-import DeptSection7 from "./components/DeptSection7";
-import DeptSection8 from "./components/DeptSection8";
-import DeptFacultySection from "./components/DeptFacultySection";
-import DeptSection9 from "./components/DeptSection9";
+import DeptHeroSection from "@/components/CourseDetail/DeptHeroSection";
+import DeptSection2 from "@/components/CourseDetail/DeptSection2";
+import DeptSection3 from "@/components/CourseDetail/DeptSection3";
+import DeptSection4 from "@/components/CourseDetail/DeptSection4";
+import DeptSection5 from "@/components/CourseDetail/DeptSection5";
+import DeptSection6 from "@/components/CourseDetail/DeptSection6";
+import DeptSection7 from "@/components/CourseDetail/DeptSection7";
+import DeptSection8 from "@/components/CourseDetail/DeptSection8";
+import DeptFacultySection from "@/components/CourseDetail/DeptFacultySection";
+import DeptSection9 from "@/components/CourseDetail/DeptSection9";
 
-import DeptSection11 from "./components/DeptSection11";
-import DeptCTABanner from "./components/DeptCTABanner";
+import DeptSection11 from "@/components/CourseDetail/DeptSection11";
+import DeptCTABanner from "@/components/CourseDetail/DeptCTABanner";
 import { useEffect, useState } from "react";
 
 

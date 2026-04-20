@@ -35,9 +35,9 @@ const AboutSection9 = () => {
                 {/* Header Content */}
                 <div className="flex flex-col items-center mb-12 4xl:mb-24 relative z-10">
                     <SectionPill text="Our Facility" className="mb-6 4xl:mb-10" />
-                    <h2 className="text-white text-h2 md:text-h1 3xl:text-65px 4xl:text-display-1 leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl text-center font-heading font-normal">
+                    <h1 className="text-headText text-white leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl text-center font-heading font-normal">
                         Empowering Future Healthcare Professionals
-                    </h2>
+                    </h1>
                 </div>
 
                 {/* Navigation Arrows Container - Positioned above cards on the right */}
@@ -59,8 +59,8 @@ const AboutSection9 = () => {
                 {/* Desktop Cards Grid */}
                 <div className="hidden sm:grid grid-cols-2 xl:grid-cols-4 gap-6 4xl:gap-12 gap-y-10 relative z-10 mb-8 w-full max-w-[1300px] 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto px-4 lg:px-0">
                     {facilities.map((item, idx) => (
-                        <div 
-                            key={idx} 
+                        <div
+                            key={idx}
                             style={{ backgroundImage: `url(${item.img})` }}
                             className="relative h-80 3xl:h-[28rem] 4xl:h-[38rem] w-full max-w-[20rem] 3xl:max-w-[25rem] 4xl:max-w-[30rem] mx-auto rounded-2xl 4xl:rounded-brand-pill overflow-hidden bg-cover bg-center bg-no-repeat group cursor-pointer shadow-2xl hover:-translate-y-2 transition-transform duration-500 isolate"
                         >

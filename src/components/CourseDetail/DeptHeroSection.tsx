@@ -16,15 +16,15 @@ const DeptHeroSection = ({ courseData }: Props) => {
             </div>
 
             <div className="relative z-20 flex flex-col items-start max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2400px] w-full h-full justify-end pb-12 3xl:pb-24 4xl:pb-32">
-                <h1 className="text-white text-display-4 md:text-display-3 3xl:text-100px 4xl:text-display-1 mb-6 4xl:mb-10 font-light font-heading leading-tight">
+                <h1 className="text-white text-headText 4xl:text-display-1 mb-6 4xl:mb-10 font-light font-heading leading-tight">
                     {courseData?.name || "Cardiac Care Technology"}
                 </h1>
-                <div className="flex flex-wrap items-center justify-start gap-x-2 gap-y-2 3xl:gap-4 4xl:gap-6 bg-white/95 rounded-full px-4 py-2 md:px-5 md:py-3 3xl:px-8 3xl:py-5 4xl:px-14 4xl:py-8 shadow-sm text-11px md:text-15px 3xl:text-20px 4xl:text-28px font-medium font-sans">
+                <div className="flex flex-wrap items-center justify-start gap-x-2 gap-y-2 3xl:gap-4 4xl:gap-6 bg-white rounded-full px-4 py-2 md:px-5 md:py-3 3xl:px-8 3xl:py-5 4xl:px-14 4xl:py-8 shadow-sm text-subText">
                     <span className="text-navy-900 uppercase">HOME</span>
                     <span className="size-2 md:size-4 3xl:size-6 4xl:size-8 rounded-full bg-brand-yellow" />
                     <span className="text-navy-900 uppercase">DEPARTMENT PAGE</span>
                     <span className="size-2 md:size-4 3xl:size-6 4xl:size-8 rounded-full bg-brand-yellow" />
-                    <span className="text-navy-900 uppercase font-bold">{courseData?.name || "CARDIAC CARE TECHNOLOGY"}</span>
+                    <span className="text-navy-900 uppercase">{courseData?.name || "CARDIAC CARE TECHNOLOGY"}</span>
                 </div>
             </div>
         </section>

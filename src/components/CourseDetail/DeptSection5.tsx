@@ -3,6 +3,7 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import SectionPill from '@/components/home/SectionPill'
+import CTAButton from '../ui/CTA'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
@@ -48,36 +49,26 @@ const DeptSection5 = ({ courseData }: Props) => {
                 {/* Header Section */}
                 <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
                     <SectionPill text="Career Opportunities" className="mb-6 4xl:mb-12" />
-                    
-                    <h2 className="text-h2 md:text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 leading-tight text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal">
+
+                    <h1 className="text-headingText text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal">
                         Empowering The Next Generation Of Healthcare Leaders
+                    </h1>
+
+                    <h2 className={`${inter.className} text-navy-800/70 text-subText text-center capitalize max-w-2xl 4xl:max-w-5xl mb-8 4xl:mb-16`}>
+                        At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
                     </h2>
 
-                    <p className={`${inter.className} text-navy-800/70 text-15px md:text-body 3xl:text-20px 4xl:text-28px leading-relaxed capitalize max-w-2xl 4xl:max-w-5xl mb-8 4xl:mb-16`}>
-                        At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
-                    </p>
-
-                    <button
-                        className="inline-flex items-center justify-between bg-brand-yellow transition-colors cursor-pointer w-68 4xl:w-120 h-12 4xl:h-24 rounded-full border border-brandBorder pl-6 4xl:pl-12 pr-1 4xl:pr-2 group"
-                    >
-                        <span className={`${inter.className} text-18px 4xl:text-28px font-normal text-navy-900 capitalize`}>Explore Our Research</span>
-                        <span className="rounded-full bg-white flex items-center justify-center flex-shrink-0 w-10 h-10 4xl:w-20 4xl:h-20">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="4xl:w-10 4xl:h-10 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-navy-900">
-                                <line x1="5" y1="19" x2="19" y2="5" />
-                                <polyline points="9 5 19 5 19 15" />
-                            </svg>
-                        </span>
-                    </button>
+                    <CTAButton text='Explore Our Research' />
                 </div>
 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 4xl:gap-16 w-full">
                     {stats.map((stat, index) => {
-                        const isEven = index % 2 === 1;
+                        const isInner = index === 1 || index === 2;
                         return (
                             <div
                                 key={index}
-                                className={`group relative rounded-3xl 4xl:rounded-brand-md p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue ${isEven ? 'lg:mt-12 4xl:mt-24' : ''}`}
+                                className={`group relative rounded-3xl 4xl:rounded-brand-md p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue flex ${isInner ? 'lg:mt-12 xl:mt-26 4xl:mt-32' : ''}`}
                             >
                                 <div
                                     className="h-full w-full rounded-3xl 4xl:rounded-brand-md p-8 xl:p-10 4xl:p-16 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px] bg-gradient-to-b from-white to-brand-lightBlue-soft"
@@ -94,15 +85,15 @@ const DeptSection5 = ({ courseData }: Props) => {
                                         </div>
                                     </div>
                                     <div className="mt-auto">
-                                        <h3 className="text-38px md:text-48px 3xl:text-65px 4xl:text-display-1 leading-tight text-brand-blue-dark mb-4 4xl:mb-8 font-heading font-light">
+                                        <h1 className="text-headText leading-tight text-brand-blue-dark mb-4 4xl:mb-8 font-heading font-light">
                                             {stat.num}
-                                        </h3>
-                                        <p className="font-heading text-18px md:text-20px 3xl:text-24px 4xl:text-38px leading-tight text-navy-900 capitalize mb-2 4xl:mb-4">
+                                        </h1>
+                                        <h2 className="font-heading text-subText text-navy-900 capitalize mb-2 4xl:mb-4">
                                             {stat.label}
-                                        </p>
-                                        <p className={`${inter.className} text-15px md:text-body 3xl:text-18px 4xl:text-28px leading-relaxed text-navy-800/70 capitalize`}>
+                                        </h2>
+                                        <h3 className={`${inter.className} text-subText text-navy-800/70 capitalize`}>
                                             {stat.desc}
-                                        </p>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>

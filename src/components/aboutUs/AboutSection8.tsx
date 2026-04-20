@@ -28,9 +28,9 @@ const AboutSection8 = () => {
             <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
                 <SectionPill text="Our History" className="mb-8 4xl:mb-16" />
 
-                <h2 className="text-h2 md:text-h1 3xl:text-70px 4xl:text-display-1 text-navy-900 mb-24 4xl:mb-48 text-center leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl whitespace-normal font-heading font-normal">
+                <h1 className="text-headText text-navy-900 mb-24 4xl:mb-48 text-center leading-tight max-w-4xl 3xl:max-w-6xl 4xl:max-w-7xl whitespace-normal font-heading font-normal">
                     A Legacy Of Excellence In Engineering Education
-                </h2>
+                </h1>
 
                 <div className="relative w-full max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl flex flex-col items-center">
                     {/* Vertical Dotted Line */}

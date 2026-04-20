@@ -14,13 +14,13 @@ const HomeSection2 = () => {
                 <div className="flex flex-col items-center text-center mb-10 md:mb-20 4xl:mb-32">
                     <SectionPill text="About Us" className="mb-8 4xl:mb-12" />
 
-                    <h2 className="text-4xl md:text-5xl lg:text-45px 3xl:text-55px 4xl:text-80px text-black mb-8 4xl:mb-12 leading-tight lg:whitespace-nowrap text-center w-full max-w-none font-medium">
+                    <h1 className="text-headText text-black mb-8 4xl:mb-12 leading-tight lg:whitespace-nowrap text-center w-full max-w-none font-medium">
                         Shaping Healthcare Leaders For A Better Tomorrow
-                    </h2>
+                    </h1>
 
-                    <p className="text-[#515151] max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl text-lg md:text-17px 3xl:text-22px 4xl:text-28px leading-relaxed">
+                    <h2 className="text-[#515151] max-w-5xl 3xl:max-w-6xl 4xl:max-w-7xl text-subText leading-relaxed">
                         Welcome To SRM Institute Of Allied Health Sciences, A Pioneering Institution Where Academic Excellence Meets Clinical Innovation. Our Programs Are Designed To Empower Students
-                    </p>
+                    </h2>
                 </div>
 
                 {/* Cards Grid with Staggered Layout */}

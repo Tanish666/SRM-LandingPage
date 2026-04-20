@@ -35,9 +35,9 @@ const AboutSection6 = () => {
                     <div>
                         <SectionPill text="Our Leadership" className="mb-6 4xl:mb-10" />
 
-                        <h2 className="font-heading text-3xl md:text-display-4 3xl:text-70px 4xl:text-display-2 leading-[1.1] text-navy-900">
+                        <h1 className="font-heading text-headText leading-[1.1] text-navy-900">
                             Meet The Leaders Driving <br className="hidden md:block" /> Academic Innovation And <br className="hidden md:block" /> Institutional Growth
-                        </h2>
+                        </h1>
                     </div>
 
                     <div className="shrink-0">
@@ -64,7 +64,7 @@ const AboutSection6 = () => {
                             </div>
                             <div className='flex items-center gap-1.5'>
                                 <div className='w-1.5 h-4.5 lg:w-2 lg:h-5 4xl:w-3 4xl:h-8 bg-brand-yellow shrink-0' />
-                                <h3 className="text-20px lg:text-24px 3xl:text-28px 4xl:text-38px text-navy-900 leading-tight font-heading font-normal">{leader.name}</h3>
+                                <h2 className="text-subText2 text-navy-900 leading-tight font-heading font-normal">{leader.name}</h2>
                             </div>
                             <div className="mt-2 4xl:mt-4">
                                 <p className="text-brand-blue-dark font-medium text-15px lg:text-18px 3xl:text-20px 4xl:text-24px font-heading">{leader.role}</p>

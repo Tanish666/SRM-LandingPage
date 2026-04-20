@@ -18,12 +18,12 @@ const HomeSection9 = () => {
                 <div className="relative w-full pt-10 pb-16 4xl:pb-32 px-8 lg:px-14 4xl:px-24 flex flex-col items-start gap-4 4xl:gap-8 z-10">
                     <div className='absolute inset-0 bg-gradient-to-b from-white/20 via-white/50 to-white/80 backdrop-blur-xl -z-10' />
                     <div className='absolute -left-10 top-0 w-72 h-72 bg-[#FFD100]/15 blur-[120px] rounded-full -z-10' />
-                    <h2 className="text-4xl md:text-5xl lg:text-54px 3xl:text-65px 4xl:text-100px leading-[1.1] text-black tracking-tight">
+                    <h1 className="text-headText text-black tracking-tight">
                         World Class Facilities
-                    </h2>
-                    <p className="text-gray-900 text-15px md:text-base 3xl:text-xl 4xl:text-3xl max-w-[95%] leading-relaxed font-medium mt-2">
+                    </h1>
+                    <h2 className="text-navy-800/70 text-subText leading-relaxed font-medium mt-2">
                         SRM College Of Allied Health Sciences Offers A Dynamic And Student-Focused Campus Designed To Nurture Academic Excellence And Holistic Development
-                    </p>
+                    </h2>
 
                     <div className="mt-6 4xl:mt-12 4xl:scale-125 4xl:origin-left">
                         <button className="bg-[#FFD100] hover:bg-[#E6BC00] text-black font-medium text-lg rounded-full pl-8 pr-1 py-1 flex items-center gap-4 transition-all hover:scale-[1.03] active:scale-95 shadow-md">

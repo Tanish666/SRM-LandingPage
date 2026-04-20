@@ -8,13 +8,13 @@ const AboutHero = () => {
             </div>
 
             <div className="relative z-20 flex flex-col items-start max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full h-full justify-end pb-12 4xl:pb-24 pl-4 md:pl-0 lg:pl-0">
-                <h1 className={"text-white text-display-4  md:text-display-3 3xl:text-100px 4xl:text-display-1 mb-6 4xl:mb-10 font-light font-heading leading-tight"}>
+                <h1 className={"text-white text-heroText mb-6 4xl:mb-10 font-light font-heading leading-tight"}>
                     About Us
                 </h1>
-                <div className="flex items-center gap-2 bg-white/95 rounded-full px-5 py-3 4xl:px-8 4xl:py-5 shadow-sm text-15px 3xl:text-body 4xl:text-24px font-medium">
+                <div className="flex items-center gap-2 bg-white rounded-full px-5 py-3 4xl:px-8 4xl:py-5 shadow-sm text-subText">
                     <span className="text-navy-900 uppercase">Home</span>
                     <span className="size-4 4xl:size-8 rounded-full bg-brand-yellow" />
-                    <span className="text-navy-900 uppercase">ABOUT US</span>
+                    <span className="text-navy-900 text-subText uppercase">ABOUT US</span>
                 </div>
             </div>
         </section>

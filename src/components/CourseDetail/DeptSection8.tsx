@@ -1,0 +1,60 @@
+'use client'
+import React from 'react'
+import { Inder } from 'next/font/google'
+import Image from 'next/image'
+
+const inder = Inder({
+    subsets: ['latin'],
+    weight: ['400'],
+})
+
+interface Props {
+    courseData?: any;
+}
+
+const DeptSection8 = ({ courseData }: Props) => {
+    return (
+        <section className="w-full bg-brand-lightBlue-tint py-12 md:py-20 4xl:py-36 px-4 md:px-10 lg:px-20 flex justify-center">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 4xl:gap-36 max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full">
+                {/* Left: Blue frame */}
+                <div className="flex-shrink-0 rounded-[20px] lg:rounded-[30px] border-[16px] lg:border-[24px] border-[#2DA4FE]">
+                    <div className="relative overflow-hidden w-64 h-72 lg:w-[22rem] lg:h-[26rem] 3xl:w-105 3xl:h-[30rem] 4xl:w-[40rem] 4xl:h-[44rem] rounded-3xl">
+                        <Image
+                            src="/depsecpic4.png"
+                            alt="Dr. Kumar Ebenezer K"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                </div>
+
+                {/* Right: Name, Designation & Contact */}
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <h3
+                        className="text-h3 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 leading-tight mb-4 4xl:mb-8 font-heading font-normal"
+                    >
+                        Dr.Kumar Ebenezer K
+                    </h3>
+                    <p
+                        className={`${inder.className} text-[#2DA4FE] font-normal mb-8 4xl:mb-16 text-24px lg:text-[28px] 3xl:text-38px 4xl:text-65px`}
+                        style={{ lineHeight: '1.2', letterSpacing: '-0.03em' }}
+                    >
+                        Professor &amp; Principal
+                    </p>
+                    <div className="space-y-3 4xl:space-y-6">
+                        <p className={`${inder.className} text-15px lg:text-body 3xl:text-20px 4xl:text-28px text-navy-800`}>
+                            <span className="font-bold text-navy-900">Email:</span>{' '}
+                            drkumarebenezerk@gmail.com
+                        </p>
+                        <p className={`${inder.className} text-15px lg:text-body 3xl:text-20px 4xl:text-28px text-navy-800`}>
+                            <span className="font-bold text-navy-900">Phone:</span>{' '}
+                            000-000-000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default DeptSection8

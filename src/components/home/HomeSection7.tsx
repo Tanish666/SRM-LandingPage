@@ -84,12 +84,12 @@ const HomeSection7 = () => {
             <div className="w-full lg:w-1/2 flex items-center justify-center py-12 md:py-16 4xl:py-32 px-4 md:px-10 lg:px-20 3xl:px-32 4xl:px-48 overflow-hidden">
                 <div className="max-w-2xl 3xl:max-w-4xl 4xl:max-w-6xl w-full">
                     {/* Header Text */}
-                    <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-tight mb-6 4xl:mb-12 font-heading font-normal">
+                    <h1 className="text-headText text-navy-900 leading-tight mb-6 4xl:mb-12 font-heading font-normal">
                         Placement Partners
-                    </h2>
-                    <p className="text-navy-800/70 text-sm md:text-base 3xl:text-xl 4xl:text-2xl leading-relaxed mb-10 4xl:mb-20 max-w-[90%]">
+                    </h1>
+                    <h2 className="text-navy-800/70 text-subText leading-relaxed mb-10 4xl:mb-20 max-w-[90%]">
                         At SRM College Of Allied Health Sciences (AHS), We Are Committed To Shaping Healthcare Professionals Who Are Career-Ready And Globally Competent. Our Strong Industry Collaborations Open Up Excellent Career Pathways For Our Students Across Leading Hospitals, Healthcare Organizations, And Research Institutions.
-                    </p>
+                    </h2>
 
                     {/* Stats Rows */}
                     <div className="flex flex-row justify-start items-center mb-16 4xl:mb-24 relative gap-4 sm:gap-0">

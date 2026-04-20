@@ -88,7 +88,7 @@ export default function HeroSection5() {
 
                 {/* Left Column: Latest News */}
                 <div className="bg-brand-yellow-light2 rounded-lg overflow-hidden flex flex-col lg:h-[520px] 3xl:h-[650px] 4xl:h-[850px] h-[450px] pb-4 shadow-sm border border-brandBorder">
-                    <div className="bg-brand-yellow rounded-lg py-2 3xl:py-4 text-center shadow-sm z-10 mx-1">
+                    <div className="bg-brand-yellow rounded-lg py-2 3xl:py-4 text-center shadow-sm z-10">
                         <h3 className="text-h3 3xl:text-h2 4xl:text-h1 text-navy-900 tracking-wide font-heading">Latest News</h3>
                     </div>
                     <div
@@ -115,9 +115,9 @@ export default function HeroSection5() {
                 <div className="flex flex-col">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 4xl:mb-16 gap-4">
-                        <h2 className="text-h2 lg:text-h1 3xl:text-6xl 4xl:text-display-2 text-navy-900 leading-[1.1] font-heading font-normal">
+                        <h1 className="text-headText text-navy-900 leading-[1.1] font-heading font-normal">
                             Insights From Our Learners
-                        </h2>
+                        </h1>
                         <div className="flex gap-3 pb-1 4xl:scale-125 4xl:origin-bottom-right">
                             <button
                                 onClick={handlePrev}

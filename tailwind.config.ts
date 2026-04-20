@@ -112,6 +112,11 @@ export default {
 				}
 			},
 			fontSize: {
+				'heroText': '50px',
+				'subText': '16px',
+				'headText': '45px',
+				'subText2': '30px',
+				'subText3': '24px',
 				'2-75rem': 'var(--fs-2-75rem)',
 				'1-35rem': 'var(--fs-1-35rem)',
 				'1-6rem': 'var(--fs-1-6rem)',

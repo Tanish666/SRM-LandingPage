@@ -11,10 +11,10 @@ const AcademicsHero = () => {
                 <h1 className="text-white text-display-4  md:text-display-3 3xl:text-100px 4xl:text-display-1 mb-6 4xl:mb-10 font-light font-heading leading-tight">
                     Academics
                 </h1>
-                <div className="flex items-center gap-2 3xl:gap-4 4xl:gap-6 bg-white/95 rounded-full px-5 py-3 3xl:px-8 3xl:py-5 4xl:px-14 4xl:py-8 shadow-sm text-15px 3xl:text-20px 4xl:text-28px">
+                <div className="flex items-center gap-2 3xl:gap-4 4xl:gap-6 bg-white rounded-full px-5 py-3 3xl:px-8 3xl:py-5 4xl:px-14 4xl:py-8 shadow-sm text-subText">
                     <span className="text-navy-900 uppercase">Home</span>
                     <span className="size-4 3xl:size-6 4xl:size-8 rounded-full bg-brand-yellow" />
-                    <span className="text-navy-900 uppercase font-bold">ACADEMICS</span>
+                    <span className="text-navy-900 uppercase ">ACADEMICS</span>
                 </div>
             </div>
         </section>

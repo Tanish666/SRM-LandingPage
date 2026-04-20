@@ -84,9 +84,9 @@ const DeptSection7 = ({ courseData }: Props) => {
                 <SectionPill text="POs, PSOs, PEOs" className="mb-8 4xl:mb-16" />
 
                 {/* Title */}
-                <h2 className="text-h2 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 leading-tight capitalize mb-6 lg:mb-10 4xl:mb-20 text-center font-heading font-normal">
+                <h1 className="text-headText text-navy-900 leading-tight capitalize mb-6 lg:mb-10 4xl:mb-20 text-center font-heading font-normal">
                     POs,PSOs And PEOs
-                </h2>
+                </h1>
 
                 {/* Accordion Container */}
                 <div className="w-full space-y-3 lg:space-y-4.5 4xl:space-y-12">
