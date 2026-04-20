@@ -40,14 +40,14 @@ const HeroSection = () => {
                         </div>
 
                         {/* Program Offered Badge */}
-                        <div className='absolute bottom-2 -right-10 md:bottom-5 md:-right-12 4xl:bottom-10 4xl:-right-28 z-20'>
+                        <div className='absolute bottom-2 -right-6 md:bottom-5 md:-right-7 lg:-right-10 4xl:bottom-10 4xl:-right-20 z-20'>
                             <div className='relative group/program'>
-                                <div className='absolute size-14 md:size-20 4xl:size-32 -z-10 bg-white rounded-full -top-2 md:-top-3.5 4xl:-top-6 -left-2.5 md:-left-4 4xl:-left-8 group-hover/program:bg-[#FFEB3B] transition-all duration-500' />
+                                <div className='absolute size-10 md:size-20 4xl:size-32 -z-10 bg-white rounded-full -top-0 md:-top-3.5 4xl:-top-6 -left-1 md:-left-4 4xl:-left-8 group-hover/program:bg-[#FFEB3B] transition-all duration-500' />
                                 <div className='flex items-center gap-1.5 md:gap-2 4xl:gap-4 pr-5 md:pr-8 4xl:pr-12 py-1.5 rounded-full transition-all duration-500 cursor-pointer '>
                                     <div className=''>
                                         <IconArrowNarrowRight stroke={1} className='w-8 h-8 md:w-10 md:h-10 4xl:w-16 4xl:h-16 rotate-[-35deg]' />
                                     </div>
-                                    <span className='text-13px md:text-lg 3xl:text-xl 4xl:text-2rem font-semibold text-slate-600 tracking-tight whitespace-nowrap group-hover/program:text-black transition-all duration-500'>Program Offered</span>
+                                    <h3 className='text-10px md:text-lg 3xl:text-xl 4xl:text-2rem font-semibold text-slate-600 tracking-tight whitespace-nowrap group-hover/program:text-black transition-all duration-500'>Program Offered</h3>
                                 </div>
                             </div>
                         </div>

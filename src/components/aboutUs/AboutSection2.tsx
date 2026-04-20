@@ -10,14 +10,14 @@ const AboutSection2 = () => {
                 <div className="flex flex-col lg:flex-row gap-16 3xl:gap-32 lg:items-center 4xl:items-stretch">
                     {/* Left Side: Image Content */}
                     <div className="w-full lg:w-[42%] 4xl:w-[50%] relative shrink-0">
-                        <div className="relative w-full aspect-square 4xl:aspect-auto 4xl:h-full rounded-brand-pill 4xl:rounded-brand-lg overflow-hidden ">
+                        <div className="relative w-full aspect-square  4xl:h-full rounded-brand-pill 4xl:rounded-brand-lg overflow-hidden ">
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <img loading="lazy" decoding="async" src='ASec2Pic1.svg' className='w-full h-full object-cover' alt="About Image" />
                             </div>
                         </div>
                         {/* Overlay Info Bar */}
-                        <div className="absolute bottom-0 left-0 w-[95%] rounded-tr-brand-pill 3xl:rounded-tr-brand-md 4xl:rounded-tr-brand-lg flex items-center gap-5 md:gap-8 4xl:gap-12 overflow-hidden pt-4 lg:pt-8">
-                            <div className="flex items-center gap-1 md:gap-1.5 4xl:gap-3 shrink-0 ">
+                        <div className="absolute bottom-0 left-0 w-[95%] rounded-tr-brand-pill flex items-center gap-5 md:gap-8 overflow-hidden pt-4 lg:pt-8">
+                            <div className="flex items-center gap-1 md:gap-1.5 shrink-0 ">
                                 <div className="w-12 md:w-24 4xl:w-40 h-4 md:h-6 4xl:h-10 bg-brand-yellow skew-x-[15deg]"></div>
                                 <div className="w-5 md:w-8 4xl:w-12 h-4 md:h-6 4xl:h-10 bg-brand-blue-dark skew-x-[15deg]"></div>
                             </div>

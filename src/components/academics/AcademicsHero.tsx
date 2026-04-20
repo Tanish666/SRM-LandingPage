@@ -7,7 +7,7 @@ const AcademicsHero = () => {
                 <img loading="lazy" decoding="async" src="/ASec1Pic1.svg" alt="Admission Hero Background" className="w-full h-full object-cover" />
             </div>
 
-            <div className="relative z-20 flex flex-col items-start max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2400px] w-full h-full justify-end pb-12 3xl:pb-24 4xl:pb-32">
+            <div className="relative z-20 flex flex-col items-start max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2400px] w-full h-full justify-end pb-12 3xl:pb-24 4xl:pb-32 pl-10 lg:pl-0">
                 <h1 className="text-white text-display-4  md:text-display-3 3xl:text-100px 4xl:text-display-1 mb-6 4xl:mb-10 font-light font-heading leading-tight">
                     Academics
                 </h1>

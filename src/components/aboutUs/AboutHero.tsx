@@ -7,7 +7,7 @@ const AboutHero = () => {
                 <img loading="lazy" decoding="async" src="/ASec1Pic1.svg" className="w-full h-full object-cover" alt="About Hero" />
             </div>
 
-            <div className="relative z-20 flex flex-col items-start max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full h-full justify-end pb-12 4xl:pb-24 pl-4 md:pl-0 lg:pl-0">
+            <div className="relative z-20 flex flex-col items-start max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full h-full justify-end pb-12 4xl:pb-24 pl-10 md:pl-10 lg:pl-0">
                 <h1 className={"text-white text-heroText mb-6 4xl:mb-10 font-light font-heading leading-tight"}>
                     About Us
                 </h1>

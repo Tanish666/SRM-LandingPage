@@ -44,61 +44,122 @@ const DeptSection5 = ({ courseData }: Props) => {
     ]
 
     return (
-        <section className="w-full bg-white flex justify-center py-12 md:py-20 4xl:py-36 px-4 md:px-10 lg:px-20 overflow-hidden">
-            <div className="max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] w-full flex flex-col items-center">
-                {/* Header Section */}
-                <div className="flex flex-col items-center text-center mb-12 4xl:mb-24">
-                    <SectionPill text="Career Opportunities" className="mb-6 4xl:mb-12" />
+        <section className="w-full bg-white flex justify-center py-12 lg:py-20 px-4 lg:px-0 overflow-hidden mb-[30px] lg:mb-[-80px] 3xl:py-16 4xl:py-24 3xl:px-32 4xl:px-48">
 
-                    <h1 className="text-headingText text-navy-900 capitalize mb-6 4xl:mb-12 max-w-4xl 4xl:max-w-7xl font-heading font-normal">
-                        Empowering The Next Generation Of Healthcare Leaders
-                    </h1>
+            {/* MOBILE LAYOUT */}
+            <div className="flex flex-col items-center w-full lg:hidden">
+                <SectionPill text="Career Opportunities" className="uppercase" />
 
-                    <h2 className={`${inter.className} text-navy-800/70 text-subText text-center capitalize max-w-2xl 4xl:max-w-5xl mb-8 4xl:mb-16`}>
-                        At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
-                    </h2>
+                {/* Main Heading */}
+                <h1 className="font-heading text-center text-[28px] leading-[36px] text-navy-900 capitalize mt-4 max-w-[90%]">
+                    Empowering The Next Generation Of Healthcare Leaders
+                </h1>
 
+                {/* Subtitle */}
+                <h2 className={`${inter.className} text-center text-navy-800/70 text-[14px] leading-[22px] capitalize mt-3 max-w-[90%]`}>
+                    At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
+                </h2>
+
+                {/* CTA Button */}
+                <div className="mt-6 flex justify-center w-full">
                     <CTAButton text='Explore Our Research' />
                 </div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 4xl:gap-16 w-full">
-                    {stats.map((stat, index) => {
-                        const isInner = index === 1 || index === 2;
-                        return (
+                {/* Mobile Stat Cards */}
+                <div className="flex flex-col gap-4 mt-8 w-full max-w-[400px]">
+                    {stats.map((stat, index) => (
+                        <div
+                            key={index}
+                            className="w-full rounded-[20px] p-[1px] bg-gradient-to-b from-slate-400 to-brand-blue"
+                        >
                             <div
-                                key={index}
-                                className={`group relative rounded-3xl 4xl:rounded-brand-md p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue flex ${isInner ? 'lg:mt-12 xl:mt-26 4xl:mt-32' : ''}`}
+                                className="w-full rounded-[19px] p-5 bg-gradient-to-b from-white to-brand-lightBlue-soft"
                             >
-                                <div
-                                    className="h-full w-full rounded-3xl 4xl:rounded-brand-md p-8 xl:p-10 4xl:p-16 flex flex-col items-start justify-between min-h-[320px] 3xl:min-h-[400px] 4xl:min-h-[550px] bg-gradient-to-b from-white to-brand-lightBlue-soft"
-                                >
-                                    <div className="w-full flex justify-end mb-4 4xl:mb-8">
-                                        <div className="4xl:scale-[2] transform-origin-right">
-                                            <Image
-                                                src={stat.icon}
-                                                alt={stat.label}
-                                                width={stat.iconW}
-                                                height={stat.iconH}
-                                                className="object-contain"
-                                            />
+                                <div className="flex items-start justify-between mb-3">
+                                    <h1 className="font-heading font-light text-[36px] leading-[36px] text-brand-blue-dark">
+                                        {stat.num}
+                                    </h1>
+                                    <Image
+                                        src={stat.icon}
+                                        alt={stat.label}
+                                        width={stat.iconW}
+                                        height={stat.iconH}
+                                        className="object-contain max-w-[50px] max-h-[50px]"
+                                    />
+                                </div>
+                                <h2 className="font-heading text-[18px] leading-[24px] text-navy-900 capitalize mb-1">
+                                    {stat.label}
+                                </h2>
+                                <h3 className={`${inter.className} text-[14px] leading-[22px] text-navy-800/70 capitalize`}>
+                                    {stat.desc}
+                                </h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* DESKTOP LAYOUT  */}
+            <div className="hidden lg:flex flex-col items-center w-full 4xl:mt-12 3xl:mt-8 4xl:mb-[400px] 3xl:mb-[250px]">
+                <SectionPill text="Career Opportunities" className="" />
+
+                <div className="relative 4xl:scale-[1.75] 3xl:scale-[1.4] transition-all duration-500 transform-gpu origin-top" style={{ width: '1245px', height: '650px' }}>
+                    {/* Main Heading */}
+                    <h1
+                        className="font-heading absolute text-center text-[45px] leading-[56px] text-navy-900 capitalize"
+                        style={{ width: '1166px', left: '41.5px', top: '65px' }}
+                    >
+                        Empowering The Next Generation Of Healthcare Leaders
+                    </h1>
+
+                    {/* Subtitle */}
+                    <h2
+                        className={`${inter.className} absolute text-center text-navy-800/70 text-[15px] leading-[25px] capitalize`}
+                        style={{ width: '623px', left: '312.5px', top: '135px' }}
+                    >
+                        At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
+                    </h2>
+
+                    {/* CTA Button */}
+                    <div className="absolute z-50 cursor-pointer flex justify-center items-center" style={{ left: '507.5px', top: '210px', width: '267px' }}>
+                        <CTAButton text='Explore Our Research' />
+                    </div>
+
+                    {/* Desktop Stat Cards*/}
+                    <div className="absolute w-full" style={{ top: '0px' }}>
+                        {stats.map((stat, index) => {
+                            const isShortCard = index === 1 || index === 2
+                            return (
+                                <div key={index} className="absolute rounded-[20px] p-[1px] transition-all duration-300 hover:-translate-y-2 bg-gradient-to-b from-slate-400 to-brand-blue" style={{
+                                    width: stat.width, height: stat.height, left: stat.left, top: stat.top,
+                                }}>
+                                    <div className="w-full h-full rounded-[19px] relative overflow-hidden bg-gradient-to-b from-white to-brand-lightBlue-soft">
+                                        <div className={`absolute ${isShortCard ? 'top-[27px] right-[18px]' : 'top-[66px] left-[17px]'}`}>
+                                            <Image src={stat.icon} alt={stat.label} width={stat.iconW} height={stat.iconH} className="object-contain" />
                                         </div>
-                                    </div>
-                                    <div className="mt-auto">
-                                        <h1 className="text-headText leading-tight text-brand-blue-dark mb-4 4xl:mb-8 font-heading font-light">
+                                        <h1
+                                            className="font-heading font-light absolute text-[40px] leading-[40px] text-brand-blue-dark"
+                                            style={{ left: '18px', top: isShortCard ? '60px' : '178px' }}
+                                        >
                                             {stat.num}
                                         </h1>
-                                        <h2 className="font-heading text-subText text-navy-900 capitalize mb-2 4xl:mb-4">
+                                        <h2
+                                            className="font-heading absolute text-[20px] leading-[25px] text-navy-900 capitalize"
+                                            style={{ left: '18px', top: isShortCard ? '116px' : '234px' }}
+                                        >
                                             {stat.label}
                                         </h2>
-                                        <h3 className={`${inter.className} text-subText text-navy-800/70 capitalize`}>
+                                        <h3
+                                            className={`${inter.className} absolute text-[15px] leading-[25px] text-navy-800/70 capitalize`}
+                                            style={{ width: stat.descWidth, left: '12px', top: isShortCard ? '153px' : '271px' }}
+                                        >
                                             {stat.desc}
                                         </h3>
                                     </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </section>
