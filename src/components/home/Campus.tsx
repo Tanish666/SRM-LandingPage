@@ -2,6 +2,7 @@
 import React from 'react'
 import { Marquee } from '@/components/ui/marquee'
 import Image from 'next/image'
+import CTAButton from '../ui/CTA'
 
 const HomeSection9 = () => {
     return (
@@ -26,15 +27,7 @@ const HomeSection9 = () => {
                     </h2>
 
                     <div className="mt-6 4xl:mt-12 4xl:scale-125 4xl:origin-left">
-                        <button className="bg-[#FFD100] hover:bg-[#E6BC00] text-black font-medium text-lg rounded-full pl-8 pr-1 py-1 flex items-center gap-4 transition-all hover:scale-[1.03] active:scale-95 shadow-md">
-                            <span>Explore Our Campus</span>
-                            <div className="bg-white rounded-full p-2.5 flex items-center justify-center shadow-sm">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="translate-x-[1px] -translate-y-[1px]">
-                                    <line x1="5" y1="19" x2="19" y2="5"></line>
-                                    <polyline points="9 5 19 5 19 15"></polyline>
-                                </svg>
-                            </div>
-                        </button>
+                        <CTAButton text="Explore Our Campus" />
                     </div>
                 </div>
 
