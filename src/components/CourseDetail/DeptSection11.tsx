@@ -73,9 +73,9 @@ const DeptSection11 = ({ courseData }: Props) => {
             <div className="w-full max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2000px] mx-auto flex flex-col items-center">
                 <SectionPill text="Testimonials" className="mb-8 4xl:mb-16" />
                 {/* Title */}
-                <h2 className="text-h2 md:text-h1 lg:text-h1 3xl:text-65px 4xl:text-display-2 text-navy-900 text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading font-normal">
+                <h1 className="text-heroText text-navy-900 text-center capitalize leading-tight mb-8 4xl:mb-16 font-heading font-normal">
                     Insights From Our Learners
-                </h2>
+                </h1>
 
                 {/* MOBILE LAYOUT  */}
                 <div className="block xl:hidden px-4 mt-8 w-full max-w-[800px] mx-auto">
