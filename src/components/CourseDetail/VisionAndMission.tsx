@@ -25,7 +25,7 @@ const DeptSection4 = ({ courseData }: Props) => {
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 md:gap-8 4xl:gap-16 mb-6 md:mb-10 4xl:mb-20">
                                 <div className="text-brand-blue-bright w-12 md:w-16 4xl:w-40">
-                                    <img loading="lazy" decoding="async" src="deptvision.png" alt="Vision Icon" className="w-full h-auto group-hover:scale-110 transition-transform" />
+                                    <img loading="lazy" decoding="async" src="deptvision.webp" alt="Vision Icon" className="w-full h-auto group-hover:scale-110 transition-transform" />
                                 </div>
                                 <h1
                                     className="text-heroText text-navy-900 capitalize font-heading font-normal leading-none"
@@ -46,7 +46,7 @@ const DeptSection4 = ({ courseData }: Props) => {
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 md:gap-8 4xl:gap-16 mb-6 md:mb-10 4xl:mb-20">
                                 <div className="text-brand-blue-bright w-12 md:w-16 4xl:w-40">
-                                    <img loading="lazy" decoding="async" src="deptmission.png" alt="Mission Icon" className="w-full h-auto group-hover:scale-110 transition-transform" />
+                                    <img loading="lazy" decoding="async" src="deptmission.webp" alt="Mission Icon" className="w-full h-auto group-hover:scale-110 transition-transform" />
                                 </div>
                                 <h1
                                     className="text-heroText text-navy-900 capitalize font-heading font-normal leading-none"

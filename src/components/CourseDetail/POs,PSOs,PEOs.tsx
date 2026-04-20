@@ -103,7 +103,7 @@ const DeptSection7 = ({ courseData }: Props) => {
                                         {item.title}
                                     </span>
                                     <img loading="lazy" decoding="async"
-                                        src={isOpen ? '/POuparrow.png' : '/POdropdown.svg'}
+                                        src={isOpen ? '/POuparrow.webp' : '/POdropdown.svg'}
                                         alt=""
                                         className="w-6 h-6 lg:w-9 lg:h-9 4xl:w-18 4xl:h-18 flex-shrink-0 ml-2"
                                     />

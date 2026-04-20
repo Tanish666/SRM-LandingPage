@@ -14,28 +14,28 @@ interface Props {
 const DeptSection5 = ({ courseData }: Props) => {
     const stats = [
         {
-            icon: "/section5logo1.png", iconW: 83, iconH: 69,
+            icon: "/section5logo1.webp", iconW: 83, iconH: 69,
             num: "150+", label: "Industry Tie-Ups",
             desc: "Collaborations With Reputed Hospitals, Diagnostic Centers Internships",
             width: '295px', height: '345px', top: '182px', left: '0px',
             descWidth: '283px'
         },
         {
-            icon: "/section5logo2.png", iconW: 57, iconH: 58,
+            icon: "/section5logo2.webp", iconW: 57, iconH: 58,
             num: "100%", label: "Internship Assurance",
             desc: "Guaranteed Hands-On Clinical Training In SRM AHS",
             width: '295px', height: '227px', top: '300px', left: '314px',
             descWidth: '247px'
         },
         {
-            icon: "/section5logo3.png", iconW: 66, iconH: 66,
+            icon: "/section5logo3.webp", iconW: 66, iconH: 66,
             num: "25+", label: "Specialization Tracks",
             desc: "Offering Diverse Career Pathways Through Specialized Programs",
             width: '295px', height: '227px', top: '300px', left: '628px',
             descWidth: '247px'
         },
         {
-            icon: "/section5logo4.png", iconW: 84, iconH: 84,
+            icon: "/section5logo4.webp", iconW: 84, iconH: 84,
             num: "1550", label: "Bedded Hospital",
             desc: "Our On-Campus Hospital Provides Real-Time Clinical Exposure",
             width: '303px', height: '345px', top: '182px', left: '942px',

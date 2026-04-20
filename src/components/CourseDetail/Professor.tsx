@@ -21,7 +21,7 @@ const DeptSection8 = ({ courseData }: Props) => {
                     <div className="flex-shrink-0 rounded-lg  overflow-hidden">
                         <div className="relative w-64 h-72 lg:w-[22rem] lg:h-[26rem] 3xl:w-105 3xl:h-[30rem] 4xl:w-[40rem] 4xl:h-[44rem]">
                             <Image
-                                src="/depsecpic4.png"
+                                src="/depsecpic4.webp"
                                 alt="Dr. Kumar Ebenezer K"
                                 fill
                                 className="object-cover"

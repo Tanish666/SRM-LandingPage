@@ -27,7 +27,7 @@ const DeptSection2 = ({ courseData }: Props) => {
                         <div
                             className="relative overflow-hidden z-10 w-[95%] h-[95%] rounded-xl 4xl:rounded-3xl"
                         >
-                            <img loading="lazy" decoding="async" src='/deptsecpic2.png' className='w-full h-full object-cover' alt="Department students" />
+                            <img loading="lazy" decoding="async" src='/deptsecpic2.webp' className='w-full h-full object-cover' alt="Department students" />
                         </div>
                     </div>
                 </div>

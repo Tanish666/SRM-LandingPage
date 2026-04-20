@@ -13,7 +13,7 @@ const AboutSection10 = () => {
             title: ""
         },
         {
-            img: "/ASec10Svg2.png",
+            img: "/ASec10Svg2.webp",
             title: ""
         },
         {

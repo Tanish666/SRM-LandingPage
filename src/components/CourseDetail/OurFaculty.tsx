@@ -20,19 +20,19 @@ const faculty = [
         name: 'Dr.Kumar Ebenezer',
         qualification: 'M.Sc., Ph.D.',
         designation: 'Professor & Principal',
-        image: '/deptimagefinal.png',
+        image: '/deptimagefinal.webp',
     },
     {
         name: 'Dr.G.Rohini',
         qualification: 'M.Sc., Ph.D. Biochemistry / PDF',
         designation: 'Associate Professor',
-        image: '/deptimagefinal.png',
+        image: '/deptimagefinal.webp',
     },
     {
         name: 'Dr.A.Vijayan',
         qualification: 'MSc., Ph.D.',
         designation: 'Assistant Professor',
-        image: '/deptimagefinal.png',
+        image: '/deptimagefinal.webp',
     },
 ]
 
