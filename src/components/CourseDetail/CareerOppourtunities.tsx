@@ -51,7 +51,7 @@ const DeptSection5 = ({ courseData }: Props) => {
                 <SectionPill text="Career Opportunities" className="uppercase" />
 
                 {/* Main Heading */}
-                <h1 className="font-heading text-center text-[28px] leading-[36px] text-navy-900 capitalize mt-4 max-w-[90%]">
+                <h1 className="font-heading text-center text-headText leading-[50px] text-navy-900 capitalize mt-4 max-w-[90%]">
                     Empowering The Next Generation Of Healthcare Leaders
                 </h1>
 
@@ -106,7 +106,7 @@ const DeptSection5 = ({ courseData }: Props) => {
                 <div className="relative 4xl:scale-[1.75] 3xl:scale-[1.4] transition-all duration-500 transform-gpu origin-top" style={{ width: '1245px', height: '650px' }}>
                     {/* Main Heading */}
                     <h1
-                        className="font-heading absolute text-center text-[45px] leading-[56px] text-navy-900 capitalize"
+                        className="font-heading absolute text-center text-headText leading-[56px] text-navy-900 capitalize"
                         style={{ width: '1166px', left: '41.5px', top: '65px' }}
                     >
                         Empowering The Next Generation Of Healthcare Leaders
@@ -114,7 +114,7 @@ const DeptSection5 = ({ courseData }: Props) => {
 
                     {/* Subtitle */}
                     <h2
-                        className={`${inter.className} absolute text-center text-navy-800/70 text-[15px] leading-[25px] capitalize`}
+                        className={`${inter.className} absolute text-center text-navy-800/70 text-subText leading-[25px] capitalize`}
                         style={{ width: '623px', left: '312.5px', top: '135px' }}
                     >
                         At SRM Allied Health, we blend academic excellence with real-world applications to prepare our students for an impactful career.
